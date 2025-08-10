@@ -1,0 +1,153 @@
+{
+    "id": "formation-aws-security-specialty",
+    "type": "formation",
+    "code": null,
+    "titre": "AWS Security Specialty: Sécurité avancée AWS",
+    "categorie": "Cloud",
+    "sous_categorie": "AWS",
+    "resume": "Concevoir et opérer la sécurité sur AWS: IAM avancé, détection des menaces, protection des données, sécurité réseau/app et conformité. Prépare à SCS-C02.",
+    "public": "Ingénieurs sécurité, architectes cloud, membres d’un SOC, DevSecOps.",
+    "prerequis": "Solides bases AWS (SAA/SOA recommandées), notions sécurité réseau/IAM/KMS.",
+    "duree_formation": "3 jours",
+    "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+    "objectifs": [
+        "Concevoir une stratégie IAM avancée et gestion des comptes (Organizations, SCP).",
+        "Mettre en œuvre la protection des données (chiffrement KMS, DLP).",
+        "Détecter et répondre aux menaces (GuardDuty, Security Hub, CloudTrail).",
+        "Durcir réseau et charges applicatives (WAF, Shield, VPC controls).",
+        "Se préparer à l’examen SCS-C02."
+    ],
+    "moyen_et_modalite": "Cours expert orienté sécurité, labs pratiques, études de cas. Présentiel ou distanciel synchrone. Supports et guides de bonnes pratiques.",
+    "moyens_techniques": "Poste apprenant, compte AWS de lab, services sécurité AWS (KMS, GuardDuty, Security Hub), plateforme visio, supports numériques.",
+    "adaptation_et_suivi": "Positionnement initial, scénarios de sécurité adaptés au secteur, suivi des acquis, retours personnalisés.",
+    "evaluation_parcours": "Quiz par domaine, TP sécurité guidé, QCM final type SCS-C02. Attestation de fin.",
+    "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+    "handicap": {
+        "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+        "partenaires": {
+            "AGEFIPH": {
+                "contacts": [
+                    "Bastien GIESBERGER",
+                    "M'Ballo SECK"
+                ],
+                "email": "rhf-idf@agefiph.asso.fr",
+                "canal": "Contact mail uniquement"
+            },
+            "MDPH": {
+                "nom": "MDPH 75 de Paris",
+                "adresse": "69 rue de la Victoire 75009 Paris",
+                "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+                "email": "contact@mdph.paris.fr"
+            },
+            "CAP_EMPLOI": {
+                "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+                "telephone": "01 44 52 40 60"
+            },
+            "APAJH": {
+                "nom": "Fédération APAJH",
+                "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+            }
+        }
+    },
+    "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+    "prix": "Nous consulter",
+    "contact": {
+        "email": "contact@idcacademy.fr",
+        "telephone": "07 59 56 59 18"
+    },
+    "programme_detaille": [
+        {
+            "module": "Gouvernance et IAM avancé",
+            "duree": "0,75 jour",
+            "contenus": [
+                "Organizations, comptes multiples, SCP",
+                "IAM policies avancées, access analyzer",
+                "PIM/PAM patterns"
+            ],
+            "activites": [
+                "Atelier: design multi-comptes sécurisé"
+            ],
+            "resultats_attendus": [
+                "Structurer la gouvernance et l’accès à l’échelle"
+            ]
+        },
+        {
+            "module": "Protection des données",
+            "duree": "0,5 jour",
+            "contenus": [
+                "KMS, CMK, rotation",
+                "Chiffrement S3/EBS/RDS",
+                "Gestion secrets"
+            ],
+            "activites": [
+                "Lab: clés KMS et chiffrement S3"
+            ],
+            "resultats_attendus": [
+                "Protéger données au repos et en transit"
+            ]
+        },
+        {
+            "module": "Détection et réponse aux menaces",
+            "duree": "0,5 jour",
+            "contenus": [
+                "CloudTrail, Config, GuardDuty",
+                "Security Hub, EventBridge/Automations"
+            ],
+            "activites": [
+                "Lab: détection alerte GuardDuty"
+            ],
+            "resultats_attendus": [
+                "Opérer un SOC cloud sur AWS"
+            ]
+        },
+        {
+            "module": "Sécurité réseau et applicative",
+            "duree": "0,5 jour",
+            "contenus": [
+                "VPC security, NACL/SG",
+                "WAF, Shield, ALB/WAF rules",
+                "PrivateLink/Endpoint policies"
+            ],
+            "activites": [
+                "Lab: durcissement d’un VPC exposé"
+            ],
+            "resultats_attendus": [
+                "Réduire la surface d’attaque réseau/app"
+            ]
+        }
+    ],
+    "competences": [
+        "Architecture sécurité AWS",
+        "Chiffrement et IAM avancé",
+        "Détection et réponse",
+        "Sécurité réseau/app"
+    ],
+    "certifications_visees": [
+        "cert-aws-scs-c02"
+    ],
+    "postes_accessibles": [
+        "Cloud Security Engineer",
+        "Security Engineer",
+        "Architecte Sécurité Cloud"
+    ],
+    "salaire_moyen": "45 000€ - 85 000€ selon expérience",
+    "modalites": [
+        "Présentiel",
+        "Distanciel"
+    ],
+    "langue": "FR",
+    "organisme": "IDC ACADEMY",
+    "meta": {
+        "buttons_alignment": "center",
+        "financement_eligibilite": [
+            "OPCO",
+            "CPF",
+            "FNE",
+            "AIF",
+            "PTP",
+            "Dispositifs régionaux",
+            "AGEFIPH",
+            "AFPR/POEI"
+        ]
+    }
+}

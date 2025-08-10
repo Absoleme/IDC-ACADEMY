@@ -1,0 +1,153 @@
+{
+    "id": "formation-az-900",
+    "type": "formation",
+    "code": "AZ-900",
+    "titre": "Fondamentaux Microsoft Azure",
+    "categorie": "Cloud",
+    "sous_categorie": "Azure",
+    "resume": "Introduction aux concepts du cloud et aux services principaux d’Azure. Idéal pour débuter et préparer la certification Azure Fundamentals.",
+    "public": "Débutants en Cloud, techniciens, chefs de projet, personnes en reconversion vers l’écosystème Azure.",
+    "prerequis": "Aucun prérequis technique. Connaissances générales IT appréciées.",
+    "duree_formation": "2 jours",
+    "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+    "objectifs": [
+        "Comprendre les concepts du Cloud (IaaS, PaaS, SaaS, modèles de déploiement).",
+        "Identifier les services principaux Azure (compute, stockage, réseaux, bases).",
+        "Appréhender la gouvernance, la sécurité, la conformité et la tarification Azure.",
+        "Se préparer à l’examen Microsoft AZ-900."
+    ],
+    "moyen_et_modalite": "Formation animée par un formateur MCT. Alternance d’apports théoriques et de démonstrations, cas pratiques, Q&A. Modalités: présentiel ou distanciel synchrone. Supports de cours et ressources officielles fournis.",
+    "moyens_techniques": "Poste apprenant avec accès Internet, environnement Azure de démonstration/sandbox, plateforme de visioconférence, support numérique (PDF) et exercices.",
+    "adaptation_et_suivi": "Accueil et positionnement en amont, adaptation du rythme et des exemples au public, suivi de la progression quotidienne, points réguliers, assistance post-formation (Q&A).",
+    "evaluation_parcours": "Positionnement d’entrée, quiz intermédiaires, QCM de fin aligné AZ-900, étude de cas guidée. Attestation de fin de formation.",
+    "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+    "handicap": {
+        "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+        "partenaires": {
+            "AGEFIPH": {
+                "contacts": [
+                    "Bastien GIESBERGER",
+                    "M'Ballo SECK"
+                ],
+                "email": "rhf-idf@agefiph.asso.fr",
+                "canal": "Contact mail uniquement"
+            },
+            "MDPH": {
+                "nom": "MDPH 75 de Paris",
+                "adresse": "69 rue de la Victoire 75009 Paris",
+                "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+                "email": "contact@mdph.paris.fr"
+            },
+            "CAP_EMPLOI": {
+                "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+                "telephone": "01 44 52 40 60"
+            },
+            "APAJH": {
+                "nom": "Fédération APAJH",
+                "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+            }
+        }
+    },
+    "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+    "prix": "Nous consulter",
+    "contact": {
+        "email": "contact@idcacademy.fr",
+        "telephone": "06 59 56 59 18"
+    },
+    "programme_detaille": [
+        {
+            "module": "Concepts Cloud et modèles de service",
+            "duree": "0,5 jour",
+            "contenus": [
+                "Définitions: Cloud, IaaS, PaaS, SaaS",
+                "Responsabilité partagée, régions et zones"
+            ],
+            "activites": [
+                "Quiz diagnostic",
+                "Q&A"
+            ],
+            "resultats_attendus": [
+                "Maîtriser les fondamentaux du Cloud"
+            ]
+        },
+        {
+            "module": "Architecture et services de base Azure",
+            "duree": "0,5 jour",
+            "contenus": [
+                "Compute (VM, App Services, Containers)",
+                "Réseau (VNet, peering, DNS, Load Balancer)",
+                "Stockage (Blob, Files, Disks)",
+                "Bases de données managées (SQL, Cosmos DB)"
+            ],
+            "activites": [
+                "Démonstrations guidées",
+                "Exercices sur portail Azure"
+            ],
+            "resultats_attendus": [
+                "Identifier les services cœur Azure"
+            ]
+        },
+        {
+            "module": "Sécurité, identité et gouvernance",
+            "duree": "0,5 jour",
+            "contenus": [
+                "Azure AD / Entra ID, RBAC",
+                "Sécurité et conformité (Defender, Security Center)",
+                "Gestion et gouvernance (Policy, Blueprints)"
+            ],
+            "activites": [
+                "Cas pratique RBAC/Policy"
+            ],
+            "resultats_attendus": [
+                "Comprendre sécurité et gouvernance Azure"
+            ]
+        },
+        {
+            "module": "Tarification, SLA et support",
+            "duree": "0,5 jour",
+            "contenus": [
+                "Estimations de coûts, calculateur de prix",
+                "SLA, SLO, support et abonnements"
+            ],
+            "activites": [
+                "Exercice d’estimation de coût"
+            ],
+            "resultats_attendus": [
+                "Être capable d’évaluer coûts et SLA"
+            ]
+        }
+    ],
+    "competences": [
+        "Concepts Cloud",
+        "Panorama des services Azure",
+        "Gouvernance et sécurité de base",
+        "Tarification et SLA"
+    ],
+    "certifications_visees": [
+        "cert-az-900"
+    ],
+    "postes_accessibles": [
+        "Assistant Cloud",
+        "Technicien Cloud junior"
+    ],
+    "salaire_moyen": "45 000€ - 75 000€ selon expérience",
+    "modalites": [
+        "Présentiel",
+        "Distanciel"
+    ],
+    "langue": "FR",
+    "organisme": "IDC ACADEMY",
+    "meta": {
+        "buttons_alignment": "center",
+        "financement_eligibilite": [
+            "OPCO",
+            "CPF",
+            "FNE",
+            "AIF",
+            "PTP",
+            "Dispositifs régionaux",
+            "AGEFIPH",
+            "AFPR/POEI"
+        ]
+    }
+}

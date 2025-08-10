@@ -1,0 +1,42 @@
+{
+  "id": "formation-cyber-ceh",
+  "type": "formation",
+  "code": "CEH",
+  "titre": "Certified Ethical Hacker (CEH) - Techniques de hacking éthique",
+  "categorie": "Cybersécurité",
+  "sous_categorie": "Cybersécurité Générale",
+  "resume": "Préparation CEH axée sur les techniques d’attaque/défense, outils et méthodologie de pentest, en environnement de lab sécurisé.",
+  "public": "Admins systèmes/réseaux, ingénieurs sécurité, consultants souhaitant s’orienter vers le pentest.",
+  "prerequis": "Bonnes bases systèmes/réseaux, notions TCP/IP, Linux/Windows.",
+  "duree_formation": "5 jours",
+  "inscription": "Contact, questionnaire d’analyse, validation, convention/convocation.",
+  "objectifs": [
+    "Connaître la méthodologie d’ethical hacking et les phases du pentest.",
+    "Utiliser les principaux outils (Nmap, Burp, Metasploit…) de manière responsable.",
+    "Identifier et exploiter des vulnérabilités courantes et proposer des remédiations."
+  ],
+  "moyen_et_modalite": "Cours + nombreux labs sur environnement isolé. Présentiel/distanciel.",
+  "moyens_techniques": "VM Kali/Parrot, cibles vulnérables (OWASP/DVWA), Burp Suite, Nmap, Metasploit.",
+  "adaptation_et_suivi": "Chemins de labs différenciés, feedback quotidien, ressources de révision.",
+  "evaluation_parcours": "Mises en situation, QCM blanc CEH, attestation.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": { "texte": "Accessibilité et aménagements possibles sur demande." },
+  "evaluation_du_besoin": "Questionnaire d’adéquation avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Introduction & cadre légal/éthique", "duree": "0,5 jour", "contenus": ["Charte, périmètre, OPSEC"], "activites": ["Signature charte, montée de lab"], "resultats_attendus": ["Conformité éthique et légale"] },
+    { "module": "Reconnaissance & Scan", "duree": "1 jour", "contenus": ["OSINT, enum réseau", "Nmap, vuln scanners"], "activites": ["Cartographie d’une cible de lab"], "resultats_attendus": ["Vue d’ensemble exploitable"] },
+    { "module": "Exploitation Web & Systèmes", "duree": "2 jours", "contenus": ["OWASP Top 10", "Exploitation et pivot"], "activites": ["Exploiter plusieurs failles sur cible"], "resultats_attendus": ["Accès obtenu et contrôlé"] },
+    { "module": "Post-exploitation & Reporting", "duree": "1 jour", "contenus": ["Privesc, persistance", "Rédaction de rapport"], "activites": ["Rapport priorisé avec remédiations"], "resultats_attendus": ["Livrable actionnable"] },
+    { "module": "Examen blanc CEH", "duree": "0,5 jour", "contenus": ["QCM, corrections"], "activites": ["Plan de révision"], "resultats_attendus": ["Préparation à l’examen"] }
+  ],
+  "competences": ["Pentest méthodologique", "Outils d’audit", "OWASP Top 10", "Reporting & remédiation"],
+  "certifications_visees": ["cert-ceh"],
+  "postes_accessibles": ["Pentester junior", "Consultant cybersécurité", "Analyste Red Team (débutant)"],
+  "salaire_moyen": "45 000€ - 85 000€",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH"] }
+}

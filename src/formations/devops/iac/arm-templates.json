@@ -1,0 +1,50 @@
+{
+  "id": "formation-devops-arm",
+  "type": "formation",
+  "code": null,
+  "titre": "Azure ARM Templates - Modéliser et déployer l’infrastructure",
+  "categorie": "DevOps",
+  "sous_categorie": "IaC",
+  "resume": "Concevoir des templates ARM pour déployer des ressources Azure de manière répétable et contrôlée.",
+  "public": "Ingénieurs Cloud/DevOps, Admins Azure, Architectes souhaitant automatiser les déploiements.",
+  "prerequis": "Connaissances de base Azure et JSON. Git recommandé.",
+  "duree_formation": "2 jours",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Comprendre la structure des templates ARM et des parameter files.",
+    "Utiliser les fonctions ARM, conditions et boucles.",
+    "Gérer les déploiements incrémentiels/complets et les dépendances.",
+    "Industrialiser avec Azure DevOps/GitHub Actions et déploiements idempotents."
+  ],
+  "moyen_et_modalite": "Cours + démos + labs guidés. Présentiel ou distanciel synchrone. Supports et modèles fournis.",
+  "moyens_techniques": "Poste apprenant, portail Azure, CLI/PowerShell, VS Code + extensions ARM, repo Git.",
+  "adaptation_et_suivi": "Positionnement, ajustement des labs, suivi des acquis, Q&A et support post-formation.",
+  "evaluation_parcours": "Quiz d’entrée/sortie, vérification des templates par déploiements test, QCM final. Attestation.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": { "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"], "email": "rhf-idf@agefiph.asso.fr", "canal": "Contact mail uniquement" },
+      "MDPH": { "nom": "MDPH 75 de Paris", "adresse": "69 rue de la Victoire 75009 Paris", "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)", "email": "contact@mdph.paris.fr" },
+      "CAP_EMPLOI": { "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris", "telephone": "01 44 52 40 60" },
+      "APAJH": { "nom": "Fédération APAJH", "adresse": "33 avenue du Maine 75755 Paris Cedex 15" }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Bases des ARM Templates", "duree": "0,5 jour", "contenus": ["Structure template/parameters", "Scopes et dépendances"], "activites": ["Création d’un template simple"], "resultats_attendus": ["Modéliser une ressource de base"] },
+    { "module": "Fonctions ARM, conditions et boucles", "duree": "0,5 jour", "contenus": ["variables, outputs, copy", "conditions, expressions"], "activites": ["Génération dynamique"], "resultats_attendus": ["Templates paramétriques robustes"] },
+    { "module": "Stratégies de déploiement et secrets", "duree": "0,5 jour", "contenus": ["Mode incrémental/complete", "Key Vault et références de secrets"], "activites": ["Déploiements sécurisés"], "resultats_attendus": ["Déploiements sûrs et idempotents"] },
+    { "module": "Pipelines et bonnes pratiques", "duree": "0,5 jour", "contenus": ["Validation/Lint", "Azure DevOps/GitHub Actions"], "activites": ["Pipeline de déploiement"], "resultats_attendus": ["Industrialisation CI/CD"] }
+  ],
+  "competences": ["Modélisation ARM", "Paramétrage avancé", "Déploiements Azure automatisés", "CI/CD ARM"],
+  "certifications_visees": [],
+  "postes_accessibles": ["Cloud Engineer", "DevOps Engineer", "Infra Engineer"],
+  "salaire_moyen": "50 000€ - 80 000€ selon expérience",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH", "AFPR/POEI"] }
+}

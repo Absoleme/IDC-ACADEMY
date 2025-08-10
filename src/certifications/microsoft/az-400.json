@@ -1,0 +1,16 @@
+{
+  "id": "cert-az-400",
+  "type": "certification",
+  "code": "AZ-400",
+  "titre": "Microsoft Certified: DevOps Engineer Expert (Exam AZ-400)",
+  "editeur": "Microsoft",
+  "niveau": "Expert",
+  "domaines": ["DevOps", "Azure DevOps", "CI/CD", "GitOps", "DevSecOps", "Observabilité"],
+  "description": "Certification expert validant la conception et la mise en œuvre de solutions DevOps sur Azure: stratégie Git, gestion du cycle de vie, pipelines CI/CD, qualité, sécurité et observabilité.",
+  "roles_vises": ["DevOps Engineer", "Release/Build Engineer", "SRE", "Platform Engineer"],
+  "cours_recommandes": ["formation-devops-az-400"],
+  "prerequis": "Connaissances d’Azure, Git et CI/CD. Expérience avec Azure DevOps et/ou GitHub Actions recommandée.",
+  "examen": { "format": "En ligne ou centre d’examen", "type": "QCM et études de cas" },
+  "liens_officiels": [],
+  "langue": "FR"
+}

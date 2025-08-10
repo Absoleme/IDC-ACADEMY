@@ -1,0 +1,182 @@
+{
+  "id": "parcours-cloud-sysadmin-azure-n6",
+  "type": "parcours",
+  "titre": "Parcours Cloud SysAdmin Azure (Niveau 6)",
+  "description": "Spécialisation administration cloud Microsoft Azure : gouvernance, identités (Microsoft Entra ID), IaaS (VM/VMSS/disques), réseau (vNet/NSG/Firewall/LB), stockage (Blob/Files), sauvegarde & PRA, sécurité (Defender for Cloud), supervision (Azure Monitor/Log Analytics), automatisation (PowerShell/CLI/Bicep/Terraform) et opérations hybrides (Azure Arc, AD Connect).",
+  "public": "Administrateurs systèmes/réseaux on-prem et cloud, techniciens d’exploitation, ingénieurs IT en reconversion souhaitant opérer une plateforme Azure sécurisée et industrialisée.",
+  "prerequis": "Bases d’administration Windows/Linux, notions réseau (TCP/IP, DNS, VPN), fondamentaux cloud. Expérience PowerShell/ligne de commande appréciée.",
+  "duree_formation": "400h + 80h de stage",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, test de positionnement, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Mettre en place une gouvernance Azure (abonnements, groupes d’administration, RBAC, Azure Policy) et un socle Landing Zone (CAF).",
+    "Administrer compute et stockage: VMs/VMSS, images, disques, Azure Files/Blob, sauvegardes (Azure Backup) et reprise d’activité (ASR).",
+    "Concevoir et sécuriser le réseau: vNets, sous-réseaux, NSG/UDR, Private Link/Private DNS, Load Balancer, Application Gateway/WAF, Azure Firewall, VPN/ExpressRoute (notions).",
+    "Gérer les identités et accès avec Microsoft Entra ID: groupes, rôles, PIM, MFA, Conditional Access, intégration hybride (AD DS + Entra Connect/Cloud Sync).",
+    "Renforcer la posture sécurité et conformité avec Microsoft Defender for Cloud, Key Vault, Bastion, JIT et bonnes pratiques Zero Trust.",
+    "Superviser et opérer: Azure Monitor, Log Analytics/KQL, alertes, workbooks, runbooks, optimisation des coûts.",
+    "Automatiser et industrialiser l’infrastructure avec PowerShell/CLI, Bicep/Terraform et CI/CD (GitHub Actions/Azure DevOps).",
+    "Préparer et réussir AZ-104 (Azure Administrator Associate) + AZ-900 (Azure Fundamentals) et préparer AZ-700 (Network Engineer) en option."
+  ],
+  "moyen_et_modalite": "Cours + ateliers pratiques, labs guidés, projets fil rouge. Présentiel ou distanciel synchrone. Environnements Azure fournis (tenant de formation).",
+  "moyens_techniques": "Portail Azure, Cloud Shell, Azure CLI, PowerShell Az, Bicep, Terraform, Git/GitHub, GitHub Actions/Azure DevOps Pipelines, Azure Monitor/Log Analytics, Azure Backup/ASR, Microsoft Entra ID, Azure Firewall, Application Gateway, Bastion, Key Vault, Azure Update Manager, Azure Arc, Azure Migrate.",
+  "adaptation_et_suivi": "Positionnement initial, plan de progression individualisé, mentoring technique, revues d’architecture/ops, sprint reviews.",
+  "evaluation_parcours": "Évaluations continues (QCM/labs), études de cas, audits de configuration (Policy/Defender), soutenance finale sur le projet fil rouge. Attestation de fin de parcours.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "90%"
+  },
+  "handicap": {
+    "texte": "Toutes les formations IDCACADEMY sont accessibles aux personnes en situation de handicap. À l’inscription, nous étudions les aménagements possibles pour favoriser l’apprentissage (matériel, rythme, accessibilité, supports…).",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "modules": [
+    {
+      "module": "Gouvernance Azure et Landing Zone (CAF)",
+      "duree": "50h",
+      "contenus": [
+        "Abonnements, groupes d’administration, Resource Groups, tagging",
+        "RBAC, identités managées, clés de voûte de la gouvernance",
+        "Azure Policy & initiatives, conformité et remédiations",
+        "Gestion des coûts: budgets, alertes, réservations, Savings Plans",
+        "Conception d’une Landing Zone (CAF), blueprints de référence (remplacés par Policy + IaC)"
+      ],
+      "activites": [
+        "Mise en place d’une Landing Zone minimale avec Policy",
+        "Tableau de bord FinOps basique (coûts/allocations)"
+      ]
+    },
+    {
+      "module": "Compute, Stockage, Sauvegarde et PRA",
+      "duree": "60h",
+      "contenus": [
+        "VM/VMSS, images (SIG), extensions, Bastion, JIT",
+        "Disques gérés, snapshots, performance et chiffrage",
+        "Azure Storage: Blob, Files (AD DS/Entra ID), lifecycle, Static Website",
+        "Sauvegarde: Azure Backup pour VMs/SQL/Files",
+        "PRA: Azure Site Recovery (ASR), runbooks et tests de bascule"
+      ],
+      "activites": [
+        "Déploiement d’un workload IaaS HA + backup",
+        "Plan de reprise d’activité et exercice de bascule"
+      ]
+    },
+    {
+      "module": "Réseau Azure et sécurité périmétrique",
+      "duree": "60h",
+      "contenus": [
+        "vNet, sous-réseaux, NSG/ASG, UDR, Private Link/Private Endpoints",
+        "DNS privé, Azure DNS, peering, vNet-to-vNet",
+        "Equilibrage: Load Balancer, Application Gateway + WAF",
+        "Pare-feu: Azure Firewall, règles et logs",
+        "Accès hybride: VPN site-à-site/point-à-site, ExpressRoute (notions)"
+      ],
+      "activites": [
+        "Architecture réseau hub-and-spoke avec filtrage",
+        "Journalisation et investigation de flux (NSG flow logs)"
+      ]
+    },
+    {
+      "module": "Identités, accès et sécurité de la posture",
+      "duree": "50h",
+      "contenus": [
+        "Microsoft Entra ID: utilisateurs, groupes, rôles, PIM",
+        "MFA/Conditional Access, Identity Protection, accès invité (B2B)",
+        "Intégration hybride: AD DS, Entra Connect/Cloud Sync",
+        "Key Vault (secrets/keys/certs), RBAC vs ACL, secrets rotation",
+        "Microsoft Defender for Cloud: recommandations, JIT, workload protections"
+      ],
+      "activites": [
+        "Mise en œuvre MFA/CA et PIM sur un tenant de formation",
+        "Durcissement d’une VM avec recommandations Defender"
+      ]
+    },
+    {
+      "module": "Automatisation et Infrastructure as Code",
+      "duree": "50h",
+      "contenus": [
+        "PowerShell Az et Azure CLI: scripts d’exploitation",
+        "Bicep: modules, param files, déploiements idempotents",
+        "Terraform: providers, state, workspaces et bonnes pratiques",
+        "CI/CD infra: GitHub Actions/Azure DevOps, approvals et environnements",
+        "Azure Update Manager, Automation, Desired State (notions)"
+      ],
+      "activites": [
+        "Déploiement d’un environnement complet avec Bicep",
+        "Pipeline GitOps: PR → validations → déploiement"
+      ]
+    },
+    {
+      "module": "Supervision, exploitation et optimisation",
+      "duree": "50h",
+      "contenus": [
+        "Azure Monitor, Log Analytics, KQL, alertes et action groups",
+        "Workbooks/dashboards, métriques, journaux d’activité",
+        "Change tracking, inventaire, Update management",
+        "SLA/SLO, runbooks d’incident, post-mortem",
+        "Optimisation des coûts et dimensionnement (rightsizing, reservations)"
+      ],
+      "activites": [
+        "Création d’un workbook d’exploitation bout-en-bout",
+        "Jeu d’incidents simulés et amélioration continue (MTTD/MTTR)"
+      ]
+    },
+    {
+      "module": "Hybridation, migration et Arc",
+      "duree": "50h",
+      "contenus": [
+        "Azure Migrate: découverte, sizing, migration de serveurs",
+        "Azure Arc: onboarding serveurs, policy/monitoring centralisés",
+        "Azure File Sync, partages hybrides et cache local",
+        "Patterns lift-and-shift vs modernisation (notions PaaS)",
+        "Sécurité et conformité en contexte hybride"
+      ],
+      "activites": [
+        "Migration d’une VM on-prem vers Azure (lab)",
+        "Compliance et monitoring d’un serveur Arc-enabled"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-az-104",
+    "cert-az-900",
+    "cert-az-700"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

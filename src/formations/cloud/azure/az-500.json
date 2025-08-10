@@ -1,0 +1,157 @@
+{
+    "id": "formation-az-500",
+    "type": "formation",
+    "code": "AZ-500",
+    "titre": "Sécurité des technologies Microsoft Azure",
+    "categorie": "Cloud",
+    "sous_categorie": "Azure",
+    "resume": "Mettre en œuvre la sécurité dans Azure: identité et accès, protection de la plateforme, opérations de sécurité, protection des données et applications. Prépare à AZ-500.",
+    "public": "Ingénieurs sécurité, administrateurs Cloud, membres d’un SOC, DevSecOps travaillant sur Azure.",
+    "prerequis": "Connaissances d’Azure au niveau administration (AZ-104 recommandé), bases de sécurité réseau et IAM.",
+    "duree_formation": "4 jours",
+    "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+    "objectifs": [
+        "Gérer identité et accès (Entra ID, RBAC, PIM, MFA, Conditional Access).",
+        "Mettre en œuvre la protection de la plateforme (NSG, WAF, Defender for Cloud).",
+        "Gérer les opérations de sécurité (journaux, alertes, réponse aux incidents).",
+        "Sécuriser données, applications et réseaux (Key Vault, chiffrement, Private Link)."
+    ],
+    "moyen_et_modalite": "Formation MCT avec exposés, labs pratiques orientés sécurité et études de cas. Modalités: présentiel ou distanciel synchrone. Supports fournis.",
+    "moyens_techniques": "Poste apprenant, sandbox Azure, outils de sécurité (Defender for Cloud, Monitor/Log Analytics), plateforme visio, supports numériques.",
+    "adaptation_et_suivi": "Positionnement initial, scénarios de sécurité adaptés aux contextes métiers, suivi des acquis, retours personnalisés.",
+    "evaluation_parcours": "Positionnement d’entrée, quiz par domaine, épreuve pratique guidée, QCM final type AZ-500. Attestation de fin de formation.",
+    "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+    "handicap": {
+        "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+        "partenaires": {
+            "AGEFIPH": {
+                "contacts": [
+                    "Bastien GIESBERGER",
+                    "M'Ballo SECK"
+                ],
+                "email": "rhf-idf@agefiph.asso.fr",
+                "canal": "Contact mail uniquement"
+            },
+            "MDPH": {
+                "nom": "MDPH 75 de Paris",
+                "adresse": "69 rue de la Victoire 75009 Paris",
+                "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+                "email": "contact@mdph.paris.fr"
+            },
+            "CAP_EMPLOI": {
+                "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+                "telephone": "01 44 52 40 60"
+            },
+            "APAJH": {
+                "nom": "Fédération APAJH",
+                "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+            }
+        }
+    },
+    "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+    "prix": "Nous consulter",
+    "contact": {
+        "email": "contact@idcacademy.fr",
+        "telephone": "07 59 56 59 18"
+    },
+    "programme_detaille": [
+        {
+            "module": "Identité, accès et protection",
+            "duree": "1 jour",
+            "contenus": [
+                "Entra ID, RBAC, PIM",
+                "MFA et Conditional Access",
+                "Privileged Access Workstations"
+            ],
+            "activites": [
+                "Lab: politiques d’accès conditionnel",
+                "Mise en place de PIM"
+            ],
+            "resultats_attendus": [
+                "Sécuriser l’identité et les privilèges"
+            ]
+        },
+        {
+            "module": "Protection de la plateforme et réseau",
+            "duree": "1 jour",
+            "contenus": [
+                "NSG/ASG, WAF/App Gateway",
+                "Defender for Cloud recommandations",
+                "Sécurisation d’AKS et PaaS"
+            ],
+            "activites": [
+                "Lab: remédiation Defender",
+                "Durcissement réseau d’une appli"
+            ],
+            "resultats_attendus": [
+                "Durcir la surface d’attaque de la plateforme"
+            ]
+        },
+        {
+            "module": "Opérations de sécurité",
+            "duree": "1 jour",
+            "contenus": [
+                "Collecte journaux, alertes",
+                "Réponse aux incidents",
+                "Playbooks d’automatisation"
+            ],
+            "activites": [
+                "Lab: détection et réponse à incident",
+                "Automatisation via Logic Apps"
+            ],
+            "resultats_attendus": [
+                "Industrialiser l’opérationnel sécurité"
+            ]
+        },
+        {
+            "module": "Sécurité des données et des applications",
+            "duree": "1 jour",
+            "contenus": [
+                "Key Vault, chiffrement au repos/en transit",
+                "Sécurisation SQL/Cosmos",
+                "Gestion secrets et accès applicatifs"
+            ],
+            "activites": [
+                "Lab: secrets applicatifs avec Key Vault",
+                "Chiffrement et audit data"
+            ],
+            "resultats_attendus": [
+                "Protéger données et applications cloud"
+            ]
+        }
+    ],
+    "competences": [
+        "Gestion des identités et des accès Azure",
+        "Durcissement plateforme et réseau",
+        "Opérations de sécurité et réponse à incident",
+        "Protection des données et applications"
+    ],
+    "certifications_visees": [
+        "cert-az-500"
+    ],
+    "postes_accessibles": [
+        "Security Engineer",
+        "Cloud Security Engineer",
+        "Analyste SOC"
+    ],
+    "salaire_moyen": "45 000€ - 85 000€ selon expérience",
+    "modalites": [
+        "Présentiel",
+        "Distanciel"
+    ],
+    "langue": "FR",
+    "organisme": "IDC ACADEMY",
+    "meta": {
+        "buttons_alignment": "center",
+        "financement_eligibilite": [
+            "OPCO",
+            "CPF",
+            "FNE",
+            "AIF",
+            "PTP",
+            "Dispositifs régionaux",
+            "AGEFIPH",
+            "AFPR/POEI"
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "cert-ceh",
+  "type": "certification",
+  "code": "CEH",
+  "titre": "EC‑Council Certified Ethical Hacker",
+  "editeur": "EC‑Council",
+  "niveau": "Intermédiaire",
+  "domaines": [
+    "Méthodologie de pentest et cadre légal/éthique",
+    "Reconnaissance, scanning et énumération",
+    "Exploitation Web et systèmes (OWASP Top 10, vulnérabilités communes)",
+    "Post‑exploitation, élévation de privilèges et persistance",
+    "Rapport et remédiations"
+  ],
+  "description": "Certification orientée offensive validant la connaissance des techniques, outils et bonnes pratiques d’ethical hacking.",
+  "roles_vises": ["Pentester junior", "Consultant cybersécurité", "Analyste Red Team (débutant)"],
+  "cours_recommandes": ["formation-cyber-ceh"],
+  "prerequis": "Bonnes bases systèmes/réseaux et sécurité ; expérience pratique souhaitée.",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM (épreuve théorique) ; options pratiques disponibles selon parcours",
+    "langue": "EN (autres langues possibles)"
+  },
+  "liens_officiels": [],
+  "langue": "FR"
+}

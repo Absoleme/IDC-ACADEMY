@@ -1,0 +1,26 @@
+{
+  "id": "cert-pl-300",
+  "type": "certification",
+  "code": "PL-300",
+  "titre": "Microsoft Certified: Power BI Data Analyst Associate",
+  "editeur": "Microsoft",
+  "niveau": "Associate",
+  "domaines": [
+    "Préparation et transformation des données (Power Query)",
+    "Modélisation (schéma en étoile, DAX, sécurité RLS)",
+    "Conception de rapports et data‑visualisation",
+    "Publication, gouvernance et collaboration Power BI"
+  ],
+  "description": "Certification validant les compétences clés de l’analyste Power BI de bout en bout.",
+  "roles_vises": ["Data Analyst", "BI Developer"],
+  "cours_recommandes": ["formation-data-pl-300"],
+  "prerequis": "Notions de SQL/Excel et fondamentaux data.",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM/scénarios",
+    "langue": "EN/FR (selon disponibilité)"
+  },
+  "renouvellement": "Évaluation de renouvellement en ligne annuelle (Microsoft).",
+  "liens_officiels": [],
+  "langue": "FR"
+}

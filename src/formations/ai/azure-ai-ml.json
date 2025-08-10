@@ -1,0 +1,42 @@
+{
+  "id": "formation-ai-azure-ml",
+  "type": "formation",
+  "code": "AZURE-AI-ML",
+  "titre": "Azure AI & ML — Services cognitifs et machine learning sur Azure",
+  "categorie": "IA",
+  "sous_categorie": "Azure AI",
+  "resume": "Construire des solutions ML de bout en bout avec Azure AI Services et Azure Machine Learning (AML).",
+  "public": "Data Scientists/Engineers, ML Engineers, Développeurs .NET/Python.",
+  "prerequis": "Python/ML de base, notions Azure.",
+  "duree_formation": "4 jours",
+  "inscription": "Contact, analyse du besoin, validation, convention/convocation.",
+  "objectifs": [
+    "Utiliser Azure AI Services (Vision, Language, Search) et responsables IA.",
+    "Mettre en place des expériences AML: datasets, compute, training et tracking.",
+    "Déployer et monitorer des modèles (endpoints temps réel/batch).",
+    "Automatiser avec pipelines AML, MLOps et sécurité/gestion des clés."
+  ],
+  "moyen_et_modalite": "Cours + démos + labs. Présentiel/distanciel.",
+  "moyens_techniques": "Azure Machine Learning, Azure AI Services, Responsible AI dashboard, Key Vault, Git.",
+  "adaptation_et_suivi": "Cas d’usage sectoriels, Q&A, ressources.",
+  "evaluation_parcours": "Labs + QCM blanc.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": { "texte": "Aménagements possibles selon besoins." },
+  "evaluation_du_besoin": "Questionnaire d’adéquation avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Azure AI Services", "duree": "1 j", "contenus": ["Vision/Language", "Search", "Sécurité & coûts"] },
+    { "module": "AML Foundations", "duree": "1 j", "contenus": ["Workspaces, compute, data", "Expériences & tracking"] },
+    { "module": "Training & déploiement", "duree": "1 j", "contenus": ["AutoML/SDK", "Endpoints, scaling, monitoring"] },
+    { "module": "MLOps & Responsible AI", "duree": "1 j", "contenus": ["Pipelines, CI/CD", "RAI, gouvernance"] }
+  ],
+  "competences": ["Azure AI Services", "Azure ML", "Déploiement ML", "MLOps", "Responsible AI"],
+  "certifications_visees": ["cert-ai-102", "cert-dp-100"],
+  "postes_accessibles": ["ML Engineer", "Data Scientist", "AI Engineer"],
+  "salaire_moyen": "45 000€ - 80 000€",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH"] }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "parcours-devops-engineer-azure-n7",
+  "type": "parcours",
+  "titre": "Parcours DevOps Engineer Azure (Niveau 7)",
+  "description": "Spécialisation DevOps sur Azure: Git, Azure DevOps, CI/CD, conteneurs, AKS, IaC (Terraform), observabilité et DevSecOps.",
+  "public": "Ingénieurs systèmes/dev, administrateurs cloud, SRE, personnes en reconversion technique souhaitant piloter la chaîne CI/CD et la plateforme.",
+  "prerequis": "Connaissances de base en Git, scripting (PowerShell/Bash) et services cloud. Notions de conteneurs appréciées.",
+  "duree_formation": "400h + 80h de stage",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Concevoir et opérer des pipelines CI/CD robustes sur Azure DevOps.",
+    "Industrialiser l’IaC avec Terraform et GitOps.",
+    "Déployer et exploiter des applications conteneurisées sur AKS.",
+    "Mettre en place la supervision et la sécurité (DevSecOps) de bout en bout.",
+    "Préparer la certification AZ-400 et Terraform Associate."
+  ],
+  "moyen_et_modalite": "Cours + ateliers pratiques, labs guidés, projets fil rouge. Présentiel ou distanciel synchrone. Supports et dépôts de code fournis.",
+  "moyens_techniques": "Repos Git, Azure DevOps (Boards, Repos, Pipelines), Azure Subscription, Terraform CLI/Cloud, AKS, Container Registry, outils de monitoring.",
+  "adaptation_et_suivi": "Positionnement, plan de progression individualisé, mentoring technique, revues de code et sprint reviews.",
+  "evaluation_parcours": "Évaluations continues, démos de sprint, QCM, audit de pipeline, soutenance finale. Attestation de fin de parcours.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "90%"
+  },
+  "modules": [
+    {
+      "module": "Culture DevOps, Git et flux de travail",
+      "duree": "40h",
+      "contenus": [
+        "Git branching, PR, code review",
+        "Trunk-based, GitFlow, trunk + feature flags"
+      ],
+      "activites": [
+        "Atelier Git avancé",
+        "Mise en place d’un repo monorepo"
+      ]
+    },
+    {
+      "module": "Azure DevOps: Boards, Repos, Pipelines",
+      "duree": "70h",
+      "contenus": [
+        "Boards & Kanban, backlogs",
+        "Build/Release YAML, Multi-stage",
+        "Secrets (Library, Key Vault)"
+      ],
+      "activites": [
+        "Pipeline CI/CD pour app .NET/Node",
+        "Intégration tests et quality gates"
+      ]
+    },
+    {
+      "module": "IaC avec Terraform et GitOps",
+      "duree": "70h",
+      "contenus": [
+        "Modules, state, workspaces",
+        "Pipelines IaC, policy-as-code"
+      ],
+      "activites": [
+        "Projet: déploiement AKS + services managés",
+        "Revue de code Terraform"
+      ]
+    },
+    {
+      "module": "Conteneurs et Kubernetes (AKS)",
+      "duree": "80h",
+      "contenus": [
+        "Docker, images, registries",
+        "AKS, Ingress, autoscaling, secrets",
+        "Helm/Kustomize"
+      ],
+      "activites": [
+        "Déploiement d’une app microservices",
+        "Canary/blue-green"
+      ]
+    },
+    {
+      "module": "Observabilité et DevSecOps",
+      "duree": "60h",
+      "contenus": [
+        "Azure Monitor, Logs, APM",
+        "Sécurité pipeline (SAST/DAST), dépendances",
+        "SRE: SLI/SLO, erreurs budgétaires"
+      ],
+      "activites": [
+        "Tableaux de bord",
+        "Runbook incident"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-az-400",
+    "cert-terraform-associate"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

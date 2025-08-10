@@ -1,0 +1,25 @@
+{
+    "id": "cert-az-104",
+    "type": "certification",
+    "code": "AZ-104",
+    "titre": "Microsoft Certified: Azure Administrator Associate",
+    "editeur": "Microsoft",
+    "niveau": "Associate",
+    "domaines": [
+        "Cloud"
+    ],
+    "description": "Valide les compétences d’administration Azure: gestion identités, stockage, compute, réseau, sauvegarde et supervision.",
+    "roles_vises": [
+        "Azure Administrator",
+        "Cloud Engineer"
+    ],
+    "cours_associes": [
+        "formation-az-104"
+    ],
+    "prerequis": "Expérience pratique d’Azure et des services de base.",
+    "examen": "AZ-104",
+    "langue": "FR",
+    "meta": {
+        "buttons_alignment": "center"
+    }
+}

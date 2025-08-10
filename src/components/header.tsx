@@ -9,6 +9,7 @@ export default function Header() {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
+           
             <a href="#contact" className="btn-primary">
               Contact
             </a>

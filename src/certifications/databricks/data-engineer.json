@@ -1,0 +1,27 @@
+{
+  "id": "cert-dbx-data-engineer",
+  "type": "certification",
+  "code": "DBX-DE",
+  "titre": "Databricks Certified Data Engineer",
+  "editeur": "Databricks",
+  "niveaux_disponibles": ["Associate", "Professional"],
+  "niveau_recommande": "Associate",
+  "domaines": [
+    "Apache Spark (DataFrames, Structured Streaming) et Delta Lake",
+    "Conception de pipelines data et optimisation des performances",
+    "Gouvernance et sécurité (Unity Catalog, permissions)",
+    "Orchestration, tests, CI/CD et monitoring"
+  ],
+  "description": "Certification attestant la maîtrise de la plateforme Databricks pour l’ingénierie de données à grande échelle.",
+  "roles_vises": ["Data Engineer", "ML Engineer", "Analytics Engineer"],
+  "cours_recommandes": ["formation-ai-databricks-spark"],
+  "prerequis": "Bonnes bases Python/SQL et concepts de data lakes.",
+  "examen": {
+    "format": "En ligne, proctoring",
+    "type": "QCM/scénarios et notebooks selon niveau",
+    "langue": "EN"
+  },
+  "renouvellement": "Pas d’expiration officielle ; recertification recommandée tous les 2 ans.",
+  "liens_officiels": [],
+  "langue": "FR"
+}

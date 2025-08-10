@@ -1,0 +1,16 @@
+ {
+  "id": "cert-cka",
+  "type": "certification",
+  "code": "CKA",
+  "titre": "Certified Kubernetes Administrator",
+  "editeur": "Linux Foundation / CNCF",
+  "niveau": "Administrator",
+  "domaines": ["Administration Kubernetes", "Réseau", "Sécurité", "Stockage", "Troubleshooting"],
+  "description": "Certification pratique attestant de la maîtrise de l’administration de clusters Kubernetes en conditions proches de la production.",
+  "roles_vises": ["Kubernetes Administrator", "DevOps Engineer", "SRE", "Platform Engineer"],
+  "cours_recommandes": ["formation-devops-cka"],
+  "prerequis": "Solides bases Linux, containers et notions réseau. Pratique régulière de kubectl.",
+  "examen": { "format": "Pratique en ligne supervisé", "type": "Mises en situation sur terminal" },
+  "liens_officiels": [],
+  "langue": "FR"
+}

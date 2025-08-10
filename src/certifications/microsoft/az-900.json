@@ -1,0 +1,26 @@
+{
+    "id": "cert-az-900",
+    "type": "certification",
+    "code": "AZ-900",
+    "titre": "Microsoft Certified: Azure Fundamentals",
+    "editeur": "Microsoft",
+    "niveau": "Fundamentals",
+    "domaines": [
+        "Cloud"
+    ],
+    "description": "Certification d’initiation validant la compréhension des concepts du cloud et des services principaux Azure, sécurité, tarification et support.",
+    "roles_vises": [
+        "Assistant Cloud",
+        "Technicien Cloud junior",
+        "Décideur IT"
+    ],
+    "cours_associes": [
+        "formation-az-900"
+    ],
+    "prerequis": "Aucun",
+    "examen": "AZ-900",
+    "langue": "FR",
+    "meta": {
+        "buttons_alignment": "center"
+    }
+}

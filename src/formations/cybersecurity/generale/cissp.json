@@ -1,0 +1,42 @@
+{
+  "id": "formation-cyber-cissp",
+  "type": "formation",
+  "code": "CISSP",
+  "titre": "CISSP - Certified Information Systems Security Professional",
+  "categorie": "Cybersécurité",
+  "sous_categorie": "Cybersécurité Générale",
+  "resume": "Préparation intensive CISSP couvrant les 8 domaines (ISC)²: gouvernance, sécurité des actifs, architecture, réseau, IAM, tests, opérations, développement sécurisé.",
+  "public": "Professionnels sécurité confirmés visant une reconnaissance internationale (RSSI, architectes, consultants).",
+  "prerequis": "Expérience sécurité recommandée (5 domaines/années selon (ISC)²).",
+  "duree_formation": "5 jours",
+  "inscription": "Contact, questionnaire d’analyse, validation, convention/convocation.",
+  "objectifs": [
+    "Maîtriser les concepts et meilleures pratiques des 8 domaines CISSP.",
+    "S’entraîner à la résolution de questions de type adaptatif et orientées risque.",
+    "Élaborer un plan de révision jusqu’à l’examen."
+  ],
+  "moyen_et_modalite": "Cours magistral, études de cas, banques de questions, examens blancs.",
+  "moyens_techniques": "Supports officiels, mindmaps par domaine, plateforme de QCM.",
+  "adaptation_et_suivi": "Suivi individualisé, planning de révision, sessions Q&A.",
+  "evaluation_parcours": "Examens blancs par domaine + final, attestation.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": { "texte": "Accessibilité et aménagements possibles sur demande." },
+  "evaluation_du_besoin": "Questionnaire d’adéquation avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Sécurité & Gouvernance (Dom.1-2)", "duree": "1 jour", "contenus": ["Gouvernance, politiques, gestion du risque", "Classification des actifs"], "activites": ["Étude de cas cartographie des risques"], "resultats_attendus": ["Approche orientée risque"] },
+    { "module": "Architecture & Réseau (Dom.3-4)", "duree": "1 jour", "contenus": ["Modèles de sécurité", "Réseaux, comms, SDN"], "activites": ["Scénarios d’architecture sécurisée"], "resultats_attendus": ["Contrôles alignés aux exigences"] },
+    { "module": "IAM & Test (Dom.5-6)", "duree": "1 jour", "contenus": ["Contrôles d’accès", "Évaluation & test"], "activites": ["Design IAM & plan de test"], "resultats_attendus": ["Contrôles IAM robustes"] },
+    { "module": "Opérations & Développement (Dom.7-8)", "duree": "1 jour", "contenus": ["Ops sécurité, continuité", "SDLC sécurisé"], "activites": ["Tabletop BCP/DRP"], "resultats_attendus": ["Résilience renforcée"] },
+    { "module": "Examens blancs & stratégie", "duree": "1 jour", "contenus": ["Stratégies d’épreuve", "Revues rapides"], "activites": ["Examens blancs chronométrés"], "resultats_attendus": ["Préparation à l’examen"] }
+  ],
+  "competences": ["Gestion des risques", "Architecture sécurité", "IAM", "Ops sécurité", "Sécurité applicative"],
+  "certifications_visees": ["cert-cissp"],
+  "postes_accessibles": ["Responsable Sécurité (RSSI)", "Architecte sécurité", "Consultant GRC"],
+  "salaire_moyen": "45 000€ - 85 000€",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH"] }
+}

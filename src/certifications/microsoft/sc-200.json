@@ -1,0 +1,25 @@
+{
+  "id": "cert-sc-200",
+  "type": "certification",
+  "code": "SC-200",
+  "titre": "Microsoft Certified: Security Operations Analyst Associate",
+  "editeur": "Microsoft",
+  "niveau": "Associate",
+  "domaines": [
+    "Opérations SOC avec Microsoft Sentinel (SIEM) et SOAR",
+    "Détection, investigation et chasse aux menaces (KQL)",
+    "XDR Microsoft Defender (Endpoint, Identity, Office, Cloud)",
+    "Réponse à incident et remédiation"
+  ],
+  "description": "Certification orientée opérations sécurité validant la capacité à réduire les risques, détecter et répondre aux menaces avec Sentinel et la suite Defender.",
+  "roles_vises": ["Analyste SOC L1/L2", "Threat Hunter", "Ingénieur Sécurité"],
+  "cours_recommandes": ["formation-cyber-sc-200"],
+  "prerequis": "Notions d’Azure/M365, bases Windows/Linux et concepts SOC (SIEM/EDR).",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM/scénarios",
+    "langue": "EN/FR (selon disponibilité)"
+  },
+  "liens_officiels": [],
+  "langue": "FR"
+}

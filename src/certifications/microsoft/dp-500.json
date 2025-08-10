@@ -1,0 +1,26 @@
+{
+  "id": "cert-dp-500",
+  "type": "certification",
+  "code": "DP-500",
+  "titre": "Microsoft Certified: Azure Enterprise Data Analyst Associate",
+  "editeur": "Microsoft",
+  "niveau": "Associate",
+  "domaines": [
+    "Modélisation sémantique et gouvernance dans Fabric/Power BI",
+    "Ingestion et préparation de données (Dataflows, pipelines)",
+    "Performance, sécurité (RLS/OLS) et partage",
+    "Monitoring, optimisation des coûts et collaboration"
+  ],
+  "description": "Certification axée sur l’analyse d’entreprise à l’échelle, couvrant Fabric/Power BI et les bonnes pratiques de gouvernance et performance.",
+  "roles_vises": ["Data Analyst", "BI Developer", "Analytics Engineer"],
+  "cours_recommandes": ["formation-data-fabric"],
+  "prerequis": "Bases solides en BI (Power BI/SQL) et concepts d’architecture data.",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM et études de cas/scénarios",
+    "langue": "EN/FR (selon disponibilité)"
+  },
+  "renouvellement": "Évaluation de renouvellement en ligne annuelle (Microsoft).",
+  "liens_officiels": [],
+  "langue": "FR"
+}

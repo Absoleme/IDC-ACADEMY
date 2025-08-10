@@ -1,0 +1,16 @@
+{
+  "id": "cert-ckad",
+  "type": "certification",
+  "code": "CKAD",
+  "titre": "Certified Kubernetes Application Developer",
+  "editeur": "Linux Foundation / CNCF",
+  "niveau": "Application Developer",
+  "domaines": ["Développement d’applications sur Kubernetes", "Design de workloads", "Config & Sécurité de base", "Observabilité"],
+  "description": "Certification orientée développeurs validant la capacité à concevoir, construire et déployer des applications sur Kubernetes.",
+  "roles_vises": ["DevOps Engineer", "Kubernetes Application Developer", "Cloud-Native Developer"],
+  "cours_recommandes": ["formation-devops-ckad"],
+  "prerequis": "Connaissances containers, YAML, et patterns de déploiement K8s (Deployments, Services, ConfigMap/Secret).",
+  "examen": { "format": "Pratique en ligne supervisé", "type": "Mises en situation sur terminal" },
+  "liens_officiels": [],
+  "langue": "FR"
+}

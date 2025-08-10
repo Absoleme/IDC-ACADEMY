@@ -1,0 +1,30 @@
+{
+  "id": "cert-cissp",
+  "type": "certification",
+  "code": "CISSP",
+  "titre": "Certified Information Systems Security Professional",
+  "editeur": "(ISC)²",
+  "niveau": "Expert",
+  "domaines": [
+    "Sécurité et gestion des risques",
+    "Sécurité des actifs",
+    "Architecture et ingénierie de la sécurité",
+    "Sécurité des communications et réseaux",
+    "Gestion des identités et des accès",
+    "Évaluation et tests de sécurité",
+    "Opérations de sécurité",
+    "Sécurité du développement logiciel"
+  ],
+  "description": "Certification senior axée sur la maîtrise des principes, cadres et meilleures pratiques de la sécurité de l’information à l’échelle de l’entreprise.",
+  "roles_vises": ["Responsable Sécurité (RSSI)", "Architecte sécurité", "Consultant GRC/SSI"],
+  "cours_recommandes": ["formation-cyber-cissp"],
+  "prerequis": "Expérience professionnelle substantielle en sécurité (voir exigences (ISC)²).",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM adaptatif/linéaire selon langue, orienté gestion du risque",
+    "langue": "EN (français partiel selon sessions)"
+  },
+  "renouvellement": "Crédits CPE annuels et adhésion (ISC)² requis pour le maintien.",
+  "liens_officiels": [],
+  "langue": "FR"
+}

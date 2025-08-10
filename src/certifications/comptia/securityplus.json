@@ -1,0 +1,27 @@
+{
+  "id": "cert-securityplus",
+  "type": "certification",
+  "code": "Security+",
+  "titre": "CompTIA Security+",
+  "editeur": "CompTIA",
+  "niveau": "Intermédiaire",
+  "domaines": [
+    "Menaces, attaques et vulnérabilités",
+    "Architecture et design sécurisés (on‑prem et cloud)",
+    "Opérations sécurité et réponse à incident",
+    "Gestion des identités et accès (IAM)",
+    "Cryptographie et PKI",
+    "Gouvernance, gestion des risques et conformité"
+  ],
+  "description": "Certification généraliste couvrant les fondamentaux pratiques de la cybersécurité pour les équipes IT et sécurité.",
+  "roles_vises": ["Technicien sécurité", "Analyste SOC junior", "Administrateur systèmes/réseaux (sécurité)"],
+  "cours_recommandes": ["formation-cyber-securityplus"],
+  "prerequis": "Connaissances IT générales (réseau, systèmes).",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM + tâches pratiques (performance-based)",
+    "langue": "EN (autres langues possibles)"
+  },
+  "liens_officiels": [],
+  "langue": "FR"
+}

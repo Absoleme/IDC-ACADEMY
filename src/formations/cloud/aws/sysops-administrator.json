@@ -1,0 +1,151 @@
+{
+    "id": "formation-aws-sysops-administrator",
+    "type": "formation",
+    "code": null,
+    "titre": "AWS SysOps Administrator: Administration AWS",
+    "categorie": "Cloud",
+    "sous_categorie": "AWS",
+    "resume": "Administrer et opérer des environnements AWS: déploiement, monitoring, sécurité opérationnelle, sauvegardes et automatisation. Prépare à SOA-C02.",
+    "public": "Administrateurs systèmes/Cloud, DevOps/ops, ingénieurs production.",
+    "prerequis": "Connaissances AWS de base (Cloud Practitioner) et notions d’architecture (SAA recommandé). Compétences systèmes et réseaux.",
+    "duree_formation": "3 jours",
+    "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+    "objectifs": [
+        "Déployer et gérer des workloads dans AWS.",
+        "Superviser et dépanner via CloudWatch/CloudTrail et journaux.",
+        "Automatiser avec IaC et scripts (CloudFormation, CLI).",
+        "Mettre en œuvre sauvegarde, restauration et haute dispo.",
+        "Se préparer à l’examen SOA-C02."
+    ],
+    "moyen_et_modalite": "Exposés, labs guidés et études de cas d’exploitation. Présentiel ou distanciel synchrone. Supports et templates fournis.",
+    "moyens_techniques": "Poste apprenant, compte AWS de lab, AWS CLI/SDK, CloudFormation, plateforme visio, supports numériques.",
+    "adaptation_et_suivi": "Positionnement initial, adaptation des labs au niveau, suivi des acquis, assistance post-formation courte.",
+    "evaluation_parcours": "Positionnement d’entrée, TP notés, QCM final type SOA-C02. Attestation de fin de formation.",
+    "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+    "handicap": {
+        "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+        "partenaires": {
+            "AGEFIPH": {
+                "contacts": [
+                    "Bastien GIESBERGER",
+                    "M'Ballo SECK"
+                ],
+                "email": "rhf-idf@agefiph.asso.fr",
+                "canal": "Contact mail uniquement"
+            },
+            "MDPH": {
+                "nom": "MDPH 75 de Paris",
+                "adresse": "69 rue de la Victoire 75009 Paris",
+                "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+                "email": "contact@mdph.paris.fr"
+            },
+            "CAP_EMPLOI": {
+                "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+                "telephone": "01 44 52 40 60"
+            },
+            "APAJH": {
+                "nom": "Fédération APAJH",
+                "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+            }
+        }
+    },
+    "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+    "prix": "Nous consulter",
+    "contact": {
+        "email": "contact@idcacademy.fr",
+        "telephone": "07 59 56 59 18"
+    },
+    "programme_detaille": [
+        {
+            "module": "Déploiement et configuration",
+            "duree": "0,75 jour",
+            "contenus": [
+                "EC2, AMI, Auto Scaling",
+                "ELB/ALB, Route 53",
+                "CloudFormation basics"
+            ],
+            "activites": [
+                "Lab: déploiement auto-scaling"
+            ],
+            "resultats_attendus": [
+                "Déployer des workloads reproductibles"
+            ]
+        },
+        {
+            "module": "Monitoring et dépannage",
+            "duree": "0,5 jour",
+            "contenus": [
+                "CloudWatch (logs/metrics/alarms)",
+                "CloudTrail, Config"
+            ],
+            "activites": [
+                "Lab: dashboards et alertes"
+            ],
+            "resultats_attendus": [
+                "Superviser et diagnostiquer efficacement"
+            ]
+        },
+        {
+            "module": "Sécurité opérationnelle",
+            "duree": "0,5 jour",
+            "contenus": [
+                "IAM, KMS",
+                "Backups (AWS Backup), patching"
+            ],
+            "activites": [
+                "Lab: sauvegarde/restauration VM"
+            ],
+            "resultats_attendus": [
+                "Opérer en respectant la sécurité et la conformité"
+            ]
+        },
+        {
+            "module": "Automatisation et optimisation",
+            "duree": "0,5 jour",
+            "contenus": [
+                "CloudFormation, CLI, SDK",
+                "Optimisation coûts et performances"
+            ],
+            "activites": [
+                "Lab: stack CloudFormation paramétrée"
+            ],
+            "resultats_attendus": [
+                "Automatiser et optimiser l’exploitation AWS"
+            ]
+        }
+    ],
+    "competences": [
+        "Administration AWS",
+        "Supervision et dépannage",
+        "Sécurité opérationnelle",
+        "Automatisation (IaC)"
+    ],
+    "certifications_visees": [
+        "cert-aws-soa-c02"
+    ],
+    "postes_accessibles": [
+        "SysOps Administrator",
+        "Cloud Administrator",
+        "DevOps/Ops Cloud"
+    ],
+    "salaire_moyen": "45 000€ - 75 000€ selon expérience",
+    "modalites": [
+        "Présentiel",
+        "Distanciel"
+    ],
+    "langue": "FR",
+    "organisme": "IDC ACADEMY",
+    "meta": {
+        "buttons_alignment": "center",
+        "financement_eligibilite": [
+            "OPCO",
+            "CPF",
+            "FNE",
+            "AIF",
+            "PTP",
+            "Dispositifs régionaux",
+            "AGEFIPH",
+            "AFPR/POEI"
+        ]
+    }
+}

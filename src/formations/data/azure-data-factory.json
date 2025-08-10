@@ -1,0 +1,43 @@
+{
+  "id": "formation-data-fabric",
+  "type": "formation",
+  "code": "FABRIC",
+  "titre": "Microsoft Fabric — Plateforme unifiée d'analyse",
+  "categorie": "Data",
+  "sous_categorie": "Microsoft Data Platform",
+  "resume": "Découvrir et mettre en œuvre Microsoft Fabric pour l’ingestion, l’ingénierie, l’entreposage, l’analyse et la BI unifiées.",
+  "public": "Data Analysts, Data Engineers, BI Developers, Architectes Data.",
+  "prerequis": "Bases SQL/BI et notions Azure recommandées.",
+  "duree_formation": "4 jours",
+  "inscription": "Contact, analyse du besoin, validation, convention/convocation.",
+  "objectifs": [
+    "Comprendre l’architecture de Fabric (OneLake, workspaces, items).",
+    "Mettre en place des pipelines/ingestions et Lakehouses.",
+    "Créer des modèles sémantiques et rapports Power BI sur Fabric.",
+    "Gérer la gouvernance, sécurité et coûts (capacités, rôles, partage)."
+  ],
+  "moyen_et_modalite": "Cours + démos + labs guidés (tenant de lab). Présentiel/distanciel.",
+  "moyens_techniques": "Microsoft Fabric, OneLake, Data Pipelines, Lakehouse, Notebooks, Power BI.",
+  "adaptation_et_suivi": "Positionnement initial, cas d’usage, Q&A, ressources post-formation.",
+  "evaluation_parcours": "Labs et QCM final, attestation.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": { "texte": "Aménagements possibles selon besoins." },
+  "evaluation_du_besoin": "Questionnaire d’adéquation avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Vue d’ensemble & gouvernance", "duree": "0,5 j", "contenus": ["Capacités & licences", "Workspaces & rôles", "OneLake & sécurité"] },
+    { "module": "Ingestion & pipelines", "duree": "1 j", "contenus": ["Connexions data", "Dataflows Gen2", "Orchestration"] },
+    { "module": "Lakehouse & notebooks", "duree": "1 j", "contenus": ["Delta/Parquet", "Spark notebooks", "Nettoyage & préparation"] },
+    { "module": "Modèles & BI", "duree": "1 j", "contenus": ["Modeling sémantique", "DAX de base", "Rapports & partage"] },
+    { "module": "Ops & FinOps", "duree": "0,5 j", "contenus": ["Surveillance", "Optimisation coûts", "Bonnes pratiques"] }
+  ],
+  "competences": ["Fabric & OneLake", "Pipelines/ETL", "Lakehouse", "Modélisation BI", "Gouvernance"],
+  "certifications_visees": ["cert-dp-500"],
+  "postes_accessibles": ["Data Analyst", "BI Developer", "Data Engineer"],
+  "salaire_moyen": "45 000€ - 80 000€",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH"] }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "formation-devops-cka",
+  "type": "formation",
+  "code": "CKA",
+  "titre": "Préparation Kubernetes CKA - Administrator",
+  "categorie": "DevOps",
+  "sous_categorie": "Kubernetes",
+  "resume": "Administrer des clusters Kubernetes: installation, plan de contrôle, scheduling, sécurité, réseau, stockage. Préparation CKA.",
+  "public": "Admins systèmes/Cloud, DevOps, SRE gérant des clusters Kubernetes.",
+  "prerequis": "Connaissances Linux, Docker/containers et réseaux de base.",
+  "duree_formation": "4 jours",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Installer et configurer un cluster Kubernetes.",
+    "Gérer le plan de contrôle, les nœuds et le scheduling.",
+    "Configurer le réseau, la sécurité (RBAC) et le stockage.",
+    "Dépanner et maintenir un cluster en production."
+  ],
+  "moyen_et_modalite": "Cours intensif + nombreux labs proches de l’examen. Présentiel ou distanciel. Supports et banque d’exercices inclus.",
+  "moyens_techniques": "Environnements K8s (kind/minikube/kubeadm), kubectl, container runtime, VS Code, visioconférence.",
+  "adaptation_et_suivi": "Positionnement, parcours de labs progressifs, corrections guidées, coaching d’examen.",
+  "evaluation_parcours": "TP pratiques chronométrés, auto-évaluations, QCM final. Attestation.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": { "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"], "email": "rhf-idf@agefiph.asso.fr", "canal": "Contact mail uniquement" },
+      "MDPH": { "nom": "MDPH 75 de Paris", "adresse": "69 rue de la Victoire 75009 Paris", "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)", "email": "contact@mdph.paris.fr" },
+      "CAP_EMPLOI": { "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris", "telephone": "01 44 52 40 60" },
+      "APAJH": { "nom": "Fédération APAJH", "adresse": "33 avenue du Maine 75755 Paris Cedex 15" }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Architecture et installation", "duree": "1 jour", "contenus": ["kubeadm, composants du control plane", "Gestion des nœuds, certificats, etcd"], "activites": ["Montage cluster kubeadm", "Backup/restore etcd"], "resultats_attendus": ["Cluster fonctionnel, notions d’HA"] },
+    { "module": "Workloads et scheduling", "duree": "1 jour", "contenus": ["Pods, Deployments, DaemonSets, Jobs", "Probes, affinities, taints/tolerations"], "activites": ["Scénarios de scheduling", "HA et rollouts"], "resultats_attendus": ["Workloads maîtrisés et observables"] },
+    { "module": "Réseau et sécurité", "duree": "1 jour", "contenus": ["CNI, Services, Ingress", "RBAC, ServiceAccounts, secrets"], "activites": ["Mise en place d’Ingress", "RBAC least privilege"], "resultats_attendus": ["Réseau opérationnel et RBAC en place"] },
+    { "module": "Stockage, maintenance et troubleshooting", "duree": "1 jour", "contenus": ["PV/PVC/StorageClass", "Logs, events, debug, upgrades"], "activites": ["PV dynamiques", "Dépannage guidé"], "resultats_attendus": ["Savoir maintenir et dépanner un cluster"] }
+  ],
+  "competences": ["Administration Kubernetes", "Réseau et stockage K8s", "RBAC et sécurité de base", "Dépannage et maintenance"],
+  "certifications_visees": ["cert-cka"],
+  "postes_accessibles": ["Kubernetes Administrator", "DevOps Engineer", "SRE"],
+  "salaire_moyen": "50 000€ - 85 000€ selon expérience",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "FNE", "Plan de développement des compétences", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH", "AFPR/POEI"] }
+}

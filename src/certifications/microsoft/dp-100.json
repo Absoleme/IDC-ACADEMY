@@ -1,0 +1,26 @@
+{
+  "id": "cert-dp-100",
+  "type": "certification",
+  "code": "DP-100",
+  "titre": "Microsoft Certified: Azure Data Scientist Associate",
+  "editeur": "Microsoft",
+  "niveau": "Associate",
+  "domaines": [
+    "Expériences Azure ML: data, compute, entraînement et suivi",
+    "Sélection de modèles, AutoML et évaluation",
+    "Déploiement (endpoints temps réel/batch) et surveillance",
+    "MLOps, sécurité et gouvernance des expériences"
+  ],
+  "description": "Certification centrée sur le cycle de vie Data Science sur Azure Machine Learning.",
+  "roles_vises": ["Data Scientist", "ML Engineer"],
+  "cours_recommandes": ["formation-ai-azure-ml"],
+  "prerequis": "Compétences en Python, apprentissage automatique et manipulation de données.",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM/scénarios",
+    "langue": "EN/FR (selon disponibilité)"
+  },
+  "renouvellement": "Évaluation de renouvellement en ligne annuelle (Microsoft).",
+  "liens_officiels": [],
+  "langue": "FR"
+}

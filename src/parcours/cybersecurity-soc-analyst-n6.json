@@ -1,0 +1,148 @@
+{
+  "id": "parcours-cybersecurity-soc-analyst-n6",
+  "type": "parcours",
+  "titre": "Parcours Cybersecurity SOC Analyst (Niveau 6)",
+  "description": "Spécialisation analyste SOC: détection, investigation et réponse aux incidents avec Microsoft Sentinel et Defender XDR, hunting KQL, automatisation SOAR, threat intel et amélioration continue des détections.",
+  "public": "Techniciens/ingénieurs systèmes-réseaux, administrateurs Microsoft 365/Azure, débutants Blue Team, personnes en reconversion souhaitant rejoindre un SOC (N1/N2) et monter en compétence vers l’investigation et la réponse à incident.",
+  "prerequis": "Bases réseaux/systèmes (TCP/IP, Windows/Linux), notions de sécurité et de services cloud Microsoft. Connaissances de Git et PowerShell/Kusto appréciées.",
+  "duree_formation": "400h + 80h de stage",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Comprendre les opérations SOC et le framework MITRE ATT&CK, définir MTTD/MTTR et playbooks.",
+    "Collecter, normaliser et corréler les logs dans Microsoft Sentinel et Microsoft Defender XDR.",
+    "Conduire l’investigation (KQL), le threat hunting et la gestion des incidents bout-en-bout.",
+    "Automatiser la réponse (SOAR) avec Logic Apps, intégrer tickets et workflows ITSM.",
+    "Préparer et réussir les certifications Microsoft SC-200 (Security Operations Analyst) et SC-900 (Fundamentals)."
+  ],
+  "moyen_et_modalite": "Cours + ateliers pratiques, labs guidés, projets fil rouge. Présentiel ou distanciel synchrone. Supports et dépôts de code fournis.",
+  "moyens_techniques": "Repos Git, abonnement Azure/Microsoft 365, Microsoft Sentinel (SIEM/SOAR), Microsoft Defender XDR (Endpoint, Identity, Office 365, Cloud Apps), Azure Monitor/Log Analytics, Entra ID (Azure AD), Azure Key Vault, Logic Apps, KQL, outils Blue Team (Sysmon, Zeek, Suricata), gitleaks/Trivy, intégrations ITSM (Jira/ServiceNow).",
+  "adaptation_et_suivi": "Positionnement, plan de progression individualisé, mentoring technique, revues de détection et post-mortems guidés.",
+  "evaluation_parcours": "Évaluations continues, QCM, exercices de hunting, création de règles d’analytique, table-top d’incident, soutenance finale. Attestation de fin de parcours.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "90%"
+  },
+  "modules": [
+    {
+      "module": "Fondamentaux SOC, cadre ATT&CK et gestion des incidents",
+      "duree": "40h",
+      "contenus": [
+        "Rôles SOC (N1/N2/N3), processus, SLA et indicateurs (MTTD/MTTR)",
+        "MITRE ATT&CK, cyber kill chain, use-cases et détections",
+        "Gestion des incidents: préparation, détection, containment, éradication, rétablissement",
+        "Evidence handling, RGPD, traçabilité et journalisation",
+        "Threat intel: sources, IOCs, TTPs, enrichissement"
+      ],
+      "activites": [
+        "Jeu de rôle et table-top d’incident",
+        "Cartographie d’use-cases sur ATT&CK"
+      ]
+    },
+    {
+      "module": "Microsoft Sentinel: ingestion, corrélation et SOAR",
+      "duree": "80h",
+      "contenus": [
+        "Connecteurs de données (M365, Azure, Syslog, CEF), coûts et normalisation",
+        "Tables/logs, schéma ASIM, analytics rules et anomalies",
+        "Workbooks, incidents, entités et investigation",
+        "SOAR avec Logic Apps: playbooks, approbations, remédiations",
+        "Intégration ITSM (tickets) et runbooks opérationnels"
+      ],
+      "activites": [
+        "Déploiement d’un lab Sentinel et onboarding des sources",
+        "Création de règles d’analytique et playbooks automatisés"
+      ]
+    },
+    {
+      "module": "Defender XDR et protection des endpoints/identités",
+      "duree": "70h",
+      "contenus": [
+        "Defender for Endpoint: EDR, prévention, isolation, live response",
+        "Defender for Identity et Identity Protection (Entra ID)",
+        "Microsoft Defender for Office 365 et Cloud Apps",
+        "Investigation XDR unifiée: incidents, evidence, timeline",
+        "Threat & Vulnerability Management, baselines et durcissement"
+      ],
+      "activites": [
+        "Analyse d’une chaîne d’attaque endpoint → identité",
+        "Mise en place de politiques blocantes et remédiations"
+      ]
+    },
+    {
+      "module": "Hunting et KQL avancé",
+      "duree": "70h",
+      "contenus": [
+        "Kusto Query Language: opérateurs, joins, let, functions",
+        "Hunting queries, bookmarks, notebooks",
+        "Détection comportementale et analytics personnalisées",
+        "Tuning des alertes, suppression du bruit et seuils",
+        "Mesure de l’efficacité des détections (coverage, precision/recall)"
+      ],
+      "activites": [
+        "Création d’un pack de hunting partagé",
+        "Red/Blue mini-exercices et validation des alertes"
+      ]
+    },
+    {
+      "module": "Amélioration continue, reporting, conformité et préparation SC-200",
+      "duree": "60h",
+      "contenus": [
+        "Posture management: recommandations Defender/ASC, hardening",
+        "Playbooks de communication, rapports à la direction et KPIs SOC",
+        "Conformité: RGPD, journaux, conservation, preuves",
+        "Industrialisation: GitOps pour détections et workbooks",
+        "Exam readiness SC-200 et fondamentaux SC-900"
+      ],
+      "activites": [
+        "CI/CD des règles Sentinel via Git et templates",
+        "Examen blanc SC-200 et plan d’entraînement"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-sc-200",
+    "cert-sc-900"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

@@ -1,0 +1,174 @@
+{
+    "id": "formation-az-104",
+    "type": "formation",
+    "code": "AZ-104",
+    "titre": "Administration Microsoft Azure",
+    "categorie": "Cloud",
+    "sous_categorie": "Azure",
+    "resume": "Apprendre à administrer les services Azure: identités, gouvernance, ressources compute, réseau, stockage, supervision et sauvegardes. Prépare à la certification AZ-104.",
+    "public": "Administrateurs systèmes/Cloud, techniciens IT, ingénieurs production, profils en reconversion vers l’administration Azure.",
+    "prerequis": "Connaissances de base d’Azure (AZ-900 recommandé), notions systèmes/réseaux, pratique de PowerShell ou CLI appréciée.",
+    "duree_formation": "4 jours",
+    "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+    "objectifs": [
+        "Gérer les identités et la gouvernance (Azure AD/Entra ID, RBAC, Policy).",
+        "Implémenter et gérer le stockage (Blob, Files, disks).",
+        "Déployer et administrer les calculs Azure (VM, scale sets, images).",
+        "Configurer et gérer le réseau virtuel (VNet, sous-réseaux, NSG, LB, VPN).",
+        "Surveiller, sauvegarder et restaurer les ressources (Monitor, Backup)."
+    ],
+    "moyen_et_modalite": "Animation par formateur MCT. Alternance d’apports théoriques, démonstrations et labs guidés. Modalités: présentiel ou distanciel synchrone. Supports et ressources officielles fournis.",
+    "moyens_techniques": "Poste apprenant avec Internet, abonnement Azure de lab/sandbox, outils CLI/PowerShell, plateforme visio, support de cours numérique.",
+    "adaptation_et_suivi": "Positionnement préalable, adaptation du rythme et des cas d’usage, suivi quotidien des acquis, points d’étape, assistance post-formation courte.",
+    "evaluation_parcours": "Positionnement d’entrée, quiz intermédiaires, QCM final aligné AZ-104, étude de cas d’administration. Attestation de fin de formation.",
+    "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+    "handicap": {
+        "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+        "partenaires": {
+            "AGEFIPH": {
+                "contacts": [
+                    "Bastien GIESBERGER",
+                    "M'Ballo SECK"
+                ],
+                "email": "rhf-idf@agefiph.asso.fr",
+                "canal": "Contact mail uniquement"
+            },
+            "MDPH": {
+                "nom": "MDPH 75 de Paris",
+                "adresse": "69 rue de la Victoire 75009 Paris",
+                "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+                "email": "contact@mdph.paris.fr"
+            },
+            "CAP_EMPLOI": {
+                "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+                "telephone": "01 44 52 40 60"
+            },
+            "APAJH": {
+                "nom": "Fédération APAJH",
+                "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+            }
+        }
+    },
+    "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+    "prix": "Nous consulter",
+    "contact": {
+        "email": "contact@idcacademy.fr",
+        "telephone": "07 59 56 59 18"
+    },
+    "programme_detaille": [
+        {
+            "module": "Identités, gouvernance et accès",
+            "duree": "0,5 jour",
+            "contenus": [
+                "Entra ID (Azure AD), groupes, RBAC",
+                "Abonnements, groupes de ressources",
+                "Azure Policy, Blueprints"
+            ],
+            "activites": [
+                "Lab: création d’utilisateurs et RBAC",
+                "Mise en conformité via Policy"
+            ],
+            "resultats_attendus": [
+                "Savoir gérer identités, rôles et politiques de conformité"
+            ]
+        },
+        {
+            "module": "Stockage Azure",
+            "duree": "0,5 jour",
+            "contenus": [
+                "Comptes de stockage, Blob/Files",
+                "Sécurité (SAS, RBAC)",
+                "Redondance, lifecycle management"
+            ],
+            "activites": [
+                "Lab: partage de fichiers Azure Files",
+                "Gestion d’accès par SAS"
+            ],
+            "resultats_attendus": [
+                "Administrer un stockage sécurisé et résilient"
+            ]
+        },
+        {
+            "module": "Compute: VM et images",
+            "duree": "1 jour",
+            "contenus": [
+                "Déploiement VM, images custom",
+                "Scale sets, disponibilité",
+                "Extensions, backup VM"
+            ],
+            "activites": [
+                "Lab: déployer une VM via ARM/CLI",
+                "Sauvegarde et restauration"
+            ],
+            "resultats_attendus": [
+                "Déployer et gérer des workloads compute"
+            ]
+        },
+        {
+            "module": "Réseau virtuel",
+            "duree": "1 jour",
+            "contenus": [
+                "VNet, sous-réseaux, DNS",
+                "NSG, Load Balancer, Application Gateway",
+                "Peering, VPN, Bastion"
+            ],
+            "activites": [
+                "Lab: peering de VNets",
+                "Exposition d’un service via LB"
+            ],
+            "resultats_attendus": [
+                "Configurer un réseau sécurisé et performant"
+            ]
+        },
+        {
+            "module": "Supervision, backup et continuité",
+            "duree": "1 jour",
+            "contenus": [
+                "Azure Monitor, Log Analytics, alerts",
+                "Azure Backup, Site Recovery (ASR)",
+                "Mise à l’échelle, coûts"
+            ],
+            "activites": [
+                "Lab: alertes et tableaux de bord",
+                "Plan de sauvegarde/restauration"
+            ],
+            "resultats_attendus": [
+                "Assurer supervision et protection des ressources"
+            ]
+        }
+    ],
+    "competences": [
+        "Administration Azure (identités, ressources, gouvernance)",
+        "Réseaux virtuels et sécurité",
+        "Stockage et compute",
+        "Supervision, sauvegarde et optimisation"
+    ],
+    "certifications_visees": [
+        "cert-az-104"
+    ],
+    "postes_accessibles": [
+        "Administrateur Cloud",
+        "Azure Administrator",
+        "Cloud Engineer"
+    ],
+    "salaire_moyen": "45 000€ - 75 000€ selon expérience",
+    "modalites": [
+        "Présentiel",
+        "Distanciel"
+    ],
+    "langue": "FR",
+    "organisme": "IDC ACADEMY",
+    "meta": {
+        "buttons_alignment": "center",
+        "financement_eligibilite": [
+            "OPCO",
+            "CPF",
+            "FNE",
+            "AIF",
+            "PTP",
+            "Dispositifs régionaux",
+            "AGEFIPH",
+            "AFPR/POEI"
+        ]
+    }
+}

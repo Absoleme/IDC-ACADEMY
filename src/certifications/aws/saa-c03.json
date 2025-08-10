@@ -1,0 +1,26 @@
+{
+    "id": "cert-aws-saa-c03",
+    "type": "certification",
+    "code": "SAA-C03",
+    "titre": "AWS Certified Solutions Architect – Associate",
+    "editeur": "AWS",
+    "niveau": "Associate",
+    "domaines": [
+        "Cloud"
+    ],
+    "description": "Valide la capacité à concevoir des solutions AWS sécurisées, résilientes, performantes et optimisées en coûts selon le cadre Well-Architected.",
+    "roles_vises": [
+        "Cloud Solutions Architect",
+        "Cloud Architect junior",
+        "Cloud Engineer"
+    ],
+    "cours_associes": [
+        "formation-aws-solutions-architect-associate"
+    ],
+    "prerequis": "Connaissances AWS et d’architecture cloud.",
+    "examen": "SAA-C03",
+    "langue": "FR",
+    "meta": {
+        "buttons_alignment": "center"
+    }
+}

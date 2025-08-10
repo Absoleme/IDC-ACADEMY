@@ -1,0 +1,50 @@
+{
+  "id": "formation-cyber-sensibilisation",
+  "type": "formation",
+  "code": null,
+  "titre": "Sensibilisation à la Cybersécurité pour les collaborateurs",
+  "categorie": "Cybersécurité",
+  "sous_categorie": "Sensibilisation",
+  "resume": "Former vos équipes aux menaces actuelles, aux bons réflexes et à la conformité (mots de passe, MFA, phishing, RGPD, mobilité).",
+  "public": "Tous collaborateurs, managers, équipes support et terrain.",
+  "prerequis": "Aucun.",
+  "duree_formation": "1 à 2 jours",
+  "inscription": "Contact, questionnaire d’analyse, validation, convention/convocation.",
+  "objectifs": [
+    "Reconnaître les tentatives de phishing et les signaux d’alerte.",
+    "Appliquer de bonnes pratiques d’authentification et de gestion des mots de passe.",
+    "Sécuriser les postes de travail et les usages mobiles/nuagiques.",
+    "Comprendre les bases de conformité RGPD et la gestion d’un incident."
+  ],
+  "moyen_et_modalite": "Ateliers interactifs, démonstrations, quiz et mises en situation. Présentiel ou distanciel.",
+  "moyens_techniques": "Plateforme de visio, supports pédagogiques, simulateur de phishing (option), quiz en ligne.",
+  "adaptation_et_suivi": "Contenu personnalisable à vos risques métiers, suivi de participation, relances post-session.",
+  "evaluation_parcours": "Quiz diagnostique, quiz final, attestation.",
+  "delai_acces": "Sous 2 à 4 semaines selon planning.",
+  "handicap": {
+    "texte": "Nos formations sont accessibles aux personnes en situation de handicap. Aménagements possibles après étude du besoin.",
+    "partenaires": {
+      "AGEFIPH": { "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"], "email": "rhf-idf@agefiph.asso.fr", "canal": "Contact mail uniquement" },
+      "MDPH": { "nom": "MDPH 75 de Paris", "adresse": "69 rue de la Victoire 75009 Paris", "telephone": "01 53 32 39 39 ou 0 805 80 09 09", "email": "contact@mdph.paris.fr" },
+      "CAP_EMPLOI": { "adresse": "43 Bis Rue d’Hautpoul, 75019 Paris", "telephone": "01 44 52 40 60" },
+      "APAJH": { "nom": "Fédération APAJH", "adresse": "33 avenue du Maine 75755 Paris Cedex 15" }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire d’adéquation du besoin proposé avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Panorama des menaces", "duree": "0,5 jour", "contenus": ["Phishing, ransomware, fraude au président", "Shadow IT"], "activites": ["Démo d’un phishing ciblé"], "resultats_attendus": ["Réflexes anti-phishing"] },
+    { "module": "Hygiène numérique", "duree": "0,5 jour", "contenus": ["Mots de passe/MFA", "Mises à jour, sauvegardes"], "activites": ["Atelier gestionnaires de mots de passe"], "resultats_attendus": ["Poste mieux sécurisé"] },
+    { "module": "Mobilité & Cloud", "duree": "0,5 jour", "contenus": ["Sécurité mobile", "Bonnes pratiques M365/Drive"], "activites": ["Checklist BYOD"], "resultats_attendus": ["Usages mobiles maîtrisés"] },
+    { "module": "RGPD & incidents", "duree": "0,5 jour", "contenus": ["Bases RGPD", "Signalement incident"], "activites": ["Exercice d’alerte interne"], "resultats_attendus": ["Réaction appropriée face à un incident"] }
+  ],
+  "competences": ["Culture cyber", "Hygiène informatique", "RGPD de base", "Réaction à incident"],
+  "certifications_visees": [],
+  "postes_accessibles": ["Tous métiers - sensibilisation"],
+  "salaire_moyen": null,
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH", "AFPR/POEI"] }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "cert-terraform-associate",
+  "type": "certification",
+  "code": null,
+  "titre": "HashiCorp Certified: Terraform Associate",
+  "editeur": "HashiCorp",
+  "niveau": "Associate",
+  "domaines": ["Infrastructure as Code", "Cloud", "Automatisation", "CI/CD"],
+  "description": "Certification validant les compétences fondamentales sur Terraform: HCL, gestion d’état, modules, workflows d’industrialisation et bonnes pratiques.",
+  "roles_vises": ["DevOps Engineer", "Cloud Engineer", "Platform Engineer"],
+  "cours_recommandes": ["formation-devops-terraform"],
+  "prerequis": "Expérience pratique recommandée avec Terraform et au moins un cloud public, notions de Git.",
+  "examen": { "format": "En ligne supervisé", "type": "QCM" },
+  "liens_officiels": [],
+  "langue": "FR"
+}

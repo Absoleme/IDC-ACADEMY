@@ -1,0 +1,26 @@
+{
+    "id": "cert-aws-soa-c02",
+    "type": "certification",
+    "code": "SOA-C02",
+    "titre": "AWS Certified SysOps Administrator – Associate",
+    "editeur": "AWS",
+    "niveau": "Associate",
+    "domaines": [
+        "Cloud"
+    ],
+    "description": "Valide les compétences d’exploitation et d’administration des environnements AWS: déploiement, supervision, sécurité opérationnelle et automatisation.",
+    "roles_vises": [
+        "SysOps Administrator",
+        "Cloud Administrator",
+        "DevOps/Ops Cloud"
+    ],
+    "cours_associes": [
+        "formation-aws-sysops-administrator"
+    ],
+    "prerequis": "Expérience pratique d’exploitation AWS.",
+    "examen": "SOA-C02",
+    "langue": "FR",
+    "meta": {
+        "buttons_alignment": "center"
+    }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "parcours-fullstack-web-developer-n6",
+  "type": "parcours",
+  "titre": "Parcours Fullstack Web Developer (Niveau 6)",
+  "description": "Spécialisation développement web moderne de bout en bout : front-end (React/Next.js), back-end (Node.js/NestJS), bases de données SQL/NoSQL, API REST/GraphQL, tests, CI/CD, conteneurisation et déploiement cloud sur Azure.",
+  "public": "Développeurs juniors, intégrateurs, techniciens applicatifs, profils en reconversion souhaitant concevoir, développer, tester et opérer des applications web de A à Z.",
+  "prerequis": "Logique de programmation et bases en HTML/CSS/JS. Des notions en Git et ligne de commande sont un plus.",
+  "duree_formation": "400h + 80h de stage",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Concevoir des interfaces modernes, accessibles et performantes avec React/Next.js et TypeScript.",
+    "Développer des APIs sécurisées (REST/GraphQL) avec Node.js/NestJS et mettre en œuvre l’authentification/autorisation.",
+    "Modéliser les données et maîtriser la persistance avec PostgreSQL/SQL (et notions NoSQL), migrations et optimisation.",
+    "Industrialiser la qualité avec tests (unitaires, intégration, E2E), linting, formatage et revues de code.",
+    "Mettre en place CI/CD, conteneurisation Docker et déployer sur Azure (Web Apps/Container Apps) avec observabilité.",
+    "Préparer la certification AZ-204 (Azure Developer Associate) et une certification Node.js OpenJS (JSNAD)."
+  ],
+  "moyen_et_modalite": "Cours + ateliers pratiques, pair programming, labs guidés et projet fil rouge. Présentiel ou distanciel synchrone. Supports, dépôts Git et environnements cloud fournis.",
+  "moyens_techniques": "Git/GitHub, GitHub Projects/Azure Boards, GitHub Actions/Azure Pipelines, Node.js LTS, TypeScript, React, Next.js, Tailwind CSS/MUI, Jest/Vitest, Testing Library/Playwright/Cypress, ESLint/Prettier, NestJS/Express, REST/GraphQL (Apollo), PostgreSQL (Azure Database), Prisma/TypeORM, Redis, Azure Storage/Blob, Docker/Docker Compose, Azure Container Registry, Azure Web Apps/Container Apps, Azure Key Vault, Application Insights.",
+  "adaptation_et_suivi": "Positionnement, plan de progression individualisé, mentoring technique, revues de code, sprint reviews et coaching insertion.",
+  "evaluation_parcours": "Évaluations continues, katas, QCM, revues de PR, couverture de tests, audits de sécurité OWASP, soutenance finale avec démonstration du projet déployé.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "90%"
+  },
+  "modules": [
+    {
+      "module": "Culture web, Git, JavaScript moderne et TypeScript",
+      "duree": "50h",
+      "contenus": [
+        "Web standards, HTTP, HTML5/CSS3, responsive et accessibilité (RGAA/WCAG)",
+        "Git branching, PR, conventions de commits et code review",
+        "JavaScript moderne (ES2023+), modules, async/await, fetch",
+        "TypeScript: types, interfaces, generics, tooling",
+        "Qualité: ESLint, Prettier, tests unitaires (Jest/Vitest), clean code, sécurité OWASP (bases)"
+      ],
+      "activites": [
+        "Atelier Git avancé et workflow collaboratif",
+        "Katas JS/TS avec TDD et CI rapide"
+      ]
+    },
+    {
+      "module": "Front-end moderne avec React et Next.js",
+      "duree": "80h",
+      "contenus": [
+        "React 18: hooks, contexte, gestion d’état (Zustand/Redux Toolkit)",
+        "Next.js: routing App Router, data fetching (SSR/SSG/ISR), images, formulaires (React Hook Form)",
+        "UI/UX: Tailwind CSS/MUI, design system, i18n, accessibilité",
+        "Performance et SEO: code splitting, caching, Core Web Vitals",
+        "Tests: Testing Library et end-to-end (Playwright/Cypress)"
+      ],
+      "activites": [
+        "Construction d’une SPA puis migration en Next.js",
+        "Audit d’accessibilité et optimisation des performances"
+      ]
+    },
+    {
+      "module": "Back-end avec Node.js/NestJS et APIs REST/GraphQL",
+      "duree": "80h",
+      "contenus": [
+        "Node.js: event loop, streams, sécurité et bonnes pratiques",
+        "NestJS/Express: architecture, modules, validation (class-validator/Zod)",
+        "APIs REST et GraphQL (Apollo): pagination, filtres, uploads",
+        "AuthN/AuthZ: JWT, sessions, OAuth2/OIDC (Entra ID/Identity Provider)",
+        "Tâches asynchrones, files et jobs (BullMQ), envoi d’emails"
+      ],
+      "activites": [
+        "Création d’une API sécurisée avec authentification et rôles",
+        "Batterie de tests d’intégration et documentation OpenAPI"
+      ]
+    },
+    {
+      "module": "Données: PostgreSQL, ORM et cache",
+      "duree": "50h",
+      "contenus": [
+        "Modélisation et schéma relationnel, clés et intégrité",
+        "ORM (Prisma/TypeORM), migrations et transactions",
+        "Performances: index, plans d’exécution (lecture), pooling",
+        "Cache Redis, recherche texte, files d’attente",
+        "Stockage objet (Azure Blob) et notions NoSQL"
+      ],
+      "activites": [
+        "Conception du schéma et migrations versionnées",
+        "Implémentation de pagination, recherche et cache"
+      ]
+    },
+    {
+      "module": "CI/CD, Docker, sécurité et déploiement Azure",
+      "duree": "60h",
+      "contenus": [
+        "Conteneurisation: Docker, multi-stage builds, Docker Compose",
+        "CI/CD: GitHub Actions/Azure Pipelines, quality gates, previews",
+        "Configuration: variables d’environnement, secrets (Azure Key Vault)",
+        "Déploiement: Azure Web Apps/Container Apps, ACR, DNS/TLS",
+        "Observabilité: logs, métriques, traces (Application Insights), runbook d’incident",
+        "Sécurité applicative: SCA/SAST, SBOM, dépendances et durcissement"
+      ],
+      "activites": [
+        "Pipeline PR: lint → tests → build → image → déploiement staging",
+        "Mise en production du projet fil rouge avec monitoring et rollback"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-az-204",
+    "cert-openjs-jsnad"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "formation-devops-cks",
+  "type": "formation",
+  "code": "CKS",
+  "titre": "Préparation Kubernetes CKS - Security Specialist",
+  "categorie": "DevOps",
+  "sous_categorie": "Kubernetes",
+  "resume": "Sécuriser les clusters et les workloads Kubernetes: hardening, network policies, runtime security, supply chain. Préparation CKS.",
+  "public": "Admins K8s, DevOps, SRE responsables de la sécurité des clusters.",
+  "prerequis": "Niveau CKA recommandé. Connaissances Linux, réseaux, containers.",
+  "duree_formation": "3 jours",
+  "inscription": "Contact, questionnaire d’analyse, validation, convention/convocation.",
+  "objectifs": [
+    "Appliquer les meilleures pratiques de hardening du cluster et des nœuds.",
+    "Mettre en place l’isolation réseau et la sécurité des workloads.",
+    "Sécuriser la supply chain (images, registries, admission).",
+    "Mettre en œuvre l’observabilité et la réponse à incident."
+  ],
+  "moyen_et_modalite": "Cours + labs orientés sécurité. Présentiel/distanciel. Études de cas et scénarios d’attaque/défense.",
+  "moyens_techniques": "Cluster K8s, outil d’analyse (kubebench/kubesec/trivy), SIEM/monitoring, VS Code.",
+  "adaptation_et_suivi": "Positionnement, labs progressifs, corrections guidées, coaching d’examen.",
+  "evaluation_parcours": "TP pratiques, QCM final, attestation.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": { "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"], "email": "rhf-idf@agefiph.asso.fr", "canal": "Contact mail uniquement" },
+      "MDPH": { "nom": "MDPH 75 de Paris", "adresse": "69 rue de la Victoire 75009 Paris", "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)", "email": "contact@mdph.paris.fr" },
+      "CAP_EMPLOI": { "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris", "telephone": "01 44 52 40 60" },
+      "APAJH": { "nom": "Fédération APAJH", "adresse": "33 avenue du Maine 75755 Paris Cedex 15" }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire d’adéquation du besoin proposé avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Cluster & node hardening", "duree": "1 jour", "contenus": ["Paramètres kubelet/APIServer", "Audit logs, CIS Benchmarks"], "activites": ["kubebench, durcissement Kubelet"], "resultats_attendus": ["Cluster durci et auditable"] },
+    { "module": "Workloads & network security", "duree": "1 jour", "contenus": ["PSP/PodSecurity, seccomp, AppArmor", "NetworkPolicies, Ingress sécu"], "activites": ["Policies par namespace", "RBAC least privilege"], "resultats_attendus": ["Isolation réseau et workloads sécurisés"] },
+    { "module": "Supply chain & runtime security", "duree": "1 jour", "contenus": ["Scanning images, SBOM", "Admission controllers, runtime detection"], "activites": ["Trivy + Admission OPA", "Scénarios de réponse"], "resultats_attendus": ["Chaîne logicielle contrôlée et surveillée"] }
+  ],
+  "competences": ["Hardening Kubernetes", "Network Policies", "Sécurité runtime", "Supply chain security"],
+  "certifications_visees": ["cert-cks"],
+  "postes_accessibles": ["Kubernetes Security Specialist", "DevSecOps Engineer", "SRE"],
+  "salaire_moyen": "50 000€ - 85 000€ selon expérience",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "FNE", "Plan de développement des compétences", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH", "AFPR/POEI"] }
+}

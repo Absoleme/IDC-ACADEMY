@@ -1,0 +1,27 @@
+{
+    "id": "cert-az-500",
+    "type": "certification",
+    "code": "AZ-500",
+    "titre": "Microsoft Certified: Azure Security Engineer Associate",
+    "editeur": "Microsoft",
+    "niveau": "Associate",
+    "domaines": [
+        "Cloud",
+        "Cybersécurité"
+    ],
+    "description": "Valide les compétences pour sécuriser les environnements Azure: identité, plateforme, opérations, données et applications.",
+    "roles_vises": [
+        "Security Engineer",
+        "Cloud Security Engineer",
+        "Analyste SOC"
+    ],
+    "cours_associes": [
+        "formation-az-500"
+    ],
+    "prerequis": "Connaissances Azure et sécurité réseau/IAM.",
+    "examen": "AZ-500",
+    "langue": "FR",
+    "meta": {
+        "buttons_alignment": "center"
+    }
+}

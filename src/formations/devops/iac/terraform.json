@@ -1,0 +1,52 @@
+{
+  "id": "formation-devops-terraform",
+  "type": "formation",
+  "code": null,
+  "titre": "Terraform - Infrastructure as Code",
+  "categorie": "DevOps",
+  "sous_categorie": "IaC",
+  "resume": "Automatiser le déploiement d’infrastructures multi-cloud avec Terraform (HCL, état, modules, CI/CD). Préparation à Terraform Associate.",
+  "public": "Ingénieurs DevOps, Cloud Engineers, SRE, Administrateurs systèmes souhaitant industrialiser l’infrastructure.",
+  "prerequis": "Bases Cloud (AWS/Azure/GCP) et Git recommandées. Connaissances Linux utiles.",
+  "duree_formation": "3 jours",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Écrire et structurer des configurations Terraform en HCL.",
+    "Gérer l’état, le verrouillage et les workspaces.",
+    "Concevoir et publier des modules réutilisables.",
+    "Intégrer Terraform aux pipelines CI/CD.",
+    "Appliquer les bonnes pratiques de sécurité et de gouvernance."
+  ],
+  "moyen_et_modalite": "Formation animée par un formateur expert. Alternance d’exposés, démos et labs guidés. Modalités: présentiel ou distanciel synchrone. Supports numériques fournis.",
+  "moyens_techniques": "Poste apprenant, accès Internet, Terraform CLI, comptes sandbox (Azure/AWS) fournis, VS Code, Git, plateforme de visioconférence.",
+  "adaptation_et_suivi": "Positionnement initial, adaptation du rythme et des cas d’usage, suivi quotidien des acquis, feedbacks individuels, Q&A post-formation.",
+  "evaluation_parcours": "Quiz de positionnement, évaluations formatives par labs, QCM final et mini-projet. Attestation de fin de formation.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": { "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"], "email": "rhf-idf@agefiph.asso.fr", "canal": "Contact mail uniquement" },
+      "MDPH": { "nom": "MDPH 75 de Paris", "adresse": "69 rue de la Victoire 75009 Paris", "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)", "email": "contact@mdph.paris.fr" },
+      "CAP_EMPLOI": { "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris", "telephone": "01 44 52 40 60" },
+      "APAJH": { "nom": "Fédération APAJH", "adresse": "33 avenue du Maine 75755 Paris Cedex 15" }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Fondamentaux Terraform et HCL", "duree": "0,5 jour", "contenus": ["Providers, resources, data sources", "Variables, outputs, dépendances"], "activites": ["Init projet HCL", "Plan/apply/destroy"], "resultats_attendus": ["Autonomie sur les bases HCL"] },
+    { "module": "Gestion d’état et workspaces", "duree": "0,5 jour", "contenus": ["Backends (local/remote)", "Locking, drift, imports"], "activites": ["Backend distant", "Gestion workspaces"], "resultats_attendus": ["État géré de façon sûre"] },
+    { "module": "Modules et réutilisabilité", "duree": "0,5 jour", "contenus": ["Structure module, versions", "Registry privé/public"], "activites": ["Création de module", "Publication interne"], "resultats_attendus": ["Modules réutilisables et versionnés"] },
+    { "module": "Intégration CI/CD et policy as code", "duree": "0,5 jour", "contenus": ["Pipelines (GitHub Actions/Azure DevOps)", "fmt/validate, plan PR, Sentinel/OPA"], "activites": ["Pipeline plan/apply", "Policy check"], "resultats_attendus": ["Intégration fiable en pipeline"] },
+    { "module": "Pratiques multi-cloud et sécurité", "duree": "0,5 jour", "contenus": ["AzureRM, AWS, GCP patterns", "Secrets, variables sensibles"], "activites": ["Déploiement Azure et AWS", "Gestion secrets"], "resultats_attendus": ["Bonnes pratiques multi-cloud et sécu"] }
+  ],
+  "competences": ["IaC avec Terraform", "Gestion d’état et workspaces", "Conception de modules", "CI/CD Terraform", "Sécurité et gouvernance IaC"],
+  "certifications_visees": ["cert-terraform-associate"],
+  "postes_accessibles": ["DevOps Engineer", "Cloud Engineer", "Platform Engineer", "SRE"],
+  "salaire_moyen": "50 000€ - 85 000€ selon expérience",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH", "AFPR/POEI"] }
+}

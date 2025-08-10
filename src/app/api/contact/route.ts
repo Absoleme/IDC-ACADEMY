@@ -17,11 +17,13 @@ export async function POST(request: NextRequest) {
     })
 
     // Email pour IDC Academy
+    const formationType = data.formationType === 'parcours' ? 'PARCOURS' : 'FORMATION'
     const adminEmailContent = `
-      NOUVELLE DEMANDE DE FORMATION
+      NOUVELLE DEMANDE DE ${formationType}
       =============================
       
-      Formation : ${data.formation}
+      ${formationType} : ${data.formation}
+      ${data.formationId ? `ID: ${data.formationId}` : ''}
       
       INFORMATIONS DU CANDIDAT :
       - Nom : ${data.nom}
@@ -38,21 +40,22 @@ export async function POST(request: NextRequest) {
     `
 
     // Email de confirmation pour le candidat
+    const typeText = data.formationType === 'parcours' ? 'le parcours' : 'la formation'
     const candidateEmailContent = `
       Bonjour ${data.prenom},
       
-      Nous avons bien reçu votre demande d'information concernant la formation "${data.formation}".
+      Nous avons bien reçu votre demande d'information concernant ${typeText} "${data.formation}".
       
       Notre équipe va étudier votre profil et vous recontacter dans les plus brefs délais pour discuter de votre projet de formation.
       
       RÉCAPITULATIF DE VOTRE DEMANDE :
-      - Formation : ${data.formation}
+      - ${formationType} : ${data.formation}
       - Email : ${data.email}
       - Téléphone : ${data.telephone || 'Non renseigné'}
       
       N'hésitez pas à nous contacter si vous avez des questions :
       - Email : contact@idcacademy.fr
-      - Téléphone : 07 59 56 59 18
+      - Téléphone : 06 59 56 59 18
       
       À très bientôt,
       L'équipe IDC Academy
@@ -62,7 +65,7 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
       to: 'contact@idcacademy.fr',
-      subject: `[FORMATION] Nouvelle demande - ${data.formation}`,
+      subject: `[${formationType}] Nouvelle demande - ${data.formation}`,
       text: adminEmailContent,
     })
 

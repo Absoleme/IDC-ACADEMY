@@ -1,0 +1,26 @@
+{
+    "id": "cert-aws-clf-c02",
+    "type": "certification",
+    "code": "CLF-C02",
+    "titre": "AWS Certified Cloud Practitioner",
+    "editeur": "AWS",
+    "niveau": "Foundational",
+    "domaines": [
+        "Cloud"
+    ],
+    "description": "Certification d’initiation validant la compréhension des concepts cloud AWS, des services principaux, de la sécurité, de la tarification et du support.",
+    "roles_vises": [
+        "Assistant Cloud",
+        "Technicien Cloud junior",
+        "Chef de projet IT"
+    ],
+    "cours_associes": [
+        "formation-aws-cloud-practitioner"
+    ],
+    "prerequis": "Aucun",
+    "examen": "CLF-C02",
+    "langue": "FR",
+    "meta": {
+        "buttons_alignment": "center"
+    }
+}

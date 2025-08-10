@@ -1,0 +1,51 @@
+{
+  "id": "formation-cyber-sc-200",
+  "type": "formation",
+  "code": "SC-200",
+  "titre": "Microsoft Security Operations Analyst (SC-200) - Sentinel, Defender, KQL",
+  "categorie": "Cybersécurité",
+  "sous_categorie": "Security Operations",
+  "resume": "Détecter, enquêter et répondre aux menaces avec Microsoft Sentinel et la suite Defender. Forte pratique de KQL et de l’automatisation SOC.",
+  "public": "Analystes SOC, Ingénieurs sécurité, Administrateurs M365/Azure, Blue Team.",
+  "prerequis": "Notions d’Azure/M365, connaissances Windows/Linux et concepts sécurité (SIEM, EDR).",
+  "duree_formation": "4 jours",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation, convention et convocation.",
+  "objectifs": [
+    "Configurer Microsoft Sentinel et connecter les sources de logs.",
+    "Écrire des requêtes KQL pour la détection, la chasse et l’investigation.",
+    "Mettre en œuvre Defender (Endpoint, Identity, Office, Cloud) et corréler les alertes.",
+    "Automatiser la réponse avec Logic Apps, playbooks et règles d’automatisation."
+  ],
+  "moyen_et_modalite": "Cours magistral + démos + labs guidés. Présentiel/distanciel. Accès à un tenant de lab.",
+  "moyens_techniques": "Tenant M365/E5 de démo, Azure Subscription, Microsoft Sentinel, Defender suite, portail Entra, VS Code/Kusto.",
+  "adaptation_et_suivi": "Positionnement initial, progression par cas d’usage SOC, Q&A quotidienne, ressources post-formation.",
+  "evaluation_parcours": "Labs pratiques chronométrés, QCM final, attestation.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription, nous étudions avec le candidat, via un questionnaire, les aménagements possibles pour favoriser l’apprentissage. Nous nous appuyons sur un réseau de partenaires nationaux identifiés.",
+    "partenaires": {
+      "AGEFIPH": { "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"], "email": "rhf-idf@agefiph.asso.fr", "canal": "Contact mail uniquement" },
+      "MDPH": { "nom": "MDPH 75 de Paris", "adresse": "69 rue de la Victoire 75009 Paris", "telephone": "01 53 32 39 39 ou 0 805 80 09 09", "email": "contact@mdph.paris.fr" },
+      "CAP_EMPLOI": { "adresse": "43 Bis Rue d’Hautpoul, 75019 Paris", "telephone": "01 44 52 40 60" },
+      "APAJH": { "nom": "Fédération APAJH", "adresse": "33 avenue du Maine 75755 Paris Cedex 15" }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire d’adéquation du besoin proposé avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Prise en main du SOC Microsoft", "duree": "0,5 jour", "contenus": ["Rôle analyste SOC", "MITRE ATT&CK", "Overview Sentinel/Defender", "Connexions de données"], "activites": ["Connexion de sources (Azure AD, M365, Defender)"], "resultats_attendus": ["Environnement SOC opérationnel"] },
+    { "module": "KQL pour la détection et l’investigation", "duree": "1 jour", "contenus": ["Filtres, agrégations, joins, timecharts", "Hunting queries", "Livres et alert rules"], "activites": ["Écrire 10+ requêtes KQL de chasse"], "resultats_attendus": ["Tableau de bord et règles d’alerte prêtes"] },
+    { "module": "Microsoft Defender Suite", "duree": "1 jour", "contenus": ["Defender for Endpoint/Identity/Office/Cloud", "Incidents unifiés", "TVM et remédiation"], "activites": ["Traiter un incident multi-vecteurs"], "resultats_attendus": ["Réduction MTTD/MTTR"] },
+    { "module": "Automatisation et réponse", "duree": "0,5 jour", "contenus": ["Logic Apps, playbooks", "SOAR, approvals, notifications"], "activites": ["Playbook de containment"], "resultats_attendus": ["Runbooks de réponse standardisés"] },
+    { "module": "Examen blanc SC-200", "duree": "1 jour", "contenus": ["Révision objectifs", "Cas pratiques", "QCM blanc"], "activites": ["Correction collective"], "resultats_attendus": ["Préparation optimale à l’examen"] }
+  ],
+  "competences": ["KQL", "SIEM/SOAR", "EDR/XDR", "Threat Hunting", "Incident Response"],
+  "certifications_visees": ["cert-sc-200"],
+  "postes_accessibles": ["Analyste SOC L1/L2", "Ingénieur sécurité", "Threat Hunter"],
+  "salaire_moyen": "42 000€ - 65 000€ selon expérience",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH", "AFPR/POEI"] }
+}

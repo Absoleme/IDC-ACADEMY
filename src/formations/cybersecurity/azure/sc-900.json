@@ -1,0 +1,41 @@
+{
+  "id": "formation-cyber-sc-900",
+  "type": "formation",
+  "code": "SC-900",
+  "titre": "SC-900 - Microsoft Security, Compliance & Identity Fundamentals",
+  "categorie": "Cybersécurité",
+  "sous_categorie": "Cybersécurité Azure",
+  "resume": "Découvrir les concepts fondamentaux de sécurité, conformité et identité dans Microsoft Cloud. Préparation à la certification SC-900.",
+  "public": "Débutants en sécurité cloud, IT pros, chefs de projet, équipes support.",
+  "prerequis": "Notions générales IT. Aucune expérience sécurité exigée.",
+  "duree_formation": "2 jours",
+  "inscription": "Contact, questionnaire d’analyse, validation, convention/convocation.",
+  "objectifs": [
+    "Comprendre les principes de sécurité, conformité et identité dans le cloud Microsoft.",
+    "Connaître les solutions Microsoft de sécurité (Defender), conformité (Purview) et gestion des identités (Entra).",
+    "Situer SC-900 dans un parcours vers les examens de niveau rôle (AZ-500, SC-200, SC-300...)."
+  ],
+  "moyen_et_modalite": "Cours interactif, démonstrations, mini-labs, quiz. Présentiel/distanciel.",
+  "moyens_techniques": "Tenant M365/E5 de démo, portail Azure/Entra, labs guidés.",
+  "adaptation_et_suivi": "Pédagogie progressive, ressources de révision, Q&A.",
+  "evaluation_parcours": "Quiz par module, QCM blanc SC-900, attestation.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": { "texte": "Accessibilité et aménagements possibles sur demande." },
+  "evaluation_du_besoin": "Questionnaire d’adéquation avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Concepts fondamentaux", "duree": "0,5 jour", "contenus": ["CIA triad, Zero Trust", "Modèles de responsabilité partagée"], "activites": ["Quiz interactif"], "resultats_attendus": ["Base commune acquise"] },
+    { "module": "Solutions d’identité (Entra)", "duree": "0,5 jour", "contenus": ["Entra ID, MFA, Conditional Access", "PIM, RBAC"], "activites": ["Configurer MFA/CA sur lab"], "resultats_attendus": ["Contrôles d’accès fondamentaux"] },
+    { "module": "Sécurité (Defender/Defender for Cloud)", "duree": "0,5 jour", "contenus": ["XDR, posture de sécurité", "Recommandations et durcissement"], "activites": ["Activer plans Defender"], "resultats_attendus": ["Vue posture initiale"] },
+    { "module": "Conformité & Gouvernance (Purview)", "duree": "0,5 jour", "contenus": ["DLP, étiquettes, audit", "Découverte des données"], "activites": ["Labeling M365"], "resultats_attendus": ["Concepts conformité acquis"] }
+  ],
+  "competences": ["Fondamentaux sécurité cloud", "Identité & accès", "Posture & conformité", "Parcours de certification"],
+  "certifications_visees": ["cert-sc-900"],
+  "postes_accessibles": ["IT Support (sécurité)", "Technicien cloud junior"],
+  "salaire_moyen": "45 000€ - 85 000€",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH"] }
+}

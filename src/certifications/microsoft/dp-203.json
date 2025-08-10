@@ -1,0 +1,26 @@
+{
+  "id": "cert-dp-203",
+  "type": "certification",
+  "code": "DP-203",
+  "titre": "Microsoft Certified: Azure Data Engineer Associate",
+  "editeur": "Microsoft",
+  "niveau": "Associate",
+  "domaines": [
+    "Conception et implémentation des pipelines d’ingestion (ADF/Synapse)",
+    "Transformation et stockage (Delta/Lake, Synapse, Fabric)",
+    "Sécurité, monitoring et gouvernance (Key Vault, RBAC, Purview)",
+    "Industrialisation CI/CD et optimisation coûts/perfs"
+  ],
+  "description": "Certification orientée ingénierie de données sur Azure, de l’ingestion à l’industrialisation.",
+  "roles_vises": ["Data Engineer", "BI/ETL Developer"],
+  "cours_recommandes": ["formation-data-adf"],
+  "prerequis": "SQL avancé, notions de data lakes et services Azure.",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM/scénarios",
+    "langue": "EN/FR (selon disponibilité)"
+  },
+  "renouvellement": "Évaluation de renouvellement en ligne annuelle (Microsoft).",
+  "liens_officiels": [],
+  "langue": "FR"
+}

@@ -1,0 +1,170 @@
+{
+    "id": "formation-az-305",
+    "type": "formation",
+    "code": "AZ-305",
+    "titre": "Architecte de Solutions Azure",
+    "categorie": "Cloud",
+    "sous_categorie": "Azure",
+    "resume": "Concevoir des architectures Azure sécurisées, résilientes et optimisées en coût. Prépare à la certification AZ-305.",
+    "public": "Architectes cloud, chefs de projet techniques, ingénieurs expérimentés souhaitant concevoir des solutions Azure à l’échelle.",
+    "prerequis": "Maîtrise des fondamentaux d’Azure et de l’administration (niveau AZ-104 recommandé), solides bases réseau, sécurité, stockage.",
+    "duree_formation": "4 jours",
+    "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+    "objectifs": [
+        "Concevoir l’architecture compute, data, réseau et stockage sur Azure.",
+        "Définir identité, sécurité, gouvernance et conformité (Zero Trust, RBAC, Policy).",
+        "Planifier la continuité d’activité (HA/DR), sauvegarde et récupération.",
+        "Optimiser coûts, performances et observabilité.",
+        "Traduire des exigences métiers en designs techniques exploitables."
+    ],
+    "moyen_et_modalite": "Cours dirigé par un MCT, apports d’architecture, patterns de référence, ateliers de conception, études de cas réels. Présentiel ou distanciel synchrone.",
+    "moyens_techniques": "Poste apprenant, whiteboards/outils de modélisation, abonnements Azure de démo, documents de design et templates ARM/Bicep de référence.",
+    "adaptation_et_suivi": "Entretien de positionnement, adaptation des cas d’usage au secteur des participants, feedbacks quotidiens, suivi des livrables de design.",
+    "evaluation_parcours": "Positionnement d’entrée, quiz par module, étude de cas de design notée, QCM final type AZ-305. Attestation de fin de formation.",
+    "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+    "handicap": {
+        "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+        "partenaires": {
+            "AGEFIPH": {
+                "contacts": [
+                    "Bastien GIESBERGER",
+                    "M'Ballo SECK"
+                ],
+                "email": "rhf-idf@agefiph.asso.fr",
+                "canal": "Contact mail uniquement"
+            },
+            "MDPH": {
+                "nom": "MDPH 75 de Paris",
+                "adresse": "69 rue de la Victoire 75009 Paris",
+                "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+                "email": "contact@mdph.paris.fr"
+            },
+            "CAP_EMPLOI": {
+                "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+                "telephone": "01 44 52 40 60"
+            },
+            "APAJH": {
+                "nom": "Fédération APAJH",
+                "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+            }
+        }
+    },
+    "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+    "prix": "Nous consulter",
+    "contact": {
+        "email": "contact@idcacademy.fr",
+        "telephone": "07 59 56 59 18"
+    },
+    "programme_detaille": [
+        {
+            "module": "Design compute et conteneurs",
+            "duree": "0,75 jour",
+            "contenus": [
+                "VM, scale sets, App Services",
+                "AKS: nœuds, réseau, identité",
+                "Choix de services et SLA"
+            ],
+            "activites": [
+                "Atelier: choix compute pour un SI existant"
+            ],
+            "resultats_attendus": [
+                "Sélectionner l’option compute adaptée et résiliente"
+            ]
+        },
+        {
+            "module": "Design data et stockage",
+            "duree": "0,75 jour",
+            "contenus": [
+                "Blob/Files/Disks, SQL managé, Cosmos DB",
+                "Patrons de réplication et partitionnement",
+                "Chiffrement et gouvernance des données"
+            ],
+            "activites": [
+                "Atelier: design stockage multi-région"
+            ],
+            "resultats_attendus": [
+                "Concevoir la persistance sécurisée et scalable"
+            ]
+        },
+        {
+            "module": "Design réseau et sécurité périmétrique",
+            "duree": "0,75 jour",
+            "contenus": [
+                "VNet hub/spoke, peering, Private Link",
+                "App Gateway/WAF, Front Door",
+                "Hybrid (VPN/ExpressRoute)"
+            ],
+            "activites": [
+                "Atelier: architecture hub & spoke sécurisée"
+            ],
+            "resultats_attendus": [
+                "Construire une topologie réseau sécurisée et performante"
+            ]
+        },
+        {
+            "module": "Identité, sécurité et gouvernance",
+            "duree": "0,5 jour",
+            "contenus": [
+                "Entra ID, RBAC, PIM",
+                "Policy, Blueprints, landing zones",
+                "Zero Trust et conformité"
+            ],
+            "activites": [
+                "Étude de cas: gouvernance multi-abonnements"
+            ],
+            "resultats_attendus": [
+                "Définir identité et gouvernance à l’échelle"
+            ]
+        },
+        {
+            "module": "Continuité, coûts et observabilité",
+            "duree": "1 jour",
+            "contenus": [
+                "HA/DR, sauvegarde, sauvegarde app et data",
+                "Optimisation coûts (reservations, autoscale)",
+                "Monitoring (Log Analytics, métriques)"
+            ],
+            "activites": [
+                "Atelier: plan de reprise d’activité",
+                "Optimisation coût/perf sur un cas réel"
+            ],
+            "resultats_attendus": [
+                "Assurer disponibilité, maîtrise des coûts et supervision"
+            ]
+        }
+    ],
+    "competences": [
+        "Conception d’architectures Azure",
+        "Sécurité, identité et gouvernance",
+        "Réseau, data et continuité d’activité",
+        "Optimisation coûts et observabilité"
+    ],
+    "certifications_visees": [
+        "cert-az-305"
+    ],
+    "postes_accessibles": [
+        "Architecte Cloud",
+        "Cloud Solutions Architect",
+        "Ingénieur Cloud senior"
+    ],
+    "salaire_moyen": "45 000€ - 75 000€ selon expérience",
+    "modalites": [
+        "Présentiel",
+        "Distanciel"
+    ],
+    "langue": "FR",
+    "organisme": "IDC ACADEMY",
+    "meta": {
+        "buttons_alignment": "center",
+        "financement_eligibilite": [
+            "OPCO",
+            "CPF",
+            "FNE",
+            "AIF",
+            "PTP",
+            "Dispositifs régionaux",
+            "AGEFIPH",
+            "AFPR/POEI"
+        ]
+    }
+}

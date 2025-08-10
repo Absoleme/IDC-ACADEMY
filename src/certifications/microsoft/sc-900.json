@@ -1,0 +1,25 @@
+{
+  "id": "cert-sc-900",
+  "type": "certification",
+  "code": "SC-900",
+  "titre": "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+  "editeur": "Microsoft",
+  "niveau": "Fundamentals",
+  "domaines": [
+    "Principes de sécurité et de conformité",
+    "Solutions d’identité (Microsoft Entra)",
+    "Sécurité Microsoft Defender et posture de sécurité",
+    "Conformité et protection de l’information (Purview)"
+  ],
+  "description": "Certification d’initiation confirmant la compréhension des concepts de sécurité, de conformité et d’identité dans l’écosystème Microsoft Cloud.",
+  "roles_vises": ["IT Support (sécurité)", "Technicien cloud junior", "Collaborateur sensibilisé à la sécurité"],
+  "cours_recommandes": ["formation-cyber-sc-900"],
+  "prerequis": "Aucun prérequis technique strict ; notions IT générales recommandées.",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM/scénarios",
+    "langue": "EN/FR (selon disponibilité)"
+  },
+  "liens_officiels": [],
+  "langue": "FR"
+}

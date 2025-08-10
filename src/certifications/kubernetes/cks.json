@@ -1,0 +1,16 @@
+{
+  "id": "cert-cks",
+  "type": "certification",
+  "code": "CKS",
+  "titre": "Certified Kubernetes Security Specialist",
+  "editeur": "Linux Foundation / CNCF",
+  "niveau": "Security Specialist",
+  "domaines": ["Sécurité Kubernetes", "Network Policies", "RBAC", "Supply Chain", "Runtime Security", "Confidentialité"],
+  "description": "Certification avancée axée sur la sécurisation des clusters, des applications et de la chaîne de supply dans l’écosystème Kubernetes.",
+  "roles_vises": ["DevSecOps Engineer", "SRE", "Kubernetes Security Specialist"],
+  "cours_recommandes": ["formation-devops-cks"],
+  "prerequis": "Bonne maîtrise de l’administration Kubernetes (idéalement CKA) et des fondamentaux sécurité.",
+  "examen": { "format": "Pratique en ligne supervisé", "type": "Mises en situation sur terminal" },
+  "liens_officiels": [],
+  "langue": "FR"
+}

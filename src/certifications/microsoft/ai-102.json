@@ -1,0 +1,26 @@
+{
+  "id": "cert-ai-102",
+  "type": "certification",
+  "code": "AI-102",
+  "titre": "Microsoft Certified: Azure AI Engineer Associate",
+  "editeur": "Microsoft",
+  "niveau": "Associate",
+  "domaines": [
+    "Azure AI Services (Vision, Language, Search) et Responsible AI",
+    "Conception, entraînement et déploiement avec Azure Machine Learning",
+    "Intégration d’IA générative et patterns RAG",
+    "MLOps: pipelines, monitoring, sécurité et coûts"
+  ],
+  "description": "Certification de rôle pour concevoir et déployer des solutions d’IA/ML sur Azure avec des pratiques MLOps.",
+  "roles_vises": ["AI Engineer", "ML Engineer", "Data Scientist"],
+  "cours_recommandes": ["formation-ai-azure-ml", "formation-ai-generative-gpt"],
+  "prerequis": "Bases Python/ML et connaissance des services Azure.",
+  "examen": {
+    "format": "En ligne ou centre d’examen",
+    "type": "QCM/scénarios, cas pratiques possibles",
+    "langue": "EN/FR (selon disponibilité)"
+  },
+  "renouvellement": "Évaluation de renouvellement en ligne annuelle (Microsoft).",
+  "liens_officiels": [],
+  "langue": "FR"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "formation-cyber-securityplus",
+  "type": "formation",
+  "code": "Security+",
+  "titre": "CompTIA Security+ - Fondamentaux de la sécurité IT",
+  "categorie": "Cybersécurité",
+  "sous_categorie": "Cybersécurité Générale",
+  "resume": "Cours intensif de préparation CompTIA Security+ couvrant menaces, architecture sécurisée, IAM, cryptographie, opérations et gouvernance.",
+  "public": "Techniciens/ingénieurs IT, admins systèmes/réseaux, débutants en cyber.",
+  "prerequis": "Connaissances IT générales (réseau, systèmes).",
+  "duree_formation": "5 jours",
+  "inscription": "Contact, questionnaire d’analyse, validation, convention/convocation.",
+  "objectifs": [
+    "Maîtriser les domaines Security+ (menaces, IAM, architecture, chiffrement, opérations).",
+    "Appliquer des contrôles de sécurité et des bonnes pratiques d’hygiène IT.",
+    "Se préparer à l’examen CompTIA Security+."
+  ],
+  "moyen_et_modalite": "Cours + labs + QCM blancs. Présentiel/distanciel.",
+  "moyens_techniques": "Labs réseau/système de démonstration, VM Windows/Linux, outils d’analyse.",
+  "adaptation_et_suivi": "Plan de révision personnalisé, Q&A, ressources officielles.",
+  "evaluation_parcours": "QCM par domaine, examen blanc chronométré, attestation.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": { "texte": "Accessibilité et aménagements possibles sur demande." },
+  "evaluation_du_besoin": "Questionnaire d’adéquation avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Menaces, attaques et vulnérabilités", "duree": "1 jour", "contenus": ["Malwares, phishing, DoS", "Vuln management"], "activites": ["Analyse d’un incident simulé"], "resultats_attendus": ["Menaces identifiées et catégorisées"] },
+    { "module": "Architecture & Design sécurisés", "duree": "1 jour", "contenus": ["Segmentation, Zero Trust", "Sécurité cloud"], "activites": ["Conception d’une archi sécurisée"], "resultats_attendus": ["Contrôles alignés au risque"] },
+    { "module": "Opérations & Réponse à incident", "duree": "1 jour", "contenus": ["Monitoring, IR, forensics léger"], "activites": ["Jeu de rôle IR"], "resultats_attendus": ["Processus IR maîtrisé"] },
+    { "module": "IAM & Cryptographie", "duree": "1 jour", "contenus": ["MFA, RBAC/ABAC", "PKI, TLS, clés"], "activites": ["Déployer TLS et PKI de lab"], "resultats_attendus": ["Contrôles d’accès et crypto appliqués"] },
+    { "module": "Gouvernance & Conformité", "duree": "1 jour", "contenus": ["Politiques, sensibilisation", "Bases RGPD"], "activites": ["Plan d’hygiène sécurité"], "resultats_attendus": ["Feuille de route sécurité"] }
+  ],
+  "competences": ["Hygiène IT", "IAM", "Cryptographie appliquée", "IR & forensics léger", "Gouvernance"],
+  "certifications_visees": ["cert-securityplus"],
+  "postes_accessibles": ["Technicien sécurité", "Analyste SOC junior", "Administrateur systèmes/réseaux (sécurité)"],
+  "salaire_moyen": "45 000€ - 85 000€",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH"] }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "formation-data-pl-300",
+  "type": "formation",
+  "code": "PL-300",
+  "titre": "Power BI Data Analyst — Préparation PL‑300",
+  "categorie": "Data",
+  "sous_categorie": "Microsoft Data Platform",
+  "resume": "Concevoir des modèles de données et réaliser des rapports interactifs avec Power BI, en préparation à l’examen PL‑300.",
+  "public": "Data Analysts, BI Developers, Contrôleurs de gestion.",
+  "prerequis": "Notions SQL/Excel et fondamentaux data.",
+  "duree_formation": "3 jours",
+  "inscription": "Contact, analyse du besoin, validation, convention/convocation.",
+  "objectifs": [
+    "Importer/transformer des données avec Power Query.",
+    "Modéliser (relations, DAX de base/avancé).",
+    "Construire des rapports et tableaux de bord efficaces.",
+    "Gérer la sécurité (RLS), la publication et le partage."
+  ],
+  "moyen_et_modalite": "Cours + démos + labs. Présentiel/distanciel.",
+  "moyens_techniques": "Power BI Desktop/Service, Fabric (option), Excel, sources de démo.",
+  "adaptation_et_suivi": "Cas d’usage métiers, Q&A, ressources.",
+  "evaluation_parcours": "QCM blanc PL‑300 + mini‑projet.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": { "texte": "Aménagements possibles selon besoins." },
+  "evaluation_du_besoin": "Questionnaire d’adéquation avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Préparation & transformation", "duree": "1 j", "contenus": ["Power Query", "Nettoyage, fusion, paramètres"] },
+    { "module": "Modélisation & DAX", "duree": "1 j", "contenus": ["Schéma en étoile", "Mesures, CALCULATE, contextes"] },
+    { "module": "Visualisation & gouvernance", "duree": "1 j", "contenus": ["Design data‑viz", "RLS", "Publication & partage"] }
+  ],
+  "competences": ["Power Query", "Modélisation sémantique", "DAX", "Data‑viz", "RLS & gouvernance"],
+  "certifications_visees": ["cert-pl-300"],
+  "postes_accessibles": ["Data Analyst", "BI Developer"],
+  "salaire_moyen": "45 000€ - 80 000€",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "CPF", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH"] }
+}

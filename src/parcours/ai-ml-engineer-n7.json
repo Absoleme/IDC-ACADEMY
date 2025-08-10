@@ -1,0 +1,148 @@
+{
+  "id": "parcours-ai-ml-engineer-n7",
+  "type": "parcours",
+  "titre": "Parcours AI/ML Engineer (Niveau 7)",
+  "description": "Spécialisation ingénierie IA/ML sur Azure : data engineering, entraînement et industrialisation de modèles, MLOps (Azure ML, MLflow), déploiement à l’échelle, observabilité et Responsible AI.",
+  "public": "Ingénieurs data/dev, data scientists, administrateurs cloud, SRE/Platform, personnes en reconversion technique souhaitant concevoir et opérer des solutions IA/ML en production.",
+  "prerequis": "Bases en Python et Git, notions de statistiques et de services cloud. Connaissances de SQL et de conteneurs appréciées.",
+  "duree_formation": "400h + 80h de stage",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Mettre en place des pipelines de données robustes pour l’IA (ingestion, préparation, feature store).",
+    "Entraîner, évaluer et itérer sur des modèles ML/Deep Learning à l’aide d’outils modernes.",
+    "Industrialiser le cycle de vie ML avec MLOps (Azure ML, Git, CI/CD, MLflow, Data/Model Versioning).",
+    "Déployer des modèles en production (batch, temps réel) et superviser les performances/drift.",
+    "Intégrer les principes de Responsible AI et préparer les certifications DP-100 et AI-102."
+  ],
+  "moyen_et_modalite": "Cours + ateliers pratiques, labs guidés, projets fil rouge. Présentiel ou distanciel synchrone. Supports et dépôts de code fournis.",
+  "moyens_techniques": "Repos Git, Azure DevOps, Azure Machine Learning, Azure Databricks, Azure Data Factory/Synapse, MLflow, DVC, Python (scikit-learn, PyTorch), Azure Container Registry, AKS/ACI, Azure Monitor/Application Insights, Feature Store, outils de tests/qualité des données.",
+  "adaptation_et_suivi": "Positionnement, plan de progression individualisé, mentoring technique, revues de code et sprint reviews.",
+  "evaluation_parcours": "Évaluations continues, démos de sprint, QCM, audit MLOps, soutenance finale. Attestation de fin de parcours.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "90%"
+  },
+  "modules": [
+    {
+      "module": "Culture IA/ML, Python scientifique et fondations MLOps",
+      "duree": "40h",
+      "contenus": [
+        "Cycle de vie ML, rôles et patterns MLOps",
+        "Python, NumPy, Pandas, notebooks, visualisation",
+        "Git branching, revues de code, CI basique",
+        "Suivi d’expériences (MLflow), versionning de données (DVC)",
+        "Évaluation de modèles, métriques, reproductibilité"
+      ],
+      "activites": [
+        "Atelier notebooks et pipeline local",
+        "Mini-challenge de classification supervisée"
+      ]
+    },
+    {
+      "module": "Data Engineering pour l’IA (Azure Data/Databricks)",
+      "duree": "70h",
+      "contenus": [
+        "Ingestion batch/stream, Spark, Delta Lake",
+        "Nettoyage, features engineering, feature store",
+        "Orchestration (Data Factory/Synapse), triggers et monitoring",
+        "Qualité des données (tests, expectations), linéage",
+        "Sécurité et coûts (RBAC, Key Vault, optimisation)"
+      ],
+      "activites": [
+        "Mise en place d’un pipeline ETL/ELT fin-à-fin",
+        "Tests de qualité et documentation des datasets"
+      ]
+    },
+    {
+      "module": "Modélisation et Deep Learning",
+      "duree": "70h",
+      "contenus": [
+        "Classiques ML (scikit-learn), validation croisée et tuning",
+        "Deep Learning avec PyTorch (vision, NLP fondamentaux)",
+        "Optimisation, quantization/ONNX, gestion des artefacts",
+        "Interprétabilité (SHAP/LIME) et biais",
+        "Packaging, dépendances, environnements reproductibles"
+      ],
+      "activites": [
+        "Projet: entraînement d’un modèle et tracking des expériences",
+        "Revue pair-à-pair des choix de features et métriques"
+      ]
+    },
+    {
+      "module": "MLOps sur Azure (Azure ML, CI/CD, déploiement)",
+      "duree": "80h",
+      "contenus": [
+        "Azure ML: workspaces, computes, environments, pipelines",
+        "Intégration CI/CD (Azure DevOps) pour training et scoring",
+        "Conteneurisation, ACR, déploiement temps réel (AKS/ACI) et batch",
+        "Stratégies de release: canary, blue/green, shadow",
+        "Surveillance des endpoints, gestion des versions, rollback"
+      ],
+      "activites": [
+        "Pipeline complet: data prep → train → register → deploy",
+        "IaC Terraform/Bicep pour l’infra ML"
+      ]
+    },
+    {
+      "module": "IA Générative, Responsible AI, Observabilité et Sécurité",
+      "duree": "60h",
+      "contenus": [
+        "Initiation Azure OpenAI et patterns RAG (Azure AI Search)",
+        "Évaluation de prompts/modèles et gouvernance des artefacts",
+        "Responsible AI: sécurité, conformité, traçabilité",
+        "Observabilité: métriques ML, drift, SLI/SLO, alerting",
+        "DevSecOps: secrets (Key Vault), dépendances, supply chain"
+      ],
+      "activites": [
+        "POC RAG avec évaluation et garde-fous",
+        "Tableaux de bord de performance et runbook incident"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-dp-100",
+    "cert-ai-102"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

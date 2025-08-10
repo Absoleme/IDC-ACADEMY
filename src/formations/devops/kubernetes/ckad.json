@@ -1,0 +1,49 @@
+{
+  "id": "formation-devops-ckad",
+  "type": "formation",
+  "code": "CKAD",
+  "titre": "Préparation Kubernetes CKAD - Application Developer",
+  "categorie": "DevOps",
+  "sous_categorie": "Kubernetes",
+  "resume": "Concevoir, déployer et dépanner des applications cloud-native sur Kubernetes. Préparation CKAD.",
+  "public": "Développeurs, DevOps, Platform Engineers construisant et opérant des apps sur K8s.",
+  "prerequis": "Bases Kubernetes (pods, services) et Docker. Connaissances YAML et Git.",
+  "duree_formation": "3 jours",
+  "inscription": "Contact, questionnaire d’analyse du besoin, validation, convention/convocation.",
+  "objectifs": [
+    "Maîtriser les objets et patterns applicatifs K8s.",
+    "Gérer configuration, secrets, healthchecks et ressources.",
+    "Exposer des services et gérer l’ingress.",
+    "Automatiser les déploiements et intégrer à la CI/CD."
+  ],
+  "moyen_et_modalite": "Cours + labs intensifs calqués sur l’examen. Présentiel/distanciel. Supports et exercices fournis.",
+  "moyens_techniques": "Cluster K8s (kind/minikube), kubectl, Helm, VS Code.",
+  "adaptation_et_suivi": "Positionnement, labs progressifs, corrections, coaching d’examen.",
+  "evaluation_parcours": "TP chronométrés, QCM final, attestation de fin de formation.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": { "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"], "email": "rhf-idf@agefiph.asso.fr", "canal": "Contact mail uniquement" },
+      "MDPH": { "nom": "MDPH 75 de Paris", "adresse": "69 rue de la Victoire 75009 Paris", "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)", "email": "contact@mdph.paris.fr" },
+      "CAP_EMPLOI": { "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris", "telephone": "01 44 52 40 60" },
+      "APAJH": { "nom": "Fédération APAJH", "adresse": "33 avenue du Maine 75755 Paris Cedex 15" }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire d’adéquation du besoin proposé avant inscription.",
+  "prix": "Nous consulter",
+  "contact": { "email": "contact@idcacademy.fr", "telephone": "06 59 56 59 18" },
+  "programme_detaille": [
+    { "module": "Design et déploiement d’applications", "duree": "1 jour", "contenus": ["Pods, ReplicaSets, Deployments", "Strategic merge, rollouts, rollbacks"], "activites": ["Blue/Green, Canary"], "resultats_attendus": ["Déploiements fiables et reversibles"] },
+    { "module": "Configuration et observabilité", "duree": "1 jour", "contenus": ["ConfigMaps, Secrets", "Liveness/Readiness/Startup probes", "Requests/Limits"], "activites": ["Config & Secrets en pratique"], "resultats_attendus": ["Apps robustes et observables"] },
+    { "module": "Réseau, Ingress et CI/CD", "duree": "1 jour", "contenus": ["Services, Ingress", "Jobs/CronJobs, Helm, GitOps"], "activites": ["Ingress + Helm chart", "Pipeline GitOps"], "resultats_attendus": ["Parcours complet du code à la prod"] }
+  ],
+  "competences": ["Développement cloud-native K8s", "Config & Secrets", "Healthchecks & ressources", "CI/CD et GitOps"],
+  "certifications_visees": ["cert-ckad"],
+  "postes_accessibles": ["Kubernetes App Developer", "DevOps", "Platform Engineer"],
+  "salaire_moyen": "50 000€ - 85 000€ selon expérience",
+  "modalites": ["Présentiel", "Distanciel"],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": { "buttons_alignment": "center", "financement_eligibilite": ["OPCO", "FNE", "Plan de développement des compétences", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH", "AFPR/POEI"] }
+}

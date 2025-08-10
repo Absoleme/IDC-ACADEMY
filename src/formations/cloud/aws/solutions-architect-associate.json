@@ -1,0 +1,167 @@
+{
+    "id": "formation-aws-solutions-architect-associate",
+    "type": "formation",
+    "code": null,
+    "titre": "AWS Solutions Architect Associate: Architecture Cloud AWS",
+    "categorie": "Cloud",
+    "sous_categorie": "AWS",
+    "resume": "Concevoir des architectures AWS hautement disponibles, sécurisées et optimisées en coût. Prépare à AWS Certified Solutions Architect – Associate (SAA-C03).",
+    "public": "Architectes cloud, ingénieurs systèmes, développeurs/DevOps souhaitant concevoir des solutions AWS.",
+    "prerequis": "Bases AWS (Cloud Practitioner recommandé), notions réseaux/sécurité, expérience pratique souhaitée.",
+    "duree_formation": "3 jours",
+    "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+    "objectifs": [
+        "Traduire des exigences métiers en architectures AWS.",
+        "Concevoir réseaux, compute, stockage et bases de données managées.",
+        "Intégrer sécurité, observabilité, haute disponibilité et DR.",
+        "Optimiser coûts et performances.",
+        "Se préparer à l’examen SAA-C03."
+    ],
+    "moyen_et_modalite": "Animation par expert AWS. Études de cas, ateliers de design, best practices Well-Architected. Présentiel ou distanciel synchrone.",
+    "moyens_techniques": "Poste apprenant, console AWS, outils de modélisation (diagrams), AWS CLI, supports numériques.",
+    "adaptation_et_suivi": "Positionnement initial, cas d’usage adaptés aux secteurs des participants, feedbacks sur les designs, suivi des livrables.",
+    "evaluation_parcours": "Quiz par module, étude de cas d’architecture notée, QCM final type SAA-C03. Attestation de fin.",
+    "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+    "handicap": {
+        "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+        "partenaires": {
+            "AGEFIPH": {
+                "contacts": [
+                    "Bastien GIESBERGER",
+                    "M'Ballo SECK"
+                ],
+                "email": "rhf-idf@agefiph.asso.fr",
+                "canal": "Contact mail uniquement"
+            },
+            "MDPH": {
+                "nom": "MDPH 75 de Paris",
+                "adresse": "69 rue de la Victoire 75009 Paris",
+                "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+                "email": "contact@mdph.paris.fr"
+            },
+            "CAP_EMPLOI": {
+                "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+                "telephone": "01 44 52 40 60"
+            },
+            "APAJH": {
+                "nom": "Fédération APAJH",
+                "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+            }
+        }
+    },
+    "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+    "prix": "Nous consulter",
+    "contact": {
+        "email": "contact@idcacademy.fr",
+        "telephone": "07 59 56 59 18"
+    },
+    "programme_detaille": [
+        {
+            "module": "Réseau et connectivité",
+            "duree": "0,75 jour",
+            "contenus": [
+                "VPC, subnets, routage",
+                "NAT/IGW, peering, Transit Gateway",
+                "PrivateLink, Direct Connect"
+            ],
+            "activites": [
+                "Atelier: design VPC hub-spoke"
+            ],
+            "resultats_attendus": [
+                "Concevoir une topologie réseau sécurisée et scalable"
+            ]
+        },
+        {
+            "module": "Compute et conteneurs",
+            "duree": "0,5 jour",
+            "contenus": [
+                "EC2, Auto Scaling, ELB/ALB/NLB",
+                "ECS/EKS, Lambda, patterns serverless"
+            ],
+            "activites": [
+                "Choix compute pour un cas réel"
+            ],
+            "resultats_attendus": [
+                "Sélectionner le compute adapté et résilient"
+            ]
+        },
+        {
+            "module": "Stockage et bases de données",
+            "duree": "0,5 jour",
+            "contenus": [
+                "S3, EBS, EFS",
+                "RDS/Aurora, DynamoDB",
+                "Réplication, sauvegarde, chiffrement"
+            ],
+            "activites": [
+                "Atelier: stratégie data multi-AZ"
+            ],
+            "resultats_attendus": [
+                "Concevoir une persistance sécurisée et performante"
+            ]
+        },
+        {
+            "module": "Sécurité et gouvernance",
+            "duree": "0,5 jour",
+            "contenus": [
+                "IAM, KMS, Organizations, SCP",
+                "CloudTrail, Config, GuardDuty, Security Hub"
+            ],
+            "activites": [
+                "Atelier: posture sécurité multi-comptes"
+            ],
+            "resultats_attendus": [
+                "Intégrer la sécurité by design"
+            ]
+        },
+        {
+            "module": "Observabilité, coûts et DR",
+            "duree": "0,75 jour",
+            "contenus": [
+                "CloudWatch, X-Ray, logs",
+                "Budgets, Cost Explorer, Savings Plans",
+                "HA/DR, multi-AZ/multi-région"
+            ],
+            "activites": [
+                "Étude de cas: PRA AWS"
+            ],
+            "resultats_attendus": [
+                "Optimiser coûts/observabilité et continuité"
+            ]
+        }
+    ],
+    "competences": [
+        "Architecture AWS",
+        "Sécurité et gouvernance",
+        "Réseau et connectivité",
+        "Optimisation coûts et performances"
+    ],
+    "certifications_visees": [
+        "cert-aws-saa-c03"
+    ],
+    "postes_accessibles": [
+        "Cloud Solutions Architect (Associate)",
+        "Cloud Architect junior",
+        "Cloud Engineer"
+    ],
+    "salaire_moyen": "45 000€ - 75 000€ selon expérience",
+    "modalites": [
+        "Présentiel",
+        "Distanciel"
+    ],
+    "langue": "FR",
+    "organisme": "IDC ACADEMY",
+    "meta": {
+        "buttons_alignment": "center",
+        "financement_eligibilite": [
+            "OPCO",
+            "CPF",
+            "FNE",
+            "AIF",
+            "PTP",
+            "Dispositifs régionaux",
+            "AGEFIPH",
+            "AFPR/POEI"
+        ]
+    }
+}

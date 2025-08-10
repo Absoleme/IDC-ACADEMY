@@ -1,0 +1,25 @@
+{
+    "id": "cert-az-305",
+    "type": "certification",
+    "code": "AZ-305",
+    "titre": "Microsoft Certified: Azure Solutions Architect Expert",
+    "editeur": "Microsoft",
+    "niveau": "Expert",
+    "domaines": [
+        "Cloud"
+    ],
+    "description": "Valide la capacité à concevoir des solutions Azure sécurisées, résilientes et optimisées en coûts, alignées aux besoins métiers.",
+    "roles_vises": [
+        "Cloud Solutions Architect",
+        "Architecte Cloud"
+    ],
+    "cours_associes": [
+        "formation-az-305"
+    ],
+    "prerequis": "Connaissances d’administration Azure et d’architecture cloud.",
+    "examen": "AZ-305",
+    "langue": "FR",
+    "meta": {
+        "buttons_alignment": "center"
+    }
+}

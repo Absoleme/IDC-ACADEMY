@@ -1,0 +1,27 @@
+{
+    "id": "cert-aws-scs-c02",
+    "type": "certification",
+    "code": "SCS-C02",
+    "titre": "AWS Certified Security – Specialty",
+    "editeur": "AWS",
+    "niveau": "Specialty",
+    "domaines": [
+        "Cloud",
+        "Cybersécurité"
+    ],
+    "description": "Valide l’expertise de sécurisation des architectures AWS: IAM avancé, chiffrement KMS, détection des menaces, sécurité réseau/app et conformité.",
+    "roles_vises": [
+        "Cloud Security Engineer",
+        "Security Engineer",
+        "Architecte Sécurité Cloud"
+    ],
+    "cours_associes": [
+        "formation-aws-security-specialty"
+    ],
+    "prerequis": "Expérience avancée sur AWS et en sécurité.",
+    "examen": "SCS-C02",
+    "langue": "FR",
+    "meta": {
+        "buttons_alignment": "center"
+    }
+}
