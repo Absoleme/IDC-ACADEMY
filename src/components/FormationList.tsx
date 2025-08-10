@@ -1,4 +1,4 @@
-'use client'
+/*'use client'
 import { useState } from 'react'
 import data from '@/data/formations.json'
 import ContactModal from './ContactModal'
@@ -134,8 +134,8 @@ export default function FormationsList({ categoryId }: FormationsListProps) {
         </div>
       </section>
 
-      {/* Correction ici : ajout de isOpen={showModal} */}
-      {selectedFormation && (
+      {/* Correction ici : ajout de isOpen={showModal} *///}
+     /* {selectedFormation && (
         <ContactModal 
           isOpen={showModal}
           formation={selectedFormation} 
@@ -145,3 +145,4 @@ export default function FormationsList({ categoryId }: FormationsListProps) {
     </>
   )
 }
+*/
