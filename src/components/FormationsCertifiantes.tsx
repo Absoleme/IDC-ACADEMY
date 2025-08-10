@@ -377,27 +377,6 @@ export default function FormationsCertifiantes({ title, description, id }: Props
           })}
         </div>
 
-        {/* Call to action */}
-        <div className="mt-20 text-center">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/50 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Besoin d'aide pour choisir votre certification ?</h3>
-            <p className="text-gray-600 mb-6">Nos experts vous conseillent pour trouver la certification qui correspond à vos objectifs professionnels</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="tel:0759565918" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold py-3 px-8 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                07 59 56 59 18
-              </a>
-              <a href="mailto:contact@idcacademy.fr" className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold py-3 px-8 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                contact@idcacademy.fr
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
 
       <ContactModal
