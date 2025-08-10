@@ -13,7 +13,7 @@ interface Formation {
 interface ContactModalProps {
   isOpen: boolean
   onClose: () => void
-  formation: Formation | null
+  formation?: Formation | null
 }
 
 export default function ContactModal({ isOpen, onClose, formation }: ContactModalProps) {

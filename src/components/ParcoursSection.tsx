@@ -233,7 +233,7 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
                 </div>
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {parcourslist.map((parcours, index) => (
+                  {parcourslist.map((parcours: Parcours, index: number) => (
                     <div key={parcours.id} className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 hover:scale-105 hover:-translate-y-3 relative overflow-hidden">
                       {/* Top gradient line */}
                       <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${categoryStyle.gradient}`}></div>

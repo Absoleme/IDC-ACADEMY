@@ -340,7 +340,7 @@ export default function FormationsCertifiantes({ title, description, id }: Props
           titre: selectedFormation.titre,
           duree: selectedFormation.duree_formation,
           type: 'formation'
-        } : undefined}
+        } : null}
       />
     </section>
   )
