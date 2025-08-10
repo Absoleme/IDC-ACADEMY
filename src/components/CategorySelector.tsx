@@ -1,4 +1,4 @@
-'use client'
+/*'use client'
 import { useState } from 'react'
 import data from '@/data/formations.json'
 
@@ -77,3 +77,4 @@ export default function CategorySelector({ onCategorySelect }: CategorySelectorP
     </section>
   )
 }
+*/
