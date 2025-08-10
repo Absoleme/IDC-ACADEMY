@@ -34,6 +34,7 @@ export default function FormationsCertifiantes({ title, description, id }: Props
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [categories, setCategories] = useState<CategoryData[]>([])
   const [loading, setLoading] = useState(true)
+  const [activeFilter, setActiveFilter] = useState<string>('all')
   
   const getCategoryConfig = (categoryName: string) => {
     const name = categoryName.toLowerCase()
@@ -118,6 +119,14 @@ export default function FormationsCertifiantes({ title, description, id }: Props
     setIsModalOpen(true)
   }
 
+  const handleFilterClick = (categoryId: string) => {
+    setActiveFilter(categoryId)
+  }
+
+  const filteredCategories = activeFilter === 'all' 
+    ? categories 
+    : categories.filter(cat => cat.id === activeFilter)
+
   if (loading) {
     return (
       <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -172,35 +181,94 @@ export default function FormationsCertifiantes({ title, description, id }: Props
           </div>
         </div>
 
+        {/* Category Filters */}
+        <div className="mb-16">
+          <div className="flex flex-wrap justify-center gap-4">
+            <button
+              onClick={() => handleFilterClick('all')}
+              className={`px-8 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 ${
+                activeFilter === 'all'
+                  ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:shadow-md'
+              }`}
+            >
+              <span className="flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-4H3m16 8H7m12-4H3" />
+                </svg>
+                Toutes les formations
+              </span>
+            </button>
+
+            {categories.map((category) => {
+              const categoryConfig = getCategoryConfig(category.nom)
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => handleFilterClick(category.id)}
+                  className={`px-8 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 ${
+                    activeFilter === category.id
+                      ? `bg-gradient-to-r ${categoryConfig.gradient} text-white shadow-lg scale-105`
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:shadow-md'
+                  }`}
+                >
+                  <span className="flex items-center">
+                    <span className="text-2xl mr-3">{categoryConfig.icon}</span>
+                    {category.nom}
+                    <span className="ml-2 bg-white/20 text-xs px-2 py-1 rounded-full">
+                      {category.formations.length}
+                    </span>
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
         <div className="space-y-16">
-          {categories.map((category) => {
+          {filteredCategories.map((category) => {
             const categoryConfig = getCategoryConfig(category.nom)
             
             return (
-              <div key={category.id} className="animate-slideUp">
-                {/* Category Header */}
-                <div className="flex items-center justify-center mb-12">
-                  <div className={`flex items-center px-8 py-4 rounded-3xl ${categoryConfig.bgColor} border-2 ${categoryConfig.borderColor} shadow-lg`}>
-                    <div className={`w-16 h-16 bg-gradient-to-r ${categoryConfig.gradient} rounded-2xl flex items-center justify-center mr-4 shadow-md`}>
-                      <span className="text-3xl">{categoryConfig.icon}</span>
-                    </div>
-                    <div className="text-left">
-                      <h3 className={`text-2xl font-bold ${categoryConfig.textColor}`}>
-                        {category.nom}
-                      </h3>
-                      <p className="text-gray-600 mt-1">
-                        {category.formations.length} formation{category.formations.length > 1 ? 's' : ''} disponible{category.formations.length > 1 ? 's' : ''}
-                      </p>
+              <div key={category.id} className="animate-slideUp transition-all duration-500 ease-in-out">
+                {/* Category Header - Only show when not filtering all */}
+                {activeFilter !== 'all' && (
+                  <div className="flex items-center justify-center mb-12">
+                    <div className={`flex items-center px-8 py-4 rounded-3xl ${categoryConfig.bgColor} border-2 ${categoryConfig.borderColor} shadow-lg`}>
+                      <div className={`w-16 h-16 bg-gradient-to-r ${categoryConfig.gradient} rounded-2xl flex items-center justify-center mr-4 shadow-md`}>
+                        <span className="text-3xl">{categoryConfig.icon}</span>
+                      </div>
+                      <div className="text-left">
+                        <h3 className={`text-2xl font-bold ${categoryConfig.textColor}`}>
+                          {category.nom}
+                        </h3>
+                        <p className="text-gray-600 mt-1">
+                          {category.formations.length} formation{category.formations.length > 1 ? 's' : ''} disponible{category.formations.length > 1 ? 's' : ''}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
+                
+                {/* When showing all, add category title above formations */}
+                {activeFilter === 'all' && (
+                  <div className="text-center mb-8">
+                    <h3 className={`text-3xl font-bold bg-gradient-to-r ${categoryConfig.gradient} bg-clip-text text-transparent mb-2`}>
+                      <span className="text-4xl mr-3">{categoryConfig.icon}</span>
+                      {category.nom}
+                    </h3>
+                    <p className="text-gray-600">
+                      {category.formations.length} formation{category.formations.length > 1 ? 's' : ''} disponible{category.formations.length > 1 ? 's' : ''}
+                    </p>
+                  </div>
+                )}
 
                 {/* Formations Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.formations.map((formation, index) => (
                     <div 
                       key={formation.id} 
-                      className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 hover:scale-105 hover:-translate-y-3 relative overflow-hidden"
+                      className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 hover:scale-105 hover:-translate-y-3 relative overflow-hidden animate-fadeIn"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       {/* Top gradient line */}

@@ -78,6 +78,7 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
   const [loading, setLoading] = useState(true)
   const [selectedParcours, setSelectedParcours] = useState<Parcours | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [activeFilter, setActiveFilter] = useState<string>('all')
 
   const categorizeParcours = (parcours: Parcours): keyof ParcoursCategory => {
     const titre = parcours.titre.toLowerCase()
@@ -160,6 +161,19 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
     setIsModalOpen(true)
   }
 
+  const handleFilterClick = (categoryKey: string) => {
+    setActiveFilter(categoryKey)
+  }
+
+  const getFilteredParcours = (): [string, Parcours[]][] => {
+    if (activeFilter === 'all') {
+      return Object.entries(parcours).filter(([_, parcourslist]) => parcourslist.length > 0) as [string, Parcours[]][]
+    } else {
+      const categoryParcours = parcours[activeFilter as keyof ParcoursCategory]
+      return categoryParcours.length > 0 ? [[activeFilter, categoryParcours] as [string, Parcours[]]] : []
+    }
+  }
+
   if (loading) {
     return (
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
@@ -216,36 +230,95 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
           </div>
         </div>
 
+        {/* Category Filters */}
+        <div className="mb-16">
+          <div className="flex flex-wrap justify-center gap-4">
+            <button
+              onClick={() => handleFilterClick('all')}
+              className={`px-8 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 ${
+                activeFilter === 'all'
+                  ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:shadow-md'
+              }`}
+            >
+              <span className="flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-4H3m16 8H7m12-4H3" />
+                </svg>
+                Tous les parcours
+              </span>
+            </button>
+
+            {Object.entries(parcours).map(([categoryKey, parcourslist]) => {
+              if (parcourslist.length === 0) return null
+              
+              const categoryStyle = categoryColors[categoryKey as keyof typeof categoryColors]
+              return (
+                <button
+                  key={categoryKey}
+                  onClick={() => handleFilterClick(categoryKey)}
+                  className={`px-8 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 ${
+                    activeFilter === categoryKey
+                      ? `bg-gradient-to-r ${categoryStyle.gradient} text-white shadow-lg scale-105`
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:shadow-md'
+                  }`}
+                >
+                  <span className="flex items-center">
+                    <span className="text-2xl mr-3">{categoryStyle.icon}</span>
+                    {categoryLabels[categoryKey as keyof typeof categoryLabels]}
+                    <span className="ml-2 bg-white/20 text-xs px-2 py-1 rounded-full">
+                      {parcourslist.length}
+                    </span>
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
         <div className="space-y-16">
-          {Object.entries(parcours).map(([category, parcourslist]) => {
-            if (parcourslist.length === 0) return null
-            
+          {getFilteredParcours().map(([category, parcourslist]) => {
             const categoryStyle = categoryColors[category as keyof typeof categoryColors]
             return (
-              <div key={category} className="animate-slideUp">
-                {/* Category Header */}
-                <div className="flex items-center justify-center mb-12">
-                  <div className={`flex items-center px-8 py-4 rounded-3xl border-2 ${categoryStyle.badge} shadow-lg`}>
-                    <div className={`w-16 h-16 bg-gradient-to-r ${categoryStyle.gradient} rounded-2xl flex items-center justify-center mr-4 shadow-md`}>
-                      <span className="text-3xl">{categoryStyle.icon}</span>
-                    </div>
-                    <div className="text-left">
-                      <h3 className={`text-2xl font-bold ${categoryStyle.badge.split(' ')[2]}`}>
-                        {categoryLabels[category as keyof typeof categoryLabels]}
-                      </h3>
-                      <p className="text-gray-600 mt-1">
-                        {parcourslist.length} parcours RNCP niveau{parcourslist.length > 1 ? 'x' : ''} 6-7
-                      </p>
+              <div key={category} className="animate-slideUp transition-all duration-500 ease-in-out">
+                {/* Category Header - Only show when not filtering all */}
+                {activeFilter !== 'all' && (
+                  <div className="flex items-center justify-center mb-12">
+                    <div className={`flex items-center px-8 py-4 rounded-3xl border-2 ${categoryStyle.badge} shadow-lg`}>
+                      <div className={`w-16 h-16 bg-gradient-to-r ${categoryStyle.gradient} rounded-2xl flex items-center justify-center mr-4 shadow-md`}>
+                        <span className="text-3xl">{categoryStyle.icon}</span>
+                      </div>
+                      <div className="text-left">
+                        <h3 className={`text-2xl font-bold ${categoryStyle.badge.split(' ')[2]}`}>
+                          {categoryLabels[category as keyof typeof categoryLabels]}
+                        </h3>
+                        <p className="text-gray-600 mt-1">
+                          {parcourslist.length} parcours RNCP niveau{parcourslist.length > 1 ? 'x' : ''} 6-7
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
+                
+                {/* When showing all, add category title above formations */}
+                {activeFilter === 'all' && (
+                  <div className="text-center mb-8">
+                    <h3 className={`text-3xl font-bold bg-gradient-to-r ${categoryStyle.gradient} bg-clip-text text-transparent mb-2`}>
+                      <span className="text-4xl mr-3">{categoryStyle.icon}</span>
+                      {categoryLabels[category as keyof typeof categoryLabels]}
+                    </h3>
+                    <p className="text-gray-600">
+                      {parcourslist.length} parcours RNCP niveau{parcourslist.length > 1 ? 'x' : ''} 6-7
+                    </p>
+                  </div>
+                )}
                 
                 {/* Parcours Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {parcourslist.map((parcours: Parcours, index: number) => (
                     <div 
                       key={parcours.id} 
-                      className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 hover:scale-105 hover:-translate-y-3 relative overflow-hidden"
+                      className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 hover:scale-105 hover:-translate-y-3 relative overflow-hidden animate-fadeIn"
                       style={{ animationDelay: `${index * 150}ms` }}
                     >
                       {/* Top gradient line */}
