@@ -49,6 +49,19 @@ interface Formation {
   meta?: {
     financement_eligibilite?: string[]
   }
+  handicap?: {
+    texte?: string
+    partenaires?: {
+      [key: string]: {
+        contacts?: string[]
+        email?: string
+        canal?: string
+        nom?: string
+        adresse?: string
+        telephone?: string
+      }
+    }
+  }
 }
 
 interface FormationDetailModalProps {
@@ -118,15 +131,15 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
         ) : formation ? (
           <div className="flex flex-col h-full min-h-0">
             {/* Header */}
-            <div className={`p-8 bg-gradient-to-r ${categoryConfig.gradient} text-white relative overflow-hidden`}>
+            <div className={`p-12 bg-gradient-to-r ${categoryConfig.gradient} text-white relative overflow-hidden`}>
               <div className="absolute inset-0 bg-black/10"></div>
               <div className="relative flex justify-between items-start">
                 <div className="flex items-start space-x-6">
-                  <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center text-4xl backdrop-blur-sm">
+                  <div className="w-24 h-24 bg-white/20 rounded-3xl flex items-center justify-center text-5xl backdrop-blur-sm shadow-lg">
                     {categoryConfig.icon}
                   </div>
-                  <div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                  <div className="flex-1">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                       {formation.titre}
                     </h2>
                     <div className="flex flex-wrap gap-3 mb-4">
@@ -144,7 +157,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                         📅 {formation.duree_formation}
                       </span>
                     </div>
-                    <p className="text-xl opacity-90 leading-relaxed">
+                    <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-4xl">
                       {formation.resume || formation.description}
                     </p>
                   </div>
@@ -444,6 +457,77 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                       <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
                         <h3 className="text-lg font-bold text-green-900 mb-3">Moyens techniques</h3>
                         <p className="text-gray-700 leading-relaxed">{formation.moyens_techniques}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Section Accessibilité Handicap */}
+                {formation.handicap && (
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-200">
+                    <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center">
+                      <svg className="w-8 h-8 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                      Accessibilité & Handicap
+                    </h3>
+                    
+                    {formation.handicap.texte && (
+                      <div className="mb-6">
+                        <p className="text-gray-700 leading-relaxed text-lg">
+                          {formation.handicap.texte}
+                        </p>
+                      </div>
+                    )}
+                    
+                    {formation.handicap.partenaires && Object.keys(formation.handicap.partenaires).length > 0 && (
+                      <div>
+                        <h4 className="text-xl font-bold text-blue-800 mb-4">Nos partenaires handicap :</h4>
+                        <div className="grid md:grid-cols-2 gap-6">
+                          {Object.entries(formation.handicap.partenaires).map(([key, partenaire]) => (
+                            <div key={key} className="bg-white rounded-xl p-6 border border-blue-100 shadow-sm">
+                              <h5 className="font-bold text-gray-900 mb-3">
+                                {partenaire.nom || key.replace(/_/g, ' ').toUpperCase()}
+                              </h5>
+                              <div className="space-y-2 text-sm text-gray-600">
+                                {partenaire.contacts && partenaire.contacts.length > 0 && (
+                                  <div>
+                                    <span className="font-semibold">Contacts: </span>
+                                    {partenaire.contacts.join(', ')}
+                                  </div>
+                                )}
+                                {partenaire.email && (
+                                  <div>
+                                    <span className="font-semibold">Email: </span>
+                                    <a href={`mailto:${partenaire.email}`} className="text-blue-600 hover:text-blue-800">
+                                      {partenaire.email}
+                                    </a>
+                                  </div>
+                                )}
+                                {partenaire.telephone && (
+                                  <div>
+                                    <span className="font-semibold">Téléphone: </span>
+                                    <a href={`tel:${partenaire.telephone.replace(/\s/g, '')}`} className="text-blue-600 hover:text-blue-800">
+                                      {partenaire.telephone}
+                                    </a>
+                                  </div>
+                                )}
+                                {partenaire.adresse && (
+                                  <div>
+                                    <span className="font-semibold">Adresse: </span>
+                                    {partenaire.adresse}
+                                  </div>
+                                )}
+                                {partenaire.canal && (
+                                  <div>
+                                    <span className="font-semibold">Contact: </span>
+                                    {partenaire.canal}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>

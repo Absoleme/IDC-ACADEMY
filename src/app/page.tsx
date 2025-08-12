@@ -2,8 +2,8 @@
 import Header from '@/components/header'
 import Hero from '@/components/hero'
 import Guarantees from '@/components/guarantees'
-import FormationsCertifiantes from '@/components/FormationsCertifiantes'
-import ParcoursReconversion from '@/components/ParcoursReconversion'
+import Partners from '@/components/Partners'
+import TechSalaryGrids from '@/components/TechSalaryGrids'
 import Contact from '@/components/contact'
 
 export default function Home() {
@@ -13,19 +13,11 @@ export default function Home() {
       <Hero />
       <Guarantees />
       
-      {/* Section 1: Formations pour Certifications */}
-      <FormationsCertifiantes 
-        title="Formations Certifiantes"
-        description="Préparez et obtenez vos certifications IT avec nos formations intensives. Classées par domaine d'expertise pour vous aider à choisir votre spécialisation."
-        id="formations-certifiantes"
-      />
+      {/* Section 1: Nos Partenaires */}
+      <Partners />
 
-      {/* Section 2: Parcours de Reconversion RNCP */}
-      <ParcoursReconversion 
-        title="Parcours de Reconversion Professionnelle"
-        description="Parcours longs et certifiants RNCP niveau 6 et 7 pour une reconversion complète vers l'IT. Accompagnement personnalisé et insertion professionnelle garantie."
-        id="parcours-reconversion"
-      />
+      {/* Section 2: Grilles de Salaires Tech */}
+      <TechSalaryGrids />
       
       <Contact />
     </main>
