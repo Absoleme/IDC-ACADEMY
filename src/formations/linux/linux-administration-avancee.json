@@ -1,0 +1,171 @@
+{
+  "id": "formation-linux-admin-avancee",
+  "type": "formation",
+  "code": null,
+  "titre": "Administration Linux avancée",
+  "categorie": "Linux/Stockage",
+  "sous_categorie": "Linux",
+  "resume": "Approfondir l’administration Linux : services et démarrage, réseau avancé, stockage (LVM/RAID), sécurité (pare‑feu, SELinux/AppArmor), supervision, performance, dépannage et automatisation. Aligné LPIC‑2/RHCSA/RHCE.",
+  "public": "Administrateurs systèmes ayant des bases Linux, ingénieurs DevOps/Cloud, techniciens systèmes souhaitant monter en compétences.",
+  "prerequis": "Avoir les fondamentaux Linux (ex. formation ‘Fondamentaux Linux’) ou expérience équivalente en ligne de commande et notions réseau/stockage.",
+  "duree_formation": "4 jours",
+  "inscription": "Contact, analyse du besoin, validation, convention/convocation.",
+  "objectifs": [
+    "Maîtriser l’administration avancée des services et du démarrage (systemd).",
+    "Configurer le réseau avancé (VLAN, bonding, routage, pare‑feu).",
+    "Gérer le stockage: partitions, LVM, RAID, chiffrage, NFS/SMB.",
+    "Renforcer la sécurité: SSH hardening, sudoers, SELinux/AppArmor.",
+    "Superviser et optimiser les performances, diagnostiquer les pannes.",
+    "Automatiser des tâches avec le shell scripting et les timers."
+  ],
+  "moyen_et_modalite": "Cours + démos + labs. Présentiel/distanciel. Alternance d’apports théoriques, exercices guidés et cas pratiques.",
+  "moyens_techniques": "Postes apprenants avec VMs Linux (RHEL/Alma/Ubuntu/Debian), hyperviseur ou sandbox, terminal/SSH, plateforme visio si distanciel, supports numériques.",
+  "adaptation_et_suivi": "Positionnement d’entrée, adaptation du rythme et des exercices selon le niveau, suivi quotidien des acquis, Q&A et ressources post-formation.",
+  "evaluation_parcours": "Quiz d’entrée, labs notés, QCM final et mini‑projet d’administration. Attestation de fin de formation.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’ Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "programme_detaille": [
+    {
+      "module": "Services, démarrage et gestion du système",
+      "duree": "1 j",
+      "contenus": [
+        "systemd avancé: units, cibles, dépendances, overrides",
+        "journalctl et journald, rotation des logs",
+        "Planification: cron et systemd timers",
+        "Gestion des paquets (apt/yum/dnf) et dépôts, signatures",
+        "Noyau: modules, paramètres sysctl (notions)"
+      ],
+      "activites": [
+        "Lab: création/override d’un service systemd",
+        "Analyse de logs et troubleshooting de démarrage"
+      ],
+      "resultats_attendus": [
+        "Savoir administrer services, démarrage et journalisation"
+      ]
+    },
+    {
+      "module": "Réseau avancé et sécurité système",
+      "duree": "1 j",
+      "contenus": [
+        "IP, routage, bonding/teaming, VLANs",
+        "Diagnostic réseau: ip, ss, tcpdump, nmap",
+        "Pare‑feu: firewalld/iptables, ufw (selon distro)",
+        "Sécurité SSH, clés et durcissement, sudoers avancé",
+        "SELinux/AppArmor: modes, contextes, politiques (notions)"
+      ],
+      "activites": [
+        "Lab: configuration bonding/VLAN et règles pare‑feu",
+        "Cas: durcissement SSH et gestion sudoers"
+      ],
+      "resultats_attendus": [
+        "Configurer le réseau et appliquer des contrôles de sécurité"
+      ]
+    },
+    {
+      "module": "Stockage, systèmes de fichiers et partage",
+      "duree": "1 j",
+      "contenus": [
+        "Partitions, LVM (PV/VG/LV), snapshots",
+        "RAID logiciel (mdadm), chiffrage (LUKS) notions",
+        "Systèmes de fichiers (ext4, xfs, btrfs) et quotas",
+        "Montages, fstab, autofs",
+        "Partages NFS et SMB/CIFS"
+      ],
+      "activites": [
+        "Lab: conception d’un schéma LVM + RAID",
+        "Mise en place d’un partage NFS/SMB"
+      ],
+      "resultats_attendus": [
+        "Gérer un stockage résilient et des partages réseau"
+      ]
+    },
+    {
+      "module": "Supervision, performance, dépannage et automatisation",
+      "duree": "1 j",
+      "contenus": [
+        "Outils: top/htop, vmstat, iostat, sar, free, df/du",
+        "Diagnostic services et réseau (ss, netstat, lsof)",
+        "Méthodologie de troubleshooting",
+        "Shell scripting avancé: fonctions, tests, logs",
+        "Packaging simple et déploiement (notions CI/CD)"
+      ],
+      "activites": [
+        "Mini‑projet: script d’audit et remédiation",
+        "Atelier: résolution d’incidents guidée"
+      ],
+      "resultats_attendus": [
+        "Diagnostiquer/optimiser un système et automatiser des tâches"
+      ]
+    }
+  ],
+  "competences": [
+    "Administration systemd avancée",
+    "Réseau Linux (VLAN, bonding, firewall)",
+    "Stockage LVM/RAID, NFS/SMB",
+    "Sécurité (SSH, sudoers, SELinux/AppArmor)",
+    "Supervision et troubleshooting",
+    "Shell scripting avancé"
+  ],
+  "certifications_visees": [
+    "cert-lpic-2",
+    "cert-rhcsa",
+    "cert-rhce"
+  ],
+  "postes_accessibles": [
+    "Administrateur Linux",
+    "Ingénieur Stockage Enterprise",
+    "Architecte Infrastructure"
+  ],
+  "salaire_moyen": "40 000€ - 65 000€ selon expérience",
+  "modalites": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": {
+    "buttons_alignment": "center",
+    "financement_eligibilite": [
+      "OPCO",
+      "CPF",
+      "FNE",
+      "AIF",
+      "PTP",
+      "Dispositifs régionaux",
+      "AGEFIPH",
+      "AFPR/POEI"
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "formation-linux-rhcsa",
+  "type": "formation",
+  "code": "RHCSA",
+  "titre": "Red Hat Certified System Administrator — Préparation RHCSA",
+  "categorie": "Linux/Stockage",
+  "sous_categorie": "Linux",
+  "resume": "Préparer et entraîner les participants aux compétences pratiques attendues à l’examen RHCSA : administration système, stockage LVM, réseau, sécurité (firewalld/SELinux), services, dépannage et automatisation.",
+  "public": "Administrateurs systèmes Linux, techniciens systèmes, ingénieurs DevOps/Cloud souhaitant valider des compétences opérationnelles sur RHEL/AlmaLinux.",
+  "prerequis": "Maîtriser les fondamentaux Linux (ligne de commande, gestion de fichiers, utilisateurs, paquets). Expérience équivalente ou formation ‘Fundamentaux Linux’ recommandée.",
+  "duree_formation": "5 jours",
+  "inscription": "Contact, analyse du besoin, validation, convention/convocation.",
+  "objectifs": [
+    "Installer, configurer et maintenir un système Linux de type RHEL.",
+    "Gérer utilisateurs/groupes, permissions, sudo et processus.",
+    "Administrer le stockage: partitions, LVM, montages, systèmes de fichiers.",
+    "Configurer le réseau, le pare‑feu (firewalld) et sécuriser SSH.",
+    "Comprendre et appliquer les principes de SELinux (modes, contextes de base).",
+    "Gérer services et journalisation (systemd, journald).",
+    "Automatiser des tâches avec le shell et planifications (cron/timers).",
+    "Aborder la conteneurisation avec Podman (bases utiles à l’examen).",
+    "S’entraîner au format de l’examen via des labs et un examen blanc."
+  ],
+  "moyen_et_modalite": "Cours + démos + labs. Présentiel/distanciel. Alternance d’apports théoriques, exercices guidés, ateliers et examen blanc.",
+  "moyens_techniques": "Environnement RHEL/AlmaLinux 9 en VM ou sandbox, accès terminal/SSH, dépôt local de paquets, plateforme visio si distanciel, supports numériques et banques d’exercices.",
+  "adaptation_et_suivi": "Positionnement d’entrée, ajustement du rythme et des exercices, suivi quotidien des acquis, Q&A et ressources post‑formation.",
+  "evaluation_parcours": "Quiz de positionnement, labs évalués, QCM de révision et examen blanc pratique RHCSA.",
+  "delai_acces": "2 à 4 semaines après validation.",
+  "handicap": {
+    "texte": "Aménagements possibles selon besoins. Nous étudions chaque situation pour adapter modalités, rythmes et supports."
+  },
+  "evaluation_du_besoin": "Questionnaire d’adéquation avant inscription.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "programme_detaille": [
+    {
+      "module": "Installation, shell et gestion du système",
+      "duree": "1 j",
+      "contenus": [
+        "Installation/initialisation RHEL/AlmaLinux",
+        "Bash et gestion des fichiers (FHS, find/grep/tar)",
+        "Utilisateurs, groupes, sudoers",
+        "Processus et services (systemd), journald",
+        "Gestion des paquets (dnf/yum), dépôts"
+      ],
+      "activites": [
+        "Labs: comptes, sudo, services et logs",
+        "Checklist de post‑installation"
+      ],
+      "resultats_attendus": [
+        "Savoir installer et administrer un système de base"
+      ]
+    },
+    {
+      "module": "Stockage et systèmes de fichiers",
+      "duree": "1 j",
+      "contenus": [
+        "Partitions, UUID, labels",
+        "LVM: PV/VG/LV, redimensionnement, snapshots",
+        "Systèmes de fichiers (xfs/ext4), fstab, montages",
+        "Quotas utilisateurs/groupes",
+        "Archivage et sauvegardes (rsync, tar)"
+      ],
+      "activites": [
+        "Lab: conception et gestion d’un schéma LVM",
+        "Exercice: montages persistants et quotas"
+      ],
+      "resultats_attendus": [
+        "Gérer un stockage souple et fiable"
+      ]
+    },
+    {
+      "module": "Réseau, sécurité et accès distant",
+      "duree": "1 j",
+      "contenus": [
+        "Configuration IP, DNS, NTP/chrony",
+        "Diagnostic (ip, ss, tcpdump) et dépannage",
+        "firewalld: zones, services, ports, règles",
+        "SSH: clés, durcissement, transfert",
+        "SELinux: modes, contextes, dépannage de base"
+      ],
+      "activites": [
+        "Lab: configuration réseau + règles firewalld",
+        "Cas: correction d’un blocage lié à SELinux"
+      ],
+      "resultats_attendus": [
+        "Sécuriser et dépanner la connectivité"
+      ]
+    },
+    {
+      "module": "Services, planification et automatisation",
+      "duree": "1 j",
+      "contenus": [
+        "Services web/partage (notions selon besoin: httpd, NFS/SMB)",
+        "Planification: cron, at et systemd timers",
+        "Journalisation et rotation de logs",
+        "Shell scripting: variables, tests, boucles, fonctions",
+        "Méthodologie de troubleshooting"
+      ],
+      "activites": [
+        "Mini‑projet: script d’audit/remédiation",
+        "Atelier: résolution d’incidents"
+      ],
+      "resultats_attendus": [
+        "Automatiser et fiabiliser l’administration"
+      ]
+    },
+    {
+      "module": "Conteneurs et préparation à l’examen",
+      "duree": "1 j",
+      "contenus": [
+        "Podman: images, conteneurs, volumes (bases)",
+        "Gestion de services conteneurisés avec systemd",
+        "Révisions thématiques et bonnes pratiques d’examen",
+        "Examen blanc pratique et débriefing"
+      ],
+      "activites": [
+        "Lab: déployer un service avec Podman",
+        "Examen blanc RHCSA chronométré"
+      ],
+      "resultats_attendus": [
+        "Être prêt pour l’épreuve pratique RHCSA"
+      ]
+    }
+  ],
+  "competences": [
+    "Administration RHEL/AlmaLinux",
+    "Gestion du stockage (LVM, montages, quotas)",
+    "Réseau et sécurité (firewalld, SSH)",
+    "SELinux (bases et dépannage)",
+    "Services, logs et planification",
+    "Shell scripting et automatisation",
+    "Conteneurs (Podman) — notions"
+  ],
+  "certifications_visees": [
+    "cert-rhcsa"
+  ],
+  "postes_accessibles": [
+    "Administrateur Linux",
+    "Administrateur Systèmes/DevOps junior",
+    "Ingénieur Systèmes Linux"
+  ],
+  "salaire_moyen": "40 000€ - 65 000€ selon expérience",
+  "modalites": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": {
+    "buttons_alignment": "center",
+    "financement_eligibilite": [
+      "OPCO",
+      "CPF",
+      "FNE",
+      "AIF",
+      "PTP",
+      "Dispositifs régionaux",
+      "AGEFIPH",
+      "AFPR/POEI"
+    ]
+  }
+}
