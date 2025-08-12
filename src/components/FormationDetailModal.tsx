@@ -120,50 +120,58 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
   const categoryConfig = getCategoryConfig(formation?.categorie)
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fadeIn">
-      <div className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] shadow-2xl border border-gray-100 animate-slideUp flex flex-col">
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-start sm:items-center justify-center p-0 sm:p-4 z-50 animate-fadeIn overflow-y-auto">
+      <div className="bg-white rounded-none sm:rounded-2xl max-w-full sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full h-full sm:max-h-[90vh] shadow-2xl border-0 sm:border border-gray-100 animate-slideUp flex flex-col">
         {loading ? (
           <div className="p-12 text-center">
             <div className="animate-spin w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-6"></div>
             <p className="text-gray-600">Chargement des détails...</p>
           </div>
         ) : formation ? (
-          <div className="flex flex-col h-full min-h-0">
-            {/* Header */}
-            <div className={`p-12 bg-gradient-to-r ${categoryConfig.gradient} text-white relative overflow-hidden`}>
+          <div className="flex flex-col h-full min-h-0 relative">
+            {/* Bouton fermer mobile fixe */}
+            <button
+              onClick={onClose}
+              className="sm:hidden fixed top-4 right-4 z-10 bg-white/90 backdrop-blur-sm text-gray-700 hover:text-gray-900 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+            >
+              <XMarkIcon className="w-6 h-6" />
+            </button>
+            
+            {/* Header - masqué sur mobile */}
+            <div className={`hidden sm:block p-4 sm:p-8 lg:p-12 bg-gradient-to-r ${categoryConfig.gradient} text-white relative overflow-hidden`}>
               <div className="absolute inset-0 bg-black/10"></div>
-              <div className="relative flex justify-between items-start">
-                <div className="flex items-start space-x-6">
-                  <div className="w-24 h-24 bg-white/20 rounded-3xl flex items-center justify-center text-5xl backdrop-blur-sm shadow-lg">
+              <div className="relative flex flex-col sm:flex-row justify-between items-start gap-4">
+                <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 flex-1">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white/20 rounded-3xl flex items-center justify-center text-3xl sm:text-4xl lg:text-5xl backdrop-blur-sm shadow-lg flex-shrink-0">
                     {categoryConfig.icon}
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                       {formation.titre}
                     </h2>
-                    <div className="flex flex-wrap gap-3 mb-4">
+                    <div className="flex flex-wrap gap-2 sm:gap-3 mb-4">
                       {formation.categorie && (
-                        <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
+                        <span className="bg-white/20 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
                           {formation.categorie}
                         </span>
                       )}
                       {formation.sous_categorie && (
-                        <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
+                        <span className="bg-white/20 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
                           {formation.sous_categorie}
                         </span>
                       )}
-                      <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-white/20 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
                         📅 {formation.duree_formation}
                       </span>
                     </div>
-                    <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-4xl">
+                    <p className="text-sm sm:text-base lg:text-xl xl:text-2xl opacity-90 leading-relaxed">
                       {formation.resume || formation.description}
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={onClose}
-                  className="text-white/80 hover:text-white hover:bg-white/10 rounded-xl p-3 transition-all duration-200"
+                  className="text-white/80 hover:text-white hover:bg-white/10 rounded-xl p-2 sm:p-3 transition-all duration-200 self-start sm:self-auto"
                 >
                   <XMarkIcon className="w-6 h-6" />
                 </button>
@@ -172,7 +180,36 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
 
             {/* Content */}
             <div className="flex-1 overflow-y-auto min-h-0">
-              <div className="p-8 space-y-8">
+              <div className="p-4 sm:p-6 lg:p-8 space-y-6 sm:space-y-8">
+                
+                {/* Titre mobile simple */}
+                <div className="sm:hidden pt-8">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center text-2xl">
+                      {categoryConfig.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h1 className="text-xl font-bold text-gray-900 leading-tight">
+                        {formation.titre}
+                      </h1>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {formation.categorie && (
+                          <span className="bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full">
+                            {formation.categorie}
+                          </span>
+                        )}
+                        <span className="bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">
+                          📅 {formation.duree_formation}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  {formation.resume || formation.description ? (
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                      {formation.resume || formation.description}
+                    </p>
+                  ) : null}
+                </div>
                 
                 {/* Stats rapides */}
                 {formation.stats && (
@@ -196,9 +233,9 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                   </div>
                 )}
 
-                <div className="grid lg:grid-cols-2 gap-8">
+                <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
                   {/* Colonne gauche */}
-                  <div className="space-y-8">
+                  <div className="space-y-6 lg:space-y-8">
                     
                     {/* Public cible */}
                     {formation.public && (
@@ -250,7 +287,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                   </div>
 
                   {/* Colonne droite */}
-                  <div className="space-y-8">
+                  <div className="space-y-6 lg:space-y-8">
                     
                     {/* Compétences */}
                     {formation.competences && formation.competences.length > 0 && (
@@ -319,7 +356,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                           </svg>
                           Postes accessibles
                         </h3>
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           {formation.postes_accessibles.map((poste, index) => (
                             <div key={index} className="bg-white border border-gray-200 rounded-xl p-3 text-center font-medium text-gray-700">
                               {poste}
@@ -474,7 +511,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                     {formation.handicap.partenaires && Object.keys(formation.handicap.partenaires).length > 0 && (
                       <div>
                         <h4 className="text-xl font-bold text-blue-800 mb-4">Nos partenaires handicap :</h4>
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                           {Object.entries(formation.handicap.partenaires).map(([key, partenaire]) => (
                             <div key={key} className="bg-white rounded-xl p-6 border border-blue-100 shadow-sm">
                               <h5 className="font-bold text-gray-900 mb-3">
@@ -527,16 +564,16 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
             </div>
 
             {/* Footer avec action */}
-            <div className="border-t border-gray-200 p-6 bg-gray-50 flex-shrink-0">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="tel:0759565918" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold py-3 px-8 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="border-t border-gray-200 p-4 sm:p-6 bg-gray-50 flex-shrink-0">
+              <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
+                <a href="tel:0759565918" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold py-3 px-6 sm:px-8 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center w-full sm:w-auto justify-center text-sm sm:text-base">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   07 59 56 59 18
                 </a>
-                <a href="mailto:contact@idcacademy.fr" className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold py-3 px-8 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <a href="mailto:contact@idcacademy.fr" className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold py-3 px-6 sm:px-8 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center w-full sm:w-auto justify-center text-sm sm:text-base">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   contact@idcacademy.fr
