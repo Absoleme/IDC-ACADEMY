@@ -12,7 +12,6 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Guarantees />
       
       {/* Section 1: Nos Partenaires */}
       <Partners />
