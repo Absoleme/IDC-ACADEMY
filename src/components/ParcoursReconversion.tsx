@@ -470,7 +470,7 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
                   </svg>
                 </div>
                 <h4 className="font-bold text-gray-900 mb-2">Financement</h4>
-                <p className="text-sm text-gray-600 text-center">CPF, Pôle Emploi, OPCO</p>
+                <p className="text-sm text-gray-600 text-center">Pôle Emploi, OPCO</p>
               </div>
               <div className="flex flex-col items-center p-4">
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-3">
