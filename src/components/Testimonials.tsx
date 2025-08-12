@@ -4,57 +4,51 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Sarah Martinez",
-      role: "Développeuse Full Stack",
-      company: "TechCorp",
+      role: "Administratrice Cloud",
       image: "/avatars/sarah.jpg",
       rating: 5,
-      text: "La formation Python/Django m'a permis de décrocher mon premier poste de développeuse. Les formateurs sont exceptionnels et l'accompagnement personnalisé fait toute la différence. Je recommande vivement !",
-      formation: "Formation Python/Django"
+      text: "La formation Fondamentaux Microsoft Azure m'a permis d'obtenir ma certification AZ-900 et de décrocher un poste dans le cloud. Les formateurs sont exceptionnels et l'accompagnement personnalisé fait toute la différence !",
+      formation: "Fondamentaux Microsoft Azure"
     },
     {
       name: "Ahmed Benali",
-      role: "Data Scientist",
-      company: "DataLab",
+      role: "Ingénieur DevOps",
       image: "/avatars/ahmed.jpg",
       rating: 5,
-      text: "Excellent programme de formation en Data Science. Les projets concrets et l'accès aux outils professionnels m'ont préparé au marché du travail. J'ai trouvé un emploi 2 semaines après la fin de la formation.",
-      formation: "Formation Data Science"
+      text: "Excellente formation Kubernetes. Les travaux pratiques et l'approche hands-on m'ont vraiment préparé aux défis du terrain. J'ai passé ma certification CKA avec succès grâce à cette formation.",
+      formation: "Kubernetes CKA"
     },
     {
       name: "Marie Dubois",
-      role: "DevOps Engineer",
-      company: "CloudTech",
+      role: "Analyste SOC",
       image: "/avatars/marie.jpg",
       rating: 5,
-      text: "Formation DevOps très complète avec des cas d'usage réels. L'équipe pédagogique est à l'écoute et les certifications incluses sont un vrai plus pour le CV. Formation que je recommande sans hésitation.",
-      formation: "Formation DevOps"
+      text: "Formation en cybersécurité très complète. Le programme SOC Analyst m'a donné toutes les bases pour travailler en centre opérationnel de sécurité. L'équipe pédagogique est à l'écoute et experte dans son domaine.",
+      formation: "SOC Analyst"
     },
     {
       name: "Lucas Moreau",
-      role: "Développeur React",
-      company: "WebStudio",
+      role: "Consultant Cloud AWS",
       image: "/avatars/lucas.jpg",
       rating: 5,
-      text: "Reconversion réussie grâce à IDC Academy ! La formation JavaScript/React est bien structurée et les formateurs partagent leur expérience terrain. Le suivi post-formation pour l'emploi est excellent.",
-      formation: "Formation JavaScript/React"
+      text: "Reconversion réussie grâce à IDC Academy ! La formation AWS Cloud Practitioner m'a ouvert les portes du cloud computing. Le contenu est structuré et les formateurs partagent leur expérience terrain.",
+      formation: "AWS Cloud Practitioner"
     },
     {
       name: "Fatima El Mansouri",
-      role: "Analyste Cybersécurité",
-      company: "SecureIT",
+      role: "Spécialiste Ethical Hacking",
       image: "/avatars/fatima.jpg",
       rating: 5,
-      text: "Formation cybersécurité de haute qualité. Contenu technique pointu, exercices pratiques et formateurs experts. J'ai acquis les compétences nécessaires pour évoluer dans ce domaine passionnant.",
-      formation: "Formation Cybersécurité"
+      text: "Formation ethical hacking de haute qualité. Contenu technique pointu avec des labs pratiques en environnement sécurisé. J'ai acquis les compétences nécessaires pour faire du pentest de manière éthique.",
+      formation: "Fondamentaux de l'Ethical Hacking"
     },
     {
       name: "Thomas Bernard",
-      role: "Cloud Architect",
-      company: "InnovCloud",
+      role: "Administrateur Systèmes Linux",
       image: "/avatars/thomas.jpg",
       rating: 5,
-      text: "IDC Academy propose des formations à la pointe de la technologie. La formation AWS m'a permis d'obtenir mes certifications et de progresser rapidement dans ma carrière. Équipe professionnelle et bienveillante.",
-      formation: "Formation AWS"
+      text: "IDC Academy propose des formations pratiques et concrètes. La formation Linux m'a permis de maîtriser l'administration système et de progresser dans ma carrière. Équipe professionnelle et bienveillante.",
+      formation: "Linux Fondamentaux"
     }
   ]
 
@@ -107,7 +101,6 @@ export default function Testimonials() {
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
-                  <p className="text-sm text-indigo-600">{testimonial.company}</p>
                 </div>
               </div>
             </div>
