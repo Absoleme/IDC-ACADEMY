@@ -1,7 +1,6 @@
 'use client'
 import Header from '@/components/header'
 import Hero from '@/components/hero'
-import Guarantees from '@/components/guarantees'
 import Partners from '@/components/Partners'
 import Testimonials from '@/components/Testimonials'
 import TechSalaryGrids from '@/components/TechSalaryGrids'
