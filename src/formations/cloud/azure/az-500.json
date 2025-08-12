@@ -144,14 +144,7 @@
     "meta": {
         "buttons_alignment": "center",
         "financement_eligibilite": [
-            "OPCO",
-            "CPF",
-            "FNE",
-            "AIF",
-            "PTP",
-            "Dispositifs régionaux",
-            "AGEFIPH",
-            "AFPR/POEI"
+            "OPCO", "FNE", "AIF", "PTP", "Dispositifs régionaux", "AGEFIPH"
         ]
     }
 }
