@@ -9,7 +9,7 @@ export default function IdcUniversityPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-900 text-white min-h-screen flex items-center overflow-hidden">
         {/* Background decorations */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-3xl"></div>

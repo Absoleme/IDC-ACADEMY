@@ -9,7 +9,7 @@ export default function FormationsPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 text-white min-h-screen flex items-center overflow-hidden">
         {/* Background decorations */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full blur-3xl"></div>

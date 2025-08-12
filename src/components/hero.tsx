@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-900 text-white py-24 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-900 text-white min-h-screen flex items-center overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
       
