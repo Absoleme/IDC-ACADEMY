@@ -211,28 +211,6 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                   ) : null}
                 </div>
                 
-                {/* Stats rapides */}
-                {formation.stats && (
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {formation.stats?.insertion_professionnelle && (
-                      <div className="bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
-                        <div className="text-3xl font-bold text-green-600 mb-2">
-                          {formation.stats.insertion_professionnelle}
-                        </div>
-                        <div className="text-green-700 font-semibold">Insertion pro</div>
-                      </div>
-                    )}
-                    {formation.stats?.taux_cdi && (
-                      <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 text-center">
-                        <div className="text-3xl font-bold text-blue-600 mb-2">
-                          {formation.stats.taux_cdi}
-                        </div>
-                        <div className="text-blue-700 font-semibold">Taux CDI</div>
-                      </div>
-                    )}
-                  </div>
-                )}
-
                 <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
                   {/* Colonne gauche */}
                   <div className="space-y-6 lg:space-y-8">
