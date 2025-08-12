@@ -16,9 +16,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className={`bg-white shadow-lg sticky top-0 z-50 transition-transform duration-300 ${
-      isScrolled ? 'transform -translate-y-full' : 'transform translate-y-0'
-    }`}>
+    <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
