@@ -14,7 +14,6 @@ interface Formation {
   niveau: string
   certifications: string[]
   technologies: string[]
-  salaire_moyen: string
   taux_insertion: string
   programme: Array<{
     module: string
@@ -102,16 +101,10 @@ export default function FormationsList({ categoryId }: FormationsListProps) {
                   </div>
                 </div>
 
-                <div className="mb-6 p-4 bg-blue-50 rounded-lg">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <div className="text-sm text-gray-600">Salaire moyen :</div>
-                      <div className="text-lg font-bold text-blue-600">{formation.salaire_moyen}</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm text-gray-600">Taux d&apos;insertion :</div>
-                      <div className="text-lg font-bold text-green-600">{formation.taux_insertion}</div>
-                    </div>
+                <div className="mb-6 p-4 bg-green-50 rounded-lg">
+                  <div className="text-center">
+                    <div className="text-sm text-gray-600">Taux d&apos;insertion :</div>
+                    <div className="text-lg font-bold text-green-600">{formation.taux_insertion}</div>
                   </div>
                 </div>
 

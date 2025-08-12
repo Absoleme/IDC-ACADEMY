@@ -32,7 +32,6 @@ interface Formation {
   certifications_visees?: string[]
   certifications_inclues?: string[]
   postes_accessibles?: string[]
-  salaire_moyen?: string
   modalites?: string[]
   prix?: string
   moyen_et_modalite?: string
@@ -176,8 +175,8 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
               <div className="p-8 space-y-8">
                 
                 {/* Stats rapides */}
-                {(formation.stats || formation.salaire_moyen) && (
-                  <div className="grid md:grid-cols-3 gap-6">
+                {formation.stats && (
+                  <div className="grid md:grid-cols-2 gap-6">
                     {formation.stats?.insertion_professionnelle && (
                       <div className="bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
                         <div className="text-3xl font-bold text-green-600 mb-2">
@@ -192,14 +191,6 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                           {formation.stats.taux_cdi}
                         </div>
                         <div className="text-blue-700 font-semibold">Taux CDI</div>
-                      </div>
-                    )}
-                    {formation.salaire_moyen && (
-                      <div className="bg-purple-50 border border-purple-200 rounded-2xl p-6 text-center">
-                        <div className="text-lg font-bold text-purple-600 mb-2">
-                          {formation.salaire_moyen}
-                        </div>
-                        <div className="text-purple-700 font-semibold">Salaire moyen</div>
                       </div>
                     )}
                   </div>

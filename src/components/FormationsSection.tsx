@@ -20,7 +20,6 @@ interface Formation {
   certifications_visees: string[]
   competences: string[]
   postes_accessibles: string[]
-  salaire_moyen: string
   modalites: string[]
 }
 
@@ -213,10 +212,6 @@ export default function FormationsSection({ type, title, description, id }: Form
                         <div className="flex items-center text-gray-700">
                           <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-xs">⏰</span>
                           <span className="font-medium">{formation.duree_formation}</span>
-                        </div>
-                        <div className="flex items-center text-gray-700">
-                          <span className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 text-xs">💰</span>
-                          <span className="font-medium">{formation.salaire_moyen}</span>
                         </div>
                         <div className="flex items-center text-gray-700">
                           <span className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3 text-xs">📋</span>
