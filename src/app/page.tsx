@@ -15,9 +15,6 @@ export default function Home() {
       {/* Section 1: Nos Partenaires */}
       <Partners />
 
-      {/* Section 2: Témoignages */}
-      <Testimonials />
-
       {/* Section 3: Grilles de Salaires Tech */}
       <TechSalaryGrids />
       
