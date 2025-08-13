@@ -2,7 +2,7 @@
   "id": "formation-devops-ckad",
   "type": "formation",
   "code": "CKAD",
-  "titre": "Préparation Kubernetes CKAD - Application Developer",
+  "titre": "Certified Kubernetes Application Developer (CKAD)",
   "categorie": "DevOps",
   "sous_categorie": "Kubernetes",
   "resume": "Concevoir, déployer et dépanner des applications cloud-native sur Kubernetes. Préparation CKAD.",

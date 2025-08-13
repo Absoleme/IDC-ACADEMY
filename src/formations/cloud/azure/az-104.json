@@ -2,7 +2,7 @@
     "id": "formation-az-104",
     "type": "formation",
     "code": "AZ-104",
-    "titre": "Administration Microsoft Azure",
+    "titre": "Microsoft Azure Administrator (AZ-104)",
     "categorie": "Cloud",
     "sous_categorie": "Azure",
     "resume": "Apprendre à administrer les services Azure: identités, gouvernance, ressources compute, réseau, stockage, supervision et sauvegardes. Prépare à la certification AZ-104.",

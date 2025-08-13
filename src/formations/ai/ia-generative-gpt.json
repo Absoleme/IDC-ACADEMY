@@ -2,7 +2,7 @@
   "id": "formation-ai-generative-gpt",
   "type": "formation",
   "code": "GENAI-GPT",
-  "titre": "IA Générative & GPT — Exploiter les LLM en production",
+  "titre": "Microsoft Azure AI Engineer (AI-102)",
   "categorie": "IA",
   "sous_categorie": "IA Générative",
   "resume": "Comprendre et appliquer les modèles de langage (LLM) pour des cas d’usage concrets: RAG, copilots métier, automatisations.",

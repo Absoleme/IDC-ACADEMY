@@ -2,7 +2,7 @@
     "id": "formation-az-500",
     "type": "formation",
     "code": "AZ-500",
-    "titre": "Sécurité des technologies Microsoft Azure",
+    "titre": "Microsoft Azure Security Technologies (AZ-500)",
     "categorie": "Cloud",
     "sous_categorie": "Azure",
     "resume": "Mettre en œuvre la sécurité dans Azure: identité et accès, protection de la plateforme, opérations de sécurité, protection des données et applications. Prépare à AZ-500.",

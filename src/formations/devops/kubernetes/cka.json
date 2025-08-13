@@ -2,7 +2,7 @@
   "id": "formation-devops-cka",
   "type": "formation",
   "code": "CKA",
-  "titre": "Préparation Kubernetes CKA - Administrator",
+  "titre": "Certified Kubernetes Administrator (CKA)",
   "categorie": "DevOps",
   "sous_categorie": "Kubernetes",
   "resume": "Administrer des clusters Kubernetes: installation, plan de contrôle, scheduling, sécurité, réseau, stockage. Préparation CKA.",

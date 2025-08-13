@@ -2,7 +2,7 @@
   "id": "formation-devops-cks",
   "type": "formation",
   "code": "CKS",
-  "titre": "Préparation Kubernetes CKS - Security Specialist",
+  "titre": "Certified Kubernetes Security Specialist (CKS)",
   "categorie": "DevOps",
   "sous_categorie": "Kubernetes",
   "resume": "Sécuriser les clusters et les workloads Kubernetes: hardening, network policies, runtime security, supply chain. Préparation CKS.",

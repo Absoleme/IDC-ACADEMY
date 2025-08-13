@@ -2,7 +2,7 @@
     "id": "formation-az-900",
     "type": "formation",
     "code": "AZ-900",
-    "titre": "Fondamentaux Microsoft Azure",
+    "titre": "Microsoft Azure Fundamentals (AZ-900)",
     "categorie": "Cloud",
     "sous_categorie": "Azure",
     "resume": "Introduction aux concepts du cloud et aux services principaux d’Azure. Idéal pour débuter et préparer la certification Azure Fundamentals.",

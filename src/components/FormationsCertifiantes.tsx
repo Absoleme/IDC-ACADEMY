@@ -37,6 +37,7 @@ export default function FormationsCertifiantes({ title, description, id }: Props
   const [categories, setCategories] = useState<CategoryData[]>([])
   const [loading, setLoading] = useState(true)
   const [activeFilter, setActiveFilter] = useState<string>('all')
+  const [activeSubFilter, setActiveSubFilter] = useState<string>('all')
   
   const getCategoryConfig = (categoryName: string) => {
     const name = categoryName.toLowerCase()
@@ -128,11 +129,27 @@ export default function FormationsCertifiantes({ title, description, id }: Props
 
   const handleFilterClick = (categoryId: string) => {
     setActiveFilter(categoryId)
+    setActiveSubFilter('all') // Reset sub-filter when changing main filter
+  }
+
+  const handleSubFilterClick = (subCategory: string) => {
+    setActiveSubFilter(subCategory)
   }
 
   const filteredCategories = activeFilter === 'all' 
     ? categories 
-    : categories.filter(cat => cat.id === activeFilter)
+    : categories.filter(cat => cat.id === activeFilter).map(cat => {
+        // If filtering Cloud category and sub-filter is active, filter formations by sub-category
+        if (cat.nom === 'Cloud' && activeSubFilter !== 'all') {
+          return {
+            ...cat,
+            formations: cat.formations.filter(formation => 
+              formation.sous_categorie?.toLowerCase() === activeSubFilter.toLowerCase()
+            )
+          }
+        }
+        return cat
+      }).filter(cat => cat.formations.length > 0)
 
   if (loading) {
     return (
@@ -230,6 +247,46 @@ export default function FormationsCertifiantes({ title, description, id }: Props
               )
             })}
           </div>
+
+          {/* Sub-filters for Cloud category */}
+          {activeFilter === 'cloud' && (
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <button
+                onClick={() => handleSubFilterClick('all')}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeSubFilter === 'all'
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:shadow-md'
+                }`}
+              >
+                Toutes les formations Cloud
+              </button>
+              
+              <button
+                onClick={() => handleSubFilterClick('aws')}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center ${
+                  activeSubFilter === 'aws'
+                    ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:shadow-md'
+                }`}
+              >
+                <span className="text-lg mr-2">🟠</span>
+                AWS
+              </button>
+              
+              <button
+                onClick={() => handleSubFilterClick('azure')}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center ${
+                  activeSubFilter === 'azure'
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:shadow-md'
+                }`}
+              >
+                <span className="text-lg mr-2">🔵</span>
+                Azure
+              </button>
+            </div>
+          )}
         </div>
 
         <div className="space-y-16">
