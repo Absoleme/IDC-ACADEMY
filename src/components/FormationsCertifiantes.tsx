@@ -275,25 +275,25 @@ export default function FormationsCertifiantes({ title, description, id }: Props
         </div>
 
         {/* Navigation Layout with Sidebar */}
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:items-stretch">
           {/* Sidebar Navigation - Desktop */}
-          <div className="hidden lg:block w-80 flex-shrink-0">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 p-6 sticky top-8">
+          <div className="hidden lg:flex w-80 flex-shrink-0">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 p-6 flex flex-col w-full">
               {/* Navigation Title */}
-              <div className="mb-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mb-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-1 flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-4H3m16 8H7m12-4H3" />
                   </svg>
                   Domaines de formation
                 </h3>
-                <p className="text-sm text-gray-600">Choisissez votre spécialité</p>
+                <p className="text-xs text-gray-600">Choisissez votre spécialité</p>
               </div>
 
               {/* All Formations Option */}
               <button
                 onClick={() => handleFilterClick('all')}
-                className={`w-full p-4 rounded-xl font-semibold transition-all duration-300 mb-3 ${
+                className={`w-full p-3 rounded-xl font-medium transition-all duration-300 mb-2 ${
                   activeFilter === 'all'
                     ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg'
                     : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200'
@@ -301,14 +301,14 @@ export default function FormationsCertifiantes({ title, description, id }: Props
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-3">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-4H3m16 8H7m12-4H3" />
                       </svg>
                     </div>
                     <div className="text-left">
-                      <div className="font-bold">Toutes les formations</div>
-                      <div className="text-sm opacity-75">
+                      <div className="font-semibold text-sm">Toutes les formations</div>
+                      <div className="text-xs opacity-75">
                         {categories.reduce((total, cat) => total + cat.formations.length, 0)} formations
                       </div>
                     </div>
@@ -326,7 +326,7 @@ export default function FormationsCertifiantes({ title, description, id }: Props
                     <div key={category.id}>
                       <button
                         onClick={() => handleFilterClick(category.id)}
-                        className={`w-full p-4 rounded-xl font-semibold transition-all duration-300 ${
+                        className={`w-full p-3 rounded-xl font-medium transition-all duration-300 ${
                           isActive
                             ? `bg-gradient-to-r ${categoryConfig.gradient} text-white shadow-lg`
                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200'
@@ -334,12 +334,12 @@ export default function FormationsCertifiantes({ title, description, id }: Props
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
-                            <div className={`w-12 h-12 ${isActive ? 'bg-white/20' : categoryConfig.bgColor} rounded-xl flex items-center justify-center mr-3`}>
-                              <span className="text-2xl">{categoryConfig.icon}</span>
+                            <div className={`w-10 h-10 ${isActive ? 'bg-white/20' : categoryConfig.bgColor} rounded-lg flex items-center justify-center mr-3`}>
+                              <span className="text-xl">{categoryConfig.icon}</span>
                             </div>
                             <div className="text-left">
-                              <div className="font-bold">{category.nom}</div>
-                              <div className="text-sm opacity-75">
+                              <div className="font-semibold text-sm">{category.nom}</div>
+                              <div className="text-xs opacity-75">
                                 {category.formations.length} formation{category.formations.length > 1 ? 's' : ''}
                               </div>
                             </div>
@@ -404,33 +404,33 @@ export default function FormationsCertifiantes({ title, description, id }: Props
               </div>
 
               {/* Advanced Filters */}
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center">
+                  <svg className="w-4 h-4 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
                   </svg>
                   Filtres avancés
                 </h4>
 
                 {/* Search Bar */}
-                <div className="mb-4">
+                <div className="mb-3">
                   <div className="relative">
-                    <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                     <input
                       type="text"
-                      placeholder="Rechercher une formation..."
+                      placeholder="Rechercher..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                      className="w-full pl-9 pr-4 py-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
                     />
                     {searchTerm && (
                       <button
                         onClick={() => setSearchTerm('')}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
                       >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </button>
@@ -439,12 +439,12 @@ export default function FormationsCertifiantes({ title, description, id }: Props
                 </div>
 
                 {/* Duration Filter */}
-                <div className="mb-4">
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Durée</label>
+                <div className="mb-3">
+                  <label className="block text-xs font-semibold text-gray-700 mb-1">Durée</label>
                   <select
                     value={durationFilter}
                     onChange={(e) => setDurationFilter(e.target.value)}
-                    className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                    className="w-full p-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="all">Toutes les durées</option>
                     <option value="short">Courte (1-3 jours)</option>
@@ -454,12 +454,12 @@ export default function FormationsCertifiantes({ title, description, id }: Props
                 </div>
 
                 {/* Modality Filter */}
-                <div className="mb-6">
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Modalité</label>
+                <div className="mb-4">
+                  <label className="block text-xs font-semibold text-gray-700 mb-1">Modalité</label>
                   <select
                     value={modalityFilter}
                     onChange={(e) => setModalityFilter(e.target.value)}
-                    className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                    className="w-full p-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="all">Toutes les modalités</option>
                     <option value="présentiel">Présentiel</option>
@@ -477,27 +477,30 @@ export default function FormationsCertifiantes({ title, description, id }: Props
                       setModalityFilter('all')
                       setCurrentPage(1)
                     }}
-                    className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-colors duration-200 text-sm font-medium"
+                    className="w-full py-2 px-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 text-xs font-medium"
                   >
-                    <svg className="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                    Réinitialiser les filtres
+                    Réinitialiser
                   </button>
                 )}
               </div>
 
+              {/* Spacer to push stats to bottom */}
+              <div className="flex-grow"></div>
+
               {/* Quick Stats */}
-              <div className="mt-6 pt-6 border-t border-gray-200">
+              <div className="mt-4 pt-4 border-t border-gray-200">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-indigo-600 mb-1">
+                  <div className="text-xl font-bold text-indigo-600 mb-1">
                     {totalItems}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-xs text-gray-600">
                     Formation{totalItems > 1 ? 's' : ''} trouvée{totalItems > 1 ? 's' : ''}
                   </div>
                   {totalPages > 1 && (
-                    <div className="text-xs text-gray-500 mt-2">
+                    <div className="text-xs text-gray-500 mt-1">
                       Page {currentPage} sur {totalPages}
                     </div>
                   )}
@@ -687,7 +690,7 @@ export default function FormationsCertifiantes({ title, description, id }: Props
                                     <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                                     </svg>
-                                    Me contacter
+                                    Nous contacter
                                   </span>
                                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                                 </button>

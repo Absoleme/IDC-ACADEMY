@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Parcours } from '@/types/formation'
 import ContactModal from './ContactModal'
 import FormationDetailModal from './FormationDetailModal'
@@ -82,6 +82,11 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false)
   const [selectedParcoursId, setSelectedParcoursId] = useState<string>('')
   const [activeFilter, setActiveFilter] = useState<string>('all')
+  const [searchTerm, setSearchTerm] = useState<string>('')
+  const [durationFilter, setDurationFilter] = useState<string>('all')
+  const [rncpFilter, setRncpFilter] = useState<string>('all')
+  const [currentPage, setCurrentPage] = useState<number>(1)
+  const [itemsPerPage] = useState<number>(3)
 
   const categorizeParcours = (parcours: Parcours): keyof ParcoursCategory => {
     const titre = parcours.titre.toLowerCase()
@@ -171,16 +176,66 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
 
   const handleFilterClick = (categoryKey: string) => {
     setActiveFilter(categoryKey)
+    setCurrentPage(1) // Reset pagination when changing filter
   }
 
-  const getFilteredParcours = (): [string, Parcours[]][] => {
+  const getFilteredParcours = (): Parcours[] => {
+    let allParcours: Parcours[] = []
+    
     if (activeFilter === 'all') {
-      return Object.entries(parcours).filter(([_, parcourslist]) => parcourslist.length > 0) as [string, Parcours[]][]
+      allParcours = Object.values(parcours).flat()
     } else {
-      const categoryParcours = parcours[activeFilter as keyof ParcoursCategory]
-      return categoryParcours.length > 0 ? [[activeFilter, categoryParcours] as [string, Parcours[]]] : []
+      allParcours = parcours[activeFilter as keyof ParcoursCategory] || []
     }
+
+    // Apply search filter
+    if (searchTerm) {
+      allParcours = allParcours.filter(parcours => 
+        parcours.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        parcours.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        parcours.certifications_inclues.some(cert => cert.toLowerCase().includes(searchTerm.toLowerCase()))
+      )
+    }
+
+    // Apply duration filter
+    if (durationFilter !== 'all') {
+      allParcours = allParcours.filter(parcours => {
+        const duree = parcours.duree_formation.toLowerCase()
+        if (durationFilter === 'short') return duree.includes('mois') && parseInt(duree) <= 6
+        if (durationFilter === 'medium') return duree.includes('mois') && parseInt(duree) > 6 && parseInt(duree) <= 12
+        if (durationFilter === 'long') return duree.includes('mois') && parseInt(duree) > 12
+        return true
+      })
+    }
+
+    // Apply RNCP level filter
+    if (rncpFilter !== 'all') {
+      allParcours = allParcours.filter(parcours => {
+        const niveau = extractNiveau(parcours.titre)
+        return niveau === rncpFilter
+      })
+    }
+
+    return allParcours
   }
+
+  // Pagination calculations
+  const filteredParcours = getFilteredParcours()
+  const totalItems = filteredParcours.length
+  const totalPages = Math.ceil(totalItems / itemsPerPage)
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  const paginatedParcours = filteredParcours.slice(startIndex, endIndex).map(parcours => {
+    const category = Object.entries(categoryColors).find(([key]) => 
+      categorizeParcours(parcours) === key
+    )?.[0] || 'fullstack'
+    return { ...parcours, categoryName: categoryLabels[category as keyof typeof categoryLabels], categoryConfig: categoryColors[category as keyof typeof categoryColors] }
+  })
+
+  // Reset page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1)
+  }, [searchTerm, durationFilter, rncpFilter])
 
   if (loading) {
     return (
@@ -238,205 +293,456 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
           </div>
         </div>
 
-        {/* Category Filters */}
-        <div className="mb-16">
-          <div className="flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() => handleFilterClick('all')}
-              className={`px-8 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 ${
-                activeFilter === 'all'
-                  ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:shadow-md'
-              }`}
-            >
-              <span className="flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-4H3m16 8H7m12-4H3" />
-                </svg>
-                Tous les parcours
-              </span>
-            </button>
+        {/* Navigation Layout with Sidebar */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:items-stretch">
+          {/* Sidebar Navigation - Desktop */}
+          <div className="hidden lg:flex w-80 flex-shrink-0">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 p-6 flex flex-col w-full">
+              {/* Navigation Title */}
+              <div className="mb-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-1 flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-4H3m16 8H7m12-4H3" />
+                  </svg>
+                  Domaines de reconversion
+                </h3>
+                <p className="text-xs text-gray-600">Choisissez votre parcours RNCP</p>
+              </div>
 
-            {Object.entries(parcours).map(([categoryKey, parcourslist]) => {
-              if (parcourslist.length === 0) return null
-              
-              const categoryStyle = categoryColors[categoryKey as keyof typeof categoryColors]
-              return (
-                <button
-                  key={categoryKey}
-                  onClick={() => handleFilterClick(categoryKey)}
-                  className={`px-8 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 ${
-                    activeFilter === categoryKey
-                      ? `bg-gradient-to-r ${categoryStyle.gradient} text-white shadow-lg scale-105`
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:shadow-md'
-                  }`}
-                >
-                  <span className="flex items-center">
-                    <span className="text-2xl mr-3">{categoryStyle.icon}</span>
-                    {categoryLabels[categoryKey as keyof typeof categoryLabels]}
-                    <span className="ml-2 bg-white/20 text-xs px-2 py-1 rounded-full">
-                      {parcourslist.length}
-                    </span>
-                  </span>
-                </button>
-              )
-            })}
-          </div>
-        </div>
-
-        <div className="space-y-16">
-          {getFilteredParcours().map(([category, parcourslist]) => {
-            const categoryStyle = categoryColors[category as keyof typeof categoryColors]
-            return (
-              <div key={category} className="animate-slideUp transition-all duration-500 ease-in-out">
-                {/* Category Header - Only show when not filtering all */}
-                {activeFilter !== 'all' && (
-                  <div className="flex items-center justify-center mb-12">
-                    <div className={`flex items-center px-8 py-4 rounded-3xl border-2 ${categoryStyle.badge} shadow-lg`}>
-                      <div className={`w-16 h-16 bg-gradient-to-r ${categoryStyle.gradient} rounded-2xl flex items-center justify-center mr-4 shadow-md`}>
-                        <span className="text-3xl">{categoryStyle.icon}</span>
-                      </div>
-                      <div className="text-left">
-                        <h3 className={`text-2xl font-bold ${categoryStyle.badge.split(' ')[2]}`}>
-                          {categoryLabels[category as keyof typeof categoryLabels]}
-                        </h3>
-                        <p className="text-gray-600 mt-1">
-                          {parcourslist.length} parcours RNCP niveau{parcourslist.length > 1 ? 'x' : ''} 6-7
-                        </p>
+              {/* All Parcours Option */}
+              <button
+                onClick={() => handleFilterClick('all')}
+                className={`w-full p-3 rounded-xl font-medium transition-all duration-300 mb-2 ${
+                  activeFilter === 'all'
+                    ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg'
+                    : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200'
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-4H3m16 8H7m12-4H3" />
+                      </svg>
+                    </div>
+                    <div className="text-left">
+                      <div className="font-semibold text-sm">Tous les parcours</div>
+                      <div className="text-xs opacity-75">
+                        {Object.values(parcours).reduce((total, arr) => total + arr.length, 0)} parcours
                       </div>
                     </div>
                   </div>
-                )}
-                
-                {/* When showing all, add category title above formations */}
-                {activeFilter === 'all' && (
-                  <div className="text-center mb-8">
-                    <h3 className={`text-3xl font-bold bg-gradient-to-r ${categoryStyle.gradient} bg-clip-text text-transparent mb-2`}>
-                      <span className="text-4xl mr-3">{categoryStyle.icon}</span>
-                      {categoryLabels[category as keyof typeof categoryLabels]}
-                    </h3>
-                    <p className="text-gray-600">
-                      {parcourslist.length} parcours RNCP niveau{parcourslist.length > 1 ? 'x' : ''} 6-7
-                    </p>
+                </div>
+              </button>
+
+              {/* Category Navigation */}
+              <div className="space-y-2">
+                {Object.entries(parcours).map(([categoryKey, parcourslist]) => {
+                  if (parcourslist.length === 0) return null
+                  const categoryStyle = categoryColors[categoryKey as keyof typeof categoryColors]
+                  const isActive = activeFilter === categoryKey
+                  
+                  return (
+                    <button
+                      key={categoryKey}
+                      onClick={() => handleFilterClick(categoryKey)}
+                      className={`w-full p-3 rounded-xl font-medium transition-all duration-300 ${
+                        isActive
+                          ? `bg-gradient-to-r ${categoryStyle.gradient} text-white shadow-lg`
+                          : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          <div className={`w-10 h-10 ${isActive ? 'bg-white/20' : categoryStyle.bg} rounded-lg flex items-center justify-center mr-3`}>
+                            <span className="text-xl">{categoryStyle.icon}</span>
+                          </div>
+                          <div className="text-left">
+                            <div className="font-semibold text-sm">{categoryLabels[categoryKey as keyof typeof categoryLabels]}</div>
+                            <div className="text-xs opacity-75">
+                              {parcourslist.length} parcours RNCP
+                            </div>
+                          </div>
+                        </div>
+                        <div className={`text-xs px-2 py-1 rounded-full ${
+                          isActive ? 'bg-white/20' : 'bg-gray-200 text-gray-600'
+                        }`}>
+                          {parcourslist.length}
+                        </div>
+                      </div>
+                    </button>
+                  )
+                })}
+              </div>
+
+              {/* Advanced Filters */}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center">
+                  <svg className="w-4 h-4 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+                  </svg>
+                  Filtres avancés
+                </h4>
+
+                {/* Search Bar */}
+                <div className="mb-3">
+                  <div className="relative">
+                    <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input
+                      type="text"
+                      placeholder="Rechercher..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full pl-9 pr-4 py-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                    />
+                    {searchTerm && (
+                      <button
+                        onClick={() => setSearchTerm('')}
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                      >
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    )}
                   </div>
+                </div>
+
+                {/* Duration Filter */}
+                <div className="mb-4">
+                  <label className="block text-xs font-semibold text-gray-700 mb-1">Durée</label>
+                  <select
+                    value={durationFilter}
+                    onChange={(e) => setDurationFilter(e.target.value)}
+                    className="w-full p-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                  >
+                    <option value="all">Toutes les durées</option>
+                    <option value="short">Courte (≤ 6 mois)</option>
+                    <option value="medium">Moyenne (7-12 mois)</option>
+                    <option value="long">Longue (+ de 12 mois)</option>
+                  </select>
+                </div>
+
+                {/* RNCP Level Filter */}
+                <div className="mb-4">
+                  <label className="block text-xs font-semibold text-gray-700 mb-1">Niveau RNCP</label>
+                  <select
+                    value={rncpFilter}
+                    onChange={(e) => setRncpFilter(e.target.value)}
+                    className="w-full p-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                  >
+                    <option value="all">Tous les niveaux</option>
+                    <option value="6">Niveau 6 (Bac+3/4)</option>
+                    <option value="7">Niveau 7 (Bac+5)</option>
+                  </select>
+                </div>
+
+                {/* Clear Filters */}
+                {(searchTerm || durationFilter !== 'all' || rncpFilter !== 'all') && (
+                  <button
+                    onClick={() => {
+                      setSearchTerm('')
+                      setDurationFilter('all')
+                      setRncpFilter('all')
+                      setCurrentPage(1)
+                    }}
+                    className="w-full py-2 px-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 text-xs font-medium"
+                  >
+                    <svg className="w-3 h-3 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    Réinitialiser
+                  </button>
                 )}
-                
-                {/* Parcours Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {parcourslist.map((parcours: Parcours, index: number) => (
+              </div>
+
+              {/* Spacer to push stats to bottom */}
+              <div className="flex-grow"></div>
+
+              {/* Quick Stats */}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <div className="text-center">
+                  <div className="text-xl font-bold text-indigo-600 mb-1">
+                    {totalItems}
+                  </div>
+                  <div className="text-xs text-gray-600">
+                    Parcours trouvé{totalItems > 1 ? 's' : ''}
+                  </div>
+                  {totalPages > 1 && (
+                    <div className="text-xs text-gray-500 mt-1">
+                      Page {currentPage} sur {totalPages}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="lg:hidden mb-8">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 p-4">
+              <div className="flex overflow-x-auto space-x-3 pb-2">
+                <button
+                  onClick={() => handleFilterClick('all')}
+                  className={`flex-shrink-0 px-4 py-2 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                    activeFilter === 'all'
+                      ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-700'
+                  }`}
+                >
+                  Tous
+                </button>
+
+                {Object.entries(parcours).map(([categoryKey, parcourslist]) => {
+                  if (parcourslist.length === 0) return null
+                  const categoryStyle = categoryColors[categoryKey as keyof typeof categoryColors]
+                  return (
+                    <button
+                      key={categoryKey}
+                      onClick={() => handleFilterClick(categoryKey)}
+                      className={`flex-shrink-0 px-4 py-2 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                        activeFilter === categoryKey
+                          ? `bg-gradient-to-r ${categoryStyle.gradient} text-white shadow-lg`
+                          : 'bg-gray-100 text-gray-700'
+                      }`}
+                    >
+                      <span className="flex items-center">
+                        <span className="text-lg mr-2">{categoryStyle.icon}</span>
+                        {categoryLabels[categoryKey as keyof typeof categoryLabels]}
+                      </span>
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Main Content Area */}
+          <div className="flex-1 min-w-0">
+            {/* Results Summary */}
+            {totalItems > 0 && (
+              <div className="mb-8 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {totalItems} parcours RNCP trouvé{totalItems > 1 ? 's' : ''}
+                </h3>
+                {totalPages > 1 && (
+                  <p className="text-gray-600">
+                    Affichage de {startIndex + 1} à {Math.min(endIndex, totalItems)} sur {totalItems} parcours
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Parcours List - Paginated */}
+            {paginatedParcours.length > 0 ? (
+              <div className="space-y-6">
+                {paginatedParcours.map((parcours, index) => (
                     <div 
                       key={parcours.id} 
-                      className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 hover:scale-105 hover:-translate-y-3 relative overflow-hidden animate-fadeIn"
-                      style={{ animationDelay: `${index * 150}ms` }}
+                      className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:scale-[1.02] relative overflow-hidden animate-fadeIn"
+                      style={{ animationDelay: `${index * 100}ms` }}
                     >
                       {/* Top gradient line */}
-                      <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${categoryStyle.gradient}`}></div>
+                      <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${parcours.categoryConfig.gradient}`}></div>
                       
-                      {/* Floating RNCP badge */}
-                      <div className={`absolute -top-3 -right-3 w-16 h-16 bg-gradient-to-r ${categoryStyle.gradient} rounded-full flex items-center justify-center shadow-lg`}>
-                        <span className="text-white font-bold text-sm">N{extractNiveau(parcours.titre)}</span>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <h3 className="text-2xl font-bold text-gray-900 leading-tight mb-2 group-hover:text-indigo-700 transition-colors">
-                          {parcours.titre}
-                        </h3>
-                        <div className={`inline-block px-3 py-1 bg-gradient-to-r ${categoryStyle.gradient} text-white text-xs font-bold rounded-full mb-4`}>
-                          RNCP Niveau {extractNiveau(parcours.titre)} - Reconversion Professionnelle
-                        </div>
-                      </div>
-                      
-                      <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">{parcours.description}</p>
-                      
-                      <div className="space-y-4 mb-6">
-                        <div className="flex items-center text-sm">
-                          <div className="w-8 h-8 bg-blue-100 rounded-xl flex items-center justify-center mr-3">
-                            <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                          </div>
-                          <div>
-                            <span className="font-semibold text-gray-900">Durée: </span>
-                            <span className="text-gray-600">{parcours.duree_formation}</span>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center text-sm">
-                          <div className="w-8 h-8 bg-green-100 rounded-xl flex items-center justify-center mr-3">
-                            <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                          </div>
-                          <div>
-                            <span className="font-semibold text-gray-900">Insertion pro: </span>
-                            <span className="text-green-600 font-bold">{parcours.stats.insertion_professionnelle}</span>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center text-sm">
-                          <div className="w-8 h-8 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
-                            <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
-                            </svg>
-                          </div>
-                          <div>
-                            <span className="font-semibold text-gray-900">Taux CDI: </span>
-                            <span className="text-purple-600 font-bold">{parcours.stats.taux_cdi}</span>
-                          </div>
-                        </div>
-                      </div>
+                      <div className="p-6 lg:p-8">
+                        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+                          
+                          {/* Left Column - Main Info */}
+                          <div className="flex-1">
+                            <div className="mb-6">
+                              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                                <h4 className="text-2xl font-bold text-gray-900 leading-tight group-hover:text-indigo-700 transition-colors">
+                                  {parcours.titre}
+                                </h4>
+                                <span className={`inline-block px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r ${parcours.categoryConfig.gradient} text-white shadow-sm flex-shrink-0`}>
+                                  RNCP Niveau {extractNiveau(parcours.titre)}
+                                </span>
+                              </div>
+                              <p className="text-gray-600 text-lg leading-relaxed">{parcours.description}</p>
+                            </div>
 
-                      {/* Certifications incluses */}
-                      <div className="mb-8">
-                        <div className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
-                          <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
-                          Certifications incluses
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {parcours.certifications_inclues.slice(0, 3).map((cert, index) => (
-                            <span key={index} className={`bg-gradient-to-r ${categoryStyle.gradient} text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm`}>
-                              {cert.replace('cert-', '').toUpperCase()}
-                            </span>
-                          ))}
-                          {parcours.certifications_inclues.length > 3 && (
-                            <span className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full border border-gray-200">
-                              +{parcours.certifications_inclues.length - 3} autres
-                            </span>
-                          )}
-                        </div>
-                      </div>
+                            {/* Details Row */}
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                              <div className="flex items-center text-sm">
+                                <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mr-3">
+                                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <div className="font-semibold text-gray-900">Durée</div>
+                                  <div className="text-gray-600">{parcours.duree_formation}</div>
+                                </div>
+                              </div>
 
-                      {/* Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <button
-                          onClick={() => handleDetailClick(parcours)}
-                          className="flex-1 bg-white border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 font-bold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 flex items-center justify-center"
-                        >
-                          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                          </svg>
-                          Voir les détails
-                        </button>
-                        <button
-                          onClick={() => handleContact(parcours)}
-                          className={`flex-1 bg-gradient-to-r ${categoryStyle.gradient} hover:shadow-xl text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 relative overflow-hidden group`}
-                        >
-                          <span className="relative z-10 flex items-center justify-center">
-                            <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
-                            Démarrer ma reconversion
-                          </span>
-                          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                        </button>
+                              <div className="flex items-center text-sm">
+                                <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center mr-3">
+                                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <div className="font-semibold text-gray-900">Insertion pro</div>
+                                  <div className="text-green-600 font-bold">{parcours.stats.insertion_professionnelle}</div>
+                                </div>
+                              </div>
+
+                              <div className="flex items-center text-sm">
+                                <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
+                                  <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <div className="font-semibold text-gray-900">Taux CDI</div>
+                                  <div className="text-purple-600 font-bold">{parcours.stats.taux_cdi}</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Certifications */}
+                            <div className="mb-6">
+                              <div className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                                <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                                Certifications incluses
+                              </div>
+                              <div className="flex flex-wrap gap-2">
+                                {parcours.certifications_inclues.slice(0, 6).map((cert, index) => (
+                                  <span key={index} className={`bg-gradient-to-r ${parcours.categoryConfig.gradient} text-white text-sm font-bold px-4 py-2 rounded-full shadow-sm`}>
+                                    {cert.replace('cert-', '').toUpperCase()}
+                                  </span>
+                                ))}
+                                {parcours.certifications_inclues.length > 6 && (
+                                  <span className="bg-gray-100 text-gray-600 text-sm font-medium px-4 py-2 rounded-full border border-gray-200">
+                                    +{parcours.certifications_inclues.length - 6} autres
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Right Column - Actions */}
+                          <div className="flex-shrink-0 lg:w-64">
+                            <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
+                              <div className="text-center mb-6">
+                                <div className={`w-16 h-16 bg-gradient-to-r ${parcours.categoryConfig.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg`}>
+                                  <span className="text-3xl">{parcours.categoryConfig.icon}</span>
+                                </div>
+                                <div className="text-sm text-gray-600 mb-2">Parcours RNCP</div>
+                                <div className="text-lg font-bold text-gray-900">
+                                  {parcours.categoryName}
+                                </div>
+                                <div className="text-xs text-gray-500 mt-1">
+                                  Niveau {extractNiveau(parcours.titre)} - Reconversion
+                                </div>
+                              </div>
+
+                              {/* Buttons */}
+                              <div className="space-y-3">
+                                <button
+                                  onClick={() => handleDetailClick(parcours)}
+                                  className="w-full bg-white border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 font-bold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 flex items-center justify-center"
+                                >
+                                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                  </svg>
+                                  Voir les détails
+                                </button>
+                                <button
+                                  onClick={() => handleContact(parcours)}
+                                  className={`w-full bg-gradient-to-r ${parcours.categoryConfig.gradient} hover:shadow-xl text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 relative overflow-hidden group`}
+                                >
+                                  <span className="relative z-10 flex items-center justify-center">
+                                    <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                    </svg>
+                                    Démarrer ma reconversion
+                                  </span>
+                                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <div className="text-gray-400 mb-4">
+                  <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-3-8.944a9.002 9.002 0 018.944 8.944M12 12v.01M12 12V8" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-600 mb-2">Aucun parcours trouvé</h3>
+                <p className="text-gray-500">Essayez de modifier vos critères de recherche.</p>
+              </div>
+            )}
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-12 flex justify-center">
+                <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
+                  <div className="flex items-center justify-center space-x-2">
+                    {/* Previous Button */}
+                    <button
+                      onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                      disabled={currentPage === 1}
+                      className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 ${
+                        currentPage === 1
+                          ? 'text-gray-400 cursor-not-allowed'
+                          : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                      }`}
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
+
+                    {/* Page Numbers */}
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(pageNum => (
+                      <button
+                        key={pageNum}
+                        onClick={() => setCurrentPage(pageNum)}
+                        className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 ${
+                          currentPage === pageNum
+                            ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg'
+                            : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                        }`}
+                      >
+                        {pageNum}
+                      </button>
+                    ))}
+
+                    {/* Next Button */}
+                    <button
+                      onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                      disabled={currentPage === totalPages}
+                      className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 ${
+                        currentPage === totalPages
+                          ? 'text-gray-400 cursor-not-allowed'
+                          : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                      }`}
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+                  
+                  {/* Page Info */}
+                  <div className="text-center mt-4 text-sm text-gray-600">
+                    Page {currentPage} sur {totalPages} • {totalItems} parcours
+                  </div>
                 </div>
               </div>
-            )
-          })}
+            )}
+          </div>
         </div>
 
         {/* Call to action spécifique reconversion */}
