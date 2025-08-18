@@ -66,8 +66,7 @@ export default function AboutUs() {
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl p-6 text-white shadow-xl">
-                <div className="text-2xl font-bold mb-2">100%</div>
-                <div className="text-blue-100">Formations certifiantes</div>
+                <div className="text-lg font-bold mb-2">Parcours préparent à une certification</div>
               </div>
               <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-6 text-white shadow-xl">
                 <div className="text-2xl font-bold mb-2">24h</div>
