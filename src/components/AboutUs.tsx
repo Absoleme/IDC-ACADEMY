@@ -69,7 +69,7 @@ export default function AboutUs() {
                 <div className="text-lg font-bold mb-2">Parcours préparent à une certification</div>
               </div>
               <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-6 text-white shadow-xl">
-                <div className="text-2xl font-bold mb-2">24h</div>
+                <div className="text-2xl font-bold mb-2">48h</div>
                 <div className="text-purple-100">Délai de réponse</div>
               </div>
               <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-6 text-white shadow-xl">

@@ -120,8 +120,8 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
   const categoryConfig = getCategoryConfig(formation?.categorie)
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-start sm:items-center justify-center p-0 sm:p-4 z-50 animate-fadeIn overflow-y-auto">
-      <div className="bg-white rounded-none sm:rounded-2xl max-w-full sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full h-full sm:max-h-[90vh] shadow-2xl border-0 sm:border border-gray-100 animate-slideUp flex flex-col">
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-0 z-50 animate-fadeIn overflow-y-auto">
+      <div className="bg-white rounded-none w-full h-full shadow-2xl border-0 animate-slideUp flex flex-col">
         {loading ? (
           <div className="p-12 text-center">
             <div className="animate-spin w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-6"></div>
@@ -129,52 +129,46 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
           </div>
         ) : formation ? (
           <div className="flex flex-col h-full min-h-0 relative">
-            {/* Bouton fermer mobile fixe */}
+            {/* Bouton fermer fixe */}
             <button
               onClick={onClose}
-              className="sm:hidden fixed top-4 right-4 z-10 bg-white/90 backdrop-blur-sm text-gray-700 hover:text-gray-900 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+              className="fixed top-4 right-4 z-10 bg-white/90 backdrop-blur-sm text-gray-700 hover:text-gray-900 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
             >
               <XMarkIcon className="w-6 h-6" />
             </button>
             
-            {/* Header - masqué sur mobile */}
-            <div className={`hidden sm:block p-4 sm:p-8 lg:p-12 bg-gradient-to-r ${categoryConfig.gradient} text-white relative overflow-hidden`}>
+            {/* Header */}
+            <div className={`p-4 sm:p-6 bg-gradient-to-r ${categoryConfig.gradient} text-white relative overflow-hidden`}>
               <div className="absolute inset-0 bg-black/10"></div>
-              <div className="relative flex flex-col sm:flex-row justify-between items-start gap-4">
-                <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 flex-1">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white/20 rounded-3xl flex items-center justify-center text-3xl sm:text-4xl lg:text-5xl backdrop-blur-sm shadow-lg flex-shrink-0">
+              <div className="relative flex flex-col sm:flex-row justify-between items-start gap-3">
+                <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4 flex-1">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl backdrop-blur-sm shadow-lg flex-shrink-0">
                     {categoryConfig.icon}
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+                    <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 leading-tight">
                       {formation.titre}
                     </h2>
-                    <div className="flex flex-wrap gap-2 sm:gap-3 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-2">
                       {formation.categorie && (
-                        <span className="bg-white/20 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
+                        <span className="bg-white/20 backdrop-blur-sm px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
                           {formation.categorie}
                         </span>
                       )}
                       {formation.sous_categorie && (
-                        <span className="bg-white/20 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
+                        <span className="bg-white/20 backdrop-blur-sm px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
                           {formation.sous_categorie}
                         </span>
                       )}
-                      <span className="bg-white/20 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
+                      <span className="bg-white/20 backdrop-blur-sm px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
                         📅 {formation.duree_formation}
                       </span>
                     </div>
-                    <p className="text-sm sm:text-base lg:text-xl xl:text-2xl opacity-90 leading-relaxed">
+                    <p className="text-sm sm:text-base opacity-90 leading-relaxed">
                       {formation.resume || formation.description}
                     </p>
                   </div>
                 </div>
-                <button
-                  onClick={onClose}
-                  className="text-white/80 hover:text-white hover:bg-white/10 rounded-xl p-2 sm:p-3 transition-all duration-200 self-start sm:self-auto"
-                >
-                  <XMarkIcon className="w-6 h-6" />
-                </button>
               </div>
             </div>
 
@@ -182,34 +176,6 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
             <div className="flex-1 overflow-y-auto min-h-0">
               <div className="p-4 sm:p-6 lg:p-8 space-y-6 sm:space-y-8">
                 
-                {/* Titre mobile simple */}
-                <div className="sm:hidden pt-8">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center text-2xl">
-                      {categoryConfig.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h1 className="text-xl font-bold text-gray-900 leading-tight">
-                        {formation.titre}
-                      </h1>
-                      <div className="flex flex-wrap gap-2 mt-2">
-                        {formation.categorie && (
-                          <span className="bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full">
-                            {formation.categorie}
-                          </span>
-                        )}
-                        <span className="bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">
-                          📅 {formation.duree_formation}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {formation.resume || formation.description ? (
-                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                      {formation.resume || formation.description}
-                    </p>
-                  ) : null}
-                </div>
                 
                 <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
                   {/* Colonne gauche */}

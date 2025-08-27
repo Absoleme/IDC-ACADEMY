@@ -21,7 +21,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-200">
-            Titres RNCP reconnus par l'État et formations courtes certifiantes
+            Titres RNCP reconnus par l'État en cours d'instruction et formations courtes certifiantes
             <span className="block mt-3 text-lg">
               Pour une reconversion réussie ou une montée en compétences
             </span>
@@ -69,7 +69,7 @@ export default function Hero() {
             <div className="bg-black bg-opacity-20 rounded-xl p-6 border border-white border-opacity-10 hover:bg-opacity-30 transition-all duration-200">
               <h3 className="text-xl font-semibold mb-2 text-yellow-400">Titres RNCP</h3>
               <p className="text-gray-300 text-sm">
-                Formations longues diplômantes reconnues par l'État pour une reconversion complète
+                Formations longues diplômantes reconnues par l'État pour une reconversion complète (en cours d'instruction)
               </p>
             </div>
             <div className="bg-black bg-opacity-20 rounded-xl p-6 border border-white border-opacity-10 hover:bg-opacity-30 transition-all duration-200">

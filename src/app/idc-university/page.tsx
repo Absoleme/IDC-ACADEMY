@@ -35,7 +35,7 @@ export default function IdcUniversityPage() {
             <svg className="w-4 h-4 text-yellow-300 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span className="text-sm font-medium text-yellow-200">Titres RNCP disponibles à partir de 2026</span>
+            <span className="text-sm font-medium text-yellow-200">En cours d’instruction</span>
           </div>
           
           <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -127,8 +127,8 @@ export default function IdcUniversityPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Titres RNCP reconnus <span className="text-sm text-orange-600 font-medium">(Disponibles en 2026)</span></h3>
-                    <p className="text-gray-600">Nos parcours délivreront des titres RNCP niveau 6 (Bac+3/4) et niveau 7 (Bac+5), reconnus par l'État et les entreprises à partir de 2026.</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Titres RNCP reconnus <span className="text-sm text-orange-600 font-medium">(En cours d'instruction)</span></h3>
+                    <p className="text-gray-600">Nos parcours délivreront des titres RNCP niveau 6 (Bac+3/4) et niveau 7 (Bac+5), reconnus par l'État et les entreprises.</p>
                   </div>
                 </div>
                 

@@ -124,7 +124,7 @@ export default function TechSalaryGrids() {
                   <div className="text-center">
                     <div className="bg-green-50 border border-green-200 rounded-xl p-4">
                       <h4 className="text-sm font-semibold text-green-700 mb-2 uppercase tracking-wider">
-                        Junior (0-2 ans)
+                        Junior (0-3 ans)
                       </h4>
                       <div className="text-2xl font-bold text-green-800">
                         {job.junior}
@@ -135,7 +135,7 @@ export default function TechSalaryGrids() {
                   <div className="text-center">
                     <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
                       <h4 className="text-sm font-semibold text-blue-700 mb-2 uppercase tracking-wider">
-                        Confirmé (3-5 ans)
+                        Confirmé (4-7 ans)
                       </h4>
                       <div className="text-2xl font-bold text-blue-800">
                         {job.middle}
