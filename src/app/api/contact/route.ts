@@ -5,8 +5,11 @@ async function verifyRecaptcha(token: string) {
   const secretKey = process.env.RECAPTCHA_SECRET_KEY
   
   if (!secretKey) {
+    console.error('RECAPTCHA_SECRET_KEY not configured')
     throw new Error('RECAPTCHA_SECRET_KEY not configured')
   }
+
+  console.log('Verifying reCAPTCHA with token:', token.substring(0, 20) + '...')
 
   const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'POST',
@@ -17,7 +20,13 @@ async function verifyRecaptcha(token: string) {
   })
 
   const result = await response.json()
-  return result.success && result.score > 0.5 // Score minimum pour v3
+  console.log('reCAPTCHA verification result:', result)
+  
+  // Pour le développement local, on accepte un score plus bas
+  const isDevelopment = process.env.NODE_ENV === 'development'
+  const minScore = isDevelopment ? 0.1 : 0.5
+  
+  return result.success && (result.score >= minScore)
 }
 
 export async function POST(request: NextRequest) {

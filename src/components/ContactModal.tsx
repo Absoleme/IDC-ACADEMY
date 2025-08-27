@@ -76,10 +76,13 @@ export default function ContactModal({ isOpen, onClose, formation }: ContactModa
         }, 3000)
       } else {
         const result = await response.json()
+        console.error('Erreur serveur:', result)
         if (result.error === 'Captcha verification failed') {
           alert('Vérification anti-robot échouée. Veuillez réessayer.')
+        } else if (result.error === 'Captcha token missing') {
+          alert('Token reCAPTCHA manquant. Veuillez rafraîchir la page.')
         } else {
-          alert('Erreur lors de l\'envoi du formulaire.')
+          alert(`Erreur: ${result.error || 'Erreur inconnue'}`)
         }
       }
     } catch (error) {
