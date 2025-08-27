@@ -1,9 +1,44 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
+async function verifyRecaptcha(token: string) {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY
+  
+  if (!secretKey) {
+    throw new Error('RECAPTCHA_SECRET_KEY not configured')
+  }
+
+  const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: `secret=${secretKey}&response=${token}`,
+  })
+
+  const result = await response.json()
+  return result.success && result.score > 0.5 // Score minimum pour v3
+}
+
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json()
+
+    // Vérification reCAPTCHA
+    if (!data.recaptchaToken) {
+      return NextResponse.json(
+        { error: 'Captcha token missing' },
+        { status: 400 }
+      )
+    }
+
+    const captchaValid = await verifyRecaptcha(data.recaptchaToken)
+    if (!captchaValid) {
+      return NextResponse.json(
+        { error: 'Captcha verification failed' },
+        { status: 400 }
+      )
+    }
 
     // Configuration du transporteur email (à adapter selon votre fournisseur)
     const transporter = nodemailer.createTransport({

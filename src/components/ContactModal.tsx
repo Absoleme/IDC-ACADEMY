@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 interface Formation {
   id?: string | number
@@ -17,6 +18,7 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ isOpen, onClose, formation }: ContactModalProps) {
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const [formData, setFormData] = useState({
     nom: '',
     prenom: '',
@@ -32,9 +34,18 @@ export default function ContactModal({ isOpen, onClose, formation }: ContactModa
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not yet available')
+      return
+    }
+
     setIsSubmitting(true)
 
     try {
+      // Exécuter reCAPTCHA
+      const token = await executeRecaptcha('contact_form')
+      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -44,7 +55,8 @@ export default function ContactModal({ isOpen, onClose, formation }: ContactModa
           ...formData,
           formation: formation.titre,
           formationId: formation.id,
-          formationType: formation.type || 'formation'
+          formationType: formation.type || 'formation',
+          recaptchaToken: token
         }),
       })
 
@@ -62,9 +74,17 @@ export default function ContactModal({ isOpen, onClose, formation }: ContactModa
             message: ''
           })
         }, 3000)
+      } else {
+        const result = await response.json()
+        if (result.error === 'Captcha verification failed') {
+          alert('Vérification anti-robot échouée. Veuillez réessayer.')
+        } else {
+          alert('Erreur lors de l\'envoi du formulaire.')
+        }
       }
     } catch (error) {
       console.error('Erreur:', error)
+      alert('Erreur lors de l\'envoi du formulaire.')
     }
 
     setIsSubmitting(false)
@@ -292,13 +312,24 @@ export default function ContactModal({ isOpen, onClose, formation }: ContactModa
               )}
             </button>
 
-            <div className="mt-6 p-4 bg-gray-50 rounded-xl border border-gray-200">
-              <p className="text-sm text-gray-600 text-center flex items-center justify-center">
-                <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-                En envoyant ce formulaire, vous acceptez d&apos;être recontacté par IDC Academy concernant votre projet de formation.
-              </p>
+            <div className="space-y-4">
+              <div className="p-3 bg-blue-50 rounded-xl border border-blue-200 flex items-center justify-center">
+                <div className="flex items-center space-x-2 text-sm text-blue-700">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="font-medium">Ce formulaire est protégé par reCAPTCHA</span>
+                </div>
+              </div>
+              
+              <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm text-gray-600 text-center flex items-center justify-center">
+                  <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                  En envoyant ce formulaire, vous acceptez d&apos;être recontacté par IDC Academy concernant votre projet de formation.
+                </p>
+              </div>
             </div>
           </form>
         )}
