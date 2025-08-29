@@ -64,7 +64,7 @@
       "Apprentis / alternants",
       "Tout public en reconversion"
     ],
-    "prerequis_entree_formation": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; à définir selon l’organisme de formation.",
+    "prerequis_entree_formation": "Aucun prérequis réglementaire précisé sur la fiche RNCP",
     "prerequis_pour_la_validation": null
   },
   "programme_et_contenus": {
