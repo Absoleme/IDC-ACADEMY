@@ -21,6 +21,45 @@ interface Formation {
   prerequis?: string | string[]
   duree_formation: string
   objectifs?: string[]
+  objectifs_et_metiers?: {
+    presentation: string;
+    activites_visees: string[];
+    types_emplois_accessibles: string[];
+    secteurs_activite: string[];
+  }
+  publics_et_prerequis?: {
+    publics: string[];
+    prerequis_entree_formation: string;
+    prerequis_pour_la_validation: string | null;
+  }
+  programme_et_contenus?: {
+    blocs_de_competences: {
+      code: string;
+      intitule: string;
+      competences: string[];
+    }[];
+    parcours_transverses: string[];
+  }
+  modalites_evaluation?: {
+    epreuves: {
+      type: string;
+      duree: string;
+      description: string;
+    }[];
+    duree_totale_epreuves: string;
+    capitalisation: string;
+  }
+  details_de_la_formation?: {
+    duree_totale_heures: number;
+    duree_centre_heures: number;
+    duree_entreprise_heures: number;
+    stage_en_entreprise: string;
+    dates_previsionnelles: string;
+    tarifs: string;
+    financements_possibles: string[];
+    lieu: string;
+  }
+  accessibilite?: string;
   programme_detaille?: Array<{
     module: string
     duree: string
@@ -187,7 +226,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                       </span>
                     </div>
                     <p className="text-sm sm:text-base opacity-90 leading-relaxed">
-                      {formation.resume || formation.description}
+                      {formation.resume || formation.objectifs_et_metiers?.presentation || formation.description}
                     </p>
                   </div>
                 </div>
@@ -202,9 +241,50 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                 <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
                   {/* Colonne gauche */}
                   <div className="space-y-6 lg:space-y-8">
+
+                    {/* Activités visées - Spécifique au JSON technicien */}
+                    {formation.objectifs_et_metiers?.activites_visees && (
+                      <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-6 border border-purple-200">
+                        <h3 className="text-xl font-bold text-purple-900 mb-4 flex items-center">
+                          <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                          </svg>
+                          Activités visées
+                        </h3>
+                        <ul className="space-y-3">
+                          {formation.objectifs_et_metiers.activites_visees.map((activite, index) => (
+                            <li key={index} className="flex items-start">
+                              <span className="w-6 h-6 bg-purple-500 text-white text-sm rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                                {index + 1}
+                              </span>
+                              <span className="text-gray-700 leading-relaxed">{activite}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Secteurs d'activité */}
+                    {formation.objectifs_et_metiers?.secteurs_activite && (
+                      <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-6 border border-cyan-200">
+                        <h3 className="text-xl font-bold text-cyan-900 mb-4 flex items-center">
+                          <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                          </svg>
+                          Secteurs d'activité
+                        </h3>
+                        <div className="flex flex-wrap gap-2">
+                          {formation.objectifs_et_metiers.secteurs_activite.map((secteur, index) => (
+                            <span key={index} className="bg-cyan-100 text-cyan-800 text-sm font-medium px-3 py-2 rounded-full border border-cyan-200">
+                              {secteur}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     
                     {/* Public cible */}
-                    {formation.public && (
+                    {(formation.public || formation.publics_et_prerequis?.publics) && (
                       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200">
                         <h3 className="text-xl font-bold text-blue-900 mb-4 flex items-center">
                           <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -212,12 +292,23 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                           </svg>
                           Public ciblé
                         </h3>
-                        <p className="text-gray-700 leading-relaxed">{formation.public}</p>
+                        {formation.publics_et_prerequis?.publics ? (
+                          <ul className="space-y-2">
+                            {formation.publics_et_prerequis.publics.map((publicCible, index) => (
+                              <li key={index} className="flex items-center">
+                                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                                <span className="text-gray-700">{publicCible}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="text-gray-700 leading-relaxed">{formation.public}</p>
+                        )}
                       </div>
                     )}
 
                     {/* Prérequis */}
-                    {formation.prerequis && (
+                    {(formation.prerequis || formation.publics_et_prerequis?.prerequis_entree_formation) && (
                       <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-6 border border-orange-200">
                         <h3 className="text-xl font-bold text-orange-900 mb-4 flex items-center">
                           <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,7 +316,9 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                           </svg>
                           Prérequis
                         </h3>
-                        {Array.isArray(formation.prerequis) ? (
+                        {formation.publics_et_prerequis?.prerequis_entree_formation ? (
+                          <p className="text-gray-700 leading-relaxed">{formation.publics_et_prerequis.prerequis_entree_formation}</p>
+                        ) : Array.isArray(formation.prerequis) ? (
                           <ul className="text-gray-700 leading-relaxed space-y-2">
                             {formation.prerequis.map((req, index) => (
                               <li key={index} className="flex items-start">
@@ -330,7 +423,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                     )}
 
                     {/* Postes accessibles */}
-                    {formation.postes_accessibles && formation.postes_accessibles.length > 0 && (
+                    {((formation.postes_accessibles && formation.postes_accessibles.length > 0) || (formation.objectifs_et_metiers?.types_emplois_accessibles && formation.objectifs_et_metiers.types_emplois_accessibles.length > 0)) && (
                       <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 border border-gray-200">
                         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                           <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -339,7 +432,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                           Postes accessibles
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                          {formation.postes_accessibles.map((poste, index) => (
+                          {(formation.objectifs_et_metiers?.types_emplois_accessibles || formation.postes_accessibles || []).map((poste, index) => (
                             <div key={index} className="bg-white border border-gray-200 rounded-xl p-3 text-center font-medium text-gray-700">
                               {poste}
                             </div>
@@ -369,12 +462,14 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                             </div>
                           </div>
                         )}
-                        {formation.prix && (
+                        {(formation.prix || formation.details_de_la_formation?.tarifs) && (
                           <div>
                             <h4 className="font-semibold text-gray-700 mb-2">Prix :</h4>
-                            {typeof formation.prix === 'string' ? (
+                            {formation.details_de_la_formation?.tarifs ? (
+                              <span className="text-lg font-bold text-orange-600">{formation.details_de_la_formation.tarifs}</span>
+                            ) : typeof formation.prix === 'string' ? (
                               <span className="text-lg font-bold text-orange-600">{formation.prix}</span>
-                            ) : (
+                            ) : formation.prix && (
                               <div className="space-y-2">
                                 {formation.prix.tarif_individuel && (
                                   <div>
@@ -418,6 +513,55 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                     </div>
                   </div>
                 </div>
+
+                {/* Blocs de compétences - Spécifique technicien */}
+                {formation.programme_et_contenus?.blocs_de_competences && (
+                  <div className="bg-white border-2 border-indigo-200 rounded-2xl p-8">
+                    <h3 className="text-2xl font-bold text-indigo-900 mb-6 flex items-center">
+                      <svg className="w-8 h-8 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-4H3m16 8H7m12-4H3" />
+                      </svg>
+                      Blocs de compétences RNCP
+                    </h3>
+                    <div className="space-y-6">
+                      {formation.programme_et_contenus.blocs_de_competences.map((bloc, index) => (
+                        <div key={index} className="border border-indigo-200 rounded-xl p-6 hover:shadow-md transition-shadow duration-200">
+                          <div className="flex items-center justify-between mb-4">
+                            <h4 className="text-lg font-bold text-gray-900">{bloc.intitule}</h4>
+                            <span className="bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full">
+                              {bloc.code}
+                            </span>
+                          </div>
+                          <div className="space-y-3">
+                            <h5 className="font-semibold text-gray-700 mb-2">Compétences :</h5>
+                            <ul className="space-y-2">
+                              {bloc.competences.map((competence, i) => (
+                                <li key={i} className="flex items-start">
+                                  <span className="w-2 h-2 bg-indigo-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                  <span className="text-gray-600">{competence}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Parcours transverses */}
+                    {formation.programme_et_contenus.parcours_transverses && formation.programme_et_contenus.parcours_transverses.length > 0 && (
+                      <div className="mt-6 bg-indigo-50 border border-indigo-200 rounded-xl p-6">
+                        <h4 className="text-lg font-bold text-indigo-900 mb-3">Parcours transverses</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {formation.programme_et_contenus.parcours_transverses.map((parcours, index) => (
+                            <span key={index} className="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-2 rounded-full">
+                              {parcours}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {/* Programme détaillé */}
                 {((formation.programme_detaille && formation.programme_detaille.length > 0) || 
@@ -579,6 +723,122 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                         )}
                       </div>
                     )}
+                  </div>
+                )}
+
+                {/* Modalités d'évaluation - Spécifique technicien */}
+                {formation.modalites_evaluation && (
+                  <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-2xl p-8 border border-yellow-200">
+                    <h3 className="text-2xl font-bold text-yellow-900 mb-6 flex items-center">
+                      <svg className="w-8 h-8 mr-3 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                      </svg>
+                      Modalités d'évaluation
+                    </h3>
+                    
+                    {formation.modalites_evaluation.epreuves && (
+                      <div className="mb-6">
+                        <h4 className="text-lg font-bold text-yellow-800 mb-4">Épreuves :</h4>
+                        <div className="space-y-4">
+                          {formation.modalites_evaluation.epreuves.map((epreuve, index) => (
+                            <div key={index} className="bg-white rounded-xl p-4 border border-yellow-200">
+                              <div className="flex items-center justify-between mb-2">
+                                <h5 className="font-bold text-gray-900">{epreuve.type}</h5>
+                                <span className="bg-yellow-100 text-yellow-800 text-sm font-semibold px-2 py-1 rounded">
+                                  {epreuve.duree}
+                                </span>
+                              </div>
+                              <p className="text-gray-700 text-sm">{epreuve.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {formation.modalites_evaluation.duree_totale_epreuves && (
+                        <div className="bg-white rounded-xl p-4 border border-yellow-200">
+                          <h5 className="font-bold text-gray-900 mb-2">Durée totale</h5>
+                          <p className="text-yellow-700 font-semibold">{formation.modalites_evaluation.duree_totale_epreuves}</p>
+                        </div>
+                      )}
+                      {formation.modalites_evaluation.capitalisation && (
+                        <div className="bg-white rounded-xl p-4 border border-yellow-200">
+                          <h5 className="font-bold text-gray-900 mb-2">Capitalisation</h5>
+                          <p className="text-gray-700 text-sm">{formation.modalites_evaluation.capitalisation}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Détails formation - Spécifique technicien */}
+                {formation.details_de_la_formation && (
+                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200">
+                    <h3 className="text-2xl font-bold text-green-900 mb-6 flex items-center">
+                      <svg className="w-8 h-8 mr-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Détails de la formation
+                    </h3>
+                    
+                    <div className="grid md:grid-cols-3 gap-4 mb-6">
+                      {formation.details_de_la_formation.duree_totale_heures && (
+                        <div className="bg-white rounded-xl p-4 border border-green-200 text-center">
+                          <h5 className="font-bold text-gray-900 mb-1">Durée totale</h5>
+                          <p className="text-2xl font-bold text-green-600">{formation.details_de_la_formation.duree_totale_heures}h</p>
+                        </div>
+                      )}
+                      {formation.details_de_la_formation.duree_centre_heures && (
+                        <div className="bg-white rounded-xl p-4 border border-green-200 text-center">
+                          <h5 className="font-bold text-gray-900 mb-1">En centre</h5>
+                          <p className="text-2xl font-bold text-blue-600">{formation.details_de_la_formation.duree_centre_heures}h</p>
+                        </div>
+                      )}
+                      {formation.details_de_la_formation.duree_entreprise_heures && (
+                        <div className="bg-white rounded-xl p-4 border border-green-200 text-center">
+                          <h5 className="font-bold text-gray-900 mb-1">En entreprise</h5>
+                          <p className="text-2xl font-bold text-purple-600">{formation.details_de_la_formation.duree_entreprise_heures}h</p>
+                        </div>
+                      )}
+                    </div>
+
+                    {formation.details_de_la_formation.stage_en_entreprise && (
+                      <div className="bg-white rounded-xl p-4 border border-green-200 mb-4">
+                        <h5 className="font-bold text-gray-900 mb-2">Stage en entreprise</h5>
+                        <p className="text-gray-700">{formation.details_de_la_formation.stage_en_entreprise}</p>
+                      </div>
+                    )}
+
+                    {formation.details_de_la_formation.financements_possibles && (
+                      <div className="bg-white rounded-xl p-4 border border-green-200">
+                        <h5 className="font-bold text-gray-900 mb-3">Financements possibles</h5>
+                        <div className="flex flex-wrap gap-2">
+                          {formation.details_de_la_formation.financements_possibles.map((financement, index) => (
+                            <span key={index} className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
+                              {financement}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Section Accessibilité */}
+                {formation.accessibilite && (
+                  <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-2xl p-8 border border-green-200">
+                    <h3 className="text-2xl font-bold text-green-900 mb-6 flex items-center">
+                      <svg className="w-8 h-8 mr-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                      Accessibilité
+                    </h3>
+                    <div className="bg-white rounded-xl p-6 border border-green-200">
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        {formation.accessibilite}
+                      </p>
+                    </div>
                   </div>
                 )}
 

@@ -100,9 +100,38 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
     return 'fullstack'
   }
 
-  const extractNiveau = (titre: string): string => {
-    const match = titre.match(/niveau\s+(\d+)|n(\d+)/i)
+  const extractNiveau = (parcours: Parcours): string => {
+    // Si le parcours a des données RNCP, utiliser celles-ci en priorité
+    if (parcours.rncp && parcours.rncp.niveau) {
+      return parcours.rncp.niveau.toString()
+    }
+    
+    // Sinon essayer d'extraire du titre
+    const match = parcours.titre.match(/niveau\s+(\d+)|n(\d+)/i)
     return match ? (match[1] || match[2]) : '0'
+  }
+
+
+  const getDescription = (parcours: Parcours): string => {
+    if (parcours.objectifs_et_metiers?.presentation) {
+      return parcours.objectifs_et_metiers.presentation
+    }
+    return parcours.description || ''
+  }
+
+  const getDureeFormation = (parcours: Parcours): string => {
+    if (parcours.details_de_la_formation?.duree_totale_heures) {
+      const heures = parcours.details_de_la_formation.duree_totale_heures
+      return `${heures}h (${Math.round(heures / 35)} semaines)`
+    }
+    return parcours.duree_formation || 'N/A'
+  }
+
+  const getSecteursActivite = (parcours: Parcours): string[] => {
+    if (parcours.objectifs_et_metiers?.secteurs_activite) {
+      return parcours.objectifs_et_metiers.secteurs_activite
+    }
+    return []
   }
 
   useEffect(() => {
@@ -117,7 +146,7 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
           'data-analyst-n6',
           'devops-engineer-azure-n7',
           'fullstack-web-developer-n6',
-          'technicien-informatique-n5'
+          'technicien-informatique-n4'
         ]
 
         const parcoursData = await Promise.all(
@@ -135,10 +164,10 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
         )
 
         const validParcours = parcoursData.filter(Boolean) as Parcours[]
-        // Filtrer uniquement les niveaux 5, 6 et 7
+        // Filtrer uniquement les niveaux 4, 5, 6 et 7
         const parcoursRNCP = validParcours.filter(p => {
-          const niveau = extractNiveau(p.titre)
-          return niveau === '5' || niveau === '6' || niveau === '7'
+          const niveau = extractNiveau(p)
+          return niveau === '4' || niveau === '5' || niveau === '6' || niveau === '7'
         })
 
         const categorized: ParcoursCategory = {
@@ -195,7 +224,7 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
       allParcours = allParcours.filter(parcours => 
         parcours.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
         parcours.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        parcours.certifications_inclues.some(cert => {
+        (parcours.certifications_inclues || []).some(cert => {
           const certName = typeof cert === 'string' ? cert : cert.id
           return certName.toLowerCase().includes(searchTerm.toLowerCase())
         })
@@ -216,7 +245,7 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
     // Apply RNCP level filter
     if (rncpFilter !== 'all') {
       allParcours = allParcours.filter(parcours => {
-        const niveau = extractNiveau(parcours.titre)
+        const niveau = extractNiveau(parcours)
         return niveau === rncpFilter
       })
     }
@@ -439,6 +468,7 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
                     className="w-full p-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="all">Tous les niveaux</option>
+                    <option value="4">Niveau 4 (Bac)</option>
                     <option value="5">Niveau 5 (Bac+2)</option>
                     <option value="6">Niveau 6 (Bac+3/4)</option>
                     <option value="7">Niveau 7 (Bac+5)</option>
@@ -564,14 +594,14 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
                                   {parcours.titre}
                                 </h4>
                                 <span className={`inline-block px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r ${parcours.categoryConfig.gradient} text-white shadow-sm flex-shrink-0`}>
-                                  RNCP Niveau {extractNiveau(parcours.titre)}
+                                  RNCP Niveau {extractNiveau(parcours)}
                                 </span>
                               </div>
-                              <p className="text-gray-600 text-lg leading-relaxed">{parcours.description}</p>
+                              <p className="text-gray-600 text-lg leading-relaxed">{getDescription(parcours)}</p>
                             </div>
 
                             {/* Details Row */}
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                            <div className="grid grid-cols-1 gap-4 mb-6">
                               <div className="flex items-center text-sm">
                                 <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mr-3">
                                   <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -580,55 +610,61 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
                                 </div>
                                 <div>
                                   <div className="font-semibold text-gray-900">Durée</div>
-                                  <div className="text-gray-600">{parcours.duree_formation}</div>
-                                </div>
-                              </div>
-
-                              <div className="flex items-center text-sm">
-                                <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center mr-3">
-                                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                  </svg>
-                                </div>
-                                <div>
-                                  <div className="font-semibold text-gray-900">Insertion pro</div>
-                                  <div className="text-green-600 font-bold">{parcours.stats.insertion_professionnelle}</div>
-                                </div>
-                              </div>
-
-                              <div className="flex items-center text-sm">
-                                <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
-                                  <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
-                                  </svg>
-                                </div>
-                                <div>
-                                  <div className="font-semibold text-gray-900">Taux CDI</div>
-                                  <div className="text-purple-600 font-bold">{parcours.stats.taux_cdi}</div>
+                                  <div className="text-gray-600">{getDureeFormation(parcours)}</div>
                                 </div>
                               </div>
                             </div>
 
-                            {/* Certifications */}
+                            {/* Secteurs d'activité */}
+                            {getSecteursActivite(parcours).length > 0 && (
+                              <div className="mb-6">
+                                <div className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                                  Secteurs d'activité
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                  {getSecteursActivite(parcours).slice(0, 4).map((secteur, index) => (
+                                    <span key={index} className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">
+                                      {secteur}
+                                    </span>
+                                  ))}
+                                  {getSecteursActivite(parcours).length > 4 && (
+                                    <span className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full border border-gray-200">
+                                      +{getSecteursActivite(parcours).length - 4} autres
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* Certifications ou titre */}
                             <div className="mb-6">
                               <div className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
                                 <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
-                                Certifications incluses
+                                {parcours.certifications_inclues && parcours.certifications_inclues.length > 0 ? 'Certifications incluses' : 'Certification'}
                               </div>
                               <div className="flex flex-wrap gap-2">
-                                {parcours.certifications_inclues.slice(0, 6).map((cert, index) => {
-                                  const certName = typeof cert === 'string' 
-                                    ? cert.replace('cert-', '').toUpperCase()
-                                    : cert.id.replace('cert-', '').toUpperCase()
-                                  return (
-                                    <span key={index} className={`bg-gradient-to-r ${parcours.categoryConfig.gradient} text-white text-sm font-bold px-4 py-2 rounded-full shadow-sm`}>
-                                      {certName}
-                                    </span>
-                                  )
-                                })}
-                                {parcours.certifications_inclues.length > 6 && (
-                                  <span className="bg-gray-100 text-gray-600 text-sm font-medium px-4 py-2 rounded-full border border-gray-200">
-                                    +{parcours.certifications_inclues.length - 6} autres
+                                {parcours.certifications_inclues && parcours.certifications_inclues.length > 0 ? (
+                                  <>
+                                    {parcours.certifications_inclues.slice(0, 6).map((cert, index) => {
+                                      const certName = typeof cert === 'string' 
+                                        ? cert.replace('cert-', '').toUpperCase()
+                                        : cert.id.replace('cert-', '').toUpperCase()
+                                      return (
+                                        <span key={index} className={`bg-gradient-to-r ${parcours.categoryConfig.gradient} text-white text-sm font-bold px-4 py-2 rounded-full shadow-sm`}>
+                                          {certName}
+                                        </span>
+                                      )
+                                    })}
+                                    {parcours.certifications_inclues.length > 6 && (
+                                      <span className="bg-gray-100 text-gray-600 text-sm font-medium px-4 py-2 rounded-full border border-gray-200">
+                                        +{parcours.certifications_inclues.length - 6} autres
+                                      </span>
+                                    )}
+                                  </>
+                                ) : (
+                                  <span className={`bg-gradient-to-r ${parcours.categoryConfig.gradient} text-white text-sm font-bold px-4 py-2 rounded-full shadow-sm`}>
+                                    {parcours.certification?.intitule || 'Titre professionnel RNCP'}
                                   </span>
                                 )}
                               </div>
@@ -647,7 +683,7 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
                                   {parcours.categoryName}
                                 </div>
                                 <div className="text-xs text-gray-500 mt-1">
-                                  Niveau {extractNiveau(parcours.titre)} - Reconversion
+                                  Niveau {extractNiveau(parcours)} - Reconversion
                                 </div>
                               </div>
 

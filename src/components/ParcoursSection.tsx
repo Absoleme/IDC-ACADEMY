@@ -92,9 +92,31 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
     return 'fullstack'
   }
 
-  const extractNiveau = (titre: string): string => {
-    const match = titre.match(/niveau\s+(\d+)|n(\d+)/i)
+  const extractNiveau = (parcours: Parcours): string => {
+    // Si le parcours a des données RNCP, utiliser celles-ci en priorité
+    if (parcours.rncp && parcours.rncp.niveau) {
+      return parcours.rncp.niveau.toString()
+    }
+    
+    // Sinon essayer d'extraire du titre
+    const match = parcours.titre.match(/niveau\s+(\d+)|n(\d+)/i)
     return match ? (match[1] || match[2]) : '0'
+  }
+
+
+  const getDescription = (parcours: Parcours): string => {
+    if (parcours.objectifs_et_metiers?.presentation) {
+      return parcours.objectifs_et_metiers.presentation
+    }
+    return parcours.description || ''
+  }
+
+  const getDureeFormation = (parcours: Parcours): string => {
+    if (parcours.details_de_la_formation?.duree_totale_heures) {
+      const heures = parcours.details_de_la_formation.duree_totale_heures
+      return `${heures}h (${Math.round(heures / 35)} semaines)`
+    }
+    return parcours.duree_formation || 'N/A'
   }
 
   useEffect(() => {
@@ -109,7 +131,7 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
           'data-analyst-n6',
           'devops-engineer-azure-n7',
           'fullstack-web-developer-n6',
-          'technicien-informatique-n5'
+          'technicien-informatique-n4'
         ]
 
         const parcoursData = await Promise.all(
@@ -127,9 +149,13 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
         )
 
         const validParcours = parcoursData.filter(Boolean) as Parcours[]
+        // Filtrer par niveau si spécifié, sinon inclure tous les niveaux 4, 5, 6 et 7
         const filteredParcours = niveaux.length > 0 
-          ? validParcours.filter(p => niveaux.includes(extractNiveau(p.titre)))
-          : validParcours
+          ? validParcours.filter(p => niveaux.includes(extractNiveau(p)))
+          : validParcours.filter(p => {
+              const niveau = extractNiveau(p)
+              return niveau === '4' || niveau === '5' || niveau === '6' || niveau === '7'
+            })
 
         const categorized: ParcoursCategory = {
           cloud: [],
@@ -242,7 +268,7 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
                       
                       {/* Floating badge */}
                       <div className={`absolute -top-3 -right-3 w-16 h-16 bg-gradient-to-r ${categoryStyle.gradient} rounded-full flex items-center justify-center shadow-lg`}>
-                        <span className="text-white font-bold text-sm">N{extractNiveau(parcours.titre)}</span>
+                        <span className="text-white font-bold text-sm">N{extractNiveau(parcours)}</span>
                       </div>
                       
                       <div className="mb-6">
@@ -251,11 +277,11 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
                         </h3>
                       
                         <div className="inline-block px-3 py-1 bg-gradient-to-r ${categoryStyle.gradient} text-white text-xs font-bold rounded-full mb-4">
-                          RNCP Niveau {extractNiveau(parcours.titre)}
+                          RNCP Niveau {extractNiveau(parcours)}
                         </div>
                       </div>
                       
-                      <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">{parcours.description}</p>
+                      <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">{getDescription(parcours)}</p>
                       
                       <div className="space-y-4 mb-6">
                         <div className="flex items-center text-sm">
@@ -266,31 +292,7 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
                           </div>
                           <div>
                             <span className="font-semibold text-gray-900">Durée: </span>
-                            <span className="text-gray-600">{parcours.duree_formation}</span>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center text-sm">
-                          <div className="w-8 h-8 bg-green-100 rounded-xl flex items-center justify-center mr-3">
-                            <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                          </div>
-                          <div>
-                            <span className="font-semibold text-gray-900">Insertion: </span>
-                            <span className="text-green-600 font-bold">{parcours.stats.insertion_professionnelle}</span>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center text-sm">
-                          <div className="w-8 h-8 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
-                            <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
-                            </svg>
-                          </div>
-                          <div>
-                            <span className="font-semibold text-gray-900">CDI: </span>
-                            <span className="text-purple-600 font-bold">{parcours.stats.taux_cdi}</span>
+                            <span className="text-gray-600">{getDureeFormation(parcours)}</span>
                           </div>
                         </div>
                       </div>
@@ -301,7 +303,7 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
                           Certifications incluses
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          {parcours.certifications_inclues.slice(0, 3).map((cert, index) => {
+                          {(parcours.certifications_inclues || []).slice(0, 3).map((cert, index) => {
                             const certName = typeof cert === 'string' 
                               ? cert.replace('cert-', '').toUpperCase()
                               : cert.id.replace('cert-', '').toUpperCase()
@@ -311,9 +313,14 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
                               </span>
                             )
                           })}
-                          {parcours.certifications_inclues.length > 3 && (
+                          {(parcours.certifications_inclues?.length || 0) > 3 && (
                             <span className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full border border-gray-200">
-                              +{parcours.certifications_inclues.length - 3} autres
+                              +{(parcours.certifications_inclues?.length || 0) - 3} autres
+                            </span>
+                          )}
+                          {(!parcours.certifications_inclues || parcours.certifications_inclues.length === 0) && (
+                            <span className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full border border-gray-200">
+                              {parcours.certification?.intitule || 'Titre professionnel RNCP'}
                             </span>
                           )}
                         </div>

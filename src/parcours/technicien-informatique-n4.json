@@ -1,0 +1,196 @@
+{
+  "id": "parcours-technicien-informatique-n4",
+  "type": "parcours",
+  "titre": "TP – Technicien informatique de proximité",
+  "description": "Le technicien informatique de proximité assure le support aux utilisateurs, déploie et maintient les équipements numériques, contribue à leur sécurité et intervient sur des éléments de l'infrastructure, y compris réseaux et solutions cloud.",
+  "duree_formation": "910 heures",
+  "public": "Demandeurs d'emploi, Salariés, Apprentis / alternants, Tout public en reconversion",
+  "prerequis": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; à définir selon l'organisme de formation.",
+  "rncp": {
+    "code": "RNCP40799",
+    "niveau": 4,
+    "etat": "Actif à partir du 2025-09-01",
+    "date_debut_parcours_certifiants": "2025-09-01",
+    "date_echeance_enregistrement": "2030-09-01",
+    "date_derniere_delivrance_possible": "2031-09-01",
+    "certificateur": "Ministère du Travail du Plein Emploi et de l’Insertion",
+    "codes": {
+      "NSF": ["326r"],
+      "formacode": ["31051", "31080", "31016", "24231"],
+      "ROME": ["I1401"]
+    },
+    "anciennes_certifications": [
+      {
+        "code": "RNCP37681",
+        "intitule": "TP - Technicien d'assistance en informatique"
+      }
+    ],
+    "base_legale": [
+      "Décret n°2016-954 du 11 juillet 2016 (titre professionnel)",
+      "Arrêté du 22 décembre 2015 modifié (conditions de délivrance du titre professionnel)",
+      "Arrêté du 21 juillet 2016 (règlement général des sessions d'examen)",
+      "Arrêté du 2 juin 2025 (TP Technicien informatique de proximité)"
+    ],
+    "europass": ["FR", "EN"]
+  },
+  "objectifs_et_metiers": {
+    "presentation": "Le technicien informatique de proximité assure le support aux utilisateurs, déploie et maintient les équipements numériques, contribue à leur sécurité et intervient sur des éléments de l’infrastructure, y compris réseaux et solutions cloud.",
+    "activites_visees": [
+      "Prendre en charge et suivre les demandes d’assistance jusqu’à résolution (sur site ou à distance)",
+      "Préparer, configurer et mettre en service des postes et équipements numériques en respectant les règles de sécurité",
+      "Installer et sécuriser des équipements réseaux, gérer des comptes utilisateurs (Active Directory), veiller à l’accès sécurisé aux ressources"
+    ],
+    "types_emplois_accessibles": [
+      "Technicien d’assistance en informatique",
+      "Technicien de maintenance en informatique",
+      "Technicien de déploiement",
+      "Technicien d’assistance en clientèle",
+      "Technicien helpdesk",
+      "Technicien assistance utilisateur",
+      "Technicien support en informatique"
+    ],
+    "secteurs_activite": [
+      "ESN / centres de services",
+      "DSI",
+      "PME/PMI/TPE",
+      "Collectivités / service public",
+      "Tous secteurs"
+    ]
+  },
+  "publics_et_prerequis": {
+    "publics": [
+      "Demandeurs d’emploi",
+      "Salariés",
+      "Apprentis / alternants",
+      "Tout public en reconversion"
+    ],
+    "prerequis_entree_formation": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; à définir selon l’organisme de formation.",
+    "prerequis_pour_la_validation": null
+  },
+  "programme_et_contenus": {
+    "blocs_de_competences": [
+      {
+        "code": "RNCP40799BC01",
+        "intitule": "Assurer le support utilisateur",
+        "competences": [
+          "Gérer une demande ou un incident et assurer le suivi du parc",
+          "Assister et accompagner l’utilisateur",
+          "Diagnostiquer un incident technique ou applicatif"
+        ]
+      },
+      {
+        "code": "RNCP40799BC02",
+        "intitule": "Mettre en service des équipements numériques",
+        "competences": [
+          "Préparer et déployer des équipements numériques",
+          "Maintenir et assurer la disponibilité des équipements numériques",
+          "Contribuer à la sécurité d’un équipement numérique et de ses données"
+        ]
+      },
+      {
+        "code": "RNCP40799BC03",
+        "intitule": "Intervenir sur les éléments de l’infrastructure",
+        "competences": [
+          "Déployer et sécuriser les équipements réseaux",
+          "Intervenir sur un annuaire Active Directory"
+        ]
+      }
+    ],
+    "parcours_transverses": [
+      "Communication et relation client interne",
+      "Sensibilisation cybersécurité et hygiène informatique",
+      "Veille professionnelle (ressources FR/EN)"
+    ]
+  },
+  "modalites_pedagogiques": [
+    "Distanciel (classes virtuelles synchrones), TP guidés, mises en situation, accompagnement au dossier professionnel"
+  ],
+  "modalites_evaluation": {
+    "epreuves": [
+      {
+        "type": "Mise en situation professionnelle",
+        "duree": "04:00",
+        "description": "Étape 1 (3h) sous surveillance: configuration et sécurisation d’une machine; rédaction d’un tutoriel. Étape 2 (1h) devant jury: évaluation du travail, diagnostic et actions techniques (réseau/AD/ticket)."
+      },
+      {
+        "type": "Entretien technique",
+        "duree": "00:30",
+        "description": "Questions du jury sur les compétences non vues ou à approfondir."
+      },
+      {
+        "type": "Entretien final",
+        "duree": "00:15",
+        "description": "Échange autour du dossier professionnel et du parcours."
+      }
+    ],
+    "duree_totale_epreuves": "04:45",
+    "capitalisation": "Titre composé de 3 CCP capitalisables; possibilité de CCS complémentaires."
+  },
+  "certification": {
+    "intitule": "Titre professionnel Technicien informatique de proximité",
+    "rncp": "RNCP40799",
+    "niveau": 4,
+    "validation_partielle_possible": true
+  },
+  "suite_de_parcours_et_debouches": {
+    "objectifs": "Accès à des fonctions de support et déploiement informatique de proximité.",
+    "debouches": [
+      "Technicien support / helpdesk",
+      "Technicien d’assistance",
+      "Technicien de maintenance",
+      "Technicien de déploiement"
+    ],
+    "poursuite_de_formation": "À définir selon le projet (non spécifié dans la fiche RNCP)."
+  },
+  "indicateurs_de_resultat": {
+    "source": "Données nationales RNCP (France compétences)",
+    "annee_reference": 2023,
+    "nombre_certifies": 2114,
+    "taux_insertion_global_6_mois_pct": 47,
+    "taux_insertion_metier_vise_6_mois_pct": 41,
+    "taux_insertion_metier_vise_2_ans_pct": 68
+  },
+  "details_de_la_formation": {
+    "duree_totale_heures": 910,
+    "duree_centre_heures": 700,
+    "duree_entreprise_heures": 210,
+    "stage_en_entreprise": "Oui — 210 h en entreprise (période d’application).",
+    "dates_previsionnelles": "Nous contacter",
+    "tarifs": "Nous contacter",
+    "financements_possibles": [
+      "Apprentissage",
+      "Contrat de professionnalisation",
+      "Formation continue",
+      "VAE"
+    ],
+    "lieu": "Distanciel"
+  },
+  "accessibilite": "Formation accessible aux personnes en situation de handicap, aménagements possibles en distanciel.",
+  "inscription": {
+    "modalites": "Nous contacter",
+    "email": "contact@idcacademy.fr"
+  },
+  "sessions_d_information": {
+    "frequence_ou_dates": "Nous contacter"
+  },
+  "lieu": {
+    "nom": "IDC Academy",
+    "adresse": "Distanciel",
+    "telephone": null
+  },
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": null
+  },
+  "voies_d_acces": {
+    "apprentissage": true,
+    "formation_continue": true,
+    "contrat_de_professionnalisation": true,
+    "candidature_individuelle": true,
+    "vae": true
+  },
+  "liens": {
+    "france_competences": "https://www.francecompetences.fr/recherche/rncp/40799/",
+    "referentiel_reac_pdf": "https://www.francecompetences.fr/wp-json/api/v1/activity/export/28185/590702"
+  }
+}
