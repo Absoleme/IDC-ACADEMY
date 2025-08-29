@@ -88,6 +88,7 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
     if (titre.includes('devops')) return 'devops'
     if (titre.includes('ai') || titre.includes('ml') || titre.includes('intelligence')) return 'ai'
     if (titre.includes('fullstack') || titre.includes('web') || titre.includes('developer')) return 'fullstack'
+    if (titre.includes('technicien') || titre.includes('informatique')) return 'fullstack'
     return 'fullstack'
   }
 
@@ -107,7 +108,8 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
           'cybersecurity-soc-analyst-n6',
           'data-analyst-n6',
           'devops-engineer-azure-n7',
-          'fullstack-web-developer-n6'
+          'fullstack-web-developer-n6',
+          'technicien-informatique-n5'
         ]
 
         const parcoursData = await Promise.all(
@@ -233,7 +235,7 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
                 </div>
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {parcourslist.map((parcours: Parcours, index: number) => (
+                  {parcourslist.map((parcours: Parcours) => (
                     <div key={parcours.id} className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 hover:scale-105 hover:-translate-y-3 relative overflow-hidden">
                       {/* Top gradient line */}
                       <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${categoryStyle.gradient}`}></div>
@@ -299,11 +301,16 @@ export default function ParcoursSection({ title, description, id, niveaux = [] }
                           Certifications incluses
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          {parcours.certifications_inclues.slice(0, 3).map((cert, index) => (
-                            <span key={index} className={`bg-gradient-to-r ${categoryStyle.gradient} text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm`}>
-                              {cert.replace('cert-', '').toUpperCase()}
-                            </span>
-                          ))}
+                          {parcours.certifications_inclues.slice(0, 3).map((cert, index) => {
+                            const certName = typeof cert === 'string' 
+                              ? cert.replace('cert-', '').toUpperCase()
+                              : cert.id.replace('cert-', '').toUpperCase()
+                            return (
+                              <span key={index} className={`bg-gradient-to-r ${categoryStyle.gradient} text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm`}>
+                                {certName}
+                              </span>
+                            )
+                          })}
                           {parcours.certifications_inclues.length > 3 && (
                             <span className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full border border-gray-200">
                               +{parcours.certifications_inclues.length - 3} autres

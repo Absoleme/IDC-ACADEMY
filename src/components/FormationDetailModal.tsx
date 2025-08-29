@@ -2,6 +2,13 @@
 import { useState, useEffect } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
+interface CertificationInclue {
+  id: string
+  titre: string
+  organisme: string
+  description: string
+}
+
 interface Formation {
   id: string
   type: string
@@ -11,7 +18,7 @@ interface Formation {
   resume?: string
   description?: string
   public?: string
-  prerequis?: string
+  prerequis?: string | string[]
   duree_formation: string
   objectifs?: string[]
   programme_detaille?: Array<{
@@ -30,18 +37,32 @@ interface Formation {
   }>
   competences?: string[]
   certifications_visees?: string[]
-  certifications_inclues?: string[]
+  certifications_inclues?: string[] | CertificationInclue[]
   postes_accessibles?: string[]
   modalites?: string[]
-  prix?: string
-  moyen_et_modalite?: string
-  moyens_techniques?: string
+  prix?: string | {
+    tarif_individuel?: string
+    tarif_entreprise?: string
+    aides?: string[]
+  }
+  moyen_et_modalite?: string | {
+    pedagogie?: string[]
+    modalites?: string[]
+  }
+  moyens_techniques?: string | {
+    materiels?: string[]
+    logiciels?: string[]
+    plateformes?: string[]
+  }
   stats?: {
     insertion_professionnelle?: string
     taux_cdi?: string
+    taux_reussite?: string
+    satisfaction?: string
   }
   structure?: {
     theorie_heures?: number
+    pratique_heures?: number
     stage_heures?: number
     coaching_duree?: string
   }
@@ -60,6 +81,7 @@ interface Formation {
         telephone?: string
       }
     }
+    amenagements_possibles?: string[]
   }
 }
 
@@ -203,7 +225,18 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                           </svg>
                           Prérequis
                         </h3>
-                        <p className="text-gray-700 leading-relaxed">{formation.prerequis}</p>
+                        {Array.isArray(formation.prerequis) ? (
+                          <ul className="text-gray-700 leading-relaxed space-y-2">
+                            {formation.prerequis.map((req, index) => (
+                              <li key={index} className="flex items-start">
+                                <span className="text-orange-600 mr-2">•</span>
+                                {req}
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="text-gray-700 leading-relaxed">{formation.prerequis}</p>
+                        )}
                       </div>
                     )}
 
@@ -279,11 +312,16 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                             <div>
                               <h4 className="font-semibold text-gray-700 mb-2">Incluses :</h4>
                               <div className="flex flex-wrap gap-2">
-                                {formation.certifications_inclues.map((cert, index) => (
-                                  <span key={index} className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full border border-green-200">
-                                    {cert.replace('cert-', '').toUpperCase()}
-                                  </span>
-                                ))}
+                                {formation.certifications_inclues.map((cert, index) => {
+                                  const certName = typeof cert === 'string' 
+                                    ? cert.replace('cert-', '').toUpperCase()
+                                    : cert.id.replace('cert-', '').toUpperCase()
+                                  return (
+                                    <span key={index} className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full border border-green-200">
+                                      {certName}
+                                    </span>
+                                  )
+                                })}
                               </div>
                             </div>
                           )}
@@ -334,7 +372,34 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                         {formation.prix && (
                           <div>
                             <h4 className="font-semibold text-gray-700 mb-2">Prix :</h4>
-                            <span className="text-lg font-bold text-orange-600">{formation.prix}</span>
+                            {typeof formation.prix === 'string' ? (
+                              <span className="text-lg font-bold text-orange-600">{formation.prix}</span>
+                            ) : (
+                              <div className="space-y-2">
+                                {formation.prix.tarif_individuel && (
+                                  <div>
+                                    <span className="text-sm font-semibold text-gray-700">Particulier : </span>
+                                    <span className="text-orange-600 font-bold">{formation.prix.tarif_individuel}</span>
+                                  </div>
+                                )}
+                                {formation.prix.tarif_entreprise && (
+                                  <div>
+                                    <span className="text-sm font-semibold text-gray-700">Entreprise : </span>
+                                    <span className="text-orange-600 font-bold">{formation.prix.tarif_entreprise}</span>
+                                  </div>
+                                )}
+                                {formation.prix.aides && formation.prix.aides.length > 0 && (
+                                  <div>
+                                    <span className="text-sm font-semibold text-gray-700">Aides : </span>
+                                    <div className="text-sm text-gray-600">
+                                      {formation.prix.aides.map((aide, i) => (
+                                        <div key={i}>• {aide}</div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            )}
                           </div>
                         )}
                         {formation.meta?.financement_eligibilite && formation.meta.financement_eligibilite.length > 0 && (
@@ -430,13 +495,88 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                     {formation.moyen_et_modalite && (
                       <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
                         <h3 className="text-lg font-bold text-blue-900 mb-3">Moyens et modalités</h3>
-                        <p className="text-gray-700 leading-relaxed">{formation.moyen_et_modalite}</p>
+                        {typeof formation.moyen_et_modalite === 'string' ? (
+                          <p className="text-gray-700 leading-relaxed">{formation.moyen_et_modalite}</p>
+                        ) : (
+                          <div className="space-y-4">
+                            {formation.moyen_et_modalite.pedagogie && (
+                              <div>
+                                <h4 className="font-semibold text-gray-700 mb-2">Pédagogie :</h4>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                  {formation.moyen_et_modalite.pedagogie.map((item, i) => (
+                                    <li key={i} className="flex items-start">
+                                      <span className="text-blue-600 mr-2">•</span>
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                            {formation.moyen_et_modalite.modalites && (
+                              <div>
+                                <h4 className="font-semibold text-gray-700 mb-2">Modalités :</h4>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                  {formation.moyen_et_modalite.modalites.map((item, i) => (
+                                    <li key={i} className="flex items-start">
+                                      <span className="text-blue-600 mr-2">•</span>
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                     )}
                     {formation.moyens_techniques && (
                       <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
                         <h3 className="text-lg font-bold text-green-900 mb-3">Moyens techniques</h3>
-                        <p className="text-gray-700 leading-relaxed">{formation.moyens_techniques}</p>
+                        {typeof formation.moyens_techniques === 'string' ? (
+                          <p className="text-gray-700 leading-relaxed">{formation.moyens_techniques}</p>
+                        ) : (
+                          <div className="space-y-4">
+                            {formation.moyens_techniques.materiels && (
+                              <div>
+                                <h4 className="font-semibold text-gray-700 mb-2">Matériels :</h4>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                  {formation.moyens_techniques.materiels.map((item, i) => (
+                                    <li key={i} className="flex items-start">
+                                      <span className="text-green-600 mr-2">•</span>
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                            {formation.moyens_techniques.logiciels && (
+                              <div>
+                                <h4 className="font-semibold text-gray-700 mb-2">Logiciels :</h4>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                  {formation.moyens_techniques.logiciels.map((item, i) => (
+                                    <li key={i} className="flex items-start">
+                                      <span className="text-green-600 mr-2">•</span>
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                            {formation.moyens_techniques.plateformes && (
+                              <div>
+                                <h4 className="font-semibold text-gray-700 mb-2">Plateformes :</h4>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                  {formation.moyens_techniques.plateformes.map((item, i) => (
+                                    <li key={i} className="flex items-start">
+                                      <span className="text-green-600 mr-2">•</span>
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>

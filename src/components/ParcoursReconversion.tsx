@@ -96,6 +96,7 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
     if (titre.includes('devops')) return 'devops'
     if (titre.includes('ai') || titre.includes('ml') || titre.includes('intelligence')) return 'ai'
     if (titre.includes('fullstack') || titre.includes('web') || titre.includes('developer')) return 'fullstack'
+    if (titre.includes('technicien') || titre.includes('informatique')) return 'fullstack'
     return 'fullstack'
   }
 
@@ -115,7 +116,8 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
           'cybersecurity-soc-analyst-n6',
           'data-analyst-n6',
           'devops-engineer-azure-n7',
-          'fullstack-web-developer-n6'
+          'fullstack-web-developer-n6',
+          'technicien-informatique-n5'
         ]
 
         const parcoursData = await Promise.all(
@@ -133,10 +135,10 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
         )
 
         const validParcours = parcoursData.filter(Boolean) as Parcours[]
-        // Filtrer uniquement les niveaux 6 et 7
+        // Filtrer uniquement les niveaux 5, 6 et 7
         const parcoursRNCP = validParcours.filter(p => {
           const niveau = extractNiveau(p.titre)
-          return niveau === '6' || niveau === '7'
+          return niveau === '5' || niveau === '6' || niveau === '7'
         })
 
         const categorized: ParcoursCategory = {
@@ -193,7 +195,10 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
       allParcours = allParcours.filter(parcours => 
         parcours.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
         parcours.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        parcours.certifications_inclues.some(cert => cert.toLowerCase().includes(searchTerm.toLowerCase()))
+        parcours.certifications_inclues.some(cert => {
+          const certName = typeof cert === 'string' ? cert : cert.id
+          return certName.toLowerCase().includes(searchTerm.toLowerCase())
+        })
       )
     }
 
@@ -434,6 +439,7 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
                     className="w-full p-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="all">Tous les niveaux</option>
+                    <option value="5">Niveau 5 (Bac+2)</option>
                     <option value="6">Niveau 6 (Bac+3/4)</option>
                     <option value="7">Niveau 7 (Bac+5)</option>
                   </select>
@@ -610,11 +616,16 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
                                 Certifications incluses
                               </div>
                               <div className="flex flex-wrap gap-2">
-                                {parcours.certifications_inclues.slice(0, 6).map((cert, index) => (
-                                  <span key={index} className={`bg-gradient-to-r ${parcours.categoryConfig.gradient} text-white text-sm font-bold px-4 py-2 rounded-full shadow-sm`}>
-                                    {cert.replace('cert-', '').toUpperCase()}
-                                  </span>
-                                ))}
+                                {parcours.certifications_inclues.slice(0, 6).map((cert, index) => {
+                                  const certName = typeof cert === 'string' 
+                                    ? cert.replace('cert-', '').toUpperCase()
+                                    : cert.id.replace('cert-', '').toUpperCase()
+                                  return (
+                                    <span key={index} className={`bg-gradient-to-r ${parcours.categoryConfig.gradient} text-white text-sm font-bold px-4 py-2 rounded-full shadow-sm`}>
+                                      {certName}
+                                    </span>
+                                  )
+                                })}
                                 {parcours.certifications_inclues.length > 6 && (
                                   <span className="bg-gray-100 text-gray-600 text-sm font-medium px-4 py-2 rounded-full border border-gray-200">
                                     +{parcours.certifications_inclues.length - 6} autres
