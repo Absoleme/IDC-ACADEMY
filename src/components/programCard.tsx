@@ -52,6 +52,11 @@ export default function ProgramCard({ formation }: ProgramCardProps) {
 
       <div className="mb-6">
         <h4 className="font-semibold mb-3">Programme :</h4>
+        <div className="bg-amber-50 border border-amber-200 rounded-md p-3 mb-3">
+          <p className="text-sm text-amber-800 font-medium">
+            ℹ️ Ce programme peut être adapté selon vos besoins spécifiques
+          </p>
+        </div>
         <div className="space-y-3">
           {formation.programme.map((module, index) => (
             <details key={index} className="group">
