@@ -1,0 +1,187 @@
+{
+  "id": "parcours-charge-etudes-reseaux-telecoms-n5",
+  "type": "parcours",
+  "titre": "TP – Chargé d'études de réseaux de télécommunications",
+  "description": "À partir des besoins de création ou de modification de réseaux très haut débit (FTTx) exprimés par les clients, le chargé d'études de réseaux de télécommunications conçoit et formalise des propositions techniques et économiques efficientes, depuis l'avant-projet sommaire (APS) jusqu'à l'avant-projet définitif (APD).",
+  "duree_formation": "910 heures (26 semaines)",
+  "public": "Demandeurs d'emploi, Salariés, Apprentis / alternants, Tout public en reconversion",
+  "prerequis": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; à définir selon l'organisme de formation.",
+  "rncp": {
+    "code": "RNCP40698",
+    "niveau": 5,
+    "etat": "Actif à partir du 2025-09-01",
+    "date_debut_parcours_certifiants": "2025-09-01",
+    "date_echeance_enregistrement": "2030-08-31",
+    "date_derniere_delivrance_possible": "2031-07-31",
+    "certificateur": "Ministère du Travail du Plein Emploi et de l’Insertion",
+    "codes": {
+      "NSF": ["326n"],
+      "formacode": ["24252", "24246"],
+      "ROME": ["M1804", "F1106"]
+    },
+    "anciennes_certifications": [
+      {
+        "code": "RNCP34875",
+        "intitule": "TP - Chargé d'études de réseaux de télécommunications"
+      }
+    ],
+    "base_legale": [
+      "Décret n°2016-954 du 11 juillet 2016 relatif au titre professionnel",
+      "Arrêté du 22 décembre 2015 modifié (conditions de délivrance du titre professionnel)",
+      "Arrêté du 21 juillet 2016 (règlement général des sessions d'examen)",
+      "Arrêté du 24 avril 2025 relatif au titre professionnel de chargé d'études de réseaux de télécommunications"
+    ],
+    "europass": ["FR", "EN"]
+  },
+  "objectifs_et_metiers": {
+    "presentation": "Le chargé d'études de réseaux télécoms FTTx analyse les besoins, collecte les données techniques et administratives, réalise les APS/APD, dimensionne les infrastructures et produit plans et documents techniques, dans une logique de performance et de sobriété énergétique.",
+    "activites_visees": [
+      "Réaliser les avant-projets sommaires (APS) des études de réseaux FTTx",
+      "Effectuer les relevés et piquetages de terrain nécessaires aux études FTTx",
+      "Réaliser les calculs, plans et documents pour les APD des études FTTx"
+    ],
+    "types_emplois_accessibles": [
+      "Chargé d'études",
+      "Dessinateur-projeteur",
+      "Dessinateur",
+      "Piqueteur"
+    ],
+    "secteurs_activite": [
+      "Entreprises de travaux publics spécialisées en réseaux télécoms",
+      "Opérateurs de télécommunications",
+      "Cabinets d'études spécialisés en réseaux télécoms"
+    ]
+  },
+  "publics_et_prerequis": {
+    "publics": [
+      "Demandeurs d’emploi",
+      "Salariés",
+      "Apprentis / alternants",
+      "Tout public en reconversion"
+    ],
+    "prerequis_entree_formation": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; à définir selon l’organisme de formation.",
+    "prerequis_pour_la_validation": null
+  },
+  "programme_et_contenus": {
+    "blocs_de_competences": [
+      {
+        "code": "RNCP40698BC01",
+        "intitule": "Réaliser les avant-projets sommaires des études de réseaux FTTx",
+        "competences": [
+          "Définir et appliquer le cadre administratif et technique d'un projet de réseau FTTx",
+          "Concevoir une réponse technique sommaire aux projets de réseaux FTTx",
+          "Constituer et présenter un avant-projet sommaire de réseaux FTTx"
+        ]
+      },
+      {
+        "code": "RNCP40698BC02",
+        "intitule": "Réaliser les relevés et piquetages de terrain nécessaires aux études de réseaux FTTx",
+        "competences": [
+          "Réaliser les relevés et piquetages des réseaux aérosouterrains",
+          "Réaliser les relevés et piquetages des réseaux en immeuble"
+        ]
+      },
+      {
+        "code": "RNCP40698BC03",
+        "intitule": "Réaliser les calculs, les plans et les documents pour les APD des études de réseaux FTTx",
+        "competences": [
+          "Dimensionner les infrastructures d'accueil et les infrastructures de câblage optique FTTx",
+          "Produire les plans 2D des infrastructures d'accueil et de câblage des réseaux de télécommunications",
+          "Constituer un avant-projet définitif de réseaux FTTx"
+        ]
+      }
+    ],
+    "parcours_transverses": [
+      "DAO et SIG (AutoCAD, QGIS) appliqués aux réseaux FTTx",
+      "Lecture de plans, normalisation et conventions de dessin",
+      "Prévention des risques (AIPR concepteur, habilitations électriques B0/H0/H0V, amiante SS4)",
+      "Communication professionnelle et gestion de projet"
+    ]
+  },
+  "modalites_pedagogiques": [
+    "Distanciel (classes virtuelles synchrones), TP guidés, études de cas APS/APD, accompagnement au dossier professionnel"
+  ],
+  "modalites_evaluation": {
+    "epreuves": [
+      {
+        "type": "Présentation d'un projet réalisé en amont de la session",
+        "duree": "01:15",
+        "description": "Présentation au jury des éléments constitutifs d’une étude FTTx (APS, relevés/piquetages, APD), réalisée en formation ou en entreprise, suivie de questions."
+      },
+      {
+        "type": "Entretien final",
+        "duree": "00:20",
+        "description": "Échange autour du dossier professionnel et du projet présenté."
+      }
+    ],
+    "duree_totale_epreuves": "01:35",
+    "capitalisation": "Titre composé de 3 CCP capitalisables ; possibilité de CCS complémentaires."
+  },
+  "certification": {
+    "intitule": "Titre professionnel Chargé d'études de réseaux de télécommunications",
+    "rncp": "RNCP40698",
+    "niveau": 5,
+    "validation_partielle_possible": true
+  },
+  "suite_de_parcours_et_debouches": {
+    "objectifs": "Accéder à des fonctions d’études FTTx (APS/APD), de piquetage et de production DAO/SIG en bureau d’études télécoms.",
+    "debouches": [
+      "Chargé d'études FTTx",
+      "Dessinateur-projeteur réseaux",
+      "Piqueteur / technicien relevés",
+      "Dessinateur DAO/SIG télécoms"
+    ],
+    "poursuite_de_formation": "À définir selon le projet (non spécifié dans la fiche RNCP)."
+  },
+  "indicateurs_de_resultat": {
+    "source": "Données France compétences (statistiques disponibles)",
+    "annee_reference": 2021,
+    "nombre_certifies": 13,
+    "taux_insertion_global_6_mois_pct": 80,
+    "taux_insertion_metier_vise_6_mois_pct": 80,
+    "taux_insertion_metier_vise_2_ans_pct": 25
+  },
+  "details_de_la_formation": {
+    "duree_totale_heures": 910,
+    "duree_centre_heures": 700,
+    "duree_entreprise_heures": 210,
+    "stage_en_entreprise": "Oui — 210 h en entreprise (période d’application).",
+    "dates_previsionnelles": "Nous contacter",
+    "tarifs": "Nous contacter",
+    "financements_possibles": [
+      "Apprentissage",
+      "Contrat de professionnalisation",
+      "Formation continue",
+      "VAE"
+    ],
+    "lieu": "Distanciel"
+  },
+  "accessibilite": "Formation accessible aux personnes en situation de handicap, aménagements possibles en distanciel.",
+  "inscription": {
+    "modalites": "Nous contacter",
+    "email": "contact@idcacademy.fr"
+  },
+  "sessions_d_information": {
+    "frequence_ou_dates": "Nous contacter"
+  },
+  "lieu": {
+    "nom": "IDC Academy",
+    "adresse": "Distanciel",
+    "telephone": null
+  },
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": null
+  },
+  "voies_d_acces": {
+    "apprentissage": true,
+    "formation_continue": true,
+    "contrat_de_professionnalisation": true,
+    "candidature_individuelle": true,
+    "vae": true
+  },
+  "liens": {
+    "france_competences": "https://www.francecompetences.fr/recherche/rncp/40698/",
+    "referentiel_reac_pdf": "https://www.francecompetences.fr/wp-json/api/v1/activity/export/28084/587990"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "id": "parcours-grade-licence-cyber-reseaux-n6",
+  "type": "parcours",
+  "titre": "Grade Licence – Sciences et ingénierie – Cybersécurité et réseaux",
+  "description": "Le diplômé conçoit, met en œuvre et sécurise des systèmes et réseaux informatiques. Il mobilise des bases scientifiques et techniques solides, maîtrise les fondamentaux des réseaux et de la cybersécurité (SOC, durcissement, détection, réponse à incident, conformité) et intervient dans des environnements variés.",
+  "duree_formation": "910 heures (26 semaines)",
+  "public": "Demandeurs d'emploi, Salariés, Apprentis / alternants, Tout public en reconversion",
+  "prerequis": "Baccalauréat (recrutement post-bac) ; prérequis complémentaires à définir selon l'organisme de formation.",
+  "rncp": {
+    "code": "RNCP40745",
+    "niveau": 6,
+    "etat": "Actif à partir du 2025-09-01",
+    "date_debut_parcours_certifiants": "2025-09-01",
+    "date_echeance_enregistrement": "2030-08-31",
+    "date_derniere_delivrance_possible": null,
+    "certificateur": "Ministère de l'Enseignement supérieur et de la Recherche (MESR) — EFREI Paris",
+    "codes": {
+      "NSF": ["326"],
+      "formacode": ["31045", "13235", "31002", "31097"],
+      "ROME": ["M1801", "M1802", "M1805", "M1810"]
+    },
+    "anciennes_certifications": [
+      {
+        "code": "RNCP36806",
+        "intitule": "Grade_Licence - Sciences et Ingénierie - CyberSécurité Défensive"
+      }
+    ],
+    "base_legale": [
+      "Arrêtés MESR fixant la liste des écoles autorisées à délivrer un diplôme conférant le grade de licence (ex. Arrêté du 3 février 2025, BO n°11 du 13/03/2025)",
+      "Enregistrement au RNCP (remplacement de RNCP36806 par RNCP40745)"
+    ],
+    "europass": ["FR", "EN"]
+  },
+  "objectifs_et_metiers": {
+    "presentation": "Former des professionnels capables de concevoir, administrer et sécuriser des réseaux et systèmes, détecter et traiter les incidents de sécurité, respecter les cadres réglementaires (RGPD, normes ANSSI/ISO) et contribuer à la performance et à la sobriété numérique.",
+    "activites_visees": [
+      "Concevoir et documenter des architectures réseaux sécurisées (segmentation, chiffrement, filtrage)",
+      "Déployer et administrer systèmes, réseaux et solutions de sécurité",
+      "Surveiller, détecter et qualifier des événements de sécurité (SOC)",
+      "Conduire la réponse à incident et la remédiation, réaliser un retour d’expérience",
+      "Mettre en conformité et sensibiliser aux bonnes pratiques (RGPD, PSSI, hygiène)",
+      "Assurer une veille technologique et réglementaire"
+    ],
+    "types_emplois_accessibles": [
+      "Analyste cybersécurité / Opérateur SOC",
+      "Administrateur systèmes et réseaux (sécurité)",
+      "Analyste réponse à incident / Forensic",
+      "Consultant sécurité débutant",
+      "Technicien/chargé d'études réseau-cyber"
+    ],
+    "secteurs_activite": [
+      "ESN / centres de services",
+      "Grandes entreprises et ETI",
+      "PME/PMI / startups",
+      "Secteur public / collectivités / opérateurs",
+      "Tous secteurs utilisateurs du SI"
+    ]
+  },
+  "publics_et_prerequis": {
+    "publics": [
+      "Demandeurs d’emploi",
+      "Salariés",
+      "Apprentis / alternants",
+      "Tout public en reconversion"
+    ],
+    "prerequis_entree_formation": "Baccalauréat (général/technologique) — recrutement post-bac ; remise à niveau possible en math/numérique selon positionnement.",
+    "prerequis_pour_la_validation": "Niveau d’anglais B1 (CECR) recommandé ; expérience en entreprise et mobilité internationale appréciées selon le référentiel du certificateur."
+  },
+  "programme_et_contenus": {
+    "blocs_de_competences": [
+      {
+        "code": "RNCP40745BC01",
+        "intitule": "Fondamentaux scientifiques et numériques pour la cybersécurité",
+        "competences": [
+          "Mobiliser des outils mathématiques et logiques pour modéliser et résoudre des problèmes",
+          "Comprendre les architectures des systèmes et réseaux et leurs vulnérabilités"
+        ]
+      },
+      {
+        "code": "RNCP40745BC02",
+        "intitule": "Réseaux, systèmes et sécurité opérationnelle",
+        "competences": [
+          "Déployer et administrer des équipements réseaux et systèmes",
+          "Mettre en œuvre des dispositifs de protection (pare-feu, IDS/IPS, EDR, chiffrement)"
+        ]
+      },
+      {
+        "code": "RNCP40745BC03",
+        "intitule": "Détection, investigation et réponse aux incidents",
+        "competences": [
+          "Surveiller, détecter et qualifier des événements de sécurité",
+          "Mener la remédiation, la preuve et le retour d’expérience"
+        ]
+      },
+      {
+        "code": "RNCP40745BC04",
+        "intitule": "Conformité, gouvernance et communication",
+        "competences": [
+          "Appliquer RGPD, normes et bonnes pratiques",
+          "Produire des livrables et sensibiliser des publics variés"
+        ]
+      },
+      {
+        "code": "RNCP40745BC05",
+        "intitule": "Veille, innovation et professionnalisation",
+        "competences": [
+          "Conduire une veille technique et réglementaire",
+          "Conduire un projet et capitaliser les apprentissages"
+        ]
+      }
+    ],
+    "parcours_transverses": [
+      "Droit des données personnelles (RGPD), éthique et responsabilité numérique",
+      "Green IT / sobriété numérique",
+      "Anglais professionnel, communication et gestion de projet"
+    ]
+  },
+  "modalites_pedagogiques": [
+    "Distanciel (classes virtuelles synchrones), TP guidés, études de cas, projets, accompagnement au dossier"
+  ],
+  "modalites_evaluation": {
+    "epreuves": [
+      {
+        "type": "Contrôle continu semestriel",
+        "duree": null,
+        "description": "Évaluations régulières (projets, études de cas, TP, présentations) — logique de capitalisation par blocs."
+      }
+    ],
+    "duree_totale_epreuves": null,
+    "capitalisation": "Validation par blocs de compétences; exigences complémentaires possibles (anglais B1, périodes en entreprise, mobilité internationale) selon le référentiel du certificateur."
+  },
+  "certification": {
+    "intitule": "Grade Licence – Sciences et ingénierie – Cybersécurité et réseaux",
+    "rncp": "RNCP40745",
+    "niveau": 6,
+    "validation_partielle_possible": true
+  },
+  "suite_de_parcours_et_debouches": {
+    "objectifs": "Insertion sur des fonctions de sécurité opérationnelle et d’administration des réseaux/systèmes, ou poursuite d’études en niveau 7.",
+    "debouches": [
+      "Analyste SOC / Analyste cybersécurité",
+      "Administrateur systèmes et réseaux (sécurité)",
+      "Technicien sécurité / Chargé d’études réseaux",
+      "Consultant junior cybersécurité"
+    ],
+    "poursuite_de_formation": "Masters/Mastères spécialisés (niveau 7), écoles d’ingénieurs, spécialisations cybersécurité."
+  },
+  "indicateurs_de_resultat": {
+    "source": "Données France compétences / certificateur",
+    "annee_reference": null,
+    "nombre_certifies": null,
+    "taux_insertion_global_6_mois_pct": null,
+    "taux_insertion_metier_vise_6_mois_pct": null,
+    "taux_insertion_metier_vise_2_ans_pct": null
+  },
+  "details_de_la_formation": {
+    "duree_totale_heures": 910,
+    "duree_centre_heures": 700,
+    "duree_entreprise_heures": 210,
+    "stage_en_entreprise": "Oui — 210 h en entreprise (période d’application).",
+    "dates_previsionnelles": "Nous contacter",
+    "tarifs": "Nous contacter",
+    "financements_possibles": [
+      "Apprentissage",
+      "Contrat de professionnalisation",
+      "Formation continue",
+      "VAE"
+    ],
+    "lieu": "Distanciel"
+  },
+  "accessibilite": "Formation accessible aux personnes en situation de handicap, aménagements possibles en distanciel.",
+  "inscription": {
+    "modalites": "Nous contacter",
+    "email": "contact@idcacademy.fr"
+  },
+  "sessions_d_information": {
+    "frequence_ou_dates": "Nous contacter"
+  },
+  "lieu": {
+    "nom": "IDC Academy",
+    "adresse": "Distanciel",
+    "telephone": null
+  },
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": null
+  },
+  "voies_d_acces": {
+    "apprentissage": true,
+    "formation_continue": true,
+    "contrat_de_professionnalisation": true,
+    "candidature_individuelle": true,
+    "vae": true
+  },
+  "liens": {
+    "france_competences": "https://www.francecompetences.fr/recherche/rncp/40745/",
+    "fiche_precedente_remplacee": "https://www.francecompetences.fr/recherche/rncp/36806/",
+    "site_certificateur": "https://www.efrei.fr/programmes-experts/bachelor-ingenierie-et-cybersecurite/"
+  }
+}

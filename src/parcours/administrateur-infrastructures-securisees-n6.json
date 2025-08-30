@@ -1,0 +1,205 @@
+{
+  "id": "parcours-administrateur-infrastructures-securisees-n6",
+  "type": "parcours",
+  "titre": "TP – Administrateur d'infrastructures sécurisées",
+  "description": "L’administrateur d’infrastructures sécurisées met en œuvre, administre et sécurise les infrastructures informatiques locales et cloud. Il conçoit et met en production des solutions répondant à des besoins d’évolution, implémente et optimise la supervision, et participe à la gestion de la cybersécurité.",
+  "duree_formation": "910 heures (26 semaines)",
+  "public": "Demandeurs d'emploi, Salariés, Apprentis / alternants, Tout public en reconversion",
+  "prerequis": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; à définir selon l'organisme de formation.",
+  "rncp": {
+    "code": "RNCP37680",
+    "niveau": 6,
+    "etat": "Actif",
+    "date_debut_parcours_certifiants": "2023-09-01",
+    "date_echeance_enregistrement": "2026-09-01",
+    "date_derniere_delivrance_possible": null,
+    "certificateur": "Ministère du Travail du Plein Emploi et de l’Insertion",
+    "codes": {
+      "NSF": ["326"],
+      "formacode": ["31015", "31006", "24273", "31034"],
+      "ROME": ["M1801", "M1802", "M1810"]
+    },
+    "anciennes_certifications": [
+      {
+        "code": "RNCP31113",
+        "intitule": "TP - Administrateur d'infrastructures sécurisées"
+      }
+    ],
+    "base_legale": [
+      "Arrêté du 26 avril 2023 relatif au titre professionnel d’administrateur d’infrastructures sécurisées",
+      "Arrêté du 6 avril 2018 relatif au titre professionnel d’administrateur d’infrastructures sécurisées",
+      "Arrêté du 22 décembre 2015 modifié (conditions de délivrance du titre professionnel)",
+      "Arrêté du 21 juillet 2016 (règlement général des sessions d’examen)",
+      "Décret n°2016-954 du 11 juillet 2016 (titre professionnel)"
+    ],
+    "europass": ["FR", "EN"]
+  },
+  "objectifs_et_metiers": {
+    "presentation": "Mettre en œuvre, administrer et sécuriser les infrastructures (réseaux, systèmes, virtualisation, cloud), concevoir et mettre en production des évolutions, optimiser la supervision et participer à la gestion de la cybersécurité.",
+    "activites_visees": [
+      "Administrer et sécuriser les infrastructures réseaux, systèmes et virtualisées",
+      "Concevoir une solution technique et en piloter la mise en production",
+      "Mettre en œuvre et optimiser la supervision des infrastructures",
+      "Participer à la mesure, à la politique et au traitement des incidents de sécurité"
+    ],
+    "types_emplois_accessibles": [
+      "Administrateur systèmes et réseaux (et sécurité)",
+      "Administrateur systèmes (et sécurité)",
+      "Administrateur réseaux (et sécurité)",
+      "Administrateur d’infrastructures / cloud",
+      "Administrateur cybersécurité",
+      "Responsable infrastructure systèmes et réseaux"
+    ],
+    "secteurs_activite": [
+      "ESN / centres de services",
+      "Entreprises utilisatrices (privé/public), collectivités, administrations"
+    ]
+  },
+  "publics_et_prerequis": {
+    "publics": [
+      "Demandeurs d’emploi",
+      "Salariés",
+      "Apprentis / alternants",
+      "Tout public en reconversion"
+    ],
+    "prerequis_entree_formation": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; positionnement recommandé en systèmes/réseaux et anglais technique (lecture/écrit B1).",
+    "prerequis_pour_la_validation": null
+  },
+  "programme_et_contenus": {
+    "blocs_de_competences": [
+      {
+        "code": "RNCP37680BC01",
+        "intitule": "Administrer et sécuriser les infrastructures",
+        "competences": [
+          "Appliquer les bonnes pratiques dans l'administration des infrastructures",
+          "Administrer et sécuriser les infrastructures réseaux",
+          "Administrer et sécuriser les infrastructures systèmes",
+          "Administrer et sécuriser les infrastructures virtualisées"
+        ]
+      },
+      {
+        "code": "RNCP37680BC02",
+        "intitule": "Concevoir et mettre en œuvre une solution en réponse à un besoin d'évolution",
+        "competences": [
+          "Concevoir une solution technique répondant à des besoins d'évolution de l'infrastructure",
+          "Mettre en production des évolutions de l'infrastructure",
+          "Mettre en œuvre et optimiser la supervision des infrastructures"
+        ]
+      },
+      {
+        "code": "RNCP37680BC03",
+        "intitule": "Participer à la gestion de la cybersécurité",
+        "competences": [
+          "Participer à la mesure et à l'analyse du niveau de sécurité de l'infrastructure",
+          "Participer à l'élaboration et à la mise en œuvre de la politique de sécurité",
+          "Participer à la détection et au traitement des incidents de sécurité"
+        ]
+      }
+    ],
+    "parcours_transverses": [
+      "Anglais technique (CECRL B1 : lecture et expression écrite)",
+      "Cybersécurité opérationnelle et hygiène informatique",
+      "Supervision, observabilité et indicateurs de performance",
+      "Virtualisation et services cloud (IaaS/PaaS/SaaS)",
+      "Veille professionnelle"
+    ]
+  },
+  "modalites_pedagogiques": [
+    "Distanciel (classes virtuelles synchrones), TP guidés, projets, mises en situation, accompagnement au dossier professionnel"
+  ],
+  "modalites_evaluation": {
+    "epreuves": [
+      {
+        "type": "Présentation d’un projet réalisé en amont",
+        "duree": "00:40",
+        "description": "Remise d’un dossier projet (un ou plusieurs projets) et soutenance devant le jury."
+      },
+      {
+        "type": "Entretien technique",
+        "duree": "01:00",
+        "description": "Questionnement du jury sur la base du dossier et de la présentation; couverture des compétences non abordées."
+      },
+      {
+        "type": "Questionnaire professionnel (anglais technique)",
+        "duree": "00:30",
+        "description": "Étude d’une documentation technique en anglais; 2 questions fermées (FR) et 2 questions ouvertes (EN)."
+      },
+      {
+        "type": "Entretien final",
+        "duree": "00:20",
+        "description": "Échange autour du dossier professionnel et du parcours."
+      }
+    ],
+    "duree_totale_epreuves": "02:30",
+    "capitalisation": "Titre composé de 3 CCP capitalisables; possibilité de CCS complémentaires."
+  },
+  "certification": {
+    "intitule": "Titre professionnel Administrateur d'infrastructures sécurisées",
+    "rncp": "RNCP37680",
+    "niveau": 6,
+    "validation_partielle_possible": true
+  },
+  "suite_de_parcours_et_debouches": {
+    "objectifs": "Insertion sur des fonctions d’administration d’infrastructures (réseaux/systèmes/virtualisation/cloud) et cybersécurité opérationnelle.",
+    "debouches": [
+      "Administrateur systèmes et réseaux",
+      "Administrateur d’infrastructures et cloud",
+      "Administrateur cybersécurité",
+      "Responsable infrastructure systèmes et réseaux"
+    ],
+    "poursuite_de_formation": "Spécialisations en cloud, cybersécurité ou supervision (niveaux 6/7), titres professionnels ou masters."
+  },
+  "indicateurs_de_resultat": {
+    "source": "Données nationales France compétences (fiche RNCP)",
+    "annee_reference": 2021,
+    "nombre_certifies": 250,
+    "taux_insertion_global_6_mois_pct": 67,
+    "taux_insertion_metier_vise_6_mois_pct": 62,
+    "taux_insertion_metier_vise_2_ans_pct": 80
+  },
+  "details_de_la_formation": {
+    "duree_totale_heures": 910,
+    "duree_centre_heures": 700,
+    "duree_entreprise_heures": 210,
+    "stage_en_entreprise": "Oui — 210 h en entreprise (période d’application).",
+    "dates_previsionnelles": "Nous contacter",
+    "tarifs": "Nous contacter",
+    "financements_possibles": [
+      "Apprentissage",
+      "Contrat de professionnalisation",
+      "Formation continue",
+      "VAE"
+    ],
+    "lieu": "Distanciel"
+  },
+  "accessibilite": "Formation accessible aux personnes en situation de handicap, aménagements possibles en distanciel.",
+  "inscription": {
+    "modalites": "Nous contacter",
+    "email": "contact@idcacademy.fr"
+  },
+  "sessions_d_information": {
+    "frequence_ou_dates": "Nous contacter"
+  },
+  "lieu": {
+    "nom": "IDC Academy",
+    "adresse": "Distanciel",
+    "telephone": null
+  },
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": null
+  },
+  "voies_d_acces": {
+    "apprentissage": true,
+    "formation_continue": true,
+    "contrat_de_professionnalisation": true,
+    "candidature_individuelle": true,
+    "vae": true
+  },
+  "liens": {
+    "france_competences": "https://www.francecompetences.fr/recherche/rncp/37680/",
+    "referentiel_reac_pdf": "https://www.francecompetences.fr/wp-json/api/v1/activity/export/24214/465506",
+    "arrete_2023": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000047541087/",
+    "arrete_2018": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000036805857/"
+  }
+}

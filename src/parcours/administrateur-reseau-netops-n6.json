@@ -1,0 +1,201 @@
+{
+  "id": "parcours-administrateur-reseau-netops-n6",
+  "type": "parcours",
+  "titre": "TP – Administrateur réseau NetOps",
+  "description": "L’administrateur réseau NetOps automatise la configuration, le déploiement et la supervision d’infrastructures réseaux LAN, datacenter et WAN (SD-LAN, SD-DC, SD-WAN), en s’appuyant sur des contrôleurs, l’automatisation par scripts/Ansible et de bonnes pratiques de sécurité.",
+  "duree_formation": "910 heures (26 semaines)",
+  "public": "Demandeurs d'emploi, Salariés, Apprentis / alternants, Tout public en reconversion",
+  "prerequis": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; à définir selon l'organisme de formation.",
+  "rncp": {
+    "code": "RNCP36163",
+    "niveau": 6,
+    "etat": "Actif",
+    "date_debut_parcours_certifiants": "2022-02-01",
+    "date_echeance_enregistrement": "2027-01-31",
+    "date_derniere_delivrance_possible": null,
+    "certificateur": "Ministère du Travail du Plein Emploi et de l’Insertion",
+    "codes": {
+      "NSF": ["326"],
+      "formacode": ["24220"],
+      "ROME": ["M1810", "M1801"]
+    },
+    "anciennes_certifications": [],
+    "base_legale": [
+      "Décret n°2016-954 du 11 juillet 2016 relatif au titre professionnel",
+      "Arrêté du 22 décembre 2015 modifié (conditions de délivrance du titre professionnel)",
+      "Arrêté du 21 juillet 2016 (règlement général des sessions d'examen)",
+      "Arrêté du 21 décembre 2021 (création du TP Administrateur réseau NetOps)",
+      "Arrêté du 23 juin 2022 (modification de l’arrêté du 21 décembre 2021)"
+    ],
+    "europass": ["FR", "EN"]
+  },
+  "objectifs_et_metiers": {
+    "presentation": "Automatiser la gestion et la sécurité des réseaux d’entreprise (LAN, datacenter, WAN) via contrôleurs/SDN, outils d’automatisation (scripts, Ansible) et supervision, avec lecture de documentation technique en anglais.",
+    "activites_visees": [
+      "Administration centralisée d’équipements réseau et industrialisation des configurations",
+      "Automatisation par scripts et Ansible, déploiement et supervision",
+      "Virtualisation et pilotage réseau en datacenter (contrôleur SDN), application de politiques de sécurité et de QoS",
+      "Gestion d’un réseau étendu (SD-WAN), priorisation des flux, VPN, sécurité et remédiation aux incidents"
+    ],
+    "types_emplois_accessibles": [
+      "Ingénieur NetOps",
+      "Développeur réseau",
+      "Ingénieur réseau SDN",
+      "Ingénieur Cloud",
+      "Ingénieur réseau LAN Datacenter"
+    ],
+    "secteurs_activite": [
+      "ESN / centres de services",
+      "Opérateurs de télécommunications",
+      "DSI d’entreprises, administrations, collectivités"
+    ]
+  },
+  "publics_et_prerequis": {
+    "publics": [
+      "Demandeurs d’emploi",
+      "Salariés",
+      "Apprentis / alternants",
+      "Tout public en reconversion"
+    ],
+    "prerequis_entree_formation": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; positionnement conseillé en réseaux/systèmes et anglais technique (lecture B2, expression écrite B1).",
+    "prerequis_pour_la_validation": null
+  },
+  "programme_et_contenus": {
+    "blocs_de_competences": [
+      {
+        "code": "RNCP36163BC01",
+        "intitule": "Automatiser la gestion d'un réseau local (SD-LAN)",
+        "competences": [
+          "Administrer une infrastructure réseau via une solution cloud clé en main",
+          "Automatiser la configuration et le déploiement des équipements",
+          "Industrialiser la gestion du LAN avec Ansible",
+          "Mettre en place la supervision automatisée du LAN"
+        ]
+      },
+      {
+        "code": "RNCP36163BC02",
+        "intitule": "Automatiser la gestion d'un réseau local de datacenter (SD-DC)",
+        "competences": [
+          "Configurer et administrer des équipements réseau virtualisés",
+          "Piloter le réseau de datacenter avec un contrôleur SDN",
+          "Automatiser la sécurité réseau en datacenter"
+        ]
+      },
+      {
+        "code": "RNCP36163BC03",
+        "intitule": "Automatiser la gestion d'un réseau étendu (SD-WAN)",
+        "competences": [
+          "Exploiter une solution SD-WAN clé en main pour gérer et superviser le WAN",
+          "Automatiser déploiement et supervision sur le réseau étendu",
+          "Automatiser le déploiement des politiques de sécurité sur le WAN",
+          "Interagir sur des réseaux professionnels, y compris en anglais"
+        ]
+      }
+    ],
+    "parcours_transverses": [
+      "Anglais technique (lecture B2, expression écrite B1)",
+      "Automatisation réseau (scripts, Ansible) et SDN/SD-WAN",
+      "Sécurité des réseaux et hygiène cyber",
+      "Supervision et observabilité",
+      "Veille professionnelle"
+    ]
+  },
+  "modalites_pedagogiques": [
+    "Distanciel (classes virtuelles synchrones), TP guidés, projets, mises en situation, accompagnement au dossier professionnel"
+  ],
+  "modalites_evaluation": {
+    "epreuves": [
+      {
+        "type": "Présentation d’un projet réalisé en amont",
+        "duree": "00:40",
+        "description": "Remise d’un dossier projet; 15 min de lecture par le jury puis 25 min de soutenance."
+      },
+      {
+        "type": "Entretien technique",
+        "duree": "00:30",
+        "description": "Questionnement du jury sur la base du dossier et de la soutenance; couverture des compétences non abordées."
+      },
+      {
+        "type": "Questionnaire professionnel (anglais technique)",
+        "duree": "00:30",
+        "description": "Étude d’un document technique en anglais et réponses écrites à questions ouvertes."
+      },
+      {
+        "type": "Entretien final",
+        "duree": "00:20",
+        "description": "Échange autour du dossier professionnel et du parcours."
+      }
+    ],
+    "duree_totale_epreuves": "02:00",
+    "capitalisation": "Titre composé de 3 CCP capitalisables; possibilité de CCS complémentaires."
+  },
+  "certification": {
+    "intitule": "Titre professionnel Administrateur réseau NetOps",
+    "rncp": "RNCP36163",
+    "niveau": 6,
+    "validation_partielle_possible": true
+  },
+  "suite_de_parcours_et_debouches": {
+    "objectifs": "Insertion sur des fonctions NetOps/réseaux automatisés, SDN/SD-WAN et supervision.",
+    "debouches": [
+      "Ingénieur NetOps",
+      "Ingénieur réseau SDN",
+      "Développeur réseau",
+      "Ingénieur Cloud",
+      "Ingénieur réseau LAN Datacenter"
+    ],
+    "poursuite_de_formation": "Titres professionnels de spécialisation réseau/sécurité (niveaux 6/7) ou masters réseau/cybersécurité."
+  },
+  "indicateurs_de_resultat": {
+    "source": "France compétences / certificateur",
+    "annee_reference": null,
+    "nombre_certifies": null,
+    "taux_insertion_global_6_mois_pct": null,
+    "taux_insertion_metier_vise_6_mois_pct": null,
+    "taux_insertion_metier_vise_2_ans_pct": null
+  },
+  "details_de_la_formation": {
+    "duree_totale_heures": 910,
+    "duree_centre_heures": 700,
+    "duree_entreprise_heures": 210,
+    "stage_en_entreprise": "Oui — 210 h en entreprise (période d’application).",
+    "dates_previsionnelles": "Nous contacter",
+    "tarifs": "Nous contacter",
+    "financements_possibles": [
+      "Apprentissage",
+      "Contrat de professionnalisation",
+      "Formation continue",
+      "VAE"
+    ],
+    "lieu": "Distanciel"
+  },
+  "accessibilite": "Formation accessible aux personnes en situation de handicap, aménagements possibles en distanciel.",
+  "inscription": {
+    "modalites": "Nous contacter",
+    "email": "contact@idcacademy.fr"
+  },
+  "sessions_d_information": {
+    "frequence_ou_dates": "Nous contacter"
+  },
+  "lieu": {
+    "nom": "IDC Academy",
+    "adresse": "Distanciel",
+    "telephone": null
+  },
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": null
+  },
+  "voies_d_acces": {
+    "apprentissage": true,
+    "formation_continue": true,
+    "contrat_de_professionnalisation": true,
+    "candidature_individuelle": false,
+    "vae": true
+  },
+  "liens": {
+    "france_competences": "https://www.francecompetences.fr/recherche/rncp/36163/",
+    "referentiel_reac_pdf": "https://www.francecompetences.fr/wp-json/api/v1/activity/export/22205/330585",
+    "arrete_creation": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044792157"
+  }
+}

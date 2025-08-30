@@ -92,11 +92,13 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
     const titre = parcours.titre.toLowerCase()
     if (titre.includes('cloud') || titre.includes('azure') || titre.includes('aws')) return 'cloud'
     if (titre.includes('data') || titre.includes('analyst')) return 'data'
-    if (titre.includes('cyber') || titre.includes('security') || titre.includes('soc')) return 'cybersecurity'
+    if (titre.includes('cyber') || titre.includes('security') || titre.includes('soc') || titre.includes('sécurisées')) return 'cybersecurity'
     if (titre.includes('devops')) return 'devops'
     if (titre.includes('ai') || titre.includes('ml') || titre.includes('intelligence')) return 'ai'
     if (titre.includes('fullstack') || titre.includes('web') || titre.includes('developer')) return 'fullstack'
     if (titre.includes('technicien') || titre.includes('informatique')) return 'fullstack'
+    // Règles spécifiques pour les nouveaux parcours
+    if (titre.includes('télécommunications') || titre.includes('netops') || titre.includes('réseaux')) return 'cloud'
     return 'fullstack'
   }
 
@@ -138,15 +140,12 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
     async function loadParcours() {
       try {
         const parcoursFiles = [
-          'ai-ml-engineer-n7',
-          'cloud-architect-n7', 
-          'cloud-sysadmin-azure-n6',
-          'cybersecurity-architect-manager-n7',
-          'cybersecurity-soc-analyst-n6',
-          'data-analyst-n6',
-          'devops-engineer-azure-n7',
-          'fullstack-web-developer-n6',
-          'technicien-informatique-n4'
+          'technicien-informatique-n4',
+          'charge-etudes-reseaux-telecoms-n5',
+          'grade-licence-cyber-reseaux-n6',
+          'administrateur-systeme-devops-n6',
+          'administrateur-reseau-netops-n6',
+          'administrateur-infrastructures-securisees-n6'
         ]
 
         const parcoursData = await Promise.all(

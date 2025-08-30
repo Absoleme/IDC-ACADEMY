@@ -1,0 +1,198 @@
+{
+  "id": "parcours-administrateur-systeme-devops-n6",
+  "type": "parcours",
+  "titre": "TP – Administrateur système DevOps",
+  "description": "L’administrateur système DevOps automatise le déploiement des infrastructures sur un cloud privé, public ou hybride. En relation avec les équipes de développement, il déploie en continu les applications, supervise les services et traite les alertes, dans une logique d’industrialisation et de sécurité.",
+  "duree_formation": "910 heures (26 semaines)",
+  "public": "Demandeurs d'emploi, Salariés, Apprentis / alternants, Tout public en reconversion",
+  "prerequis": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; un niveau 5 ou une expérience en systèmes/réseaux est recommandé selon l’organisme.",
+  "rncp": {
+    "code": "RNCP36061",
+    "niveau": 6,
+    "etat": "Actif jusqu’au 2026-11-30",
+    "date_debut_parcours_certifiants": "2021-12-01",
+    "date_echeance_enregistrement": "2026-11-30",
+    "date_derniere_delivrance_possible": null,
+    "certificateur": "Ministère du Travail du Plein Emploi et de l’Insertion",
+    "codes": {
+      "NSF": ["326"],
+      "formacode": ["31011", "30854", "30812", "31034", "31021"],
+      "ROME": ["M1801", "M1802"]
+    },
+    "anciennes_certifications": [],
+    "base_legale": [
+      "Arrêté du 27 octobre 2021 portant création du titre professionnel d’administrateur système DevOps",
+      "Arrêté du 23 juin 2022 modifiant l’arrêté du 27 octobre 2021",
+      "Arrêté du 22 décembre 2015 modifié (conditions de délivrance du titre professionnel)",
+      "Arrêté du 21 juillet 2016 (règlement général des sessions d’examen)"
+    ],
+    "europass": ["FR", "EN"]
+  },
+  "objectifs_et_metiers": {
+    "presentation": "Automatiser le déploiement d’infrastructures, déployer en continu des applications et superviser les services en production, avec une maîtrise des outils d’industrialisation (IaC, CI/CD, conteneurs, orchestrateurs) et des bonnes pratiques de sécurité.",
+    "activites_visees": [
+      "Automatiser la création et le déploiement d’une infrastructure dans le cloud et sécuriser les environnements",
+      "Préparer les environnements de test/préproduction, gérer données et conteneurs, automatiser la mise en production",
+      "Mettre en place des indicateurs et exploiter une solution de supervision, assurer une veille technologique"
+    ],
+    "types_emplois_accessibles": [
+      "Administrateur système DevOps",
+      "Ingénieur DevOps / SysOps",
+      "Ingénieur système DevOps",
+      "Ingénieur / Administrateur Cloud",
+      "Développeur Cloud"
+    ],
+    "secteurs_activite": [
+      "ESN / centres de services",
+      "Opérateurs / hébergeurs Cloud",
+      "Éditeurs de logiciels",
+      "DSI d’entreprises et d’administrations"
+    ]
+  },
+  "publics_et_prerequis": {
+    "publics": [
+      "Demandeurs d’emploi",
+      "Salariés",
+      "Apprentis / alternants",
+      "Tout public en reconversion"
+    ],
+    "prerequis_entree_formation": "Aucun prérequis réglementaire précisé sur la fiche RNCP ; positionnement conseillé en systèmes/réseaux, scripts et anglais technique (lecture B2).",
+    "prerequis_pour_la_validation": null
+  },
+  "programme_et_contenus": {
+    "blocs_de_competences": [
+      {
+        "code": "RNCP36061BC01",
+        "intitule": "Automatiser le déploiement d’une infrastructure dans le cloud",
+        "competences": [
+          "Automatiser la création de serveurs à l’aide de scripts",
+          "Automatiser le déploiement d’une infrastructure",
+          "Sécuriser l’infrastructure",
+          "Mettre l’infrastructure en production dans le cloud"
+        ]
+      },
+      {
+        "code": "RNCP36061BC02",
+        "intitule": "Déployer en continu une application",
+        "competences": [
+          "Préparer un environnement de test",
+          "Gérer le stockage des données",
+          "Gérer des conteneurs",
+          "Automatiser la mise en production d’une application avec une plateforme"
+        ]
+      },
+      {
+        "code": "RNCP36061BC03",
+        "intitule": "Superviser les services déployés",
+        "competences": [
+          "Définir et mettre en place des statistiques de services",
+          "Exploiter une solution de supervision",
+          "Échanger sur des réseaux professionnels éventuellement en anglais"
+        ]
+      }
+    ],
+    "parcours_transverses": [
+      "Anglais technique (lecture B2, expression écrite B1)",
+      "Sécurité des infrastructures cloud et hygiène cyber",
+      "CI/CD, Infrastructure as Code, conteneurs & orchestrateurs",
+      "Gestion de projet DevOps et collaboration interéquipes"
+    ]
+  },
+  "modalites_pedagogiques": [
+    "Distanciel (classes virtuelles synchrones), TP guidés, projets, mises en situation, accompagnement au dossier professionnel"
+  ],
+  "modalites_evaluation": {
+    "epreuves": [
+      {
+        "type": "Présentation d’un projet réalisé en amont",
+        "duree": null,
+        "description": "Présentation d’un projet conforme au référentiel; remise d’un dossier projet et soutenance devant jury."
+      },
+      {
+        "type": "Entretien technique",
+        "duree": null,
+        "description": "Questionnement du jury sur la base du dossier et de la soutenance pour couvrir l’ensemble des compétences."
+      },
+      {
+        "type": "Questionnaire professionnel (dont anglais technique)",
+        "duree": null,
+        "description": "Étude d’un document technique en anglais et réponses écrites; questionnement complémentaire lié à la supervision."
+      },
+      {
+        "type": "Entretien final",
+        "duree": null,
+        "description": "Échange autour du dossier professionnel et du parcours."
+      }
+    ],
+    "duree_totale_epreuves": null,
+    "capitalisation": "Titre composé de 3 CCP capitalisables; possibilité de CCS complémentaires selon le ministère."
+  },
+  "certification": {
+    "intitule": "Titre professionnel Administrateur système DevOps",
+    "rncp": "RNCP36061",
+    "niveau": 6,
+    "validation_partielle_possible": true
+  },
+  "suite_de_parcours_et_debouches": {
+    "objectifs": "Insertion sur des fonctions DevOps/systèmes et cloud, administration et industrialisation des déploiements.",
+    "debouches": [
+      "Administrateur système DevOps",
+      "Ingénieur / Administrateur Cloud",
+      "Ingénieur système / SysOps",
+      "Développeur Cloud"
+    ],
+    "poursuite_de_formation": "Spécialisations Cloud/DevSecOps (niveau 6/7), titres professionnels ou masters en cybersécurité/systèmes."
+  },
+  "indicateurs_de_resultat": {
+    "source": "France compétences / certificateur",
+    "annee_reference": null,
+    "nombre_certifies": null,
+    "taux_insertion_global_6_mois_pct": null,
+    "taux_insertion_metier_vise_6_mois_pct": null,
+    "taux_insertion_metier_vise_2_ans_pct": null
+  },
+  "details_de_la_formation": {
+    "duree_totale_heures": 910,
+    "duree_centre_heures": 700,
+    "duree_entreprise_heures": 210,
+    "stage_en_entreprise": "Oui — 210 h en entreprise (période d’application).",
+    "dates_previsionnelles": "Nous contacter",
+    "tarifs": "Nous contacter",
+    "financements_possibles": [
+      "Apprentissage",
+      "Contrat de professionnalisation",
+      "Formation continue",
+      "VAE"
+    ],
+    "lieu": "Distanciel"
+  },
+  "accessibilite": "Formation accessible aux personnes en situation de handicap, aménagements possibles en distanciel.",
+  "inscription": {
+    "modalites": "Nous contacter",
+    "email": "contact@idcacademy.fr"
+  },
+  "sessions_d_information": {
+    "frequence_ou_dates": "Nous contacter"
+  },
+  "lieu": {
+    "nom": "IDC Academy",
+    "adresse": "Distanciel",
+    "telephone": null
+  },
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": null
+  },
+  "voies_d_acces": {
+    "apprentissage": true,
+    "formation_continue": true,
+    "contrat_de_professionnalisation": true,
+    "candidature_individuelle": false,
+    "vae": true
+  },
+  "liens": {
+    "france_competences": "https://www.francecompetences.fr/recherche/rncp/36061/",
+    "arrete_creation": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044289676",
+    "arrete_modification": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045982337"
+  }
+}
