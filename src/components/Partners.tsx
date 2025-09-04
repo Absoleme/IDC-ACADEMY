@@ -80,10 +80,10 @@ export default function Partners() {
                   href="/documents/certificat-qualiopi.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block w-32 h-32 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer group"
+                  className="block w-48 h-32 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer group"
                   title="Cliquez pour télécharger le certificat Qualiopi"
                 >
-                  <div className="w-full h-full flex items-center justify-center p-4 relative">
+                  <div className="w-full h-full flex items-center justify-center p-2 relative">
                     {/* Image Qualiopi ou placeholder */}
                     <img 
                       src="/logos/qualiopi.png" 
