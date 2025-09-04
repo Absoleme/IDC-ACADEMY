@@ -15,7 +15,7 @@ export default function Hero() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Devenez expert en
             <span className="block text-yellow-400">
-              Technologies Digitales
+              Technologies Numériques
             </span>
           </h1>
 
