@@ -33,6 +33,14 @@ export async function POST(request: NextRequest) {
   try {
     const data = await request.json()
 
+    // Vérification du consentement RGPD
+    if (!data.accepteRGPD) {
+      return NextResponse.json(
+        { error: 'Le consentement RGPD est obligatoire' },
+        { status: 400 }
+      )
+    }
+
     // Vérification reCAPTCHA
     if (!data.recaptchaToken) {
       return NextResponse.json(
@@ -99,7 +107,7 @@ export async function POST(request: NextRequest) {
       
       N'hésitez pas à nous contacter si vous avez des questions :
       - Email : contact@idcacademy.fr
-      - Téléphone : 06 59 56 59 18
+      - Téléphone : 07 59 56 59 18
       
       À très bientôt,
       L'équipe IDC Academy

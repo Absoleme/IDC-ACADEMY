@@ -25,7 +25,8 @@ export default function ContactModal({ isOpen, onClose, formation }: ContactModa
     email: '',
     telephone: '',
     situation: '',
-    message: ''
+    message: '',
+    accepteRGPD: false
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -83,7 +84,8 @@ export default function ContactModal({ isOpen, onClose, formation }: ContactModa
             email: '',
             telephone: '',
             situation: '',
-            message: ''
+            message: '',
+            accepteRGPD: false
           })
         }, 3000)
       } else {
@@ -106,9 +108,11 @@ export default function ContactModal({ isOpen, onClose, formation }: ContactModa
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const target = e.target as HTMLInputElement
+    const value = target.type === 'checkbox' ? target.checked : target.value
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [target.name]: value
     })
   }
 
@@ -304,9 +308,40 @@ export default function ContactModal({ isOpen, onClose, formation }: ContactModa
               </div>
             </div>
 
+            {/* Case à cocher RGPD obligatoire */}
+            <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-6 rounded-2xl border border-gray-200">
+              <div className="flex items-start space-x-3">
+                <div className="flex items-center h-5">
+                  <input
+                    id="accepteRGPD"
+                    name="accepteRGPD"
+                    type="checkbox"
+                    required
+                    checked={formData.accepteRGPD}
+                    onChange={handleChange}
+                    className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                </div>
+                <div className="text-sm">
+                  <label htmlFor="accepteRGPD" className="font-medium text-gray-700 cursor-pointer">
+                    <span className="text-red-500">*</span> J'accepte que mes données soient utilisées pour répondre à ma demande. 
+                    Pour en savoir plus sur la gestion de vos données, consultez notre{' '}
+                    <a 
+                      href="/politique-confidentialite" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline font-semibold"
+                    >
+                      Politique de Confidentialité
+                    </a>.
+                  </label>
+                </div>
+              </div>
+            </div>
+
             <button
               type="submit"
-              disabled={isSubmitting || !captchaReady}
+              disabled={isSubmitting || !captchaReady || !formData.accepteRGPD}
               className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-8 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-95"
             >
               {isSubmitting ? (
