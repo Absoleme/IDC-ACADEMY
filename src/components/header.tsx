@@ -1,10 +1,30 @@
 'use client'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import DropdownFormations from './DropdownFormations'
+import FormationDetailModal from './FormationDetailModal'
+
+interface Formation {
+  id: string
+  type: string
+  titre: string
+  categorie: string
+  sous_categorie?: string
+  duree_formation: string
+  resume: string
+  certifications_visees: string[]
+  competences: string[]
+  postes_accessibles: string[]
+  salaire_moyen: string
+  modalites: string[]
+}
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [selectedFormationId, setSelectedFormationId] = useState<string | null>(null)
+  const [formationType, setFormationType] = useState<'formation' | 'parcours'>('formation')
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +34,17 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const handleFormationClick = (formation: Formation) => {
+    setSelectedFormationId(formation.id)
+    setFormationType(formation.type as 'formation' | 'parcours')
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedFormationId(null)
+  }
 
   return (
     <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
@@ -37,13 +68,7 @@ export default function Header() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-200"></span>
             </Link>
             
-            <Link 
-              href="/formations" 
-              className="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-200 relative group"
-            >
-              Formations
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-200"></span>
-            </Link>
+            <DropdownFormations onFormationClick={handleFormationClick} />
             
             {/* <Link 
               href="/idc-university" 
@@ -130,6 +155,16 @@ export default function Header() {
           </div>
         )}
       </nav>
+      
+      {/* Modal de formation */}
+      {selectedFormationId && (
+        <FormationDetailModal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          formationId={selectedFormationId}
+          formationType={formationType}
+        />
+      )}
     </header>
   )
 }
