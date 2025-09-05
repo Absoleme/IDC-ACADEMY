@@ -6,23 +6,25 @@ import Partners from '@/components/Partners'
 import Testimonials from '@/components/Testimonials'
 import TechSalaryGrids from '@/components/TechSalaryGrids'
 import Contact from '@/components/contact'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
       <Hero />
-      
+      {/* Section 3: Grilles de Salaires Tech */}
+      <TechSalaryGrids />
       {/* Section À propos */}
       <AboutUs />
       
       {/* Section Partenaires */}
       <Partners />
 
-      {/* Section 3: Grilles de Salaires Tech */}
-      <TechSalaryGrids />
       
-      <Contact />
+      
+ 
+      <Footer />
     </main>
   )
 }

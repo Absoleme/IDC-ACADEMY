@@ -3,14 +3,8 @@
 export default function Partners() {
   const partners = [
     {
-      name: "Qualiopi",
-      logo: "/logos/qualiopi.png", // Vous devrez ajouter ce logo
-      description: "Certification qualité des organismes de formation",
-      type: "certification"
-    },
-    {
       name: "OPCO",
-      logo: "/logos/opco.png", // Logo générique OPCO
+      logo: "/logos/opco.png",
       description: "Opérateurs de Compétences",
       type: "financement"
     },
@@ -71,76 +65,10 @@ export default function Partners() {
           </div>
         </div>
 
-        {/* Mise en avant de Qualiopi */}
-        <div className="mb-16 text-center">
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-12 border-2 border-green-200 shadow-xl max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
-              <div className="flex-shrink-0">
-                <a 
-                  href="/documents/certificat-qualiopi.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block w-64 h-40 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer group"
-                  title="Cliquez pour télécharger le certificat Qualiopi"
-                >
-                  <div className="w-full h-full flex items-center justify-center p-2 relative">
-                    {/* Image Qualiopi ou placeholder */}
-                    <img 
-                      src="/logos/qualiopi.png" 
-                      alt="Certification Qualiopi" 
-                      className="w-full h-full object-contain rounded-xl"
-                      onError={(e) => {
-                        // Fallback si l'image n'existe pas
-                        (e.target as HTMLImageElement).style.display = 'none';
-                        (e.target as HTMLImageElement).nextElementSibling!.classList.remove('hidden');
-                      }}
-                    />
-                    {/* Fallback placeholder */}
-                    <div className="hidden w-full h-full bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">
-                      QUALIOPI
-                    </div>
-                    {/* Icône de téléchargement qui apparaît au hover */}
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 rounded-xl flex items-center justify-center transition-all duration-300">
-                      <svg className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="text-left">
-                <h3 className="text-3xl font-bold text-green-800 mb-4">
-                  Organisme Certifié Qualiopi
-                </h3>
-                <p className="text-lg text-green-700 leading-relaxed mb-4">
-                  IDC Academy est certifié Qualiopi, gage de qualité et de conformité 
-                  aux exigences du référentiel national qualité.
-                </p>
-                <div className="flex items-center text-green-600 mb-3">
-                  <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                  <span className="font-semibold">Formations éligibles aux financements publics</span>
-                </div>
-                <a 
-                  href="/documents/certificat-qualiopi.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-green-600 hover:text-green-800 font-medium text-sm transition-colors duration-200"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  Télécharger le certificat
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Grille des partenaires */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {partners.filter(p => p.name !== "Qualiopi").map((partner, index) => (
+          {partners.map((partner, index) => (
             <div 
               key={partner.name}
               className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:scale-105"
@@ -148,8 +76,18 @@ export default function Partners() {
             >
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 bg-gray-50 rounded-xl flex items-center justify-center group-hover:bg-gray-100 transition-colors">
-                  {/* Placeholder pour logos */}
-                  <div className="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg flex items-center justify-center text-white text-xs font-bold">
+                  <img 
+                    src={partner.logo} 
+                    alt={`Logo ${partner.name}`}
+                    className="w-16 h-16 object-contain"
+                    onError={(e) => {
+                      // Fallback si l'image n'existe pas
+                      (e.target as HTMLImageElement).style.display = 'none';
+                      (e.target as HTMLImageElement).nextElementSibling!.classList.remove('hidden');
+                    }}
+                  />
+                  {/* Fallback placeholder */}
+                  <div className="hidden w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg items-center justify-center text-white text-xs font-bold">
                     {partner.name.slice(0, 3).toUpperCase()}
                   </div>
                 </div>
@@ -170,37 +108,7 @@ export default function Partners() {
           ))}
         </div>
 
-        {/* Call to action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-8 border border-indigo-200">
-            <h3 className="text-2xl font-bold text-indigo-900 mb-4">
-              Financements et Certifications
-            </h3>
-            <p className="text-indigo-700 mb-6 max-w-3xl mx-auto">
-              Obtenez des certifications reconnues par les plus grandes entreprises tech.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center text-indigo-600">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
-                <span className="font-semibold">Financement personnel</span>
-              </div>
-              <div className="flex items-center text-indigo-600">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-                <span className="font-semibold">Certifications officielles</span>
-              </div>
-              <div className="flex items-center text-indigo-600">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                <span className="font-semibold">Qualité garantie</span>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   )
