@@ -1,0 +1,147 @@
+{
+  "id": "parcours-reconversion-devops-azure",
+  "type": "parcours_reconversion",
+  "titre": "Parcours Reconversion – DevOps Azure Specialist",
+  "description": "Formation intensive pour devenir DevOps sur Azure : Infrastructure as Code (Terraform), CI/CD avec Azure DevOps, conteneurs (Docker/Kubernetes), observabilité et bonnes pratiques DevSecOps.",
+  "public": "Personnes en reconversion, admins systèmes, développeurs, techniciens IT souhaitant évoluer vers des rôles DevOps/Cloud sur Azure.",
+  "prerequis": "Bases Linux/Windows, notions de réseaux, Git et scripting (Bash/PowerShell) recommandées.",
+  "duree_formation": "400h + 80h de stage",
+  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers pratiques, labs guidés, projet fil rouge. Coaching emploi 2 mois.",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Mettre en œuvre l’IaC multi-cloud avec Terraform (modules, state, workspaces, policy-as-code).",
+    "Construire des pipelines CI/CD avec Azure DevOps (Repos, Pipelines, Releases, Test Plans).",
+    "Conteneuriser des applications et déployer sur Kubernetes (bases CKA) et Azure Container services.",
+    "Mettre en place l’observabilité (logs, métriques, alertes) et l’automatisation opérationnelle (runbooks).",
+    "Intégrer la sécurité (DevSecOps), la gouvernance et l’optimisation des coûts (FinOps).",
+    "Préparer la certification AZ-400 et Terraform Associate."
+  ],
+  "moyens_techniques": "Repos Git (Azure DevOps/GitHub), abonnements Azure sandbox, Azure DevOps (Repos/Boards/Pipelines), Terraform CLI/Cloud, Docker, cluster Kubernetes de lab, Azure Monitor/Log Analytics, outils de modélisation (C4, diagrams).",
+  "adaptation_et_suivi": "Positionnement initial, plan de progression individualisé, mentoring technique, revues de sprint/projet.",
+  "evaluation_parcours": "Évaluations continues, QCM, études de cas, audit de pipeline/IaC, soutenance finale du projet fil rouge.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations IDCACADEMY sont accessibles aux personnes en situation de handicap. Un questionnaire permet d’identifier les adaptations nécessaires, avec appui de partenaires nationaux.",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire de cadrage pour confirmer l’adéquation du parcours avec le projet professionnel.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "labs_heures": 80,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "92%"
+  },
+  "modules": [
+    {
+      "module": "Fondamentaux Cloud, Linux, Git & Scripting",
+      "duree": "60h",
+      "contenus": [
+        "Culture Cloud et modèles IaaS/PaaS/SaaS",
+        "Linux/Windows pour DevOps, réseaux et sécurité de base",
+        "Git/GitFlow, GitHub/GitOps, scripting Bash/PowerShell",
+        "Patrons d’architecture et modélisation C4"
+      ],
+      "activites": [
+        "Ateliers Git (branches, PR, CI basique)",
+        "TP scripts d’automatisation"
+      ]
+    },
+    {
+      "module": "Azure pour DevOps (plateforme & services)",
+      "duree": "80h",
+      "contenus": [
+        "Identités (Entra ID), RBAC et gouvernance",
+        "Réseau: VNet, routage, équilibreurs, sécurité",
+        "Compute & PaaS: VM/Scale Sets, App Services, Functions",
+        "Stockage: Blob/Files/Disks; sauvegarde et reprise",
+        "Observabilité: Azure Monitor, Log Analytics, alerting"
+      ],
+      "activites": [
+        "Labs: déploiements réseau/compute/stockage",
+        "Mise en place de tableaux de bord et alertes"
+      ]
+    },
+    {
+      "module": "Infrastructure as Code avec Terraform",
+      "duree": "80h",
+      "contenus": [
+        "Terraform CLI/Cloud, providers, modules, variables",
+        "Gestion du state, workspaces, backends distants",
+        "Policy-as-code, tests d’infrastructure",
+        "Landing zone Azure avec Terraform"
+      ],
+      "activites": [
+        "TP: modules réutilisables, revue de code IaC",
+        "Déploiement d’une landing zone"
+      ]
+    },
+    {
+      "module": "CI/CD avec Azure DevOps, Conteneurs & Kubernetes",
+      "duree": "100h",
+      "contenus": [
+        "Azure Repos/Boards/Pipelines (YAML), artefacts",
+        "Stratégies de release, blue/green, canary",
+        "Docker: images, registries, best practices",
+        "Kubernetes: objets de base, déploiements, services",
+        "Sécurité pipelines et supply chain (SAST/DAST)"
+      ],
+      "activites": [
+        "Pipelines CI/CD de bout en bout",
+        "Déploiement conteneurisé sur cluster de lab"
+      ]
+    },
+    {
+      "module": "Observabilité, DevSecOps, FinOps & Préparation AZ-400",
+      "duree": "80h",
+      "contenus": [
+        "SLI/SLO, logs, métriques, traces, runbooks",
+        "Sécurité: secrets mgmt (Key Vault), conformité",
+        "FinOps: budgétisation, étiquetage, optimisation continue",
+        "Révisions et examens blancs AZ-400 & Terraform"
+      ],
+      "activites": [
+        "Audit de pipeline/IaC et remédiations",
+        "Projet fil rouge et soutenance"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-az-400",
+    "cert-terraform-associate"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

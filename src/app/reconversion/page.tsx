@@ -2,6 +2,8 @@
 import Header from '@/components/header'
 import FormationsCertifiantes from '@/components/FormationsCertifiantes'
 import Contact from '@/components/contact'
+import Footer from '@/components/Footer'
+import ReconversionParcours from '@/components/ReconversionParcours'
 
 export default function ReconversionPage() {
   return (
@@ -117,13 +119,36 @@ export default function ReconversionPage() {
       </section>
 
       {/* Parcours Section */}
-      <FormationsCertifiantes 
-        title="Nos Parcours de Reconversion"
-        description="Des programmes complets de 6 à 18 mois pour changer de carrière en toute sérénité. Chaque parcours combine théorie, pratique et accompagnement personnalisé pour garantir votre réussite professionnelle."
-        id="parcours"
-      />
+      <section id="parcours" className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-r from-indigo-400 to-pink-400 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl mb-6 shadow-lg">
+              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-900 via-indigo-800 to-purple-800 bg-clip-text text-transparent mb-6">
+              Nos Parcours de Reconversion
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">Des programmes complets de 6 à 18 mois pour changer de carrière en toute sérénité. Chaque parcours combine théorie, pratique et accompagnement personnalisé pour garantir votre réussite professionnelle.</p>
+            <div className="mt-8 flex justify-center">
+              <div className="h-1 w-32 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-full"></div>
+            </div>
+          </div>
+
+          <ReconversionParcours />
+        </div>
+      </section>
       
-      <Contact />
+      <Footer />
     </main>
   )
 }

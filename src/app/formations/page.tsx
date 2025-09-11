@@ -2,6 +2,7 @@
 import Header from '@/components/header'
 import FormationsCertifiantes from '@/components/FormationsCertifiantes'
 import Contact from '@/components/contact'
+import Footer from '@/components/Footer'
 
 export default function FormationsPage() {
   return (
@@ -123,7 +124,7 @@ export default function FormationsPage() {
         id="formations"
       />
       
-      <Contact />
+      <Footer />
     </main>
   )
 }
