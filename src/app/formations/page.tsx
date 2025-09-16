@@ -85,7 +85,7 @@ export default function FormationsPage() {
             <div className="hidden lg:block">
               <div className="bg-black bg-opacity-20 rounded-xl p-1 border border-white border-opacity-10">
                 <img 
-                  src="/hero/hero-side-image.jpg" 
+                  src="/hero/hero-formation-background.png" 
                   alt="Formation certifiante technologies IT" 
                   className="w-full h-auto rounded-lg"
                 />
