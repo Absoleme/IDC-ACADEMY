@@ -1,0 +1,158 @@
+{
+  "id": "parcours-reconversion-m365-enterprise-admin",
+  "type": "parcours_reconversion",
+  "titre": "Parcours Reconversion – M365 Enterprise Administrator",
+  "description": "Devenez administrateur Microsoft 365: identités Entra ID, Exchange Online, Teams, SharePoint/OneDrive, Intune/Endpoint Manager, sécurité et conformité (Purview/Defender). Préparation MS-900, MS-100/101, MS-700 et sécurité M365.",
+  "public": "Personnes en reconversion, techniciens/administrateurs systèmes, support IT, responsables collaboration souhaitant administrer et sécuriser Microsoft 365 à l’échelle.",
+  "prerequis": "Connaissances de base en réseaux, Windows, notions annuaire/IAM. Powershell apprécié.",
+  "duree_formation": "400h + 80h de stage",
+  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers pratiques, labs guidés et projet fil rouge.",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Concevoir et administrer les identités, accès et licences Microsoft 365 (Entra ID, RBAC, PIM, Conditional Access).",
+    "Déployer et opérer Exchange Online, SharePoint/OneDrive, Teams et la gouvernance associée.",
+    "Gérer les postes et applications avec Intune/Endpoint Manager (compliance, MAM/MDM, updates).",
+    "Mettre en œuvre la sécurité et la conformité: Defender for Office/Endpoint/Identity, Purview (DLP, eDiscovery, Information Protection).",
+    "Automatiser l’administration avec PowerShell et Microsoft Graph, et documenter la gouvernance.",
+    "Préparer et réussir MS-900, MS-100, MS-101 et MS-700."
+  ],
+  "moyens_techniques": "Tenants Microsoft 365 sandbox, Entra ID (Azure AD), Exchange Online, Teams, SharePoint/OneDrive, Intune/Endpoint Manager, Microsoft Defender (Office/Endpoint/Identity), Microsoft Purview (DLP, Sensitivity labels, eDiscovery), PowerShell (EXO, MSOnline, Graph), Microsoft Graph API, Azure AD Connect (lab hybride).",
+  "adaptation_et_suivi": "Positionnement initial, plan de progression individualisé, mentoring, revues d’implémentation et sprint reviews.",
+  "evaluation_parcours": "Évaluations continues, labs notés, QCM, études de cas, audit de locataire M365, soutenance finale du projet fil rouge.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations IDCACADEMY sont accessibles aux personnes en situation de handicap. Un questionnaire à l’inscription permet d’identifier les adaptations nécessaires, avec appui de partenaires nationaux.",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire de cadrage pour confirmer l’adéquation du parcours avec le projet professionnel.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "labs_heures": 80,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "88%"
+  },
+  "modules": [
+    {
+      "module": "Fondamentaux & Gouvernance Microsoft 365 (MS-900)",
+      "duree": "40h",
+      "contenus": [
+        "Concepts cloud & services M365",
+        "Licensing & gouvernance: rôles, RBAC, structure du tenant",
+        "Sécurité de base: MFA, CA, bonnes pratiques",
+        "Méthodologie de déploiement et adoption"
+      ],
+      "activites": [
+        "Atelier gouvernance (naming, rôles, licences)",
+        "Quiz de validation MS-900"
+      ]
+    },
+    {
+      "module": "Identité & Accès – Entra ID (MS-100)",
+      "duree": "80h",
+      "contenus": [
+        "Entra ID: utilisateurs, groupes, rôles, PIM",
+        "Conditional Access, MFA, SSPR, Identity Protection",
+        "Applications d’entreprise, SSO, SCIM/Provisioning",
+        "Hybrid Identity: Azure AD Connect, sync & federation (lab)"
+      ],
+      "activites": [
+        "Labs CA & PIM",
+        "Intégration d’une app SSO (SAML/OIDC)"
+      ]
+    },
+    {
+      "module": "Administration Microsoft 365 & Endpoint (MS-101)",
+      "duree": "80h",
+      "contenus": [
+        "Microsoft 365 tenant & service health, monitoring",
+        "Intune/Endpoint Manager: devices compliance, configuration profiles, apps",
+        "Windows Update for Business, Autopilot, MAM/MDM",
+        "Reporting & automatisation PowerShell/Graph"
+      ],
+      "activites": [
+        "Déploiement Intune end-to-end",
+        "Scripts PowerShell d’automatisation"
+      ]
+    },
+    {
+      "module": "Messagerie & Collaboration – Exchange Online",
+      "duree": "60h",
+      "contenus": [
+        "Exchange Online: mail flow, antispam/antimalware",
+        "Transport rules, DAG concepts (notions), migration hybrid (lab)",
+        "Rétention, archivage, eDiscovery basique",
+        "Monitoring & dépannage"
+      ],
+      "activites": [
+        "Lab migration batch vers EXO",
+        "Audit de configuration sécurité EXO"
+      ]
+    },
+    {
+      "module": "Teams & SharePoint/OneDrive (MS-700 + Admin SP)",
+      "duree": "80h",
+      "contenus": [
+        "Teams: architecture, policies, meetings/voice, governance",
+        "SharePoint: sites, permissions, lifecycle, OneDrive",
+        "External sharing, B2B, sensitivity labels",
+        "Adoption & gouvernance opérationnelle"
+      ],
+      "activites": [
+        "Création d’un hub SP & configuration Teams",
+        "Plan de gouvernance collaboration"
+      ]
+    },
+    {
+      "module": "Sécurité & Conformité M365 (Purview/Defender)",
+      "duree": "60h",
+      "contenus": [
+        "Microsoft Purview: DLP, Information Protection, eDiscovery Premium",
+        "Defender for Office/Endpoint/Identity: politiques et réponse",
+        "Audit, alertes, Investigations & remédiations",
+        "Préparation examens & projet fil rouge"
+      ],
+      "activites": [
+        "Lab DLP et labels de sensibilité",
+        "Soutenance projet fil rouge (gouvernance & sécu)"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-ms-900",
+    "cert-ms-100",
+    "cert-ms-101",
+    "cert-ms-700"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

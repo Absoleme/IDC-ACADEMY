@@ -1,0 +1,170 @@
+{
+  "id": "parcours-reconversion-data-analyst-power-bi",
+  "type": "parcours_reconversion",
+  "titre": "Parcours Reconversion – Data Analyst Power BI",
+  "description": "Maîtrisez la chaîne analytique avec Power BI : préparation de données, modélisation (étoile), DAX, visualisation & storytelling, gouvernance et sécurité. Préparation PL-300 (et DP-900 en option).",
+  "public": "Personnes en reconversion, contrôleurs de gestion, profils BI/Excel avancés, data enthusiasts souhaitant devenir Data Analyst autonomes sur Power BI.",
+  "prerequis": "Bonne maîtrise d’Excel et notions de SQL recommandées. Appétence pour l’analyse de données.",
+  "duree_formation": "400h + 80h de stage",
+  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers guidés, labs, étude de cas et projet fil rouge.",
+  "inscription": "Contact email/téléphone, questionnaire d’analyse du besoin, positionnement, validation administrative et envoi de la convention/convocation.",
+  "objectifs": [
+    "Collecter et préparer des données avec Power Query/M et SQL.",
+    "Concevoir des modèles en étoile performants et maintenir la qualité des données.",
+    "Écrire des mesures DAX robustes (time intelligence, contextes).",
+    "Créer des rapports efficaces (UX, storytelling, accessibilité) et des tableaux de bord de suivi.",
+    "Administrer Power BI Service : espaces de travail, sécurité (RLS/OLS), déploiements et gouvernance.",
+    "Optimiser les performances (DirectQuery, agrégations, composite models) et intégrer avec Azure.",
+    "Préparer et réussir PL-300 (et DP-900 en option)."
+  ],
+  "moyens_techniques": "Power BI Desktop & Service, Power Query/M, DAX, SQL (Azure SQL/SQL Server), Excel, Power Automate, Azure Synapse (serverless), Azure Data Lake, Databricks (option), GitHub/Azure DevOps pour CI/CD, Python/R (visuels avancés).",
+  "adaptation_et_suivi": "Positionnement initial, plan de progression individualisé, mentoring, revues de modèles/DAX et sprint reviews.",
+  "evaluation_parcours": "Évaluations continues, labs notés, QCM, étude de cas métier, audit de modèle et soutenance finale du projet fil rouge.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations IDCACADEMY sont accessibles aux personnes en situation de handicap. Un questionnaire à l’inscription permet d’identifier les adaptations nécessaires, avec appui de partenaires nationaux.",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire de cadrage pour confirmer l’adéquation du parcours avec le projet professionnel.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "labs_heures": 80,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "94%"
+  },
+  "modules": [
+    {
+      "module": "Fondamentaux Data & BI (DP-900 – option)",
+      "duree": "40h",
+      "contenus": [
+        "Concepts BI: ETL/ELT, entrepôt vs lake, schéma en étoile",
+        "Panorama Power Platform et Azure pour la BI",
+        "Qualité, gouvernance, coûts et sécurité de base",
+        "Initiation SQL et bonnes pratiques de datavis"
+      ],
+      "activites": [
+        "Atelier cadrage indicateurs métier",
+        "Quiz DP-900"
+      ]
+    },
+    {
+      "module": "Préparation de données (Power Query/M & SQL)",
+      "duree": "80h",
+      "contenus": [
+        "Connecteurs, transformations M, paramètres, fonctions personnalisées",
+        "Nettoyage, normalisation, gestion des valeurs manquantes",
+        "Requêtes SQL pour l’analytique, vues et sécurité",
+        "Flux de données, Dataflows Gen2 et pipelines"
+      ],
+      "activites": [
+        "Atelier M avancé (fonctions, erreurs, performances)",
+        "Automatisation rafraîchissements et contrôles qualité"
+      ]
+    },
+    {
+      "module": "Modélisation & DAX",
+      "duree": "100h",
+      "contenus": [
+        "Schéma en étoile, relations, tables de dates",
+        "DAX: contextes ligne/filtre, CALCULATE, FILTER, variables",
+        "Time intelligence, segmentation, scénarios what‑if",
+        "Bonnes pratiques: formatage, dossiers d’affichage, testabilité"
+      ],
+      "activites": [
+        "Construction d’un modèle complet et pack de mesures",
+        "Tests unitaires DAX et validation métier"
+      ]
+    },
+    {
+      "module": "Datavisualisation, UX & Storytelling",
+      "duree": "60h",
+      "contenus": [
+        "Principes IBCS, accessibilité, thèmes & bookmarks",
+        "Visuels natifs/marketplace, cartes, KPI, decomposition tree",
+        "Interactions, drill-through, tooltips, navigation guidée",
+        "Storytelling orienté décision et adoption"
+      ],
+      "activites": [
+        "Design system Power BI (thèmes & templates)",
+        "Itérations avec retours utilisateurs"
+      ]
+    },
+    {
+      "module": "Power BI Service, Sécurité & Gouvernance",
+      "duree": "60h",
+      "contenus": [
+        "Workspaces, apps, déploiements et pipelines",
+        "Sécurité: RLS/OLS, sensibilités, partage interne/externe",
+        "Administration, capacité Premium, Gateway, Fabric (notions)",
+        "Lignage, catalogue, M365 et Purview"
+      ],
+      "activites": [
+        "Mise en place RLS/OLS et politiques de partage",
+        "Catalogue & lignage des artefacts analytiques"
+      ]
+    },
+    {
+      "module": "Performance & Intégrations avancées",
+      "duree": "40h",
+      "contenus": [
+        "Modèles composites, DirectQuery vs Import, agrégations",
+        "Optimisations (vertipaq analyzer), incrémental refresh",
+        "Intégrations: Synapse serverless, Databricks, Python/R",
+        "CI/CD des rapports et datasets (DevOps/GitHub)"
+      ],
+      "activites": [
+        "Audit de performances et tuning d’un modèle",
+        "Chaîne CI/CD simple pour datasets"
+      ]
+    },
+    {
+      "module": "Préparation PL-300 & Projet fil rouge",
+      "duree": "20h",
+      "contenus": [
+        "Examens blancs PL-300",
+        "Packaging du projet (docs, dictionnaire de données, guide utilisateur)",
+        "Soutenance finale"
+      ],
+      "activites": [
+        "Coaching examens",
+        "Soutenance du projet fil rouge"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-pl-300",
+    "cert-dp-900"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

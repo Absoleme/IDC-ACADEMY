@@ -6,7 +6,7 @@
   "public": "Personnes en reconversion, admins systèmes, développeurs, techniciens IT souhaitant évoluer vers des rôles DevOps/Cloud sur Azure.",
   "prerequis": "Bases Linux/Windows, notions de réseaux, Git et scripting (Bash/PowerShell) recommandées.",
   "duree_formation": "400h + 80h de stage",
-  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers pratiques, labs guidés, projet fil rouge. Coaching emploi 2 mois.",
+  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers pratiques, labs guidés, projet fil rouge.",
   "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
   "objectifs": [
     "Mettre en œuvre l’IaC multi-cloud avec Terraform (modules, state, workspaces, policy-as-code).",

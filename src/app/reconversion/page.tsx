@@ -15,7 +15,7 @@ export default function ReconversionPage() {
         {/* Background image */}
         <div className="absolute inset-0 opacity-30">
           <img 
-            src="/hero/hero-background.jpg" 
+            src="/hero/hero-reconversion-background.png" 
             alt="Reconversion professionnelle technologies numériques" 
             className="w-full h-full object-cover object-center"
           />
@@ -42,26 +42,19 @@ export default function ReconversionPage() {
 
               {/* Subtitle */}
               <p className="text-base md:text-lg mb-6 leading-relaxed text-gray-200">
-                Titres RNCP reconnus par l'État pour une reconversion réussie
-                <span className="block mt-2 text-sm">
-                  Accompagnement personnalisé de votre projet professionnel
+Accompagnement personnalisé de votre projet professionnel                <span className="block mt-2 text-sm">
+                  
                 </span>
               </p>
 
               {/* Features */}
               <div className="flex flex-wrap gap-3 mb-6 text-xs">
-                <div className="flex items-center space-x-2 bg-black bg-opacity-20 px-2 py-1 rounded-full border border-white border-opacity-10">
-                  <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-                  <span>Titres RNCP</span>
-                </div>
+                
                 <div className="flex items-center space-x-2 bg-black bg-opacity-20 px-2 py-1 rounded-full border border-white border-opacity-10">
                   <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
                   <span>Accompagnement carrière</span>
                 </div>
-                <div className="flex items-center space-x-2 bg-black bg-opacity-20 px-2 py-1 rounded-full border border-white border-opacity-10">
-                  <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-                  <span>Financement CPF</span>
-                </div>
+               
               </div>
 
               {/* CTA Buttons */}
@@ -86,7 +79,7 @@ export default function ReconversionPage() {
             <div className="hidden lg:block">
               <div className="bg-black bg-opacity-20 rounded-xl p-1 border border-white border-opacity-10">
                 <img 
-                  src="/hero/hero-side-image.jpg" 
+                  src="/hero/hero-side-image.png" 
                   alt="Parcours de reconversion professionnelle" 
                   className="w-full h-auto rounded-lg"
                 />
@@ -99,7 +92,7 @@ export default function ReconversionPage() {
             <div className="bg-black bg-opacity-20 rounded-xl p-4 border border-white border-opacity-10 hover:bg-opacity-30 transition-all duration-200">
               <h3 className="text-lg font-semibold mb-2 text-blue-400">Développeur Full Stack</h3>
               <p className="text-gray-300 text-xs">
-                De zéro à développeur web en 6-12 mois - Titre RNCP Niveau 6
+                De zéro à développeur web en 6-12 mois
               </p>
             </div>
             <div className="bg-black bg-opacity-20 rounded-xl p-4 border border-white border-opacity-10 hover:bg-opacity-30 transition-all duration-200">

@@ -4,7 +4,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 opacity-30">
         <img 
-          src="/hero/hero-background.jpg" 
+          src="/hero/hero-reconversion-background.png" 
           alt="Professional working environment" 
           className="w-full h-full object-cover object-center"
         />

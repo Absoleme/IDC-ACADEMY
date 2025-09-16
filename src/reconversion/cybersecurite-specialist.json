@@ -1,0 +1,155 @@
+{
+  "id": "parcours-reconversion-cybersecurite-specialist",
+  "type": "parcours_reconversion",
+  "titre": "Parcours Reconversion – Cybersécurité Specialist",
+  "description": "Devenez spécialiste cybersécurité orienté Cloud & SOC : Zero Trust, gouvernance, sécurisation Azure (AZ-500), opérations de sécurité et détection (SC-200), ethical hacking, réponse à incident, BCDR et conformité.",
+  "public": "Personnes en reconversion, administrateurs systèmes/réseaux, analystes helpdesk, ingénieurs cloud souhaitant évoluer vers des rôles Blue Team/SOC, Security Engineer ou Consultant sécurité.",
+  "prerequis": "Bases réseaux (TCP/IP), systèmes Windows/Linux, notions Cloud (Azure) et Git. Appétence pour la sécurité et l’investigation.",
+  "duree_formation": "400h + 80h de stage",
+  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers pratiques, labs guidés, projet fil rouge.",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Mettre en œuvre une approche Zero Trust et une gouvernance sécurité (IAM, MFA, PIM, policies).",
+    "Sécuriser les charges de travail Azure (réseau, identités, données, posture) et automatiser la conformité.",
+    "Exploiter Microsoft Sentinel, Defender et KQL pour la détection, la chasse aux menaces et la réponse à incident.",
+    "Appliquer les fondamentaux d’ethical hacking (OWASP, MITRE ATT&CK) dans un lab isolé et rédiger des rapports de risques.",
+    "Structurer un plan BCDR, la journalisation, l’investigation et la preuve (forensics) en environnement Cloud.",
+    "Préparer les certifications AZ-500 et SC-200."
+  ],
+  "moyens_techniques": "Tenant Azure sandbox, Microsoft Sentinel, Defender for Cloud/Endpoint/Identity/Office, Entra ID (PIM, Conditional Access), Azure Policy/Defender CSPM, KQL, Logic Apps, GitHub/Azure DevOps, Kali Linux, OWASP ZAP, Burp Suite, Nmap, Metasploit, Wireshark, VM lab isolé.",
+  "adaptation_et_suivi": "Positionnement initial, plan de progression individualisé, mentoring technique, revues de sécurité et sprint reviews.",
+  "evaluation_parcours": "Évaluations continues, études de cas, QCM, exercices SOC/IR, audit sécurité, soutenance finale du projet fil rouge.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations IDCACADEMY sont accessibles aux personnes en situation de handicap. Un questionnaire à l’inscription permet d’identifier les adaptations nécessaires, avec appui de partenaires nationaux.",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire de cadrage pour confirmer l’adéquation du parcours avec le projet professionnel.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "labs_heures": 80,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "97%"
+  },
+  "modules": [
+    {
+      "module": "Culture cyber, gouvernance & Zero Trust",
+      "duree": "40h",
+      "contenus": [
+        "Cadres de référence: ISO 27001, NIST CSF, RGPD, shared responsibility model",
+        "IAM & contrôle d’accès: Entra ID, MFA, Conditional Access, PIM",
+        "Threat modeling (STRIDE) et analyse de risques",
+        "Classification des données et politiques de sécurité"
+      ],
+      "activites": [
+        "Atelier classification & cartographie des risques",
+        "Threat modeling sur application de référence"
+      ]
+    },
+    {
+      "module": "Sécurité Azure (AZ-500)",
+      "duree": "80h",
+      "contenus": [
+        "Segmentation & réseau: NSG/ASG, Azure Firewall, WAF/Application Gateway, Private Link",
+        "Protection des identités & secrets: Entra ID, Key Vault",
+        "Protection des données & workloads: chiffrement, Defender for Cloud (CSPM/CNAPP)",
+        "Politiques & conformité: Azure Policy, Security Center posture"
+      ],
+      "activites": [
+        "Durcissement d’un environnement IaaS/PaaS",
+        "Mise en place de guardrails et remédiations automatiques"
+      ]
+    },
+    {
+      "module": "Opérations de sécurité & SOC (SC-200)",
+      "duree": "80h",
+      "contenus": [
+        "Microsoft Sentinel: connecteurs, règles d’analytique, hunting & notebooks",
+        "KQL: requêtes, workbooks, détection avancée",
+        "Automatisation & réponse: Logic Apps, playbooks, ticketing",
+        "Defender (Endpoint/Identity/Office): investigation et containment"
+      ],
+      "activites": [
+        "Création de détections et playbooks",
+        "Gestion d’incidents de bout en bout dans Sentinel"
+      ]
+    },
+    {
+      "module": "Ethical Hacking & Pentest (lab isolé)",
+      "duree": "80h",
+      "contenus": [
+        "Cadres d’attaque: MITRE ATT&CK, cyber kill chain",
+        "Reconnaissance, scanning, exploitation, post-exploitation",
+        "Sécurité applicative: OWASP Top 10, API security",
+        "Réseaux & AD basics, élévation de privilèges"
+      ],
+      "activites": [
+        "TP: reconnaissance et exploitation contrôlée",
+        "Rédaction d’un rapport de vulnérabilités et remédiations"
+      ]
+    },
+    {
+      "module": "Cloud Security, DevSecOps, Forensics & BCDR",
+      "duree": "80h",
+      "contenus": [
+        "Sécurité CI/CD: SAST/DAST, secret scanning, supply chain",
+        "Conteneurs & Kubernetes: image scanning, policies",
+        "Journalisation, conservation, chaîne de preuve & forensics",
+        "Plans BCDR, ransomware resilience, sauvegardes immuables"
+      ],
+      "activites": [
+        "Tabletop exercise & simulation de crise",
+        "Atelier forensics sur journaux cloud"
+      ]
+    },
+    {
+      "module": "Préparation certifications & projet fil rouge",
+      "duree": "40h",
+      "contenus": [
+        "Examens blancs AZ-500 et SC-200",
+        "Consolidation KQL, playbooks, runbooks SOC",
+        "Soutenance d’architecture sécurité & plan de réponse à incident"
+      ],
+      "activites": [
+        "Revues individuelles de préparation",
+        "Soutenance finale"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-az-500",
+    "cert-sc-200"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

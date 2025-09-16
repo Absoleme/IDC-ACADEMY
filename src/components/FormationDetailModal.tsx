@@ -128,7 +128,7 @@ interface FormationDetailModalProps {
   isOpen: boolean
   onClose: () => void
   formationId?: string
-  formationType: 'formation' | 'parcours'
+  formationType: 'formation' | 'parcours' | 'reconversion'
 }
 
 export default function FormationDetailModal({ isOpen, onClose, formationId, formationType }: FormationDetailModalProps) {
@@ -146,11 +146,16 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
     
     setLoading(true)
     try {
-      const apiPath = formationType === 'formation' ? 'formations' : 'parcours'
-      // Pour les parcours, enlever le préfixe "parcours-" de l'ID pour l'API
-      const apiId = formationType === 'parcours' && formationId.startsWith('parcours-') 
-        ? formationId.replace('parcours-', '') 
-        : formationId
+      const apiPath = formationType === 'formation' ? 'formations' :
+                      formationType === 'reconversion' ? 'reconversion' : 'parcours'
+
+      // Pour les parcours de reconversion, enlever le préfixe "parcours-reconversion-" de l'ID pour l'API
+      let apiId = formationId
+      if (formationType === 'reconversion' && formationId.startsWith('parcours-reconversion-')) {
+        apiId = formationId.replace('parcours-reconversion-', '')
+      } else if (formationType === 'parcours' && formationId.startsWith('parcours-')) {
+        apiId = formationId.replace('parcours-', '')
+      }
       
       const response = await fetch(`/api/${apiPath}/${apiId}`)
       if (response.ok) {
@@ -334,7 +339,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                     )}
 
                     {/* Objectifs */}
-                    {formation.objectifs && formation.objectifs.length > 0 && (
+                    {formation.objectifs && Array.isArray(formation.objectifs) && formation.objectifs.length > 0 && (
                       <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200">
                         <h3 className="text-xl font-bold text-green-900 mb-4 flex items-center">
                           <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -360,7 +365,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                   <div className="space-y-6 lg:space-y-8">
                     
                     {/* Compétences */}
-                    {formation.competences && formation.competences.length > 0 && (
+                    {formation.competences && Array.isArray(formation.competences) && formation.competences.length > 0 && (
                       <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-200">
                         <h3 className="text-xl font-bold text-purple-900 mb-4 flex items-center">
                           <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -379,7 +384,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                     )}
 
                     {/* Certifications */}
-                    {((formation.certifications_visees && formation.certifications_visees.length > 0) || 
+                    {formationType !== 'reconversion' && ((formation.certifications_visees && formation.certifications_visees.length > 0) ||
                       (formation.certifications_inclues && formation.certifications_inclues.length > 0)) && (
                       <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-6 border border-indigo-200">
                         <h3 className="text-xl font-bold text-indigo-900 mb-4 flex items-center">
@@ -389,7 +394,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                           Certifications
                         </h3>
                         <div className="space-y-3">
-                          {formation.certifications_visees && formation.certifications_visees.length > 0 && (
+                          {formation.certifications_visees && Array.isArray(formation.certifications_visees) && formation.certifications_visees.length > 0 && (
                             <div>
                               <h4 className="font-semibold text-gray-700 mb-2">Visées :</h4>
                               <div className="flex flex-wrap gap-2">
@@ -401,7 +406,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                               </div>
                             </div>
                           )}
-                          {formation.certifications_inclues && formation.certifications_inclues.length > 0 && (
+                          {formation.certifications_inclues && Array.isArray(formation.certifications_inclues) && formation.certifications_inclues.length > 0 && (
                             <div>
                               <h4 className="font-semibold text-gray-700 mb-2">Incluses :</h4>
                               <div className="flex flex-wrap gap-2">
@@ -450,15 +455,22 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                         Informations pratiques
                       </h3>
                       <div className="space-y-3">
-                        {formation.modalites && formation.modalites.length > 0 && (
+                        {formation.modalites && (
                           <div>
                             <h4 className="font-semibold text-gray-700 mb-2">Modalités :</h4>
                             <div className="flex flex-wrap gap-2">
-                              {formation.modalites.map((modalite, index) => (
-                                <span key={index} className="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">
-                                  {modalite}
-                                </span>
-                              ))}
+                              {Array.isArray(formation.modalites)
+                                ? formation.modalites.map((modalite, index) => (
+                                    <span key={index} className="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">
+                                      {modalite}
+                                    </span>
+                                  ))
+                                : (
+                                    <span className="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">
+                                      {formation.modalites}
+                                    </span>
+                                  )
+                              }
                             </div>
                           </div>
                         )}
@@ -673,7 +685,7 @@ export default function FormationDetailModal({ isOpen, onClose, formationId, for
                         )}
                       </div>
                     )}
-                    {formation.moyens_techniques && (
+                    {formationType !== 'reconversion' && formation.moyens_techniques && (
                       <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
                         <h3 className="text-lg font-bold text-green-900 mb-3">Moyens techniques</h3>
                         {typeof formation.moyens_techniques === 'string' ? (

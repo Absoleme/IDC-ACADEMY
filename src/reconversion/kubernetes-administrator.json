@@ -1,0 +1,191 @@
+{
+  "id": "parcours-reconversion-kubernetes-administrator",
+  "type": "parcours_reconversion",
+  "titre": "Parcours Reconversion – Kubernetes Administrator",
+  "description": "Devenez administrateur Kubernetes: maîtrisez Docker/OCI, l’orchestration de conteneurs, l’administration de clusters (on‑prem et cloud), la sécurité, l’observabilité et le GitOps. Préparation CKA, CKAD et CKS.",
+  "public": "Personnes en reconversion, administrateurs systèmes Linux, DevOps/SRE, développeurs souhaitant opérer des applications conteneurisées à l’échelle.",
+  "prerequis": "Bases Linux (CLI, processus, permissions), notions réseau TCP/IP/DNS, Git et Docker/OCI recommandés. Aisance en ligne de commande.",
+  "duree_formation": "400h + 80h de stage",
+  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers pratiques, labs guidés et projet fil rouge.",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Construire, sécuriser et publier des images de conteneurs (Docker/OCI) et des manifestes Kubernetes.",
+    "Administrer des clusters: installation, opérations du plan de contrôle, mises à jour, sauvegarde/restauration et dépannage.",
+    "Déployer et exposer des workloads: Pods, Deployments, Jobs/CronJobs, Services, Ingress, autoscaling, tolérances/affinités.",
+    "Gérer le réseau, le stockage et la haute disponibilité: CNI, NetworkPolicies, Ingress, PV/PVC, CSI, StatefulSets, sauvegardes.",
+    "Mettre en œuvre la sécurité: RBAC, Pod Security Admission, secrets, policies (OPA Gatekeeper/Kyverno), supply chain & runtime.",
+    "Automatiser les déploiements avec Helm/Kustomize et GitOps (Argo CD/Flux) intégrés à la CI/CD.",
+    "Superviser et fiabiliser: Prometheus/Grafana, logs, tracing, alerting, budgets d’erreur et pratiques SRE.",
+    "Opérer des services managés (AKS/EKS/GKE) et préparer/réussir CKA, CKAD et CKS."
+  ],
+  "moyens_techniques": "Clusters Kubernetes locaux (kind/k3d/minikube, K3s), VM Linux, clusters managés AKS/EKS/GKE (sandbox), registries (Harbor/ACR/ECR/GCR), Ingress NGINX, CNI (Calico/Cilium), Helm/Kustomize, Argo CD/Flux, CI/CD (GitHub Actions/GitLab CI), Terraform, Velero, OPA Gatekeeper/Kyverno, Sealed Secrets/External Secrets, Prometheus/Grafana/Loki, Jaeger.",
+  "adaptation_et_suivi": "Positionnement initial, plan de progression individualisé, mentoring, revues d’implémentation et sprint reviews.",
+  "evaluation_parcours": "Évaluations continues, labs notés, QCM, examens blancs CKA/CKAD/CKS, audit de cluster et soutenance finale du projet fil rouge.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations IDCACADEMY sont accessibles aux personnes en situation de handicap. Un questionnaire à l’inscription permet d’identifier les adaptations nécessaires, avec appui de partenaires nationaux.",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire de cadrage pour confirmer l’adéquation du parcours avec le projet professionnel.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "labs_heures": 80,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "91%",
+    "taux_cdi": "91%"
+  },
+  "modules": [
+    {
+      "module": "Fondamentaux Conteneurs & Docker/OCI",
+      "duree": "40h",
+      "contenus": [
+        "Images, Dockerfile, couches et multi‑stage builds",
+        "Registries, tags, SBOM et scan de vulnérabilités",
+        "Compose vs Kubernetes: limites et passerelles",
+        "Bonnes pratiques: distroless, rootless, ressources"
+      ],
+      "activites": [
+        "Build sécurisé d’une image et publication en registry",
+        "Scan & remédiation des vulnérabilités"
+      ]
+    },
+    {
+      "module": "Kubernetes Core – Workloads & Configuration",
+      "duree": "80h",
+      "contenus": [
+        "API, objets de base: Pod, ReplicaSet, Deployment",
+        "Jobs/CronJobs, DaemonSet, StatefulSet (notions)",
+        "ConfigMap, Secret, probes, ressources & quotas",
+        "Scheduling: requests/limits, taints/tolerations, affinities",
+        "Stratégies de déploiement: rolling, blue/green, canary"
+      ],
+      "activites": [
+        "Déploiement d’une app 12‑factor avec probes",
+        "Mises à jour, rollback et HPA/VPA (notions)"
+      ]
+    },
+    {
+      "module": "Réseau & Exposition des Services",
+      "duree": "60h",
+      "contenus": [
+        "Services (ClusterIP, NodePort, LoadBalancer), DNS/CoreDNS",
+        "Ingress Controller (NGINX), TLS, certificats (cert‑manager)",
+        "CNI (Calico/Cilium) et NetworkPolicies",
+        "Trafic avancé, canary via annotations/Ingress",
+        "Service Mesh (notions: Istio/Linkerd)"
+      ],
+      "activites": [
+        "Mise en place d’un Ingress TLS et routage blue/green",
+        "Micro‑segmentation avec NetworkPolicies"
+      ]
+    },
+    {
+      "module": "Stockage & Workloads Stateful",
+      "duree": "40h",
+      "contenus": [
+        "Volumes, PV/PVC, StorageClass, CSI drivers",
+        "StatefulSets, stratégies de persistance",
+        "Sauvegarde/restauration applicative avec Velero",
+        "Gestion des snapshots et migrations"
+      ],
+      "activites": [
+        "Déploiement d’une base de données stateful",
+        "Backup/restore et test de reprise"
+      ]
+    },
+    {
+      "module": "Administration de Cluster & Opérations",
+      "duree": "60h",
+      "contenus": [
+        "Installation (kubeadm/k3s), architecture control plane/etcd",
+        "Upgrades, cordon/drainage, node pools et autoscaling",
+        "Sauvegarde/restauration etcd, certificats, kubeconfig",
+        "Dépannage: events, logs, kubectl debug/ephemeral containers",
+        "AKS/EKS/GKE: spécificités et intégrations cloud"
+      ],
+      "activites": [
+        "Montée de version contrôlée d’un cluster",
+        "Plan de sauvegarde/restore etcd et PRA"
+      ]
+    },
+    {
+      "module": "Sécurité Kubernetes & Supply Chain",
+      "duree": "40h",
+      "contenus": [
+        "RBAC, ServiceAccounts, Pod Security Admission",
+        "Secrets (KMS/External Secrets), policies (OPA Gatekeeper/Kyverno)",
+        "Images: signatures (cosign), provenance (SLSA – notions)",
+        "Sécurité runtime: limitations, seccomp, AppArmor, eBPF (notions)",
+        "Conformité et durcissement (Benchmarks CIS – notions)"
+      ],
+      "activites": [
+        "Mise en place de policies et contrôle d’admission",
+        "Durcissement d’un workload et tests d’intrusion (lab contrôlé)"
+      ]
+    },
+    {
+      "module": "Helm, Kustomize & GitOps (Argo CD/Flux)",
+      "duree": "40h",
+      "contenus": [
+        "Packaging d’applications avec Helm, charts & repositories",
+        "Surcharges & overlays avec Kustomize",
+        "GitOps: principes, déploiements déclaratifs, promotion d’environnements",
+        "CI/CD: pipelines GitHub Actions/GitLab CI, scans & gates"
+      ],
+      "activites": [
+        "Publication d’un chart Helm et déploiement via Argo CD",
+        "Chaîne CI/CD complète avec validations et promotion"
+      ]
+    },
+    {
+      "module": "Observabilité, SRE & Préparation CKA/CKAD/CKS",
+      "duree": "40h",
+      "contenus": [
+        "Metrics, logs, traces: Prometheus, Grafana, Loki, Jaeger",
+        "Alerting, runbooks, SLIs/SLOs et budgets d’erreur",
+        "Tableaux de dépannage rapides (kubectl/k9s), exercices chronométrés",
+        "Stratégie d’examen, astuces CLI et mise en situation"
+      ],
+      "activites": [
+        "Tableau de bord complet d’une application distribuée",
+        "Examens blancs CKA/CKAD/CKS et soutenance du projet fil rouge"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-cka",
+    "cert-ckad",
+    "cert-cks"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

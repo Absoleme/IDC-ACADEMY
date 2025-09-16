@@ -148,7 +148,7 @@ export default function DropdownFormations({ onFormationClick }: DropdownFormati
               {/* Colonne des catégories */}
               <div className="py-4" style={{ minWidth: '300px' }}>
                 <div className="px-4 mb-4">
-                  <h3 className="text-lg font-bold text-gray-900">Catégories</h3>
+                  <h3 className="text-lg font-bold text-gray-900">Domaines</h3>
                   <p className="text-sm text-gray-500">Cliquez pour voir les formations</p>
                 </div>
                 

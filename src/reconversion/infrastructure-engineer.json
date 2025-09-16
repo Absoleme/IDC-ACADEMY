@@ -1,0 +1,189 @@
+{
+  "id": "parcours-reconversion-infrastructure-engineer",
+  "type": "parcours_reconversion",
+  "titre": "Parcours Reconversion – Infrastructure Engineer",
+  "description": "Devenez ingénieur infrastructure Cloud & On‑Prem: réseaux IP, routage/switching, VPN et sécurité, virtualisation, services IaaS Azure (AZ‑104) et réseau Azure avancé (AZ‑700). Conception hybride, automatisation et observabilité.",
+  "public": "Personnes en reconversion, techniciens/administrateurs systèmes/réseaux, exploitants datacenter souhaitant concevoir, déployer et exploiter des infrastructures hybrides sécurisées.",
+  "prerequis": "Bases réseaux (modèle TCP/IP, VLAN, sous‑réseaux), notions Linux/Windows et virtualisation. Confort avec la ligne de commande et Git recommandé.",
+  "duree_formation": "400h + 80h de stage",
+  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers pratiques, labs guidés et projet fil rouge.",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Maîtriser les fondamentaux réseaux: IPv4/IPv6, VLAN, routage statique/dynamique, QoS et services d’infrastructure (DNS, DHCP, NTP).",
+    "Concevoir et opérer des réseaux d’entreprise: switching, STP, EtherChannel, routing (OSPF/BGP – notions), NAT et haute disponibilité.",
+    "Mettre en œuvre la sécurité périmétrique et la connectivité: pare‑feu, VPN site‑à‑site et accès distant (IPsec/SSL), segmentation et Zero Trust (notions).",
+    "Déployer et administrer Azure (AZ‑104): compute, stockage, identité, RBAC, sauvegarde et gouvernance de base.",
+    "Concevoir le réseau Azure (AZ‑700): VNets, sous‑réseaux, routage, Azure Firewall/NVA, Load Balancing, Private Link/Endpoint, DNS et Bastion.",
+    "Mettre en place la connectivité hybride: VPN S2S, ER (concepts), BGP, stratégies de nommage et résolution de noms hybride.",
+    "Superviser et fiabiliser: métriques, logs, traces, alerting, PRA/PCA, tests de bascule et optimisation des coûts.",
+    "Automatiser avec PowerShell/Bash et IaC (Bicep/Terraform) pour des déploiements reproductibles et contrôlés.",
+    "Préparer et réussir AZ‑104, AZ‑700 et CCNA."
+  ],
+  "moyens_techniques": "Labs virtualisés avec EVE‑NG/GNS3 (switching/routage), routeurs virtuels (VyOS), pare‑feu open‑source (pfSense/OPNsense), VMware/Hyper‑V pour l’hyperviseur; sandbox Azure (VNets, VPN Gateway, Azure Firewall, Load Balancer, Bastion, Private Link), outils d’automatisation (PowerShell, Bash, Terraform/Bicep), supervision (Zabbix/Prometheus, Grafana, Azure Monitor/Log Analytics).",
+  "adaptation_et_suivi": "Positionnement initial, plan de progression individualisé, mentoring, revues d’implémentation et sprint reviews.",
+  "evaluation_parcours": "Évaluations continues, labs notés, QCM, études de cas (design réseau, sécurité, hybridation), audits d’architecture et soutenance finale du projet fil rouge.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations IDCACADEMY sont accessibles aux personnes en situation de handicap. Un questionnaire à l’inscription permet d’identifier les adaptations nécessaires, avec appui de partenaires nationaux.",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire de cadrage pour confirmer l’adéquation du parcours avec le projet professionnel.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "labs_heures": 80,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "90%",
+    "taux_cdi": "89%"
+  },
+  "modules": [
+    {
+      "module": "Fondamentaux Réseau & Infrastructure",
+      "duree": "40h",
+      "contenus": [
+        "Modèles OSI/TCP‑IP, adressage IPv4/IPv6, sous‑réseaux/VLSM",
+        "Switching: VLAN, trunking 802.1Q, STP/RSTP",
+        "Services d’infra: DHCP, DNS, NTP, NAT/PAT",
+        "Haute disponibilité et continuité (notions)"
+      ],
+      "activites": [
+        "Plan d’adressage et segmentation d’un LAN d’entreprise",
+        "Lab DHCP/DNS redondés et tests de résolution"
+      ]
+    },
+    {
+      "module": "Routage & Interconnexion d’Entreprises",
+      "duree": "60h",
+      "contenus": [
+        "Routage statique, OSPF, BGP (notions), redistribution",
+        "Aggregation, policy‑based routing, VRF",
+        "QoS: classification, queuing, shaping (notions)",
+        "Redondance: HSRP/VRRP, ECMP"
+      ],
+      "activites": [
+        "Topology multi‑sites sous EVE‑NG avec OSPF/BGP",
+        "Scénarios de panne et bascule contrôlée"
+      ]
+    },
+    {
+      "module": "Sécurité Réseau & VPN",
+      "duree": "40h",
+      "contenus": [
+        "Pare‑feu L3/L7, NAT, zones et objects",
+        "VPN IPsec site‑à‑site et accès distant SSL",
+        "Segmentation: ACL, micro‑segmentation, Zero Trust (notions)",
+        "Hardening, mises à jour et journalisation"
+      ],
+      "activites": [
+        "Montage d’un VPN S2S et test d’applications",
+        "Audit de règles firewall et remédiations"
+      ]
+    },
+    {
+      "module": "Administration Azure – AZ‑104",
+      "duree": "60h",
+      "contenus": [
+        "Compute: VM, images, extensions, disponibilité",
+        "Stockage: comptes, disques, snapshots, sauvegardes",
+        "Identité & accès: Entra ID, RBAC, managed identities",
+        "Gouvernance: tags, policy, cost management"
+      ],
+      "activites": [
+        "Déploiement IaaS Azure production‑like",
+        "Runbooks d’exploitation et sauvegarde"
+      ]
+    },
+    {
+      "module": "Réseau Azure – AZ‑700",
+      "duree": "80h",
+      "contenus": [
+        "VNets, sous‑réseaux, UDR, peering et routage",
+        "VPN Gateway: P2S/S2S, BGP",
+        "ExpressRoute (concepts) et coexistence avec VPN",
+        "Load Balancer, Application Gateway, Azure Firewall/NVA",
+        "Private Link/Endpoint, Bastion, Azure DNS/Private DNS"
+      ],
+      "activites": [
+        "Architecture hub‑and‑spoke sécurisée",
+        "Publication d’applications privées via Private Link"
+      ]
+    },
+    {
+      "module": "Connectivité Hybride & Résolution de Noms",
+      "duree": "60h",
+      "contenus": [
+        "Intégration On‑Prem/Azure, modèles de connectivité",
+        "BGP avancé pour S2S/ER (concepts), routage transité",
+        "DNS hybride: split‑horizon, conditional forwarders",
+        "Bastionnement, accès distant sécurisé"
+      ],
+      "activites": [
+        "Mise en place d’un site distant connecté à Azure",
+        "Plan de nommage et DNS hybride avec tests"
+      ]
+    },
+    {
+      "module": "Observabilité, Fiabilité & PRA/PCA",
+      "duree": "40h",
+      "contenus": [
+        "Logs, métriques, traces: Azure Monitor, Log Analytics",
+        "Alerting, SLI/SLO, tableaux de bord Grafana",
+        "PRA/PCA: objectifs RPO/RTO, tests de bascule",
+        "Optimisation coûts/perf: rightsizing, réservations (notions)"
+      ],
+      "activites": [
+        "Tableau de bord bout‑en‑bout réseau + IaaS",
+        "Exercice PRA avec scénario de sinistre"
+      ]
+    },
+    {
+      "module": "Automatisation & IaC (Bicep/Terraform) + Prépa Examens",
+      "duree": "20h",
+      "contenus": [
+        "Bicep/Terraform: modules, variables, state et workspaces",
+        "PowerShell/Bash: scripts d’exploitation et APIs",
+        "Intégration CI/CD basique, policy‑as‑code (notions)",
+        "Préparation AZ‑104, AZ‑700, CCNA et soutenance projet fil rouge"
+      ],
+      "activites": [
+        "Déploiement infra réseau Azure via IaC",
+        "Examens blancs et soutenance finale"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-az-104",
+    "cert-az-700",
+    "cert-ccna"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

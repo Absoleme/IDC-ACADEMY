@@ -1,0 +1,160 @@
+{
+  "id": "parcours-reconversion-cloud-architect-multicloud",
+  "type": "parcours_reconversion",
+  "titre": "Parcours Reconversion – Cloud Architect (Multi‑cloud)",
+  "description": "Devenez Architecte Cloud multi-fournisseurs (Azure & AWS) : cadrage d’architecture, gouvernance, sécurité, résilience, IaC (Terraform), observabilité, BCDR et optimisation des coûts. Préparation aux certifications Azure (AZ‑305, AZ‑104) et AWS (Cloud Practitioner, SAA‑C03).",
+  "public": "Personnes en reconversion, admins systèmes/dev, ingénieurs cloud, chefs de projet techniques souhaitant concevoir et piloter des architectures Cloud à l’échelle.",
+  "prerequis": "Bases en réseaux, virtualisation et services cloud (Azure/AWS). Notions de scripting (PowerShell/Bash) et d’IaC appréciées.",
+  "duree_formation": "400h + 80h de stage",
+  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers pratiques, labs guidés, projet fil rouge.",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Concevoir des architectures cloud sécurisées, résilientes et optimisées coûts sur Azure et AWS.",
+    "Mettre en place la gouvernance (identités, RBAC/IAM, policies) et la conformité multi‑comptes/abonnements.",
+    "Industrialiser l’IaC avec Terraform (modules, state, workspaces, policy‑as‑code) et pipelines CI/CD.",
+    "Définir l’observabilité (logs, métriques, traces, alertes) et les plans BCDR (RTO/RPO, DR multi‑région).",
+    "Appliquer les bonnes pratiques Well‑Architected (Azure & AWS) et Cloud Adoption Framework.",
+    "Préparer AZ‑104, AZ‑305 et AWS Cloud Practitioner / SAA‑C03."
+  ],
+  "moyens_techniques": "Repos Git (Azure DevOps/GitHub), abonnements Azure & comptes AWS sandbox, Terraform CLI/Cloud, Azure Portal/CLI, AWS Console/CLI, Azure Monitor/Log Analytics, CloudWatch/CloudTrail/Config, outils de modélisation (C4, diagrams), Well‑Architected Tools.",
+  "adaptation_et_suivi": "Positionnement initial, plan de progression individualisé, mentoring technique, revues d’architecture et sprint reviews.",
+  "evaluation_parcours": "Évaluations continues, études de cas, QCM, audit d’architecture, soutenance finale du projet fil rouge.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations IDCACADEMY sont accessibles aux personnes en situation de handicap. Un questionnaire à l’inscription permet d’identifier les adaptations nécessaires, avec appui de partenaires nationaux.",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire de cadrage pour confirmer l’adéquation du parcours avec le projet professionnel.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "labs_heures": 80,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "94%",
+    "taux_cdi": "90%"
+  },
+  "modules": [
+    {
+      "module": "Culture Cloud, CAF/WAF & cadrage d’architecture",
+      "duree": "40h",
+      "contenus": [
+        "Cloud Adoption Framework (Azure) & Well‑Architected (Azure & AWS)",
+        "Exigences non fonctionnelles: sécurité, résilience, performance, coût",
+        "Patrons d’architecture (C4, microservices, event‑driven)",
+        "Choix IaaS/PaaS/SaaS, multi‑comptes/abonnements"
+      ],
+      "activites": [
+        "Atelier cadrage: exigences et risques",
+        "Conception de diagrammes C4 pour un SI cible"
+      ]
+    },
+    {
+      "module": "Architecture Azure (AZ‑305) – Data, Intégration, Sécurité",
+      "duree": "80h",
+      "contenus": [
+        "Data: SQL MI, Cosmos DB, Data Lake",
+        "Intégration: Event Grid, Service Bus, Functions",
+        "Sécurité: Key Vault, Defender, segmentation réseau",
+        "Gouvernance: Azure Policy, Blueprints, Landing Zone"
+      ],
+      "activites": [
+        "Étude de cas d’architecture bout‑en‑bout",
+        "Revue Well‑Architected Azure"
+      ]
+    },
+    {
+      "module": "AWS Core & Architecture (SAA‑C03)",
+      "duree": "80h",
+      "contenus": [
+        "IAM, Organizations & comptes",
+        "Réseau: VPC, routage, NAT, Transit Gateway",
+        "Compute & scaling: EC2, ELB/ALB/NLB, Auto Scaling",
+        "Stockage & data: S3, EBS, EFS, RDS, DynamoDB",
+        "Observabilité: CloudWatch, CloudTrail; Well‑Architected AWS"
+      ],
+      "activites": [
+        "Lab: design VPC multi‑AZ et architecture HA",
+        "Exercice d’optimisation de coûts sur S3/EC2"
+      ]
+    },
+    {
+      "module": "Gouvernance multi‑cloud & Landing Zones",
+      "duree": "60h",
+      "contenus": [
+        "Identités & accès: Entra ID vs IAM, RBAC/IAM, PIM",
+        "Multi‑comptes/abonnements: management groups, SCP, budgets",
+        "Conformité & audit: Azure Policy, AWS Config, CloudTrail",
+        "Sécurité des secrets & clés: Key Vault, KMS"
+      ],
+      "activites": [
+        "Atelier policies & guardrails multi‑cloud",
+        "Audit de conformité croisé Azure/AWS"
+      ]
+    },
+    {
+      "module": "Infrastructure as Code & Automatisation",
+      "duree": "80h",
+      "contenus": [
+        "Terraform: providers, modules, state, workspaces",
+        "Policy‑as‑code, tests d’infrastructure",
+        "Pipelines CI/CD (Azure DevOps/GitHub Actions)",
+        "Déploiement d’une landing zone multi‑cloud"
+      ],
+      "activites": [
+        "Revue de code IaC & GitOps",
+        "Déploiement automatisé bout‑en‑bout"
+      ]
+    },
+    {
+      "module": "Observabilité, BCDR, FinOps & Préparation certifs",
+      "duree": "60h",
+      "contenus": [
+        "SLI/SLO, logs, métriques, traces, alerting",
+        "Plans BCDR: sauvegarde, restauration, DR multi‑région (RTO/RPO)",
+        "FinOps: budgétisation, étiquetage, optimisation continue",
+        "Examens blancs: AZ‑104, AZ‑305, AWS Cloud Practitioner, SAA‑C03",
+        "Soutenance du projet fil rouge"
+      ],
+      "activites": [
+        "Exercices de restauration & scénarios DR",
+        "Revues de coûts et recommandations FinOps"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-az-104",
+    "cert-az-305",
+    "cert-aws-cloud-practitioner",
+    "cert-aws-saa-c03"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}

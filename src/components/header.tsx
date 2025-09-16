@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import DropdownFormations from './DropdownFormations'
+import DropdownReconversion from './DropdownReconversion'
 import FormationDetailModal from './FormationDetailModal'
 
 interface Formation {
@@ -19,11 +20,27 @@ interface Formation {
   modalites: string[]
 }
 
+interface ParcoursReconversion {
+  id: string
+  type: string
+  titre: string
+  description: string
+  duree_formation: string
+  modalites: string
+  objectifs: string[]
+  modules: Array<{
+    module: string
+    duree: string
+    contenus: string[]
+    activites: string[]
+  }>
+}
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [selectedFormationId, setSelectedFormationId] = useState<string | null>(null)
-  const [formationType, setFormationType] = useState<'formation' | 'parcours'>('formation')
+  const [formationType, setFormationType] = useState<'formation' | 'parcours' | 'reconversion'>('formation')
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
@@ -37,7 +54,13 @@ export default function Header() {
 
   const handleFormationClick = (formation: Formation) => {
     setSelectedFormationId(formation.id)
-    setFormationType(formation.type as 'formation' | 'parcours')
+    setFormationType(formation.type as 'formation' | 'parcours' | 'reconversion')
+    setIsModalOpen(true)
+  }
+
+  const handleParcoursClick = (parcours: ParcoursReconversion) => {
+    setSelectedFormationId(parcours.id)
+    setFormationType('reconversion')
     setIsModalOpen(true)
   }
 
@@ -69,14 +92,8 @@ export default function Header() {
             </Link>
             
             <DropdownFormations onFormationClick={handleFormationClick} />
-            
-            <Link 
-              href="/reconversion" 
-              className="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-200 relative group"
-            >
-              Reconversion
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-200"></span>
-            </Link>
+
+            <DropdownReconversion onParcoursClick={handleParcoursClick} />
             
             <Link 
               href="/#a-propos" 

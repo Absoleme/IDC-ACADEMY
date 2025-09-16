@@ -1,0 +1,193 @@
+{
+  "id": "parcours-reconversion-admin-systeme-stockage",
+  "type": "parcours_reconversion",
+  "titre": "Parcours Reconversion – Administrateur Système & Stockage",
+  "description": "Devenez administrateur systèmes et stockage: Linux & Windows Server, virtualisation (vSphere/Hyper‑V/KVM), stockage SAN/NAS, sauvegarde & PRA, supervision et automatisation. Préparation LFCS, VMware VCTA‑DCV et Veeam VMCE.",
+  "public": "Personnes en reconversion, techniciens/administrateurs systèmes juniors, support IT, exploitants datacenter souhaitant monter en compétence sur l’exploitation serveurs, virtualisation et stockage.",
+  "prerequis": "Bases réseaux (TCP/IP, DNS, DHCP), notions Linux/Windows. Confort avec ligne de commande recommandé. Aucune expérience datacenter obligatoire.",
+  "duree_formation": "400h + 80h de stage",
+  "modalites": "Présentiel ou distanciel synchrone. Cours, ateliers pratiques, labs guidés et projet fil rouge.",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention/convocation.",
+  "objectifs": [
+    "Installer, configurer et administrer Linux (RHEL/Alma, Ubuntu) et Windows Server (services de base).",
+    "Mettre en œuvre Active Directory, DNS, DHCP et stratégies de groupe (notions essentielles).",
+    "Concevoir et exploiter le stockage: RAID, LVM, ZFS, NFS/SMB, iSCSI/Fibre Channel.",
+    "Déployer et opérer la virtualisation: VMware ESXi/vCenter, Hyper‑V et KVM (réseaux, HA, ressources).",
+    "Mettre en place la sauvegarde, la réplication et le PRA avec Veeam (règle 3‑2‑1‑1‑0, immutabilité).",
+    "Superviser serveurs et baies: métriques, logs et alertes (Zabbix/Prometheus, Grafana, journald/rsyslog).",
+    "Durcir et sécuriser les systèmes: patch management, firewall (nftables/Windows Firewall), SELinux/AppArmor, droits et audits.",
+    "Automatiser opérations et configurations avec Bash/PowerShell et Ansible (idempotence, inventaires, rôles).",
+    "Documenter l’exploitation: runbooks, capacité, CMDB légère et bonnes pratiques ITIL (notions).",
+    "Préparer et réussir LFCS, VMware VCTA‑DCV et Veeam VMCE."
+  ],
+  "moyens_techniques": "Labs virtualisés (nested) avec VMware vSphere/ESXi & vCenter, Hyper‑V, KVM/libvirt; serveurs Linux & Windows; stockage logiciel (TrueNAS/ZFS, Ceph – notions), NFS/SMB, iSCSI; Veeam Backup & Replication; outils d’admin (SSH, RDP, Ansible), supervision (Zabbix, Prometheus/Grafana).",
+  "adaptation_et_suivi": "Positionnement initial, plan de progression individualisé, mentoring, revues d’implémentation et sprint reviews.",
+  "evaluation_parcours": "Évaluations continues, labs notés, QCM, études de cas (audit d’infra, PRA), examens blancs LFCS/VCTA/VMCE et soutenance finale du projet fil rouge.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations IDCACADEMY sont accessibles aux personnes en situation de handicap. Un questionnaire à l’inscription permet d’identifier les adaptations nécessaires, avec appui de partenaires nationaux.",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": ["Bastien GIESBERGER", "M'Ballo SECK"],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Questionnaire de cadrage pour confirmer l’adéquation du parcours avec le projet professionnel.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "06 59 56 59 18"
+  },
+  "structure": {
+    "theorie_heures": 320,
+    "labs_heures": 80,
+    "stage_heures": 80,
+    "coaching_duree": "2 mois"
+  },
+  "stats": {
+    "insertion_professionnelle": "86%",
+    "taux_cdi": "85%"
+  },
+  "modules": [
+    {
+      "module": "Fondamentaux Systèmes, Réseau & Sécurité",
+      "duree": "40h",
+      "contenus": [
+        "Architecture système, CPU/RAM/IOPS, filesystems",
+        "Réseau: IPv4/IPv6, VLAN, routage, DNS, DHCP",
+        "Sécurité: principes, chiffrement, sauvegarde vs archivage",
+        "Méthodologie d’exploitation et documentation"
+      ],
+      "activites": [
+        "Cartographie d’un SI type (réseau + serveurs + stockage)",
+        "Atelier bonnes pratiques de sécurité et sauvegarde"
+      ]
+    },
+    {
+      "module": "Administration Linux (LFCS)",
+      "duree": "80h",
+      "contenus": [
+        "Installation, partitionnement, LVM, boot, services systemd",
+        "Gestion utilisateurs/groupes, permissions, sudo, ACL",
+        "Réseau, firewall nftables, SSH, PAM",
+        "Gestion paquets (dnf/apt), dépôts, kernel et modules",
+        "Stockage: ext4/XFS, NFS/SMB, quotas",
+        "Script Bash: automatisation et troubleshooting"
+      ],
+      "activites": [
+        "Durcissement et baseline d’un serveur Linux",
+        "TP dépannage chronométré type examen LFCS"
+      ]
+    },
+    {
+      "module": "Administration Windows Server",
+      "duree": "60h",
+      "contenus": [
+        "Installation, rôles et fonctionnalités",
+        "AD DS: OU, GPO, DNS, DHCP, fichiers/impression",
+        "Hyper‑V: VM, réseaux virtuels, stockage",
+        "Sécurité: mises à jour, Defender, audit",
+        "PowerShell pour l’automatisation"
+      ],
+      "activites": [
+        "Déploiement d’un domaine AD et GPO de base",
+        "Scripts PowerShell d’administration courante"
+      ]
+    },
+    {
+      "module": "Virtualisation – VMware vSphere, Hyper‑V & KVM",
+      "duree": "60h",
+      "contenus": [
+        "ESXi/vCenter: clusters, HA/DRS, vMotion, profils hôtes",
+        "Réseau virtuel: vSwitch/DSwitch, VLAN, trunking",
+        "Stockage: VMFS, NFS, iSCSI, multipathing",
+        "Hyper‑V: clustering, live migration, réplication",
+        "KVM/libvirt: notions et cas d’usage"
+      ],
+      "activites": [
+        "Création d’un cluster vSphere et migrations à chaud",
+        "Simulation de panne et analyse d’impact"
+      ]
+    },
+    {
+      "module": "Stockage Entreprise – SAN/NAS & Filesystems",
+      "duree": "60h",
+      "contenus": [
+        "Concepts: RAID, IOPS, latence, cache, thin/thick",
+        "SAN: iSCSI/Fibre Channel, zoning, LUN, multipath",
+        "NAS: NFS/SMB, ACLs, snapshots, quotas",
+        "ZFS/TrueNAS, LVM, tiering et réplication"
+      ],
+      "activites": [
+        "Provisionnement LUN iSCSI et montée en cluster",
+        "Partage NAS avec snapshots et restauration"
+      ]
+    },
+    {
+      "module": "Sauvegarde, Restauration & PRA (Veeam)",
+      "duree": "40h",
+      "contenus": [
+        "Topology Veeam: server, proxies, repositories",
+        "Jobs backup/copy, SOBR, ReFS/XFS, immutabilité",
+        "Restauration granulaire, SureBackup, Instant Recovery",
+        "Réplication, failover/failback, PRA et tests réguliers"
+      ],
+      "activites": [
+        "Plan de sauvegarde 3‑2‑1‑1‑0 pour un SI type",
+        "Exercice PRA avec objectifs RPO/RTO"
+      ]
+    },
+    {
+      "module": "Supervision & Observabilité",
+      "duree": "40h",
+      "contenus": [
+        "Zabbix: modélisation hôtes, templates, triggers",
+        "Prometheus/Grafana: métriques, dashboards",
+        "Logs: journald/rsyslog, Windows Event Forwarding",
+        "Alerting, escalade, runbooks et capacity planning"
+      ],
+      "activites": [
+        "Tableaux de bord infra + alerting SLA",
+        "Rapport de capacité et recommandations"
+      ]
+    },
+    {
+      "module": "Sécurité Opérationnelle & Préparation Examens",
+      "duree": "20h",
+      "contenus": [
+        "Durcissement Linux/Windows (CIS – notions)",
+        "Gestion des vulnérabilités, patching et EDR serveur",
+        "Stratégies d’examens LFCS/VCTA/VMCE, drills CLI",
+        "Soutenance projet fil rouge"
+      ],
+      "activites": [
+        "Audit sécurité d’un serveur et remédiations",
+        "Examens blancs et soutenance finale"
+      ]
+    }
+  ],
+  "certifications_inclues": [
+    "cert-lfcs",
+    "cert-vmware-vcta-dcv",
+    "cert-veeambackup-vmce"
+  ],
+  "meta": {
+    "buttons_alignment": "center"
+  }
+}
