@@ -742,7 +742,7 @@ export default function ReconversionParcours() {
                               Objectifs principaux
                             </div>
                             <div className="flex flex-wrap gap-2">
-                              {(formation.certifications_visees || []).map((cert, index) => (
+                              {(formation.certifications_visees || []).map((cert: string, index: number) => (
                                 <span key={index} className={`bg-gradient-to-r ${formation.domainConfig.gradient} text-white text-sm font-bold px-4 py-2 rounded-full shadow-sm`}>
                                   {cert}
                                 </span>
@@ -757,7 +757,7 @@ export default function ReconversionParcours() {
                               Compétences acquises
                             </div>
                             <div className="flex flex-wrap gap-2">
-                              {(formation.competences || []).slice(0, 6).map((comp, index) => (
+                              {(formation.competences || []).slice(0, 6).map((comp: string, index: number) => (
                                 <span key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-800 text-sm font-medium px-4 py-2 rounded-full border border-blue-200">
                                   {comp}
                                 </span>
