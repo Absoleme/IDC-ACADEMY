@@ -20,7 +20,7 @@ export async function GET(
       objectifs: Array.isArray(parcoursData.objectifs) ? parcoursData.objectifs : (parcoursData.objectifs ? [parcoursData.objectifs] : []),
       competences: parcoursData.modules?.map((module: any) => module.module) || [],
       certifications_visees: Array.isArray(parcoursData.objectifs) ? parcoursData.objectifs : [],
-      modalites: parcoursData.modalites ? (typeof parcoursData.modalites === 'string' ? parcoursData.modalites : parcoursData.modalites) : '',
+      modalites: parcoursData.modalites ? [parcoursData.modalites] : [],
       prerequis: parcoursData.prerequis || '',
       // Ajouter des champs manquants pour éviter les erreurs
       certifications_inclues: [],
