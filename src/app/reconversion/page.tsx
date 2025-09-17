@@ -66,12 +66,7 @@ Accompagnement personnalisé de votre projet professionnel                <span 
                   Découvrir nos parcours
                 </a>
                 
-                <a 
-                  href="#contact" 
-                  className="px-5 py-2.5 bg-transparent border-2 border-white border-opacity-30 rounded-lg font-medium text-sm hover:bg-white hover:text-gray-900 transition-all duration-200"
-                >
-                  Parler à un conseiller
-                </a>
+                
               </div>
             </div>
 

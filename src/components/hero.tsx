@@ -59,14 +59,14 @@ export default function Hero() {
               href="/formations" 
               className="px-5 py-2.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-medium text-sm hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl"
             >
-              Découvrir nos formations
+              Découvrir nos formations certifiantes
             </a>
             
             <a 
-              href="#contact" 
+              href="/reconversion" 
               className="px-5 py-2.5 bg-transparent border-2 border-white border-opacity-30 rounded-lg font-medium text-sm hover:bg-white hover:text-gray-900 transition-all duration-200"
             >
-              Parler à un conseiller
+              Découvrir nos parcours de reconversion professionnelle
             </a>
           </div>
           </div>
