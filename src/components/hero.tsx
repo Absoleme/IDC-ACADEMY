@@ -75,7 +75,7 @@ export default function Hero() {
           <div className="hidden lg:block">
             <div className="bg-white bg-opacity-95 rounded-xl p-4 border border-white border-opacity-20 shadow-xl">
               <img
-                src="/hero/image.png"
+                src="/hero/hero-side-image.jpg"
                 alt="Formation en technologies numériques"
                 className="w-full h-auto rounded-lg"
               />

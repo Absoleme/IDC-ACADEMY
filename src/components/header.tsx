@@ -72,14 +72,12 @@ export default function Header() {
   return (
     <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
             {/* Logo */}
-            {/*
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <img src="/logo.png" alt="IDC Academy" className="h-10 w-auto mr-3" />
-            <span className="text-xl font-bold text-gray-900">IDC ACADEMY</span>
+              <img src="/hero/image.png" alt="IDC Academy" className="h-16 w-auto mr-3" />
+              
             </Link>
-            */}
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
