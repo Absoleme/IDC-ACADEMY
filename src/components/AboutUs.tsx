@@ -40,40 +40,46 @@ export default function AboutUs() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Nos Domaines d'Expertise</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                    </svg>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Nos Domaines d'Expertise</h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="group bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg hover:border-indigo-300 transition-all duration-300 cursor-pointer">
+                  <div className="mb-4 flex justify-center">
+                    <div className="w-16 h-16 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                      <img src="/logos/cloud-computing-logo.jpeg" alt="Cloud Computing" className="w-12 h-12 object-contain" />
+                    </div>
                   </div>
-                  <span className="font-medium text-gray-700">Cloud Computing</span>
+                  <h4 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Cloud Computing</h4>
+                  <p className="text-sm text-gray-500 mt-1">AWS, Azure, GCP</p>
                 </div>
-                <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-                  <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mr-3">
-                    <svg className="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
+
+                <div className="group bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg hover:border-indigo-300 transition-all duration-300 cursor-pointer">
+                  <div className="mb-4 flex justify-center">
+                    <div className="w-16 h-16 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors">
+                      <img src="/logos/cyber-logo.jpeg" alt="Cybersécurité" className="w-12 h-12 object-contain" />
+                    </div>
                   </div>
-                  <span className="font-medium text-gray-700">Cybersécurité</span>
+                  <h4 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Cybersécurité</h4>
+                  <p className="text-sm text-gray-500 mt-1">Sécurité & Protection</p>
                 </div>
-                <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
-                    <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
+
+                <div className="group bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg hover:border-indigo-300 transition-all duration-300 cursor-pointer">
+                  <div className="mb-4 flex justify-center">
+                    <div className="w-16 h-16 rounded-xl bg-green-50 flex items-center justify-center group-hover:bg-green-100 transition-colors">
+                      <img src="/logos/data-logo.jpeg" alt="Data & IA" className="w-12 h-12 object-contain" />
+                    </div>
                   </div>
-                  <span className="font-medium text-gray-700">Data & IA</span>
+                  <h4 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Data & IA</h4>
+                  <p className="text-sm text-gray-500 mt-1">Analytics & Machine Learning</p>
                 </div>
-                <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-                  <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
-                    <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
+
+                <div className="group bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg hover:border-indigo-300 transition-all duration-300 cursor-pointer">
+                  <div className="mb-4 flex justify-center">
+                    <div className="w-16 h-16 rounded-xl bg-purple-50 flex items-center justify-center group-hover:bg-purple-100 transition-colors">
+                      <img src="/logos/devops-logo.jpeg" alt="DevOps" className="w-12 h-12 object-contain" />
+                    </div>
                   </div>
-                  <span className="font-medium text-gray-700">DevOps</span>
+                  <h4 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">DevOps</h4>
+                  <p className="text-sm text-gray-500 mt-1">CI/CD & Automation</p>
                 </div>
               </div>
             </div>
