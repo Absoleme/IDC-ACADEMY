@@ -73,10 +73,10 @@ export default function Hero() {
 
           {/* Right side - Visual or additional image */}
           <div className="hidden lg:block">
-            <div className="bg-black bg-opacity-20 rounded-xl p-1 border border-white border-opacity-10">
-              <img 
-                src="/hero/hero-side-image.jpg" 
-                alt="Formation en technologies numériques" 
+            <div className="bg-white bg-opacity-95 rounded-xl p-4 border border-white border-opacity-20 shadow-xl">
+              <img
+                src="/hero/image.png"
+                alt="Formation en technologies numériques"
                 className="w-full h-auto rounded-lg"
               />
             </div>
