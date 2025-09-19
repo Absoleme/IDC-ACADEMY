@@ -199,13 +199,26 @@ export default function DropdownReconversion({ onParcoursClick }: DropdownReconv
       onMouseLeave={handleMouseLeave}
     >
       {/* Lien Reconversion */}
-      <button className="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-200 relative group flex items-center">
-        Reconversion
-        <svg className={`w-4 h-4 ml-1 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-        <span className={`absolute -bottom-1 left-0 h-0.5 bg-indigo-600 transition-all duration-200 ${isOpen ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-      </button>
+      <div className="flex items-center">
+        <a
+          href="/reconversion"
+          className="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-200 relative group"
+        >
+          Reconversion
+          <span className={`absolute -bottom-1 left-0 h-0.5 bg-indigo-600 transition-all duration-200 ${isOpen ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+        </a>
+        <button
+          className="text-gray-700 hover:text-indigo-600 ml-1 transition-colors duration-200"
+          onClick={(e) => {
+            e.preventDefault()
+            setIsOpen(!isOpen)
+          }}
+        >
+          <svg className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
 
       {/* Dropdown Menu */}
       {isOpen && (
@@ -297,30 +310,12 @@ export default function DropdownReconversion({ onParcoursClick }: DropdownReconv
                       <button
                         key={parcours.id}
                         onClick={() => handleParcoursClick(parcours)}
-                        className="w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors duration-150 border-l-2 border-transparent hover:border-indigo-500"
+                        className="w-full px-4 py-2 text-left hover:bg-gray-50 transition-colors duration-150 border-l-2 border-transparent hover:border-indigo-500"
                       >
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1 min-w-0">
-                            <h4 className="text-sm font-medium text-gray-900 mb-1">
-                              {parcours.titre}
-                            </h4>
-                            <div className="flex items-center space-x-3 mb-1">
-                              <span className="text-xs text-gray-500 flex items-center">
-                                <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                {parcours.duree_formation}
-                              </span>
-                              <span className="text-xs text-purple-600 font-medium bg-purple-50 px-2 py-0.5 rounded">
-                                🔄 Reconversion
-                              </span>
-                            </div>
-                            {parcours.description && (
-                              <p className="text-xs text-gray-600 line-clamp-2">
-                                {parcours.description.substring(0, 120)}...
-                              </p>
-                            )}
-                          </div>
+                        <div className="flex items-center justify-between">
+                          <h4 className="text-sm font-medium text-gray-900">
+                            {parcours.titre}
+                          </h4>
                           <svg className="w-4 h-4 text-gray-400 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
