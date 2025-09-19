@@ -93,14 +93,24 @@ export default function Header() {
 
             <DropdownReconversion onParcoursClick={handleParcoursClick} />
             
-            <Link 
-              href="/#a-propos" 
+            <Link
+              href="/#a-propos"
               className="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-200 relative group"
             >
               À propos
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-200"></span>
             </Link>
-            
+
+            <div className="text-gray-500 hover:text-indigo-400 font-medium transition-colors duration-200 relative group cursor-not-allowed">
+              VAE à venir
+              <span className="absolute -top-1 -right-1 w-2 h-2 bg-orange-400 rounded-full"></span>
+            </div>
+
+            <div className="text-gray-500 hover:text-indigo-400 font-medium transition-colors duration-200 relative group cursor-not-allowed">
+              Bilan de compétence à venir
+              <span className="absolute -top-1 -right-1 w-2 h-2 bg-orange-400 rounded-full"></span>
+            </div>
+
             <a href="#contact" className="btn-primary">
               Contact
             </a>
@@ -151,16 +161,26 @@ export default function Header() {
                 Reconversion
               </Link>
               
-              <Link 
-                href="/#a-propos" 
+              <Link
+                href="/#a-propos"
                 className="text-gray-700 hover:text-indigo-600 font-medium px-2 py-2 rounded-md hover:bg-gray-50 transition-all duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 À propos
               </Link>
-              
-              <a 
-                href="#contact" 
+
+              <div className="text-gray-500 font-medium px-2 py-2 rounded-md relative flex items-center cursor-not-allowed">
+                VAE à venir
+                <span className="ml-2 w-2 h-2 bg-orange-400 rounded-full"></span>
+              </div>
+
+              <div className="text-gray-500 font-medium px-2 py-2 rounded-md relative flex items-center cursor-not-allowed">
+                Bilan de compétence à venir
+                <span className="ml-2 w-2 h-2 bg-orange-400 rounded-full"></span>
+              </div>
+
+              <a
+                href="#contact"
                 className="btn-primary inline-block text-center mx-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
