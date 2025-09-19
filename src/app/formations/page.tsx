@@ -12,15 +12,15 @@ export default function FormationsPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-900 text-white pt-20 pb-8 md:pt-24 md:pb-12 overflow-hidden">
         {/* Background image */}
-        <div className="absolute inset-0 opacity-30">
-          <img 
-            src="/hero/hero-background.jpg" 
-            alt="Formation technologies numériques" 
+        <div className="absolute inset-0 opacity-60">
+          <img
+            src="/hero/hero-background.jpg"
+            alt="Formation technologies numériques"
             className="w-full h-full object-cover object-center"
           />
         </div>
         {/* Background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/80 via-blue-900/80 to-purple-900/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/60 via-blue-900/60 to-purple-900/60"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
