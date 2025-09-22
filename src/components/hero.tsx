@@ -85,12 +85,14 @@ export default function Hero() {
 
         {/* Formation types - moved below the grid */}
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
-          <div className="bg-black bg-opacity-20 rounded-xl p-4 border border-white border-opacity-10 hover:bg-opacity-30 transition-all duration-200">
+            {/* 
+            <div className="bg-black bg-opacity-20 rounded-xl p-4 border border-white border-opacity-10 hover:bg-opacity-30 transition-all duration-200">
             <h3 className="text-lg font-semibold mb-2 text-yellow-400">Titres RNCP</h3>
             <p className="text-gray-300 text-xs">
               Formations longues diplômantes reconnues par l'État pour une reconversion complète (en cours d'instruction)
             </p>
-          </div>
+            </div>
+            */}
           <div className="bg-black bg-opacity-20 rounded-xl p-4 border border-white border-opacity-10 hover:bg-opacity-30 transition-all duration-200">
             <h3 className="text-lg font-semibold mb-2 text-blue-400">Formations Courtes</h3>
             <p className="text-gray-300 text-xs">
