@@ -1,0 +1,156 @@
+{
+  "id": "formation-powerbi",
+  "type": "formation",
+  "code": null,
+  "titre": "Microsoft Power BI - Initiation à Analyse de données",
+  "categorie": "Data",
+  "sous_categorie": "Power BI",
+  "resume": "Découvrir puis maîtriser Power BI pour connecter, transformer, modéliser et visualiser des données. Création de rapports interactifs, publication et partage sécurisés. Prépare à la certification Microsoft PL-300.",
+  "public": "Analystes métiers, contrôleurs de gestion, profils RH/marketing/ventes, PMO, data champions, débutants en BI souhaitant créer des tableaux de bord.",
+  "prerequis": "Aucun prérequis technique. À l’aise avec Excel et les notions de base en données (tables, colonnes) recommandé.",
+  "duree_formation": "2 jours",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+  "objectifs": [
+    "Prendre en main Power BI Desktop et Power BI Service.",
+    "Se connecter à des sources de données et les transformer avec Power Query.",
+    "Construire un modèle de données de qualité (relations, colonnes calculées, mesures DAX).",
+    "Créer des visualisations efficaces et des tableaux de bord interactifs.",
+    "Publier, partager et sécuriser les contenus (espaces de travail, RLS), et se préparer à PL-300."
+  ],
+  "moyen_et_modalite": "Cours animé par un formateur expert. Alternance d’apports théoriques, démonstrations et exercices guidés. Modalités: présentiel ou distanciel synchrone. Supports et jeux de données fournis.",
+  "moyens_techniques": "Poste apprenant, accès Internet, Power BI Desktop (version récente), compte Power BI (Pro ou essai) pour la publication, plateforme visio, supports numériques.",
+  "adaptation_et_suivi": "Positionnement initial, adaptation du rythme et des exemples, suivi quotidien des acquis, points d’étape, assistance post-formation courte.",
+  "evaluation_parcours": "Positionnement d’entrée, quiz intermédiaires, exercices corrigés, QCM final type PL-300, mini-projet fil rouge. Attestation de fin de formation.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "07 59 56 59 18"
+  },
+  "programme_detaille": [
+    {
+      "module": "Découverte de Power BI et connexion aux données",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Écosystème Power BI: Desktop, Service, Mobile, Gateway, licences",
+        "Sources: Excel/CSV, dossiers, bases SQL, web; paramètres et actualisation",
+        "Power Query: étapes, types de données, fusion et ajout de requêtes, nettoyage"
+      ],
+      "activites": [
+        "Import d’un dossier de CSV et nettoyage dans Power Query",
+        "Atelier: normaliser un jeu de données hétérogène"
+      ],
+      "resultats_attendus": [
+        "Savoir se connecter et transformer des données de manière reproductible"
+      ]
+    },
+    {
+      "module": "Modélisation et DAX fondamentaux",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Schéma en étoile, relations, cardinalités et sens de croisement",
+        "Colonnes calculées vs mesures, hiérarchies, tables de dates",
+        "DAX essentiels: SUM, COUNTROWS, CALCULATE, FILTER, RELATED, DISTINCTCOUNT, time intelligence (TOTALYTD, SAMEPERIODLASTYEAR)"
+      ],
+      "activites": [
+        "Création d’un modèle étoile à partir de données ventes",
+        "Exercices: écrire 5 mesures DAX clés"
+      ],
+      "resultats_attendus": [
+        "Construire un modèle robuste et des mesures précises"
+      ]
+    },
+    {
+      "module": "Visualisations et storytelling",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Choix des visuels: barres, lignes, secteurs, cartes, matrices, indicateurs",
+        "Interactions, segments, signets, infobulles, thèmes et mise en page",
+        "Accessibilité, bonnes pratiques de data viz et performance des rapports"
+      ],
+      "activites": [
+        "Atelier: concevoir un rapport à 3 pages",
+        "Exercice: optimiser interactions et navigation"
+      ],
+      "resultats_attendus": [
+        "Produire des rapports clairs, interactifs et performants"
+      ]
+    },
+    {
+      "module": "Publication, partage et gouvernance",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Publication dans Power BI Service, espaces de travail, apps",
+        "Partage, droits, RLS (Row-Level Security) et pipelines de déploiement",
+        "Actualisation: gateways, planification; export et intégration (Teams/SharePoint)"
+      ],
+      "activites": [
+        "Mise en place de la RLS et test des rôles",
+        "Publication d’une app d’espace de travail"
+      ],
+      "resultats_attendus": [
+        "Diffuser en sécurité et industrialiser l’actualisation"
+      ]
+    }
+  ],
+  "competences": [
+    "Ingestion et transformation de données avec Power Query",
+    "Modélisation en étoile et écriture de mesures DAX",
+    "Conception de rapports interactifs performants",
+    "Publication, partage sécurisé et gouvernance de base"
+  ],
+  "certifications_visees": [
+    "cert-microsoft-pl-300"
+  ],
+  "postes_accessibles": [
+    "Analyste Data/BI junior",
+    "Contrôleur de gestion junior",
+    "Business Analyst"
+  ],
+  "salaire_moyen": "32 000€ - 45 000€ selon expérience",
+  "modalites": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": {
+    "buttons_alignment": "center",
+    "financement_eligibilite": [
+      "OPCO",
+      "FNE",
+      "AIF",
+      "PTP",
+      "Dispositifs régionaux",
+      "AGEFIPH"
+    ]
+  }
+}

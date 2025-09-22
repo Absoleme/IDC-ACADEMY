@@ -1,0 +1,161 @@
+{
+  "id": "formation-excel",
+  "type": "formation",
+  "code": null,
+  "titre": "Microsoft Excel - Initiation à Perfectionnement",
+  "categorie": "Bureautique",
+  "sous_categorie": "Excel",
+  "resume": "Maîtriser les bases d’Excel puis progresser vers l’analyse de données : formules, mises en forme, tableaux, graphiques, tableaux croisés dynamiques, outils d’automatisation légère. Prépare aux certifications MOS Excel (Associate/Expert).",
+  "public": "Débutants sur Excel, utilisateurs occasionnels souhaitant gagner en efficacité, assistants/admin, fonctions RH/finance/commercial, profils en reconversion.",
+  "prerequis": "Aucun prérequis. À l’aise avec l’environnement Windows/macOS recommandé.",
+  "duree_formation": "2 jours",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+  "objectifs": [
+    "Acquérir les bases d’Excel : interface, saisie, formats, calculs simples.",
+    "Construire des feuilles fiables : références absolues/relatives, fonctions essentielles.",
+    "Présenter et partager : mises en forme, tableaux, graphiques, impressions et protection.",
+    "Analyser des données : filtres, tris, tableaux structurés, tableaux croisés dynamiques.",
+    "Découvrir l’automatisation légère : noms, validation de données, mises en forme conditionnelles, introduction à Power Query."
+  ],
+  "moyen_et_modalite": "Cours animé par un formateur expert. Alternance d’apports théoriques, démonstrations et exercices guidés. Modalités: présentiel ou distanciel synchrone. Supports officiels fournis.",
+  "moyens_techniques": "Poste apprenant, accès Internet, Microsoft Excel (Microsoft 365 ou 2019+), plateforme visio, supports numériques et fichiers d’exercices.",
+  "adaptation_et_suivi": "Positionnement initial, adaptation du rythme et des exemples, suivi quotidien des acquis, points d’étape, assistance post-formation courte.",
+  "evaluation_parcours": "Positionnement d’entrée, quiz intermédiaires, exercices corrigés, QCM final, étude de cas guidée. Attestation de fin de formation.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "07 59 56 59 18"
+  },
+  "programme_detaille": [
+    {
+      "module": "Prise en main d’Excel et bases du calcul",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Interface, rubans, options et aides",
+        "Saisie, formats (nombres, dates), gestion des fichiers",
+        "Références relatives/absolues et mixtes",
+        "Formules et fonctions essentielles: SOMME, MOYENNE, NB, MIN, MAX, AUJOURDHUI"
+      ],
+      "activites": [
+        "Exercices guidés de calculs",
+        "Atelier: bâtir une feuille de suivi simple"
+      ],
+      "resultats_attendus": [
+        "Être autonome sur l’interface et les calculs de base"
+      ]
+    },
+    {
+      "module": "Mise en forme, tableaux et graphiques",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Mise en forme classique et conditionnelle",
+        "Tableaux structurés (ListObject): filtres, tris, totaux",
+        "Graphiques: colonnes, lignes, secteurs, barres; mise en forme et sélection des données",
+        "Mise en page, zones d’impression, en-têtes/pieds, export PDF"
+      ],
+      "activites": [
+        "Atelier: tableau de ventes formaté",
+        "Exercice: créer 3 graphiques pertinents"
+      ],
+      "resultats_attendus": [
+        "Présenter des données lisibles et visuelles"
+      ]
+    },
+    {
+      "module": "Fonctions intermédiaires et qualité des données",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Fonctions de texte et de date: GAUCHE, DROITE, STXT, CONCAT, TEXTE, MOIS",
+        "Recherches et conditions: RECHERCHEV/XRECHERCHE, INDEX/EQUIV, SI, SI.CONDITIONS",
+        "Nettoyage: SUPPRESPACE, SUPPRET, valeurs en double, validation de données",
+        "Noms de plages, liaisons et protections (cellules, feuilles)"
+      ],
+      "activites": [
+        "Exercices pas-à-pas sur XRECHERCHE et SI",
+        "Atelier: contrôle de saisie d’un formulaire"
+      ],
+      "resultats_attendus": [
+        "Fiabiliser les feuilles et accélérer les recherches"
+      ]
+    },
+    {
+      "module": "Analyse de données et automatisation légère",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Tableaux croisés dynamiques (TCD) et graphiques croisés",
+        "Segments, chronologies, regroupements et calculs dans TCD",
+        "Introduction à Power Query: import CSV/Excel, fusion et transformation simples",
+        "Bonnes pratiques, partage, protection de classeur"
+      ],
+      "activites": [
+        "Atelier: construire un TCD de suivi",
+        "Exercice: pipeline d’import et nettoyage basique"
+      ],
+      "resultats_attendus": [
+        "Synthétiser et automatiser des analyses récurrentes"
+      ]
+    }
+  ],
+  "competences": [
+    "Utilisation opérationnelle d’Excel",
+    "Maîtrise des fonctions courantes et intermédiaires",
+    "Mise en forme, visualisation et impression professionnelles",
+    "Analyse de données avec TCD et Power Query (bases)"
+  ],
+  "certifications_visees": [
+    "cert-mos-excel-associate",
+    "cert-mos-excel-expert"
+  ],
+  "postes_accessibles": [
+    "Assistant administratif",
+    "Gestionnaire de données junior",
+    "Analyste junior"
+  ],
+  "salaire_moyen": "28 000€ - 40 000€ selon expérience",
+  "modalites": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": {
+    "buttons_alignment": "center",
+    "financement_eligibilite": [
+      "OPCO",
+      "FNE",
+      "AIF",
+      "PTP",
+      "Dispositifs régionaux",
+      "AGEFIPH"
+    ]
+  }
+}

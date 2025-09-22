@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import ContactModal from './ContactModal'
 import FormationDetailModal from './FormationDetailModal'
 
@@ -79,18 +80,26 @@ export default function FormationsCertifiantes({ title, description, id }: Props
         borderColor: 'border-purple-200',
         textColor: 'text-purple-800'
       }
-    if (name.includes('ia')) 
-      return { 
-        icon: '🤖', 
-        gradient: 'from-orange-500 to-yellow-500', 
+    if (name.includes('ia'))
+      return {
+        icon: '🤖',
+        gradient: 'from-orange-500 to-yellow-500',
         bgColor: 'bg-orange-50',
         borderColor: 'border-orange-200',
         textColor: 'text-orange-800'
       }
-    
-    return { 
-      icon: '💻', 
-      gradient: 'from-gray-500 to-slate-500', 
+    if (name.includes('bureautique'))
+      return {
+        icon: '📄',
+        gradient: 'from-amber-500 to-yellow-500',
+        bgColor: 'bg-amber-50',
+        borderColor: 'border-amber-200',
+        textColor: 'text-amber-800'
+      }
+
+    return {
+      icon: '💻',
+      gradient: 'from-gray-500 to-slate-500',
       bgColor: 'bg-gray-50',
       borderColor: 'border-gray-200',
       textColor: 'text-gray-800'
@@ -661,6 +670,17 @@ export default function FormationsCertifiantes({ title, description, id }: Props
                           <div className="flex-shrink-0 lg:w-64">
                             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
                               <div className="text-center mb-6">
+                                {/* Photo d'étudiant au-dessus de l'icône */}
+                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                                  <Image
+                                    src={`/photo-etudiant/image${['-4', '-3', '-2', '', '-5'][index % 5]}.png`}
+                                    alt="Étudiant en formation"
+                                    width={80}
+                                    height={80}
+                                    className="w-full h-full object-cover"
+                                    unoptimized
+                                  />
+                                </div>
                                 <div className={`w-16 h-16 bg-gradient-to-r ${formation.categoryConfig.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg`}>
                                   <span className="text-3xl">{formation.categoryConfig.icon}</span>
                                 </div>

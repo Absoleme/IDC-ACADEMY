@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import ContactModal from './ContactModal'
 import FormationDetailModal from './FormationDetailModal'
 
@@ -680,7 +681,8 @@ export default function ReconversionParcours() {
                     {/* Top gradient line */}
                     <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${formation.domainConfig.gradient}`}></div>
 
-                    <div className="p-6 lg:p-8">
+
+                    <div className="p-6 lg:p-8 relative">
                       <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
 
                         {/* Left Column - Main Info */}
@@ -767,6 +769,17 @@ export default function ReconversionParcours() {
                         <div className="flex-shrink-0 lg:w-64">
                           <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
                             <div className="text-center mb-6">
+                              {/* Photo d'étudiant au-dessus de l'icône */}
+                              <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white shadow-md mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                                <Image
+                                  src="/photo-etudiant/image-3.png"
+                                  alt="Étudiant en reconversion"
+                                  width={144}
+                                  height={144}
+                                  className="w-full h-full object-cover"
+                                  unoptimized
+                                />
+                              </div>
                               <div className={`w-16 h-16 bg-gradient-to-r ${formation.domainConfig.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg`}>
                                 <span className="text-3xl">{formation.domainConfig.icon}</span>
                               </div>

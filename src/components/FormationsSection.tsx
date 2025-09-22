@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import ContactModal from './ContactModal'
 
 interface FormationsSectionProps {
@@ -37,16 +38,18 @@ export default function FormationsSection({ type, title, description, id }: Form
   
   const getCategoryIcon = (categoryName: string): { icon: string, gradient: string, bgColor: string } => {
     const name = categoryName.toLowerCase()
-    if (name.includes('cloud')) 
+    if (name.includes('cloud'))
       return { icon: '☁️', gradient: 'from-blue-500 to-cyan-500', bgColor: 'bg-blue-50' }
-    if (name.includes('cyber') || name.includes('sécurité')) 
+    if (name.includes('cyber') || name.includes('sécurité'))
       return { icon: '🔒', gradient: 'from-red-500 to-pink-500', bgColor: 'bg-red-50' }
-    if (name.includes('data')) 
+    if (name.includes('data'))
       return { icon: '📊', gradient: 'from-green-500 to-emerald-500', bgColor: 'bg-green-50' }
-    if (name.includes('devops')) 
+    if (name.includes('devops'))
       return { icon: '⚙️', gradient: 'from-purple-500 to-indigo-500', bgColor: 'bg-purple-50' }
-    if (name.includes('ia')) 
+    if (name.includes('ia'))
       return { icon: '🤖', gradient: 'from-orange-500 to-yellow-500', bgColor: 'bg-orange-50' }
+    if (name.includes('bureautique'))
+      return { icon: '📄', gradient: 'from-amber-500 to-yellow-500', bgColor: 'bg-amber-50' }
     return { icon: '💻', gradient: 'from-gray-500 to-slate-500', bgColor: 'bg-gray-50' }
   }
 
@@ -183,86 +186,161 @@ export default function FormationsSection({ type, title, description, id }: Form
               <div key={category.id} className="group bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:-translate-y-2">
               {/* Header with gradient */}
               <div className={`h-2 bg-gradient-to-r ${categoryStyle.gradient}`}></div>
-              
+
               <div className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 ${categoryStyle.bgColor} rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="text-3xl">{categoryStyle.icon}</span>
+                  <div className="flex flex-col items-center mr-4">
+                    {/* Photo d'étudiant au-dessus de l'icône */}
+                    <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white shadow-md mb-2 group-hover:scale-105 transition-transform duration-300">
+                      <Image
+                        src="/photo-etudiant/image.png"
+                        alt="Étudiant en formation"
+                        width={144}
+                        height={144}
+                        className="w-full h-full object-cover"
+                        unoptimized
+                      />
+                    </div>
+                    <div className={`w-16 h-16 ${categoryStyle.bgColor} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <span className="text-3xl">{categoryStyle.icon}</span>
+                    </div>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors">{category.nom}</h3>
                 </div>
                 
                 <div className="space-y-6">
                   {category.formations.map((formation, index) => (
-                    <div key={formation.id} className="group/card border border-gray-200 rounded-xl p-6 hover:border-gray-300 hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-white to-gray-50">
-                      <div className="flex justify-between items-start mb-4">
-                        <h4 className="font-bold text-gray-900 text-lg group-hover/card:text-blue-700 transition-colors leading-tight">
-                          {formation.titre}
-                        </h4>
-                        {type === 'rncp' && (
-                          <span className={`bg-gradient-to-r ${categoryStyle.gradient} text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm`}>
-                            {getRNCP(formation)}
-                          </span>
-                        )}
-                      </div>
-                      
-                      <p className="text-sm text-gray-600 mb-4 line-clamp-2 leading-relaxed">{formation.resume}</p>
-                      
-                      <div className="grid grid-cols-1 gap-3 text-sm mb-4">
-                        <div className="flex items-center text-gray-700">
-                          <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-xs">⏰</span>
-                          <span className="font-medium">{formation.duree_formation}</span>
-                        </div>
-                        <div className="flex items-center text-gray-700">
-                          <span className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3 text-xs">📋</span>
-                          <span className="font-medium">{formation.modalites.join(' • ')}</span>
-                        </div>
-                      </div>
-                      
-                      <div className="mb-4">
-                        <div className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                          Compétences
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {formation.competences.slice(0, 3).map((comp: string) => (
-                            <span key={comp} className="bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200">
-                              {comp}
-                            </span>
-                          ))}
-                          {formation.competences.length > 3 && (
-                            <span className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full border border-gray-200">
-                              +{formation.competences.length - 3} autres
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <div className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                          Certifications
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {formation.certifications_visees.map((cert: string) => (
-                            <span key={cert} className={`bg-gradient-to-r ${categoryStyle.gradient} text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm`}>
-                              {cert.replace('cert-', '').toUpperCase()}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                    <div
+                      key={formation.id}
+                      className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:scale-[1.02] relative overflow-hidden animate-fadeIn"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      {/* Top gradient line */}
+                      <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${categoryStyle.gradient}`}></div>
 
-                      <button
-                        onClick={() => handleFormationClick(formation)}
-                        className={`w-full bg-gradient-to-r ${categoryStyle.gradient} text-white font-bold py-3 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-300 transform active:scale-95`}
-                      >
-                        <span className="flex items-center justify-center">
-                          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                          </svg>
-                          Demander des informations
-                        </span>
-                      </button>
+                      <div className="p-6 lg:p-8 relative">
+                        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+
+                          {/* Left Column - Main Info */}
+                          <div className="flex-1">
+                            <div className="mb-6">
+                              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                                <h4 className="text-2xl font-bold text-gray-900 leading-tight group-hover:text-indigo-700 transition-colors">
+                                  {formation.titre}
+                                </h4>
+                                {type === 'rncp' && (
+                                  <span className={`inline-block px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r ${categoryStyle.gradient} text-white shadow-sm flex-shrink-0`}>
+                                    {getRNCP(formation)}
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-gray-600 text-lg leading-relaxed">{formation.resume}</p>
+                            </div>
+
+                            {/* Details Row */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                              <div className="flex items-center text-sm">
+                                <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mr-3">
+                                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <div className="font-semibold text-gray-900">Durée</div>
+                                  <div className="text-gray-600">{formation.duree_formation}</div>
+                                </div>
+                              </div>
+
+                              <div className="flex items-center text-sm">
+                                <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
+                                  <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <div className="font-semibold text-gray-900">Modalité</div>
+                                  <div className="text-purple-600">{formation.modalites.join(' • ')}</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Compétences */}
+                            <div className="mb-6">
+                              <div className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                                Compétences acquises
+                              </div>
+                              <div className="flex flex-wrap gap-2">
+                                {formation.competences.slice(0, 2).map((comp: string) => (
+                                  <span key={comp} className="bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-800 text-sm font-medium px-4 py-2 rounded-full border border-blue-200">
+                                    {comp}
+                                  </span>
+                                ))}
+                                {formation.competences.length > 2 && (
+                                  <span className="bg-gray-100 text-gray-600 text-sm font-medium px-4 py-2 rounded-full border border-gray-200">
+                                    +{formation.competences.length - 2} autres...
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+
+                            {/* Certifications */}
+                            <div className="mb-6">
+                              <div className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                                <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                                Certifications
+                              </div>
+                              <div className="flex flex-wrap gap-2">
+                                {formation.certifications_visees.slice(0, 2).map((cert: string) => (
+                                  <span key={cert} className={`bg-gradient-to-r ${categoryStyle.gradient} text-white text-sm font-bold px-4 py-2 rounded-full shadow-sm`}>
+                                    {cert.replace('cert-', '').toUpperCase()}
+                                  </span>
+                                ))}
+                                {formation.certifications_visees.length > 2 && (
+                                  <span className="bg-gray-100 text-gray-600 text-sm font-medium px-4 py-2 rounded-full border border-gray-200">
+                                    +{formation.certifications_visees.length - 2} autres...
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Right Column - Actions */}
+                          <div className="flex-shrink-0 lg:w-64">
+                            <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
+                              <div className="text-center mb-6">
+                                {/* Photo d'étudiant au-dessus de l'icône */}
+                                <div className="w-20 h-20 rounded-full border-2 border-red-500 shadow-md mx-auto mb-3 bg-red-500 flex items-center justify-center">
+                                  <div className="text-white font-bold">TEST</div>
+                                </div>
+                                <div className={`w-16 h-16 bg-gradient-to-r ${categoryStyle.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg`}>
+                                  <span className="text-3xl">{categoryStyle.icon}</span>
+                                </div>
+                                <div className="text-sm text-gray-600 mb-2">Formation</div>
+                                <div className="text-lg font-bold text-gray-900">
+                                  {category.nom}
+                                </div>
+                              </div>
+
+                              {/* Buttons */}
+                              <div className="space-y-3">
+                                <button
+                                  onClick={() => handleFormationClick(formation)}
+                                  className={`w-full bg-gradient-to-r ${categoryStyle.gradient} hover:shadow-xl text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 relative overflow-hidden group`}
+                                >
+                                  <span className="relative z-10 flex items-center justify-center">
+                                    <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                    </svg>
+                                    Demander des informations
+                                  </span>
+                                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>

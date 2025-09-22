@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { Parcours } from '@/types/formation'
 import ContactModal from './ContactModal'
 import FormationDetailModal from './FormationDetailModal'
@@ -574,15 +575,16 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
             {paginatedParcours.length > 0 ? (
               <div className="space-y-6">
                 {paginatedParcours.map((parcours, index) => (
-                    <div 
-                      key={parcours.id} 
+                    <div
+                      key={parcours.id}
                       className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:scale-[1.02] relative overflow-hidden animate-fadeIn"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       {/* Top gradient line */}
                       <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${parcours.categoryConfig.gradient}`}></div>
-                      
-                      <div className="p-6 lg:p-8">
+
+
+                      <div className="p-6 lg:p-8 relative">
                         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
                           
                           {/* Left Column - Main Info */}
@@ -674,6 +676,10 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
                           <div className="flex-shrink-0 lg:w-64">
                             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
                               <div className="text-center mb-6">
+                                {/* Photo d'étudiant au-dessus de l'icône */}
+                                <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white shadow-md mx-auto mb-3 group-hover:scale-105 transition-transform duration-300 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
+                                  <div className="text-4xl">👩‍💼</div>
+                                </div>
                                 <div className={`w-16 h-16 bg-gradient-to-r ${parcours.categoryConfig.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg`}>
                                   <span className="text-3xl">{parcours.categoryConfig.icon}</span>
                                 </div>

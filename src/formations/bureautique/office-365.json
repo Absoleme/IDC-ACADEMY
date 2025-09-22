@@ -1,0 +1,160 @@
+{
+  "id": "formation-office-365",
+  "type": "formation",
+  "code": null,
+  "titre": "Microsoft 365 (Office 365) - Collaboration et Productivité",
+  "categorie": "Bureautique",
+  "sous_categorie": "Microsoft 365",
+  "resume": "Prendre en main Microsoft 365 pour collaborer efficacement : Outlook, Teams, OneDrive, SharePoint, Word/Excel/PowerPoint en ligne, OneNote, Planner/To Do, Forms. Bonnes pratiques de partage, coédition et sécurité de base. Prépare aux notions clés de MS-900.",
+  "public": "Utilisateurs débutants à intermédiaires, équipes métiers (RH, finance, ventes, support), managers, PMO, toute personne souhaitant travailler mieux en mode collaboratif.",
+  "prerequis": "Aucun prérequis. À l’aise avec l’environnement Windows/macOS et le web recommandé.",
+  "duree_formation": "2 jours",
+  "inscription": "Prise de contact (email/tél), questionnaire d’analyse du besoin, validation administrative, envoi de la convention et de la convocation.",
+  "objectifs": [
+    "Découvrir l’écosystème Microsoft 365 et la logique cloud (applications, services, stockage).",
+    "Communiquer et collaborer avec Outlook, Teams et OneDrive/SharePoint (coédition, partage, réunions).",
+    "Utiliser efficacement les versions web de Word, Excel, PowerPoint et OneNote pour des travaux d’équipe.",
+    "Organiser le travail et les projets légers avec Planner, To Do, Forms et Loop (découverte).",
+    "Adopter les bonnes pratiques de sécurité et de gouvernance côté utilisateur (partage, droits, étiquettes de confidentialité)."
+  ],
+  "moyen_et_modalite": "Cours animé par un formateur expert. Alternance d’apports théoriques, démonstrations et ateliers guidés. Modalités: présentiel ou distanciel synchrone. Supports et jeux d’exercices fournis.",
+  "moyens_techniques": "Poste apprenant, accès Internet, abonnement Microsoft 365 (compte de test ou entreprise), applications Microsoft 365 (Desktop/Web), plateforme visio, supports numériques.",
+  "adaptation_et_suivi": "Positionnement initial, adaptation du rythme et des exemples, suivi quotidien des acquis, points d’étape, assistance post-formation courte.",
+  "evaluation_parcours": "Positionnement d’entrée, quiz intermédiaires, exercices pratiques, QCM final, mini-cas collaboratif. Attestation de fin de formation.",
+  "delai_acces": "2 à 4 semaines après validation de l’inscription.",
+  "handicap": {
+    "texte": "Toutes les formations dispensées à IDCACADEMY sont accessibles aux personnes en situation de handicap. Lors de l’inscription à nos formations, nous étudions avec le candidat en situation de handicap et à travers un questionnaire les actions que nous pouvons mettre en place pour favoriser son apprentissage.\nPour cela, nous pouvons également nous appuyer sur un réseau de partenaires nationaux préalablement identifiés.\nCoordonnées des partenaires handicap : \nAGEFIPH\nBastien GIESBERGER M'Ballo SECK\nContact mail uniquement\nrhf-idf@agefiph.asso.fr\nMDPH\nMDPH 75 de Paris 69 rue de la Victoire 75009 Paris\n01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)\ncontact@mdph.paris.fr\nCAP EMPLOI\n43 Bis Rue d’Hautpoul\n75019 - Paris\nTel : 01 44 52 40 60\nAssociation Pour Adultes et Jeunes Handicapés\nFédération APAJH\n33 avenue du Maine 75755 Paris Cedex 15",
+    "partenaires": {
+      "AGEFIPH": {
+        "contacts": [
+          "Bastien GIESBERGER",
+          "M'Ballo SECK"
+        ],
+        "email": "rhf-idf@agefiph.asso.fr",
+        "canal": "Contact mail uniquement"
+      },
+      "MDPH": {
+        "nom": "MDPH 75 de Paris",
+        "adresse": "69 rue de la Victoire 75009 Paris",
+        "telephone": "01 53 32 39 39 ou 0 805 80 09 09 (Numéro vert)",
+        "email": "contact@mdph.paris.fr"
+      },
+      "CAP_EMPLOI": {
+        "adresse": "43 Bis Rue d’Hautpoul, 75019 - Paris",
+        "telephone": "01 44 52 40 60"
+      },
+      "APAJH": {
+        "nom": "Fédération APAJH",
+        "adresse": "33 avenue du Maine 75755 Paris Cedex 15"
+      }
+    }
+  },
+  "evaluation_du_besoin": "Un questionnaire sera proposé pour analyser l’adéquation du besoin de formation avec les formations dispensées.",
+  "prix": "Nous consulter",
+  "contact": {
+    "email": "contact@idcacademy.fr",
+    "telephone": "07 59 56 59 18"
+  },
+  "programme_detaille": [
+    {
+      "module": "Panorama Microsoft 365 et bonnes pratiques",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Applications et services: Outlook, Teams, OneDrive, SharePoint, Word/Excel/PowerPoint/OneNote web",
+        "Stockage et partage: OneDrive vs SharePoint, versions et corbeille",
+        "Sécurité côté utilisateur: liens de partage, droits, étiquettes de confidentialité, MFA (notions)",
+        "Organisation personnelle: To Do, calendrier, contacts"
+      ],
+      "activites": [
+        "Parcours guidé du portail M365 et lancement rapide des apps",
+        "Atelier: structurer son OneDrive (dossiers, versions, partage)"
+      ],
+      "resultats_attendus": [
+        "Comprendre l’écosystème et adopter des pratiques de base sécurisées"
+      ]
+    },
+    {
+      "module": "Communication et réunions avec Outlook et Teams",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Outlook: boîtes aux lettres, règles, catégories, recherche, calendrier partagé",
+        "Teams: équipes/canaux, conversation, fichiers, réunions, enregistrements, Live reactions",
+        "Réunions efficaces: planification, lobbies, rôles, notes, prise en main partagée",
+        "Intégrations: Teams + OneNote, Planner, Forms"
+      ],
+      "activites": [
+        "Atelier: créer une équipe, planifier une réunion, coéditer un document",
+        "Exercice: règles Outlook et boîte de réception prioritaire"
+      ],
+      "resultats_attendus": [
+        "Communiquer clairement et animer des réunions productives"
+      ]
+    },
+    {
+      "module": "Coédition et gestion de contenus",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Word/Excel/PowerPoint en ligne: coédition, commentaires, @mentions",
+        "Bibliothèques SharePoint: colonnes, vues, métadonnées, alertes",
+        "OneNote: prise de notes partagée, modèles, recherche",
+        "Forms: enquêtes, quiz; collecte et export des réponses"
+      ],
+      "activites": [
+        "Atelier: créer une bibliothèque avec métadonnées et vues",
+        "Exercice: coéditer un document et gérer les versions"
+      ],
+      "resultats_attendus": [
+        "Structurer et coéditer les contenus de manière fiable"
+      ]
+    },
+    {
+      "module": "Organisation d’équipe et automatisation légère",
+      "duree": "0,5 jour",
+      "contenus": [
+        "Planner: plans, tâches, étiquettes, affectations, vues et rapports",
+        "Loop (découverte): composants, pages, espaces",
+        "Power Automate (découverte): modèles d’automatisation simples (approbations, notifications)",
+        "Bonnes pratiques de gouvernance utilisateur: noms d’équipes, partage externe, cycle de vie"
+      ],
+      "activites": [
+        "Atelier: plan d’équipe avec suivi des tâches et notifications",
+        "Exercice: flux Power Automate à partir d’un modèle"
+      ],
+      "resultats_attendus": [
+        "Mettre en place une organisation d’équipe et automatiser des tâches courantes"
+      ]
+    }
+  ],
+  "competences": [
+    "Utilisation opérationnelle des principales applications Microsoft 365",
+    "Communication et réunions efficaces avec Outlook et Teams",
+    "Coédition, partage et gestion documentaire sur OneDrive/SharePoint",
+    "Organisation de l’activité et automatisation légère (Planner, Forms, Power Automate - découverte)"
+  ],
+  "certifications_visees": [
+    "cert-microsoft-ms-900"
+  ],
+  "postes_accessibles": [
+    "Assistant administratif",
+    "Assistant de projet",
+    "Collaborateur bureautique polyvalent"
+  ],
+  "salaire_moyen": "26 000€ - 38 000€ selon expérience",
+  "modalites": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "langue": "FR",
+  "organisme": "IDC ACADEMY",
+  "meta": {
+    "buttons_alignment": "center",
+    "financement_eligibilite": [
+      "OPCO",
+      "FNE",
+      "AIF",
+      "PTP",
+      "Dispositifs régionaux",
+      "AGEFIPH"
+    ]
+  }
+}
