@@ -191,18 +191,15 @@ export default function FormationsSection({ type, title, description, id }: Form
                 <div className="flex items-center mb-6">
                   <div className="flex flex-col items-center mr-4">
                     {/* Photo d'étudiant au-dessus de l'icône */}
-                    <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white shadow-md mb-2 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-64 h-64 rounded-full overflow-hidden border-2 border-white shadow-md mb-2 group-hover:scale-105 transition-transform duration-300">
                       <Image
                         src="/photo-etudiant/image.png"
                         alt="Étudiant en formation"
-                        width={144}
-                        height={144}
+                        width={256}
+                        height={256}
                         className="w-full h-full object-cover"
                         unoptimized
                       />
-                    </div>
-                    <div className={`w-16 h-16 ${categoryStyle.bgColor} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-3xl">{categoryStyle.icon}</span>
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors">{category.nom}</h3>
@@ -310,11 +307,8 @@ export default function FormationsSection({ type, title, description, id }: Form
                             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
                               <div className="text-center mb-6">
                                 {/* Photo d'étudiant au-dessus de l'icône */}
-                                <div className="w-20 h-20 rounded-full border-2 border-red-500 shadow-md mx-auto mb-3 bg-red-500 flex items-center justify-center">
+                                <div className="w-36 h-36 rounded-full border-2 border-red-500 shadow-md mx-auto mb-3 bg-red-500 flex items-center justify-center">
                                   <div className="text-white font-bold">TEST</div>
-                                </div>
-                                <div className={`w-16 h-16 bg-gradient-to-r ${categoryStyle.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg`}>
-                                  <span className="text-3xl">{categoryStyle.icon}</span>
                                 </div>
                                 <div className="text-sm text-gray-600 mb-2">Formation</div>
                                 <div className="text-lg font-bold text-gray-900">

@@ -671,18 +671,15 @@ export default function FormationsCertifiantes({ title, description, id }: Props
                             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
                               <div className="text-center mb-6">
                                 {/* Photo d'étudiant au-dessus de l'icône */}
-                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                                <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white shadow-md mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
                                   <Image
                                     src={`/photo-etudiant/image${['-4', '-3', '-2', '', '-5'][index % 5]}.png`}
                                     alt="Étudiant en formation"
-                                    width={80}
-                                    height={80}
+                                    width={144}
+                                    height={144}
                                     className="w-full h-full object-cover"
                                     unoptimized
                                   />
-                                </div>
-                                <div className={`w-16 h-16 bg-gradient-to-r ${formation.categoryConfig.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg`}>
-                                  <span className="text-3xl">{formation.categoryConfig.icon}</span>
                                 </div>
                                 <div className="text-sm text-gray-600 mb-2">Formation</div>
                                 <div className="text-lg font-bold text-gray-900">
