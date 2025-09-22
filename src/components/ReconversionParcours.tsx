@@ -4,6 +4,8 @@ import Image from 'next/image'
 import ContactModal from './ContactModal'
 import FormationDetailModal from './FormationDetailModal'
 
+// Bon fichier pour les parcours de reconversion
+
 interface ParcoursReconversion {
   id: string
   type: string
@@ -779,9 +781,6 @@ export default function ReconversionParcours() {
                                   className="w-full h-full object-cover"
                                   unoptimized
                                 />
-                              </div>
-                              <div className={`w-16 h-16 bg-gradient-to-r ${formation.domainConfig.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg`}>
-                                <span className="text-3xl">{formation.domainConfig.icon}</span>
                               </div>
                               <div className="text-sm text-gray-600 mb-2">Parcours</div>
                               <div className="text-lg font-bold text-gray-900">

@@ -5,6 +5,8 @@ import { Parcours } from '@/types/formation'
 import ContactModal from './ContactModal'
 import FormationDetailModal from './FormationDetailModal'
 
+// Ce fichier n'est pas utilisé 
+
 interface Props {
   title: string
   description: string
@@ -677,11 +679,8 @@ export default function ParcoursReconversion({ title, description, id }: Props) 
                             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
                               <div className="text-center mb-6">
                                 {/* Photo d'étudiant au-dessus de l'icône */}
-                                <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white shadow-md mx-auto mb-3 group-hover:scale-105 transition-transform duration-300 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
-                                  <div className="text-4xl">👩‍💼</div>
-                                </div>
-                                <div className={`w-16 h-16 bg-gradient-to-r ${parcours.categoryConfig.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg`}>
-                                  <span className="text-3xl">{parcours.categoryConfig.icon}</span>
+                                <div className="w-64 h-64 rounded-full overflow-hidden border-2 border-white shadow-md mx-auto mb-3 group-hover:scale-105 transition-transform duration-300 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
+                                  <div className="text-6xl">👩‍💼</div>
                                 </div>
                                 <div className="text-sm text-gray-600 mb-2">Parcours RNCP</div>
                                 <div className="text-lg font-bold text-gray-900">

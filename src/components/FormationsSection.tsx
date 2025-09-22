@@ -307,7 +307,7 @@ export default function FormationsSection({ type, title, description, id }: Form
                             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
                               <div className="text-center mb-6">
                                 {/* Photo d'étudiant au-dessus de l'icône */}
-                                <div className="w-36 h-36 rounded-full border-2 border-red-500 shadow-md mx-auto mb-3 bg-red-500 flex items-center justify-center">
+                                <div className="w-64 h-64 rounded-full border-2 border-red-500 shadow-md mx-auto mb-3 bg-red-500 flex items-center justify-center">
                                   <div className="text-white font-bold">TEST</div>
                                 </div>
                                 <div className="text-sm text-gray-600 mb-2">Formation</div>
