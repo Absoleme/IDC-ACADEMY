@@ -83,11 +83,11 @@ export default function FormationsPage() {
 
             {/* Right side - Visual */}
             <div className="hidden lg:block">
-              <div className="bg-black bg-opacity-20 rounded-xl p-1 border border-white border-opacity-10">
-                <img 
-                  src="/hero/hero-formation-background.png" 
-                  alt="Formation certifiante technologies IT" 
-                  className="w-full h-auto rounded-lg"
+              <div className="bg-black bg-opacity-20 rounded-xl p-4 border border-white border-opacity-10 w-fit mx-auto">
+                <img
+                  src="/hero/hero-formation-background.png"
+                  alt="Formation certifiante technologies IT"
+                  className="w-80 h-auto rounded-lg"
                 />
               </div>
             </div>

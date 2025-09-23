@@ -671,12 +671,12 @@ export default function FormationsCertifiantes({ title, description, id }: Props
                             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 h-full flex flex-col justify-center">
                               <div className="text-center mb-6">
                                 {/* Photo d'étudiant au-dessus de l'icône */}
-                                <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white shadow-md mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                                <div className="w-48 h-48 rounded-full overflow-hidden border-2 border-white shadow-md mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
                                   <Image
                                     src={`/photo-etudiant/image${['-4', '-3', '-2', '', '-5'][index % 5]}.png`}
                                     alt="Étudiant en formation"
-                                    width={144}
-                                    height={144}
+                                    width={192}
+                                    height={192}
                                     className="w-full h-full object-cover"
                                     unoptimized
                                   />

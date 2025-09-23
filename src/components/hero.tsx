@@ -77,7 +77,7 @@ export default function Hero() {
               <img
                 src="/hero/hero-side-image.jpg"
                 alt="Formation en technologies numériques"
-                className="w-full h-auto rounded-xl"
+                className="w-4/5 h-auto rounded-xl mx-auto"
               />
             </div>
           </div>
