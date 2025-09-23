@@ -85,9 +85,9 @@ Accompagnement personnalisé de votre projet professionnel                <span 
           {/* Parcours types - moved below the grid */}
           <div className="mt-8 grid md:grid-cols-3 gap-4 max-w-6xl mx-auto">
             <div className="bg-black bg-opacity-20 rounded-xl p-4 border border-white border-opacity-10 hover:bg-opacity-30 transition-all duration-200">
-              <h3 className="text-lg font-semibold mb-2 text-blue-400">Développeur Full Stack</h3>
+              <h3 className="text-lg font-semibold mb-2 text-blue-400">AI Engineer</h3>
               <p className="text-gray-300 text-xs">
-                De zéro à développeur web en 6-12 mois
+                Devenez un expert en intelligence artificielle et machine learning
               </p>
             </div>
             <div className="bg-black bg-opacity-20 rounded-xl p-4 border border-white border-opacity-10 hover:bg-opacity-30 transition-all duration-200">
